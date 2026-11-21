@@ -1,0 +1,45 @@
+--- before/run_window.py
++++ after/run_window.py
+@@ -51,7 +51,7 @@
+     setup_seed(cfg['setup_seed'])
+     meta = {'status':'RUNNING','variant':'R0_author_GT_assisted','frames':a.frames,'index_sha256':sha256(index),'torch':torch.__version__,'gpu':torch.cuda.get_device_name(),'args':vars(args),'cfg':cfg,'notes':['Author GT initialization / early poses retained','Author evaluator scale=True retained; not metric KITTI or GT-free evidence','Reduced buffer capacity only; training/optimization defaults retained','Short window input count does not establish GS tracking was exercised']}
+     (output/'run_manifest.json').write_text(json.dumps(meta,indent=2))
+-    counts = {key:0 for key in ['input_frames','gs_tracking_calls','gs_mapping_calls','gs_pose_optimization_calls','gs_render_calls','mapping_optimize_calls']}
++    counts = {key:0 for key in ['input_frames','input_frames_submitted','gs_tracking_calls','gs_mapping_calls','gs_pose_optimization_calls','gs_render_calls','mapping_optimize_calls']}
+     started = time.time()
+     try:
+         model = dg_model(cfg,args)
+@@ -72,14 +72,22 @@
+         module.render = counted_render
+         data = load_window(a.frames)
+         for t,image,depth,intrinsics,pose,mask in data:
+-            model.track(t,image,depth,pose,intrinsics,mask)
++            counts['input_frames_submitted']+=1
++            try:
++                model.track(t,image,depth,pose,intrinsics,mask)
++            except RuntimeError as error:
++                if t==a.frames-1 and not model.frontend.is_initialized and model.frontend.graph.ii.numel()==0 and 'min()' in str(error):
++                    meta['author_end_window_error']=repr(error)
++                    raise CoverageIncomplete(f'Short window ended with {model.video.counter.value}/{args.warmup} warmup keyframes and no graph edges; author final-frame flush cannot run') from error
++                raise
+             counts['input_frames'] += 1
+             if counts['input_frames']%10 == 0:
+                 print(json.dumps(counts),flush=True)
+                 meta['counters']=dict(counts)
+                 (output/'run_manifest.json').write_text(json.dumps(meta,indent=2))
+         n = model.video.counter.value
+-        assert n > 0 and model.mapping_counter > 0, 'DROID warmup or GS mapping was not reached'
++        if n==0 or model.mapping_counter==0:
++            raise CoverageIncomplete('DROID warmup or GS mapping was not reached')
+         estimated = torch.stack([get_tensor_from_camera(x,Tquad=True).cpu() for x in mapper.estimate_c2w_list[:n]])
+         model.video.poses[:n] = lietorch.cat([SE3(estimated)],0).inv().data
+         trajectory = model.terminate_woBA(data)
+@@ -93,6 +101,8 @@
+         meta.update(status='COVERAGE_INSUFFICIENT' if isinstance(error,CoverageIncomplete) else 'FAILED', error=repr(error))
+         raise
+     finally:
++        if 'model' in locals():
++            meta.update(droid_keyframes=int(model.video.counter.value),mapped_keyframes=int(model.mapping_counter),frontend_initialized=bool(model.frontend.is_initialized),graph_edges=int(model.frontend.graph.ii.numel()),warmup_required=int(args.warmup))
+         meta.update(counters=counts,wall_seconds=time.time()-started,max_gpu_memory_bytes=torch.cuda.max_memory_allocated())
+         (output/'run_manifest.json').write_text(json.dumps(meta,indent=2,default=str))
+ 

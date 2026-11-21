@@ -1,0 +1,19 @@
+--- R1.1/dg_slam/gs_tracking_mapping.py
++++ T01/dg_slam/gs_tracking_mapping.py
+@@ -34,6 +34,7 @@
+ class gs_tracking_mapping():
+     def __init__(self, cfg, args, video):
+         self.cfg = cfg
++        self.gs_pose_refine = cfg.get('gs_pose_refine', True)
+         self.args = args
+         self.video = video
+         self.scale_factor = 0.8
+@@ -1158,7 +1159,7 @@
+             print("Tracking KeyFrame ",  idx.item())
+             print(Style.RESET_ALL)
+ 
+-        if idx <= 1:
++        if idx <= 1 or not self.gs_pose_refine:
+             # Preserve the 50-iteration budget from idx>=2; idx=1 uses DROID.
+             c2w = torch.eye(4, device=estimated_c2w.device) if idx == 0 else estimated_c2w
+         else:

@@ -1,0 +1,136 @@
+"""Build the evidence report from sealed diagnostics and CPU scoring."""
+import csv
+import json
+from pathlib import Path
+import numpy as np
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+F=Path(__file__).resolve().parents[1]
+def read(name):return list(csv.DictReader((F/name).open(encoding='utf-8-sig')))
+S=json.loads((F/'receipts/server_scoring.json').read_text(encoding='utf-8'))
+summary={r['case']:r for r in S['summaries']}
+rows=read('T20_逐帧误差与移动.csv');iterations=read('T20_逐轮目标与GT误差.csv')
+(F/'figures').mkdir(exist_ok=True)
+colors={'N_MAP_LEGACY':'#d35e60','N_MAP_FIXED':'#377eb8','N_NATIVE_FIXED':'#42904d','I_MAP_LEGACY':'#d35e60','I_MAP_FIXED':'#377eb8'}
+fig,axes=plt.subplots(1,2,figsize=(12,4.2),sharey=True)
+for ax,arm in zip(axes,['NO_GS_REFINE','LOCAL_ID']):
+    cases=[name for name,r in summary.items() if r['arm']==arm]
+    for name in cases:
+        values=[r for r in rows if r['case']==name]
+        x=[int(r['frame']) for r in values];y=[float(r['final_error_cm']) for r in values]
+        ax.plot(x,y,label=name,color=colors[name],linewidth=1.5,alpha=.85)
+        for r in values:
+            if r['keyframe']=='True':ax.scatter(int(r['frame']),float(r['final_error_cm']),color=colors[name],s=20,zorder=5)
+    initial=[r for r in rows if r['case']==cases[0]]
+    ax.plot([int(r['frame']) for r in initial],[float(r['initial_error_cm']) for r in initial],color='#777777',linestyle='--',label='Mapping-anchor initialization')
+    for r in initial:
+        if r['keyframe']=='True':ax.axvline(int(r['frame']),color='#cccccc',linewidth=.8,linestyle=':')
+    ax.set(title=arm,xlabel='Associated input frame');ax.grid(alpha=.2);ax.legend(fontsize=8)
+axes[0].set_ylabel('Position error with fixed native-anchor alignment (cm)')
+fig.tight_layout();fig.savefig(F/'figures/T20_position_errors.png',dpi=170);plt.close(fig)
+fig,ax=plt.subplots(figsize=(7.2,4.5))
+for name in ['N_NATIVE_FIXED','I_MAP_FIXED']:
+    values=[r for r in iterations if r['case']==name]
+    x=[100*(float(r['fixed_target_residual_after'])-float(r['fixed_target_residual_before']))/max(float(r['fixed_target_residual_before']),1e-30) for r in values]
+    y=[float(r['GT_RMSE_after_cm'])-float(r['GT_RMSE_before_cm']) for r in values]
+    ax.scatter(x,y,label=name,color=colors[name],s=38,alpha=.8)
+ax.axhline(0,color='#888888',linewidth=.8);ax.axvline(0,color='#888888',linewidth=.8)
+ax.set(xlabel='Within-iteration fixed learned-target residual change (%)',ylabel='Temporary-node GT position RMSE change (cm)',title='A lower diagnostic residual can accompany a worse pose')
+ax.grid(alpha=.2);ax.legend();fig.tight_layout();fig.savefig(F/'figures/T20_residual_vs_pose.png',dpi=170);plt.close(fig)
+lines=[]
+for name,r in summary.items():
+    lines.append(f"|{name}|{r['fixed_native_alignment_RMSE_initial_cm']:.4f}|{r['fixed_native_alignment_RMSE_final_cm']:.4f}|{r['KF_RMSE_final_cm']:.4f}|{r['nonKF_RMSE_final_cm']:.4f}|{r['RPE1_translation_cm']:.4f}|{r['RPE10_translation_cm']:.4f}|{r['within_iteration_residual_down_GT_up']}/12|")
+table='\n'.join(lines)
+id_improve=100*(1-summary['I_MAP_FIXED']['fixed_native_alignment_RMSE_final_cm']/summary['I_MAP_LEGACY']['fixed_native_alignment_RMSE_final_cm'])
+id_rpe=100*(summary['I_MAP_FIXED']['RPE1_translation_cm']/summary['I_MAP_LEGACY']['RPE1_translation_cm']-1)
+text=f'''# T20：T19 补全接口候选的真实 GPU 诊断与下一步
+
+日期：2026-10-12；执行及新增诊断归属 CHY。接续 [T19 登记](T19_diagnostic_registration.json) 与 [接手后交接文档](../CHY_回交队友_T11至T19_20261012/交接文档_CHY接手后T11至T19_20261012.md)，不代表队友签核。
+
+## 当前决定
+
+已完成两次完整 DEV200 状态重建和全部五组同状态补全诊断。候选关键帧输出约束、真实网络／CUDA／原生 BA 接口与逐轮记录均通过工程检查。但非关键帧仍明显漂移，**不能宣布补全质量修复完成，也不自动采用 ID、NO_GS 或 FULL**。
+
+本轮把 T19 从“仅 CPU 候选”推进到“登记的真实 GPU 机制诊断已完成”。T14 的 FULL 不采用、T17 的两组均未获综合资格均保持不变。没有重跑 T14 的 18 次验收，没有使用新 Test，没有启动新的 FULL 优化路线。
+
+## 设计与实际运行
+
+沿用已曝光 TUM walking_xyz 的作者关联输入 0–199 帧、seed2718，分别重建 NO_GS_REFINE 和 LOCAL_ID 的完整原生状态。NO_GS 仍保留高斯建图；两组均为 24 个关键帧。五组补全请求都为 144–175，共 32 帧，保留 144–159／160–175 两个原批次；其中 3 帧是关键帧，29 帧是非关键帧。
+
+|案例|来源|输出行为|几何状态|
+|---|---|---|---|
+|N_MAP_LEGACY|NO_GS mapping snapshot|所有帧建立临时节点|明确标记混合几何诊断|
+|N_MAP_FIXED|同上|关键帧返回选定锚点，只优化非关键帧|同上|
+|N_NATIVE_FIXED|NO_GS 最终原生 DROID|关键帧固定|原生 DROID 锚点与状态|
+|I_MAP_LEGACY|ID mapping snapshot|所有帧建立临时节点|明确标记混合几何诊断|
+|I_MAP_FIXED|同上|关键帧固定|同上；尚未解决 ID 一致几何|
+
+每组别在注入 mapping 位姿前保存原生状态；每个案例恢复同一份 active video、可能复用的 16 个临时槽、网络参数／buffer／eval 模式与 Python/NumPy/Torch CPU/CUDA RNG，并核验哈希。保存的是 24 个 active 槽加 16 个潜在临时槽；其余 buffer 槽不被本轮案例索引，不能称为全部 232 槽的完整转储。
+
+五例分别记录两个批次的初始化及各六轮更新，每例 50 个 trace 事件、12 次图更新，共 250 个科学 trace 事件／60 次图更新。另有工程冒烟记录，单独存放。运行期间 GT 位姿和评价关联文件均被拦截；五组封存后才做 CPU GT 评分。`depths_gt` 是继承作者代码的变量名，此处装载传感器深度，不是 GT 相机位姿。
+
+T19 原登记及 adapter 的 `GPU_validated=False` 等字段是执行前保留的静态候选标记，没有回写或覆盖；本轮是否通过真实 GPU 检查，以新的 `candidate_gpu_smoke_v2.json`、各例 `engineering_gate.json` 和 `launch_v2.json` 为准。
+
+## 32 帧结果
+
+下表的位置 RMSE 使用每组别原生 DROID 的 24 个关键帧与 GT 拟合一次无尺度 SE(3) 对齐，并对该组全部案例固定复用。**它不是各案例重新对齐后的完整 200 帧 ATE**，不能直接和 T17 的主 ATE 数值比较。RPE1／10 分别使用这 32 帧的全部 31／22 个帧对。误差单位为 cm。
+
+|案例|初始化 RMSE|最终 RMSE|关键帧 RMSE|非关键帧 RMSE|RPE1 平移|RPE10 平移|轮内代理残差降而 GT 误差升|
+|---|---:|---:|---:|---:|---:|---:|---:|
+{table}
+
+![逐帧位置误差](figures/T20_position_errors.png)
+
+NO_GS 的三条最终曲线几乎重合；ID 的可见区别集中在关键帧。独立 CPU 审计确认，两组各自的 legacy／fixed 案例中，29 个非关键帧的七维位姿数组逐位完全相同。因此关键帧输出修复没有改变本次非关键帧求解结果。
+
+ID 固定关键帧输出后，整体位置 RMSE 下降约 {id_improve:.2f}%，但非关键帧 RMSE 保持 3.3651 cm，RPE1 平移反而上升约 {id_rpe:.2f}%。NO_GS 固定关键帧输出的整体变化很小；换成最终 DROID 锚点，也没有救回本段非关键帧误差。
+
+frame158 是主要异常：N_NATIVE_FIXED 从初始化误差约 2.1447 cm 变成 8.2715 cm，位移约 8.1518 cm；I_MAP_FIXED 从约 1.6939 cm 变成 9.1720 cm，位移约 8.8273 cm。固定关键帧输出保住了接口约束，不能阻止这些非关键帧走偏。
+
+本轮是新进程状态重建，不是旧 T17 的逐位复现。两组 24 个关键帧索引与旧记录一致；NO_GS 的 mapped 锚点最大位置差约 0.0023 cm，ID 约 1.5114 cm。ID 的 legacy32 输出与旧完整 filler 同帧输出最大位置差约 2.7040 cm。具体差异来自何种数值非确定性尚未逐内核定位，不能按结果选择“更好的重建”，也不能照搬 T18 中 98.65% 等误差归因比例。本轮各案例在同一新状态上的配对哈希全部一致，内部对照仍成立。
+
+本地完整核验 467 个原始归档文件和 376 个封存结果文件通过；本地与服务器指标最大差约 `4.12e-13`。22 条 ID 相机 trace 的 806 个更新记录、2,138 个提议通过独立 CPU 审计，重构位姿最大差约 `2.98e-8`。T17/T19 原有 361 个文件重新校验未变。
+
+## 机制判断：目标下降不保证位姿改善
+
+N_NATIVE_FIXED 有 7/12 轮、I_MAP_FIXED 有 10/12 轮出现“在本轮固定 learned target 与实际 mask 后权重下，残差下降，而临时节点 GT 位置平方误差上升”。这些残差是诊断代理量，**不是完整原生 BA 目标**；不同轮的 learned target／weight 会改变，只比较同一轮 BA 前后，不把跨轮数值当成同一目标。
+
+![轮内目标与位姿变化](figures/T20_residual_vs_pose.png)
+
+这支持把下一步定位到补全的匹配目标、有效权重及几何支持，而非继续盲调 FULL 的 P。N_NATIVE_FIXED 仍有明显漂移，说明在本段数据中，mapping／DROID 几何混用不是所有非关键帧退化的必要条件；它不证明其他帧的接口风险可忽略，也不代表 ID 的一致几何问题已解决。
+
+权重旁路检查是结果揭晓后的 CPU 诊断：frame158 首轮的有效权重约 59%–60% 来自没有传感器深度的源像素，匹配落入目标人物分割区域约占 1%–1.3%，落在目标边界外约 0.46%–0.47%。人物分割只作代理，不是 GT 运动标签；这些比例不能独立证明因果。
+
+进一步检查，缺传感器深度的那组源像素仍有 DROID 估计，其加权深度中位数约 11.1–11.2 m，估计 disparity 落在最小夹紧值上的权重仅占该组约 2.9%–3.2%。因此不能把全部“缺传感器深度”像素当成错误，更不能直接按结果裁剪权重并宣布修复。后续需区分远景带来的弱平移约束、估计几何可信度及 learned 匹配偏差。
+
+## 工程故障与保留记录
+
+原生 sm120 GPU 预检通过，包括 Lie、scatter、FAISS、相关运算、原生 BA 及 rasterizer 梯度。首次候选冒烟失败是我设置的 64×64 合成输入过小，相关金字塔下采样到零；当时尚未启动两次科学状态重建。原脚本、执行锁、失败日志与 smoke/ 均保留。
+
+单独登记 128×128 的冒烟 v2 并增加执行锁后通过；六份 T19 候选源码、科学窗口、种子、五组案例及门槛未改。两次状态重建均只运行一次，五组案例均正常结束，未按 GT 挑选或追加样本。
+
+初始 SFTP 与单连接数据流传输过慢，改用八个只读 SSH 字节段并行下载，并以完整 ZIP SHA256 校验；这是归档传输调整，不是科学实验重跑。
+
+## 证据入口
+
+- [冻结协议](protocol.json)、[原 T19 登记](T19_diagnostic_registration.json)、[初始执行锁](execution_lock.json)、[冒烟 v2 执行锁](execution_lock_v2.json)。
+- [首次失败及停止](receipts/launch.json)、[输入修复登记](receipts/smoke_fixture_repair_v2.json)、[真实候选冒烟通过](receipts/candidate_gpu_smoke_v2.json)、[五组完成回执](receipts/launch_v2.json)。
+- [原始结果封存](receipts/raw_seal.json)、[服务器 CPU 评分](receipts/server_scoring.json)、[本地归档校验](receipts/local_archive_validation.json)、[本地独立复算](independent_cpu/receipts/scoring.json)、[独立审计](receipts/independent_audit.json)。
+- [五组结果 CSV](T20_五组诊断结果.csv)、[160 条逐帧结果](T20_逐帧误差与移动.csv)、[60 条逐轮结果](T20_逐轮目标与GT误差.csv)。
+- [有效权重诊断](T20_有效权重诊断.csv)、[首轮逐帧权重](T20_首轮逐帧权重诊断.csv)、[frame158 源深度检查](receipts/source_depth_inspection.json)。
+- runs/ 内两组分别保存 native_state.pt、原生锚点、相机 trace、Gaussian 快照和各案例完整 NPZ 记录；source/ 为独立候选，旧 T17/T19 未覆盖。
+- [服务器诊断后状态](receipts/server_after_diagnostics.json)、[交付清单](delivery_manifest.json)、[交付核验](receipts/delivery_validation.json)。
+
+## 接下来应该做什么
+
+本轮已完成原 T19 登记的 GPU 诊断，先保留“关键帧输出固定”的工程候选及全部负结果。尚未运行修复后的完整 DEV200 补全轨迹对照，尚未解决 ID 位姿与 disparity／特征的一致几何，也没有获得新的正式采用资格。
+
+下一轮优先登记同状态的小对照，区分传感器深度支持、DROID 估计几何可信度与 learned 匹配误差，再评价原始 BA 和一种事先冻结的权重／累计移动约束候选。不能仅凭缺深度比例就删去全部对应像素，也不能按 GT 选择半径、接受帧或优化轮次。先用完整原生补全流程和未裁剪的轨迹评分确认候选，再决定是否扩大到完整 DEV。
+
+T20 现在已保存本轮补全所需的原生 video／特征／网络／RNG 状态，后续这段固定状态回放可复用这些封存输入，不必再次从零重建 200 帧；这不代表保存了能继续完整 SLAM 或高斯建图优化的全部状态。扩大完整 DEV 前，还应核对同 seed 状态重建的稳定性，避免把重建差异误算成候选收益。
+
+暂不重跑 FULL 整批验收；T14 的 W1/W2、本轮 DEV 和异常种子均已曝光，若以后需要正式采用，另选未曝光数据并重新登记。服务器未自动关机；本轮 GPU worker 已结束，之后的评分、审计和打包均为 CPU／文件操作。
+'''
+(F/'T20_GPU补全诊断结果与下一步.md').write_text(text,encoding='utf-8')
+print(json.dumps({'status':'REPORT_WRITTEN','figures':2,'document':'T20_GPU补全诊断结果与下一步.md'},ensure_ascii=False))

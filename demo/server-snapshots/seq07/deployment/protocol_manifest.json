@@ -1,0 +1,10 @@
+{
+  "status": "ALL_200_SEEN_DEPLOYMENT_NO_HELDOUT",
+  "split_sha256": "0e7367ca08f601ad0af330522049779042a56ba855c560120f9fc537876b2cf5",
+  "frames": [
+    850,
+    1049
+  ],
+  "pose_source": "estimated ORB-SLAM3 P2 c2w",
+  "GT_input": false
+}

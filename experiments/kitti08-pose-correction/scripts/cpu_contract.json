@@ -1,0 +1,7 @@
+{
+  "status": "PASS_1024_CONTINUOUS_POSE_PROPAGATION_CONTRACTS",
+  "checks": 1024,
+  "max_error": 1.9895196601282805e-13,
+  "GPU_calls": 0,
+  "scope": "Matrix chain, origin invariance, no-feedback bypass and rejected-candidate fallback; no SLAM/GPU trajectory yet."
+}

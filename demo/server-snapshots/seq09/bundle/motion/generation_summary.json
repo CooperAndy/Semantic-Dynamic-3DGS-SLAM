@@ -1,0 +1,72 @@
+{
+  "status": "GENERATED",
+  "pairs": 199,
+  "frame_range": [
+    0,
+    199
+  ],
+  "pose_file": "/root/autodl-tmp/demo_batch09_17_20261107/seq09_000300_000499/poses_estimated_camera2.txt",
+  "pose_coordinate_input": "p2",
+  "pose_coordinate_internal": "p2_c2w",
+  "depth_dir": "/root/autodl-tmp/seq09_300_499_demo_tuning_20261114/bundle/motion_depth",
+  "instance_dir": "/root/autodl-tmp/seq09_300_499_demo_tuning_20261114/bundle/instances",
+  "calibration": {
+    "fx": 707.0912,
+    "fy": 707.0912,
+    "cx": 601.8873,
+    "cy": 183.1104,
+    "t_c2_c0": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.06103058397167452
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -0.0014397217004244998
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.006203223
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "raft": {
+    "weights": "Raft_Large_Weights.C_T_SKHT_V2",
+    "url": "https://download.pytorch.org/models/raft_large_C_T_SKHT_V2-ff5fadd5.pth",
+    "checkpoint": "/root/.cache/torch/hub/checkpoints/raft_large_C_T_SKHT_V2-ff5fadd5.pth",
+    "checkpoint_sha256": "ff5fadd56d26b40647388883af1547351ea17868b765c05b27231e72dd16a322"
+  },
+  "torch_version": "2.8.0+cu128",
+  "torchvision_version": "0.23.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "raft_inference_ms_per_direction": {
+    "mean": 38.00143470903437,
+    "median": 36.19005437940359,
+    "p95": 39.73156372085213
+  },
+  "valid_ratio": {
+    "mean": 0.5813700352208554,
+    "median": 0.5868700674573432,
+    "p95": 0.6410621224813721
+  },
+  "thresholds": {
+    "fb_abs": 1.0,
+    "fb_relative": 0.05,
+    "occlusion_abs_m": 0.5,
+    "occlusion_relative": 0.05,
+    "probability_center": 3.0,
+    "probability_temperature": 1.0
+  }
+}

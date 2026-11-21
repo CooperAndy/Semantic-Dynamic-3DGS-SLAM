@@ -1,0 +1,34 @@
+--- before200/run_window.py
++++ current/run_window.py
+@@ -49,7 +49,7 @@
+     output.mkdir(exist_ok=False)
+     cfg,args=window_settings(a.frames,output)  # Length set BEFORE model construction.
+     setup_seed(cfg['setup_seed'])
+-    meta = {'status':'RUNNING','variant':'R0_author_GT_assisted','frames':a.frames,'index_sha256':sha256(index),'torch':torch.__version__,'gpu':torch.cuda.get_device_name(),'args':vars(args),'cfg':cfg,'notes':['Author GT initialization / early poses retained','Author evaluator scale=True retained; not metric KITTI or GT-free evidence','Reduced buffer capacity only; training/optimization defaults retained','Short window input count does not establish GS tracking was exercised']}
++    meta = {'status':'RUNNING','variant':'R0_author_GT_assisted','frames':a.frames,'index_sha256':sha256(index),'mask_manifest_sha256':sha256(DATA/'seg_mask/manifest.json'),'adapter_sha256':sha256(Path(__file__)),'torch':torch.__version__,'gpu':torch.cuda.get_device_name(),'args':vars(args),'cfg':cfg,'notes':['Author GT initialization / early poses retained','Author evaluator scale=True retained; not metric KITTI or GT-free evidence','Reduced buffer capacity only; training/optimization defaults retained','Short window input count does not establish GS tracking was exercised','Final Gaussian NPZ is an adapter snapshot, not an author final-color-refinement checkpoint']}
+     (output/'run_manifest.json').write_text(json.dumps(meta,indent=2))
+     counts = {key:0 for key in ['input_frames','input_frames_submitted','gs_tracking_calls','gs_mapping_calls','gs_pose_optimization_calls','gs_render_calls','mapping_optimize_calls']}
+     started = time.time()
+@@ -61,7 +61,10 @@
+             @functools.wraps(original)
+             def wrapped(*args,**kwargs):
+                 counts[key] += 1
+-                return original(*args,**kwargs)
++                result = original(*args,**kwargs)
++                if name=='mapping':
++                    print(json.dumps({'event':'mapping_completed','keyframe':int(args[0]),'gaussians':int(mapper.gaussians.get_xyz().shape[0])}),flush=True)
++                return result
+             setattr(mapper,name,wrapped)
+         for name,key in [('tracking','gs_tracking_calls'),('mapping','gs_mapping_calls'),('optimize_cam_in_batch','gs_pose_optimization_calls'),('optimize_map','mapping_optimize_calls')]: count_method(name,key)
+         module = importlib.import_module(type(mapper).__module__)
+@@ -88,6 +91,10 @@
+         n = model.video.counter.value
+         if n==0 or model.mapping_counter==0:
+             raise CoverageIncomplete('DROID warmup or GS mapping was not reached')
++        gaussian_arrays = {key:getattr(mapper.gaussians,method)().detach().cpu().numpy() for key,method in [('xyz','get_xyz'),('features_dc','get_features_dc'),('features_rest','get_features_rest'),('scaling','get_scaling'),('rotation','get_rotation'),('opacity','get_opacity')]}
++        assert gaussian_arrays['xyz'].shape[0]>0 and all(np.isfinite(x).all() for x in gaussian_arrays.values()), 'Empty or non-finite final Gaussian state'
++        np.savez(output/'gaussian_snapshot.npz',**gaussian_arrays,estimated_keyframe_c2w=mapper.estimate_c2w_list[:n].cpu().numpy(),reference_keyframe_c2w=mapper.gt_c2w_list[:n].cpu().numpy(),keyframe_input_indices=model.video.tstamp[:n].cpu().numpy())
++        meta['gaussian_snapshot']={'file':'gaussian_snapshot.npz','sha256':sha256(output/'gaussian_snapshot.npz'),'count':int(gaussian_arrays['xyz'].shape[0]),'all_finite':True}
+         estimated = torch.stack([get_tensor_from_camera(x,Tquad=True).cpu() for x in mapper.estimate_c2w_list[:n]])
+         model.video.poses[:n] = lietorch.cat([SE3(estimated)],0).inv().data
+         trajectory = model.terminate_woBA(data)

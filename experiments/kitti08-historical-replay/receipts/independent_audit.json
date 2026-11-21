@@ -1,0 +1,69 @@
+{
+  "status": "PASS_SIX1000_FRAME_PAIRED_RUNS",
+  "at": "2026-10-27T23:05:42.984486+08:00",
+  "runs": [
+    {
+      "variant": "B00C0_S0",
+      "steps": 57000,
+      "history_slots": 0,
+      "history_changed": 0,
+      "births": 2846389
+    },
+    {
+      "variant": "B03C0_S0",
+      "steps": 57000,
+      "history_slots": 2280,
+      "history_changed": 2253,
+      "births": 2846389
+    },
+    {
+      "variant": "B00C0_S1",
+      "steps": 57000,
+      "history_slots": 0,
+      "history_changed": 0,
+      "births": 2846665
+    },
+    {
+      "variant": "B03C0_S1",
+      "steps": 57000,
+      "history_slots": 2280,
+      "history_changed": 2251,
+      "births": 2846665
+    },
+    {
+      "variant": "B00C0_S2",
+      "steps": 57000,
+      "history_slots": 0,
+      "history_changed": 0,
+      "births": 2846329
+    },
+    {
+      "variant": "B03C0_S2",
+      "steps": 57000,
+      "history_slots": 2280,
+      "history_changed": 2258,
+      "births": 2846329
+    }
+  ],
+  "paired": [
+    {
+      "seed": 0,
+      "same_initial_sha": "43f43744262d986517433286fb923136c8647571591ba3bd38060bcfda3a24a7",
+      "same_actual_births": true
+    },
+    {
+      "seed": 1,
+      "same_initial_sha": "43f43744262d986517433286fb923136c8647571591ba3bd38060bcfda3a24a7",
+      "same_actual_births": true
+    },
+    {
+      "seed": 2,
+      "same_initial_sha": "43f43744262d986517433286fb923136c8647571591ba3bd38060bcfda3a24a7",
+      "same_actual_births": true
+    }
+  ],
+  "all_camera_arrays_identical": true,
+  "past200_cameras_unchanged": true,
+  "GT_reads": 0,
+  "native_GPU_calls": 0
+}

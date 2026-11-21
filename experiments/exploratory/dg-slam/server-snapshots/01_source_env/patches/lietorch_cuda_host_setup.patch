@@ -1,0 +1,10 @@
+--- lietorch/setup.py.before_host_split
++++ lietorch/setup.py
+@@ -37,6 +37,7 @@
+                 osp.join(ROOT, 'eigen')],
+             sources=[
+                 'lietorch/src/lietorch.cpp', 
++                *sorted(glob.glob('lietorch/src/split_gpu/*.cpp')),
+                 *sorted(glob.glob('lietorch/src/split_gpu/*.cu')),
+                 *sorted(glob.glob('lietorch/src/split_cpu/*.cpp'))],
+             extra_compile_args={

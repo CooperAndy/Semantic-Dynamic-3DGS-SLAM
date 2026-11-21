@@ -1,0 +1,23 @@
+{
+  "status": "S1_FIVE_THRESHOLDS_COMMON_SUPPORT_COMPLETE",
+  "updated_at": "2026-09-29",
+  "scope": "KITTI seq00 frames 000000-000199",
+  "original_preregistered_thresholds": [
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "later_extension_threshold": 0.5,
+  "tested_thresholds": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "gpu_mapping_complete": true,
+  "common_support_complete": true,
+  "depth_target": "raw RAFT pseudo-depth, not LiDAR ground truth",
+  "historical_audit": "audit_summary_20260917.json"
+}

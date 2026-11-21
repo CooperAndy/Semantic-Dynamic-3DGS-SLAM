@@ -1,0 +1,56 @@
+{
+  "at": "2026-10-27T23:05:25.837621+08:00",
+  "runs": [
+    {
+      "variant": "B00C0_S0",
+      "status": "COMPLETE_WINDOW",
+      "frames": 1000,
+      "wall_seconds": 2644.0899245105684,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "variant": "B03C0_S0",
+      "status": "COMPLETE_WINDOW",
+      "frames": 1000,
+      "wall_seconds": 2321.5773034729064,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "variant": "B00C0_S1",
+      "status": "COMPLETE_WINDOW",
+      "frames": 1000,
+      "wall_seconds": 2320.4935113918036,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "variant": "B03C0_S1",
+      "status": "COMPLETE_WINDOW",
+      "frames": 1000,
+      "wall_seconds": 2354.1973231993616,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "variant": "B00C0_S2",
+      "status": "COMPLETE_WINDOW",
+      "frames": 1000,
+      "wall_seconds": 2368.6111812889576,
+      "exit_code": 0,
+      "error": null,
+      "execution_host": "p10781"
+    },
+    {
+      "variant": "B03C0_S2",
+      "status": "COMPLETE_WINDOW",
+      "frames": 1000,
+      "wall_seconds": 2370.712184358388,
+      "exit_code": 0,
+      "error": null,
+      "execution_host": "p10781"
+    }
+  ],
+  "interrupted_attempt_in_provenance": true
+}

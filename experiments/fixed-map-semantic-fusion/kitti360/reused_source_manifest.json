@@ -1,0 +1,42 @@
+[
+  {
+    "source": "/root/autodl-tmp/SplaTAM/utils/recon_helpers.py",
+    "sha256": "a70401ab285bd895e3c406440a744b6a093793f97fb229f1edcbdbcb2abc681a",
+    "snapshot": "03_方法冻结与隔离评价/kitti360_isolated_v1/reused_source_snapshots/0_recon_helpers.py"
+  },
+  {
+    "source": "/root/autodl-tmp/SplaTAM/utils/slam_helpers.py",
+    "sha256": "a3e67277378f93f939861971276ccd75ae38c98064c56b0db470b9aec32d3020",
+    "snapshot": "03_方法冻结与隔离评价/kitti360_isolated_v1/reused_source_snapshots/1_slam_helpers.py"
+  },
+  {
+    "source": "/root/miniconda3/lib/python3.12/site-packages/diff_gaussian_rasterization/__init__.py",
+    "sha256": "a7f1dc461c5c2524f9c8a3d6f706eb49fc269b87b4001f219386f305f9b1beab",
+    "snapshot": "03_方法冻结与隔离评价/kitti360_isolated_v1/reused_source_snapshots/2___init__.py"
+  },
+  {
+    "source": "/root/miniconda3/lib/python3.12/site-packages/diff_gaussian_rasterization/_C.cpython-312-x86_64-linux-gnu.so",
+    "sha256": "4afa94b9a287c553e0f893c3a9e18b30f6599df02ce6c1f805765c2149b19d70",
+    "snapshot": "03_方法冻结与隔离评价/kitti360_isolated_v1/reused_source_snapshots/3__C.cpython-312-x86_64-linux-gnu.so"
+  },
+  {
+    "source": "/root/autodl-tmp/SplaTAM/scripts/splatam.py",
+    "sha256": "f407c2d42d54e37a42e85ed7f0593b58a63aadbbc4242512405035cff0dab655",
+    "snapshot": "03_方法冻结与隔离评价/kitti360_isolated_v1/reused_source_snapshots/4_splatam.py"
+  },
+  {
+    "source": "/root/autodl-tmp/SplaTAM/datasets/gradslam_datasets/kitti.py",
+    "sha256": "ce5a3d9d0646ed092fdb3a985956c76073d11121cd4b81ecb97b00b988750a1b",
+    "snapshot": "03_方法冻结与隔离评价/kitti360_isolated_v1/reused_source_snapshots/5_kitti.py"
+  },
+  {
+    "source": "/root/autodl-tmp/SplaTAM/datasets/gradslam_datasets/basedataset.py",
+    "sha256": "032a45d1622e287925c0df32ff5b17a703a7b5ff1e59b90c940ace992b1a76fb",
+    "snapshot": "03_方法冻结与隔离评价/kitti360_isolated_v1/reused_source_snapshots/6_basedataset.py"
+  },
+  {
+    "source": "/root/autodl-tmp/slam_project/stage2_semantic/scripts/generate_mask2former_semantics_kitti.py",
+    "sha256": "e1d6d5ba80ad4fd1868617f8d183e9e60c350aee0a7aee8f099832871814f5c2",
+    "snapshot": "03_方法冻结与隔离评价/kitti360_isolated_v1/reused_source_snapshots/7_generate_mask2former_semantics_kitti.py"
+  }
+]

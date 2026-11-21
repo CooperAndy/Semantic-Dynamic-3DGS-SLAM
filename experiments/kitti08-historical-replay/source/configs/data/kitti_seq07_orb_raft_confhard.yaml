@@ -1,0 +1,15 @@
+dataset_name: "kitti"
+
+# Same P2/Twc trajectory as E3. Only the depth source and fixed confidence gate differ.
+pose_path: "/root/autodl-tmp/stage1_14r_cross_scene/inputs/seq07_orb_kitti_200.txt"
+depth_folder: "/root/autodl-tmp/stage1_14r_cross_scene/results/confidence_seq07_200/depth_confhard"
+
+camera_params:
+  image_height: 370
+  image_width: 1226
+  fx: 707.0912
+  fy: 707.0912
+  cx: 601.8873
+  cy: 183.1104
+  png_depth_scale: 1.0
+  crop_edge: 0

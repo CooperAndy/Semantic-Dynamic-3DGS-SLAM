@@ -1,0 +1,49 @@
+{
+  "sceneId": "kitti10_orb_f1_resume796",
+  "title": "KITTI 10 · ORB F1 resumed",
+  "dataset": "KITTI odometry sequence 10",
+  "sourceFrames": [
+    0,
+    999
+  ],
+  "gaussianCount": 18080179,
+  "defaultVariant": "F1",
+  "fidelityMode": "full-resolution",
+  "poseProtocol": "Fixed causal ORB estimated P2 poses (no GT input); resumed after frame 796",
+  "depthProtocol": "RAFT-Stereo; confidence >= 0.60; 0.5–40 m",
+  "defaultCameraFrame": 99,
+  "assetManifest": "scene-data/KITTI10_ORB_F1_Resume796/manifest.json",
+  "variants": {
+    "F1": {
+      "label": "ORB F1 · Seed 0 · Resumed",
+      "description": "Fixed ORB; depth confidence 0.60; 4000-step appearance refinement. Resumed after frame 796; all 1000 views seen.",
+      "rgb": "scene-data/KITTI10_ORB_F1_Resume796/RGB.ply",
+      "rgbWithTrajectory": "scene-data/KITTI10_ORB_F1_Resume796/RGB_with_Trajectory.ply",
+      "manifest": "scene-data/KITTI10_ORB_F1_Resume796/manifest.json",
+      "sogLod": "scene-data/KITTI10_ORB_F1_Resume796/streamed_sog/lod-meta.json"
+    }
+  },
+  "assets": {
+    "rgb": "scene-data/KITTI10_ORB_F1_Resume796/RGB.ply",
+    "rgbWithTrajectory": "scene-data/KITTI10_ORB_F1_Resume796/RGB_with_Trajectory.ply",
+    "cameraPoses": "scene-data/KITTI10_ORB_F1_Resume796/camera_poses.json",
+    "viewerSettings": "scene-data/KITTI10_ORB_F1_Resume796/viewer_settings.json",
+    "trajectoryViewerSettings": "scene-data/KITTI10_ORB_F1_Resume796/viewer_settings_trajectory.json",
+    "semantic": "scene-data/KITTI10_ORB_F1_Resume796/Semantic.ply",
+    "sogLod": "scene-data/KITTI10_ORB_F1_Resume796/streamed_sog/lod-meta.json"
+  },
+  "cameraPathLayer": {
+    "enabled": true,
+    "variant": "F1",
+    "asset": "scene-data/KITTI10_ORB_F1_Resume796/camera_path.ply",
+    "manifest": "scene-data/KITTI10_ORB_F1_Resume796/manifest.json",
+    "gaussianCount": 8195,
+    "sha256": "3adbf2ea19c3f7f6d5de0418baa94c7cf92a506cd3470731ff38fb5192341ba4"
+  },
+  "semanticGaussianCount": 18080179,
+  "semanticManifest": "scene-data/KITTI10_ORB_F1_Resume796/semantic_manifest.json",
+  "semanticSource": "Mask2Former Cityscapes-19, offline fixed-map fusion from 1000 seq10 images",
+  "semanticStatus": "Predicted categories; not motion. Fixed final map was fused offline because some Gaussian birth frames are unknown. No semantic ground-truth accuracy or object binding has been verified.",
+  "semanticMapId": "kitti10_orb_f1_resume796_semantic",
+  "semanticRelation": "same RGB geometry, opacity, rotation and Gaussian order; category colors replace RGB"
+}

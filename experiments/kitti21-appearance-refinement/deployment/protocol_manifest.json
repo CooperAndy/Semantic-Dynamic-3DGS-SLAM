@@ -1,0 +1,11 @@
+{
+  "status": "ALL_200_SEEN_DEPLOYMENT_NO_HELDOUT",
+  "split_sha256": "daf29b3b843ae30ba14e10b17dd0a021fb560b5d960b119b82441af4223651d9",
+  "roi_mask_ledger_sha256": "fe242ad1138e6445e5d71df55b674115674208b3f0f9412efbf9f085761a4f7f",
+  "frames": [
+    1200,
+    1399
+  ],
+  "pose_source": "estimated ORB-SLAM3 P2 c2w",
+  "after_test_consumed_sha256": "56b1528be48fca527b92496f73a16216a6023b30a7c22a5e3720429fb1661cea"
+}

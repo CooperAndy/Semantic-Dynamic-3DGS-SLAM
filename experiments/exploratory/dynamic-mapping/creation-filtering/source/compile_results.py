@@ -1,0 +1,9 @@
+from pathlib import Path
+import json,csv
+p=Path(r'阶段2/第十六轮_动态创建过滤与成果_20261031');a=json.loads(Path(r'2026.9.6-9/第11R_静态语义GaussianMap与最终评估/第11R_Holdout公平对照/server_results/analysis/fair_holdout_summary.json').read_text(encoding='utf8'));b=json.loads(Path(r'2026.9.6-9/第14R_E6a跨场景泛化验证/server_results/results/formal_analysis/cross_scene_summary.json').read_text(encoding='utf8'));rows=[]
+for method,x in a['runs'].items():
+ y=x['held_out'];rows.append({'scope':'KITTI00 heldout same sequence 10 frames','method':method,'psnr':y['psnr'],'ms_ssim':y['ssim'],'lpips':y['lpips'],'gaussians':x['gaussian_count'],'mapping_s_per_frame':x['runtime']['mapping_seconds_per_frame'],'gpu_peak_gib':x['runtime']['peak_cuda_memory_gib'],'evidence':str(Path(r'2026.9.6-9/第11R_静态语义GaussianMap与最终评估/第11R_Holdout公平对照/server_results/analysis/fair_holdout_summary.json').resolve())})
+for x in b['summary']:rows.append({'scope':'KITTI07 heldout same sequence 10 frames','method':x['method'],'psnr':x['psnr'],'ms_ssim':x['ssim'],'lpips':x['lpips'],'gaussians':x['gaussian_count'],'mapping_s_per_frame':None,'gpu_peak_gib':None,'evidence':str(Path(r'2026.9.6-9/第14R_E6a跨场景泛化验证/server_results/results/formal_analysis/cross_scene_summary.json').resolve())})
+for mode in ['D0','D3']:
+ z=list(csv.DictReader((p/'results/Scene02/map_per_frame.csv').open()));q=[x for x in z if x['policy']==mode];rows.append({'scope':'Scene02 DEV 206-231 seen-view final map 26 frames','method':mode,'psnr':sum(float(x['psnr']) for x in q)/26,'ms_ssim':sum(float(x['ssim']) for x in q)/26,'lpips':sum(float(x['lpips']) for x in q)/26,'gaussians':int(q[-1]['total']),'mapping_s_per_frame':None,'gpu_peak_gib':None,'evidence':'results/Scene02/map_per_frame.csv'})
+with (p/'results/FYP_results_table.csv').open('w',encoding='utf-8-sig',newline='') as f:w=csv.DictWriter(f,fieldnames=rows[0]);w.writeheader();w.writerows(rows)

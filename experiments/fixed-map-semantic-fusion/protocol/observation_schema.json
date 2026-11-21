@@ -1,0 +1,21 @@
+{
+  "source_frame_identity": [
+    "dataset",
+    "sequence",
+    "camera",
+    "original_frame"
+  ],
+  "input_version": "per-input SHA256 lock; version change requires another run",
+  "gaussian_identity": "base source_gaussian_index",
+  "support_unit": "distinct effective source frame per Gaussian",
+  "replay": "same frame/version no-op; changed version raises error",
+  "checkpoint": "evidence and processed ledger committed together using atomic file replace",
+  "frame_aggregation_candidate": "implemented shared alpha-weighted hard class histogram, normalized within source frame; unit budget",
+  "association_cache": "native color adjoint alpha/transmittance per-Gaussian footprint; real 180-frame engineering cache verified",
+  "cached_2d_label": "hard Cityscapes-19 selected class",
+  "cached_2d_confidence": "selected semantic class evidence / sum of 19 class evidence; scalar, not full vector or calibrated probability",
+  "provenance_scope": "KITTI08 generation receipt and model hash bound by Step00 20261007; scalar field semantics audited",
+  "full_class_distribution_available": false,
+  "history_consistency": "disabled",
+  "depth_input_version": "SGBM_ENGINEERING_NEW_VERSION; not historical RAFT replacement"
+}

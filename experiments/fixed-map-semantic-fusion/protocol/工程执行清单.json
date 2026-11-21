@@ -1,0 +1,24 @@
+{
+  "phase": "CPU_ONLY",
+  "groups": [
+    "S0",
+    "S1",
+    "S-G",
+    "S2",
+    "S2-H"
+  ],
+  "map_lock": "3244884f5a22ebfc6cf94b4ec0e48ddb4f666f5803938bc5e53cc4c62ae6031b",
+  "init_status": "PASS_CPU",
+  "cpu_contracts": "10/10 PASS",
+  "native_renderer": "PREPARED_NOT_EXECUTED",
+  "rgb_invariance": "PENDING_GPU",
+  "real_dev_comparison": "PENDING_INPUT_AND_NATIVE_CACHE",
+  "independent_gt": "NOT_FOUND_IN_AUDITED_INPUTS",
+  "oracle": "SKIPPED_NO_GT",
+  "formal_freeze": "NOT_ISSUED",
+  "learning": "NOT_STARTED",
+  "environment": {
+    "python": "3.12.4",
+    "numpy": "1.26.4"
+  }
+}

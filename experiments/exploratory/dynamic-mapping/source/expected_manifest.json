@@ -1,0 +1,35 @@
+[
+  {
+    "path": "/root/autodl-tmp/stage2_round16_backup_v1/scene02_run.tar.gz",
+    "bytes": 340949907,
+    "sha256": "eb634030619ea9d88911c9a5ed87823e3263b94c87e624bbb3abb9fe81059da1",
+    "seconds": 12.20501075591892,
+    "note": "Scene02 bridge uses symlinks to historical RGB/depth; retain original referenced files or dereference when moving"
+  },
+  {
+    "path": "/root/autodl-tmp/stage2_round16_backup_v1/scene06_audit.tar.gz",
+    "bytes": 1411142,
+    "sha256": "a8abef16c9467983097883c96de03599f1819eee9033e72068aa9aa875a3163b",
+    "seconds": 0.05402554711326957,
+    "note": "archive"
+  },
+  {
+    "path": "/root/autodl-tmp/stage2_round16_backup_v1/gaussian_export.tar.gz",
+    "bytes": 161710704,
+    "sha256": "2dd753a5b2e1bda1d06ab0b79867bb10cc16b76d16a257787a63c33f32f617fb",
+    "seconds": 6.493517399067059,
+    "note": "archive"
+  },
+  {
+    "path": "/root/autodl-tmp/stage2_round16_backup_v1/scene02_bridge_dereferenced.tar.gz",
+    "bytes": 10455051,
+    "sha256": "c0f0a27fb7346ade64933cae3691841c4de615e431176cfc5c2489783ee41d63",
+    "note": "bridge with input links dereferenced"
+  },
+  {
+    "path": "/root/autodl-tmp/SplaTAM_e6b/experiments/KITTI/seq00_e6a_confhard_holdout_200_0/params.npz",
+    "bytes": 168279730,
+    "sha256": "58ba466cdee359f2658cef2ce1d1f91b7061ee6c0886da1aedb44ca6acd0a934",
+    "note": "original E6a full parameters; PLY is not a substitute"
+  }
+]

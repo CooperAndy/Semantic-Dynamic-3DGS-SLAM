@@ -1,0 +1,133 @@
+{
+  "status": "FORMAL_S2_COMMON_SUPPORT_COMPLETE",
+  "protocol_manifest": "/root/autodl-tmp/slam_project/stage1r_confidence_mapping/results/s2_frame_efficiency_20260919/s2_protocol_manifest.json",
+  "budget_curve_modes": [
+    "m025",
+    "m050",
+    "m100",
+    "m190"
+  ],
+  "matched_view_noheldout_comparison": {
+    "heldout_mode": "m190",
+    "in_sample_mode": "noheldout200",
+    "psnr_difference_in_sample_minus_heldout": 0.9811993598937985,
+    "ms_ssim_difference": 0.10419808626174931,
+    "lpips_difference": -0.08179863244295116,
+    "depth_l1_difference_m": -0.46854648888111117,
+    "warning": "The no-held-out score is in-sample reconstruction and is not a generalization metric."
+  },
+  "validations": {
+    "m025": {
+      "mapping_frames_match_manifest": true,
+      "evaluation_role": "heldout",
+      "evaluation_frames": [
+        19,
+        39,
+        59,
+        79,
+        99,
+        119,
+        139,
+        159,
+        179,
+        199
+      ],
+      "heldout_mapping_overlap": [],
+      "heldout_keyframe_overlap": []
+    },
+    "m050": {
+      "mapping_frames_match_manifest": true,
+      "evaluation_role": "heldout",
+      "evaluation_frames": [
+        19,
+        39,
+        59,
+        79,
+        99,
+        119,
+        139,
+        159,
+        179,
+        199
+      ],
+      "heldout_mapping_overlap": [],
+      "heldout_keyframe_overlap": []
+    },
+    "m100": {
+      "mapping_frames_match_manifest": true,
+      "evaluation_role": "heldout",
+      "evaluation_frames": [
+        19,
+        39,
+        59,
+        79,
+        99,
+        119,
+        139,
+        159,
+        179,
+        199
+      ],
+      "heldout_mapping_overlap": [],
+      "heldout_keyframe_overlap": []
+    },
+    "m190": {
+      "mapping_frames_match_manifest": true,
+      "evaluation_role": "heldout",
+      "evaluation_frames": [
+        19,
+        39,
+        59,
+        79,
+        99,
+        119,
+        139,
+        159,
+        179,
+        199
+      ],
+      "heldout_mapping_overlap": [],
+      "heldout_keyframe_overlap": []
+    },
+    "noheldout200": {
+      "mapping_frames_match_manifest": true,
+      "evaluation_role": "in_sample",
+      "evaluation_frames": [
+        19,
+        39,
+        59,
+        79,
+        99,
+        119,
+        139,
+        159,
+        179,
+        199
+      ],
+      "heldout_mapping_overlap": [
+        19,
+        39,
+        59,
+        79,
+        99,
+        119,
+        139,
+        159,
+        179,
+        199
+      ],
+      "heldout_keyframe_overlap": [
+        19,
+        39,
+        59,
+        79,
+        99,
+        119,
+        139,
+        159,
+        179,
+        199
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "status": "FROZEN_BEFORE_TEST_RGB_READ",
+  "split_sha256": "124b05e5267e15bada003263fc0a268890505e3671e6f91631ca7d885713e31f",
+  "roi_mask_ledger_sha256": "fe242ad1138e6445e5d71df55b674115674208b3f0f9412efbf9f085761a4f7f",
+  "evaluator_sha256": "33269c529fe7f05b1a9f91cdca6e1ad25a0a44d286bccddef3f15422f3a96bd6",
+  "pre_registered_success": {
+    "paired_mean_psnr_delta_db_min": 0.0,
+    "positive_frames_min": 15,
+    "lpips_delta_max": 0.01,
+    "hole_rate_delta_max": 0.01
+  },
+  "candidate_order": [
+    {
+      "name": "F0",
+      "map_path": "/root/autodl-tmp/seq21_chy_20260926/runs/train160_orb_raft_t060/params.npz",
+      "map_sha256": "ce305ae11f22b24217bf99edc17ae94fe35c417aa545a5e6c0243436f24cf972"
+    },
+    {
+      "name": "F1",
+      "map_path": "/root/autodl-tmp/seq21_chy_20260926/runs/F1_train160/params.npz",
+      "map_sha256": "f2331609216557431cbe463beac44324dfdb63e5c4a80accf8d6753a1e35231f"
+    }
+  ],
+  "dev_pair_summary_sha256": "79476b105e18b2bec1f65c6a9ff1334d1ff592ef9482b373331357762d9703d9"
+}

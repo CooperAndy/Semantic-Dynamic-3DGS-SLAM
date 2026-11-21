@@ -1,0 +1,168 @@
+{
+  "status": "PASS_CPU_STEREO_PIPELINE_SOURCE_WEIGHT_AND4000_IMAGE_LOCKS_PENDING_GPU",
+  "at": "2026-10-29T04:37:08.592082+08:00",
+  "windows": [
+    {
+      "id": "K05_F000000_000999",
+      "sequence": "05",
+      "source_start": 0,
+      "frame_count": 1000,
+      "shape": [
+        370,
+        1226
+      ],
+      "K": [
+        [
+          707.0912,
+          0.0,
+          601.8873
+        ],
+        [
+          0.0,
+          707.0912,
+          183.1104
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection_beta": 380.34753,
+      "input_view": "/root/autodl-tmp/stage3_g21_inputs_20261029_p47149/windows/K05_F000000_000999/input_view",
+      "input_registration_sha256": "613ac1d1b6a4e4273a3c476b0ea8b0f5ec6a431e4d1dfbb7f73bc4e52dec1c93",
+      "frontend_audit_sha256": "df1372410fc7fb0d3dfdc50a1934d0b29f04c59106f26bd22de1596315069a2f",
+      "primary_pose_path": "/root/autodl-tmp/stage3_g21_inputs_20261029_p47149/windows/K05_F000000_000999/output/external_causal_P2_c2w.txt",
+      "primary_pose_sha256": "ef77fe8d93315698dad6af117843fb01ad300ed8bf6d4621860b5d587592d8c7",
+      "GT_quality_consulted": false
+    },
+    {
+      "id": "K10_F000000_000999",
+      "sequence": "10",
+      "source_start": 0,
+      "frame_count": 1000,
+      "shape": [
+        370,
+        1226
+      ],
+      "K": [
+        [
+          707.0912,
+          0.0,
+          601.8873
+        ],
+        [
+          0.0,
+          707.0912,
+          183.1104
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection_beta": 380.34753,
+      "input_view": "/root/autodl-tmp/stage3_g21_inputs_20261029_p47149/windows/K10_F000000_000999/input_view",
+      "input_registration_sha256": "de428d629672a4bf316ae94d037688914d88d9fa20314af7243dbfa1fc278cdf",
+      "frontend_audit_sha256": "834d341f49fddc55f766d814ea1ef87995fd16d54b5c754bd90262266c515a65",
+      "primary_pose_path": "/root/autodl-tmp/stage3_g21_inputs_20261029_p47149/windows/K10_F000000_000999/output/external_causal_P2_c2w.txt",
+      "primary_pose_sha256": "03965bffd378cf0cb563f346389c540a71c4e788f9c73e47588f6d6302b0183e",
+      "GT_quality_consulted": false
+    }
+  ],
+  "source_files": {
+    "common.py": "412ca7cb8bdd4d89dd3318497ea0408e8a485f4b13833d3ded5ea5422906bff2",
+    "prepare_cpu.py": "001b8cc5fda28fc656274754cb04e1b3bcb8028d098fa7655d5e31b7c77deabf",
+    "PROTOCOL.md": "e13c7fc2bf81735a92aa224bf945841dd2994dcc596c113e53fe887ec0292a63",
+    "runtime/raftstereo-middlebury.pth": "d22e84c0e431bf31d7cc66902c40601859eb40b35ef7f4399ea81276c2915819",
+    "source/left.py": "0b860b9224905b347aca555aeea12ebb921944fc3535edb60b6039ab1aa4a241",
+    "source/right.py": "167c3a6180dd22b67016bf28e7fe5168a2a671f1c8e381aa4e4a5850d2cf9317",
+    "source/confidence.py": "64022d185d8e6ec14171245846168c5e47e805fa74c1321734d23b0d69a12b4a",
+    "provenance/G19C_audit.json": "40145f07326e6d53b08236b3add39ace36d205a4336743f4515054098829cf49",
+    "provenance/G21_frontend_registration.json": "170ac7f68003cdc9d9bc06f794ec2ccec5816b706f8683d04b127ece34289103",
+    "templates/producer.py": "e1f81b9f044aea1b1d59bdf07503f1423fd9bc87dd72f5e7b60aa5832f7455da",
+    "templates/contract.py": "4027b16863a0f7f7ec015a071750c363bebc4c34de00b256595af87f58980a2d",
+    "templates/audit_parent.py": "6230853416dbab527329589f820c5a7110ec833e9ebf26f518fa8c90e62a8543",
+    "source/RAFT-Stereo/core/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source/RAFT-Stereo/core/corr.py": "cf3a9dacbfbfd28656f793a9857d066c7ce2a05fbceb3a3f3206522649c7be19",
+    "source/RAFT-Stereo/core/extractor.py": "7e384e51f70f705f8f46efc042afa5fc6fb848e07cf0314f2c9ec6a38a026972",
+    "source/RAFT-Stereo/core/raft_stereo.py": "107d836e37d341e4ca6f93446a448d2c3626fefb3145b1ca8ce5768fea55257a",
+    "source/RAFT-Stereo/core/stereo_datasets.py": "5ff3f2bfec30fee16982d003003941fecc3706b43815ffdcd37a8d9caaa13b58",
+    "source/RAFT-Stereo/core/update.py": "e3d8a9b402f58109cf7e4990d8a14d0d2a675b0b1f108edc42ee085e57133ec9",
+    "source/RAFT-Stereo/core/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source/RAFT-Stereo/core/utils/augmentor.py": "5e48a8ada05bb50e2b9347730d928b305b71752e6ab756144ffcee265caccdee",
+    "source/RAFT-Stereo/core/utils/frame_utils.py": "43cbd17f0d1e5ed28800fe93dd74b9c2038a80bd283847559d2eeabb9292b109",
+    "source/RAFT-Stereo/core/utils/utils.py": "65968f7bab52e4744dc36b7fab1d56b47a91cc0180b6f594387d730677d602c1"
+  },
+  "raft_core_files": [
+    {
+      "path": "source/RAFT-Stereo/core/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source/RAFT-Stereo/core/corr.py",
+      "bytes": 6628,
+      "sha256": "cf3a9dacbfbfd28656f793a9857d066c7ce2a05fbceb3a3f3206522649c7be19"
+    },
+    {
+      "path": "source/RAFT-Stereo/core/extractor.py",
+      "bytes": 10327,
+      "sha256": "7e384e51f70f705f8f46efc042afa5fc6fb848e07cf0314f2c9ec6a38a026972"
+    },
+    {
+      "path": "source/RAFT-Stereo/core/raft_stereo.py",
+      "bytes": 6116,
+      "sha256": "107d836e37d341e4ca6f93446a448d2c3626fefb3145b1ca8ce5768fea55257a"
+    },
+    {
+      "path": "source/RAFT-Stereo/core/stereo_datasets.py",
+      "bytes": 15051,
+      "sha256": "5ff3f2bfec30fee16982d003003941fecc3706b43815ffdcd37a8d9caaa13b58"
+    },
+    {
+      "path": "source/RAFT-Stereo/core/update.py",
+      "bytes": 5355,
+      "sha256": "e3d8a9b402f58109cf7e4990d8a14d0d2a675b0b1f108edc42ee085e57133ec9"
+    },
+    {
+      "path": "source/RAFT-Stereo/core/utils/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source/RAFT-Stereo/core/utils/augmentor.py",
+      "bytes": 12401,
+      "sha256": "5e48a8ada05bb50e2b9347730d928b305b71752e6ab756144ffcee265caccdee"
+    },
+    {
+      "path": "source/RAFT-Stereo/core/utils/frame_utils.py",
+      "bytes": 6096,
+      "sha256": "43cbd17f0d1e5ed28800fe93dd74b9c2038a80bd283847559d2eeabb9292b109"
+    },
+    {
+      "path": "source/RAFT-Stereo/core/utils/utils.py",
+      "bytes": 3068,
+      "sha256": "65968f7bab52e4744dc36b7fab1d56b47a91cc0180b6f594387d730677d602c1"
+    }
+  ],
+  "checkpoint_sha256": "d22e84c0e431bf31d7cc66902c40601859eb40b35ef7f4399ea81276c2915819",
+  "runtime_python": "/root/autodl-tmp/stage3_g05_runtime_20261025/venv/bin/python",
+  "model_parameters": "ParentG14 unchanged;32iters,mixed_precision,corr_alt",
+  "confidence_formula_source_sha256": "e1f81b9f044aea1b1d59bdf07503f1423fd9bc87dd72f5e7b60aa5832f7455da",
+  "depth_range_m": [
+    0.5,
+    80
+  ],
+  "confidence_selection_range_m": [
+    0.5,
+    40
+  ],
+  "seed_threshold": 0.8,
+  "loss_threshold": 0.2,
+  "seconds": 4.712592609226704,
+  "GPU_calls": 0,
+  "GT_scoring": false,
+  "quality_adoption": false
+}

@@ -1,0 +1,69 @@
+{
+  "sceneId": "kitti09_orb_f200_full",
+  "title": "KITTI 09 · 估计轨迹全量图",
+  "dataset": "KITTI odometry sequence 09",
+  "sourceFrames": [
+    300,
+    499
+  ],
+  "gaussianCount": 3166109,
+  "defaultVariant": "F1",
+  "fidelityMode": "full-resolution",
+  "poseProtocol": "ORB-SLAM3 estimated P2 camera poses (no GT input)",
+  "depthProtocol": "RAFT-Stereo confidence ≥0.60；0.5–40 m；原图未按车辆类别排除",
+  "defaultCameraFrame": 399,
+  "assetManifest": "scene-data/KITTI09_F200/KITTI09_F200_manifest.json",
+  "variants": {
+    "F200": {
+      "label": "F200 · 原始全量",
+      "description": "200帧已见视角部署图；固定 ORB-SLAM3 估计相机。",
+      "rgb": "scene-data/KITTI09_F200/KITTI09_F200_RGB.ply",
+      "rgbWithTrajectory": "scene-data/KITTI09_F200/KITTI09_F200_RGB_with_Trajectory.ply",
+      "manifest": "scene-data/KITTI09_F200/KITTI09_F200_manifest.json"
+    },
+    "F1": {
+      "label": "F1 · 外观优化",
+      "description": "固定几何、尺度、旋转与估计相机；仅优化 RGB/opacity，共800步；不是独立Test。",
+      "rgb": "scene-data/KITTI09_F1/KITTI09_F1_RGB.ply",
+      "rgbWithTrajectory": "scene-data/KITTI09_F1/KITTI09_F1_RGB_with_Trajectory.ply",
+      "manifest": "scene-data/KITTI09_F1/KITTI09_F1_manifest.json"
+    }
+  },
+  "assets": {
+    "rgb": "scene-data/KITTI09_F200/KITTI09_F200_RGB.ply",
+    "rgbWithTrajectory": "scene-data/KITTI09_F200/KITTI09_F200_RGB_with_Trajectory.ply",
+    "cameraPoses": "scene-data/KITTI09_F200/KITTI09_F200_camera_poses.json",
+    "viewerSettings": "scene-data/KITTI09_F200/viewer_settings_source_99.json",
+    "trajectoryViewerSettings": "scene-data/KITTI09_F200/viewer_settings_trajectory.json",
+    "semantic": "scene-data/KITTI09_F1_Semantic/KITTI09_F1_Semantic.ply"
+  },
+  "semanticGaussianCount": 3166109,
+  "semanticSource": "seq09 原图200帧 Mask2Former预测融合 · F1同点集",
+  "semanticStatus": "F1同点集语义预测；类别不等于运动状态，未做语义真值准确率评价。",
+  "semanticMapId": "kitti09_F1_semantic_same_points",
+  "semanticManifest": "scene-data/KITTI09_F1_Semantic/semantic_manifest.json",
+  "semanticRelation": "same F1 geometry, opacity and point order; display colors replaced",
+  "motionIndex": "scene-data/KITTI09_MotionDemo/index.json",
+  "dynamicVehicleRemoval": {
+    "version": 2,
+    "removedCount": 117942,
+    "gaussianCount": 3048167,
+    "maskSha256": "85d53025426b56e680e0f703ddcc4607cf48622e86ae3bdb6076b88bcd71ccee",
+    "manifest": "scene-data/KITTI09_VehicleCleanupV2/cleanup_manifest.json",
+    "semantic": "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F1_Semantic.ply",
+    "highlights": {
+      "F200": "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F200_RGB_Highlight.ply",
+      "F1": "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F1_RGB_Highlight.ply"
+    },
+    "variants": {
+      "F200": {
+        "rgb": "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F200_RGB.ply",
+        "rgbWithTrajectory": "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F200_RGB_with_Trajectory.ply"
+      },
+      "F1": {
+        "rgb": "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F1_RGB.ply",
+        "rgbWithTrajectory": "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F1_RGB_with_Trajectory.ply"
+      }
+    }
+  }
+}

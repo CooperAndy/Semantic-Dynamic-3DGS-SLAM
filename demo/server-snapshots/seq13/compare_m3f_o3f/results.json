@@ -1,0 +1,361 @@
+{
+  "status": "COMPLETE",
+  "scope": "13 predetermined seen views; G19C depth-valid ROI; black background; no GT accuracy",
+  "source_frames": [
+    780,
+    799,
+    819,
+    839,
+    859,
+    879,
+    899,
+    919,
+    939,
+    959,
+    979,
+    1009,
+    1039
+  ],
+  "common_camera": "O3 selected estimated ORB poses; first pose common, no post-hoc alignment",
+  "own_camera_note": "M3F_own is not a paired-camera score",
+  "results": {
+    "O3F_common": {
+      "path": "/root/autodl-tmp/seq13_000780_001039_O3F_260_20261115/cell_O3_retry1/runs/O3F/params.npz",
+      "sha256": "6cebfe6efc70888706c17c443e5774e3894bd74e0d0baa6f495b51a33bb97c20",
+      "gaussians": 834436,
+      "mean_psnr": 13.30448265707302,
+      "mean_roi_psnr": 24.241864764885467,
+      "mean_ssim": 0.5714676150908837,
+      "rows": [
+        {
+          "frame": 0,
+          "source_frame": 780,
+          "psnr": 18.132150385935383,
+          "roi_psnr": 28.509386792336148,
+          "ssim": 0.7826402187347412
+        },
+        {
+          "frame": 19,
+          "source_frame": 799,
+          "psnr": 17.65816028616587,
+          "roi_psnr": 29.563996233632004,
+          "ssim": 0.7250204682350159
+        },
+        {
+          "frame": 39,
+          "source_frame": 819,
+          "psnr": 12.551987137127048,
+          "roi_psnr": 16.859762741897278,
+          "ssim": 0.44319379329681396
+        },
+        {
+          "frame": 59,
+          "source_frame": 839,
+          "psnr": 10.611256726533844,
+          "roi_psnr": 14.419416800686014,
+          "ssim": 0.3450493812561035
+        },
+        {
+          "frame": 79,
+          "source_frame": 859,
+          "psnr": 14.335307026660377,
+          "roi_psnr": 29.45282221984443,
+          "ssim": 0.7593498826026917
+        },
+        {
+          "frame": 99,
+          "source_frame": 879,
+          "psnr": 12.051360296562406,
+          "roi_psnr": 26.51138129341443,
+          "ssim": 0.6921069025993347
+        },
+        {
+          "frame": 119,
+          "source_frame": 899,
+          "psnr": 13.063160390550623,
+          "roi_psnr": 26.620201175700615,
+          "ssim": 0.6412360072135925
+        },
+        {
+          "frame": 139,
+          "source_frame": 919,
+          "psnr": 13.819830308768497,
+          "roi_psnr": 25.693625524971786,
+          "ssim": 0.6190940737724304
+        },
+        {
+          "frame": 159,
+          "source_frame": 939,
+          "psnr": 11.169150874473633,
+          "roi_psnr": 24.356685492963216,
+          "ssim": 0.5307455658912659
+        },
+        {
+          "frame": 179,
+          "source_frame": 959,
+          "psnr": 12.874950070319706,
+          "roi_psnr": 25.2651832223426,
+          "ssim": 0.4783512353897095
+        },
+        {
+          "frame": 199,
+          "source_frame": 979,
+          "psnr": 14.123946546811892,
+          "roi_psnr": 26.933309007313866,
+          "ssim": 0.6165031790733337
+        },
+        {
+          "frame": 229,
+          "source_frame": 1009,
+          "psnr": 14.230085410087147,
+          "roi_psnr": 25.712336970142683,
+          "ssim": 0.5461090803146362
+        },
+        {
+          "frame": 259,
+          "source_frame": 1039,
+          "psnr": 8.336929081952842,
+          "roi_psnr": 15.246134468265954,
+          "ssim": 0.24967920780181885
+        }
+      ]
+    },
+    "M3F_common": {
+      "path": "/root/autodl-tmp/seq13_000780_001039_O3F_260_20261115/cell_M3/runs/M3F/params.npz",
+      "sha256": "ff18da6c66b5227aae1fb2a6eaaf11f2e8d8ca980e270c323fb82792f6949a28",
+      "gaussians": 836228,
+      "mean_psnr": 12.124485332339757,
+      "mean_roi_psnr": 17.12638504317038,
+      "mean_ssim": 0.3864418394290484,
+      "rows": [
+        {
+          "frame": 0,
+          "source_frame": 780,
+          "psnr": 18.245602442196557,
+          "roi_psnr": 28.400460364893824,
+          "ssim": 0.78302401304245
+        },
+        {
+          "frame": 19,
+          "source_frame": 799,
+          "psnr": 17.977948693934977,
+          "roi_psnr": 28.716269552363478,
+          "ssim": 0.7039096355438232
+        },
+        {
+          "frame": 39,
+          "source_frame": 819,
+          "psnr": 12.412430218900283,
+          "roi_psnr": 16.304183511154513,
+          "ssim": 0.4261753261089325
+        },
+        {
+          "frame": 59,
+          "source_frame": 839,
+          "psnr": 10.52656848301722,
+          "roi_psnr": 13.966386520175021,
+          "ssim": 0.31108418107032776
+        },
+        {
+          "frame": 79,
+          "source_frame": 859,
+          "psnr": 13.076436743413563,
+          "roi_psnr": 17.8638109621868,
+          "ssim": 0.5914046764373779
+        },
+        {
+          "frame": 99,
+          "source_frame": 879,
+          "psnr": 11.166876662442988,
+          "roi_psnr": 17.569577892397426,
+          "ssim": 0.4589385390281677
+        },
+        {
+          "frame": 119,
+          "source_frame": 899,
+          "psnr": 11.786614404620082,
+          "roi_psnr": 16.32486321598887,
+          "ssim": 0.3454119563102722
+        },
+        {
+          "frame": 139,
+          "source_frame": 919,
+          "psnr": 12.113429320586276,
+          "roi_psnr": 16.171915917099703,
+          "ssim": 0.26677078008651733
+        },
+        {
+          "frame": 159,
+          "source_frame": 939,
+          "psnr": 10.238190111212322,
+          "roi_psnr": 16.169817353325733,
+          "ssim": 0.28987568616867065
+        },
+        {
+          "frame": 179,
+          "source_frame": 959,
+          "psnr": 11.1357391286619,
+          "roi_psnr": 15.810230899666049,
+          "ssim": 0.2094397097826004
+        },
+        {
+          "frame": 199,
+          "source_frame": 979,
+          "psnr": 11.257899069667726,
+          "roi_psnr": 14.66520463607672,
+          "ssim": 0.2482120841741562
+        },
+        {
+          "frame": 229,
+          "source_frame": 1009,
+          "psnr": 10.283058954335045,
+          "roi_psnr": 11.102217945716642,
+          "ssim": 0.23482683300971985
+        },
+        {
+          "frame": 259,
+          "source_frame": 1039,
+          "psnr": 7.397515087427873,
+          "roi_psnr": 9.5780667901702,
+          "ssim": 0.15467049181461334
+        }
+      ]
+    },
+    "M3F_own": {
+      "path": "/root/autodl-tmp/seq13_000780_001039_O3F_260_20261115/cell_M3/runs/M3F/params.npz",
+      "sha256": "ff18da6c66b5227aae1fb2a6eaaf11f2e8d8ca980e270c323fb82792f6949a28",
+      "gaussians": 836228,
+      "mean_psnr": 13.37242875663522,
+      "mean_roi_psnr": 23.975295107754484,
+      "mean_ssim": 0.564425901724742,
+      "rows": [
+        {
+          "frame": 0,
+          "source_frame": 780,
+          "psnr": 18.245602442196557,
+          "roi_psnr": 28.400460364893824,
+          "ssim": 0.78302401304245
+        },
+        {
+          "frame": 19,
+          "source_frame": 799,
+          "psnr": 18.08313550582843,
+          "roi_psnr": 29.346072108024067,
+          "ssim": 0.724616289138794
+        },
+        {
+          "frame": 39,
+          "source_frame": 819,
+          "psnr": 12.480204035469933,
+          "roi_psnr": 16.410341249288795,
+          "ssim": 0.4361109137535095
+        },
+        {
+          "frame": 59,
+          "source_frame": 839,
+          "psnr": 10.630016042853558,
+          "roi_psnr": 14.29994159016645,
+          "ssim": 0.32377398014068604
+        },
+        {
+          "frame": 79,
+          "source_frame": 859,
+          "psnr": 14.521215246636622,
+          "roi_psnr": 29.154240769858756,
+          "ssim": 0.741112232208252
+        },
+        {
+          "frame": 99,
+          "source_frame": 879,
+          "psnr": 12.353464814376977,
+          "roi_psnr": 26.760593203812434,
+          "ssim": 0.7034510970115662
+        },
+        {
+          "frame": 119,
+          "source_frame": 899,
+          "psnr": 13.219278760789903,
+          "roi_psnr": 26.2967088348649,
+          "ssim": 0.6414218544960022
+        },
+        {
+          "frame": 139,
+          "source_frame": 919,
+          "psnr": 13.95355929235511,
+          "roi_psnr": 25.77593610767211,
+          "ssim": 0.6216377019882202
+        },
+        {
+          "frame": 159,
+          "source_frame": 939,
+          "psnr": 11.28328305545018,
+          "roi_psnr": 24.683702902550838,
+          "ssim": 0.5384385585784912
+        },
+        {
+          "frame": 179,
+          "source_frame": 959,
+          "psnr": 13.03870894425868,
+          "roi_psnr": 25.72534654561388,
+          "ssim": 0.5131603479385376
+        },
+        {
+          "frame": 199,
+          "source_frame": 979,
+          "psnr": 13.761196643760501,
+          "roi_psnr": 25.114127539253502,
+          "ssim": 0.555634081363678
+        },
+        {
+          "frame": 229,
+          "source_frame": 1009,
+          "psnr": 13.924876546534879,
+          "roi_psnr": 24.400786752005764,
+          "ssim": 0.5053392648696899
+        },
+        {
+          "frame": 259,
+          "source_frame": 1039,
+          "psnr": 8.347032505746526,
+          "roi_psnr": 15.310578432802886,
+          "ssim": 0.2498163878917694
+        }
+      ]
+    }
+  },
+  "MASS": {
+    "accepted_count": 24,
+    "attempts": 259,
+    "accepted_local_frames": [
+      2,
+      4,
+      11,
+      14,
+      17,
+      39,
+      55,
+      58,
+      59,
+      60,
+      62,
+      64,
+      75,
+      76,
+      80,
+      81,
+      82,
+      83,
+      86,
+      111,
+      123,
+      124,
+      125,
+      131
+    ],
+    "translation_difference_mean_m": 0.39514851570129395,
+    "translation_difference_max_m": 0.9553839564323425,
+    "rotation_difference_mean_deg": 0.19220342717356004,
+    "rotation_difference_max_deg": 0.2657542308002452
+  },
+  "limits": "Additional MASS feedback changes later map and trajectory; no ground truth accuracy or isolated H3 claim"
+}

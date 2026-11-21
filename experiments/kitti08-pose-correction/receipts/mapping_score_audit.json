@@ -1,0 +1,3369 @@
+{
+  "status": "PASS_ALL480_FLOAT_PSNR_COVERAGE_CAMERAS_AND48_GROUPS",
+  "at": "2026-11-01T21:41:52.576734+08:00",
+  "checks": [
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 2.149391775674303e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 1.9895196601282805e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.474376176702208e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.438849039914203e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.6342482922482304e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.8474111129762605e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 2.007283228522283e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.3322676295501878e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 2.149391775674303e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 1.9895196601282805e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.474376176702208e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 1.438849039914203e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.6342482922482304e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.8474111129762605e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 2.007283228522283e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.3322676295501878e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 2.113864638886298e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 2.1316282072803006e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.4210854715202004e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.865174681370263e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 2.0961010704922955e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.9539925233402755e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 2.255973186038318e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.7763568394002505e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 2.113864638886298e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 2.1316282072803006e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.4210854715202004e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 1.865174681370263e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 2.0961010704922955e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.9539925233402755e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 2.255973186038318e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.7763568394002505e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 1.3322676295501878e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 2.149391775674303e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.2256862191861728e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.2612133559741778e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.8118839761882555e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.3500311979441904e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.4566126083082054e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 1.6342482922482304e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.2434497875801753e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.3855583347321954e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 819,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 839,
+      "max_error": 1.7053025658242404e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 859,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 879,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 899,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 919,
+      "max_error": 1.3145040611561853e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 939,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 959,
+      "max_error": 1.1368683772161603e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 979,
+      "max_error": 1.8474111129762605e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 999,
+      "max_error": 1.8829382497642655e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 1.3322676295501878e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 2.149391775674303e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.2256862191861728e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 1.2612133559741778e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 1.8118839761882555e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.3500311979441904e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.4566126083082054e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 1.6342482922482304e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 1.2434497875801753e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.3855583347321954e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 819,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 839,
+      "max_error": 1.7053025658242404e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 859,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 879,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 899,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 919,
+      "max_error": 1.3145040611561853e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 939,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 959,
+      "max_error": 1.1368683772161603e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 979,
+      "max_error": 1.8474111129762605e-13
+    },
+    {
+      "variant": "B00_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 999,
+      "max_error": 1.8829382497642655e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 2.220446049250313e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 2.3092638912203256e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.4210854715202004e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 2.007283228522283e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.580957587066223e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.7763568394002505e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 1.9895196601282805e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.5276668818842154e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.3500311979441904e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 2.220446049250313e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 2.3092638912203256e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.4210854715202004e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 2.007283228522283e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 1.580957587066223e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.7763568394002505e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 1.9895196601282805e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 1.5276668818842154e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.3500311979441904e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 2.2382096176443156e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 1.9539925233402755e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.8829382497642655e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 2.2026824808563106e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.9184653865522705e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 2.2382096176443156e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 2.1316282072803006e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.723066134218243e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 2.2382096176443156e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 1.9539925233402755e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 1.8829382497642655e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 2.2026824808563106e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.9184653865522705e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 2.2382096176443156e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 2.1316282072803006e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.723066134218243e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 1.474376176702208e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 2.042810365310288e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.1368683772161603e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.5276668818842154e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.4033219031261979e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 1.9184653865522705e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.758593271006248e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 819,
+      "max_error": 1.687538997430238e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 839,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 859,
+      "max_error": 1.7763568394002505e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 879,
+      "max_error": 1.6342482922482304e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 899,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 919,
+      "max_error": 1.3145040611561853e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 939,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 959,
+      "max_error": 1.1368683772161603e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 979,
+      "max_error": 1.8118839761882555e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 999,
+      "max_error": 1.8474111129762605e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 1.474376176702208e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 2.042810365310288e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.1368683772161603e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 1.5276668818842154e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.4033219031261979e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 1.9184653865522705e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 1.758593271006248e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 819,
+      "max_error": 1.687538997430238e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 839,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 859,
+      "max_error": 1.7763568394002505e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 879,
+      "max_error": 1.6342482922482304e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 899,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 919,
+      "max_error": 1.3145040611561853e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 939,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 959,
+      "max_error": 1.1368683772161603e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 979,
+      "max_error": 1.8118839761882555e-13
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 999,
+      "max_error": 1.8474111129762605e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 2.2026824808563106e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 2.184918912462308e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.4566126083082054e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 2.1316282072803006e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.6697754290362354e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.7408297026122455e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 1.9539925233402755e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.3500311979441904e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 2.2026824808563106e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 2.184918912462308e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.4566126083082054e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 2.1316282072803006e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.6697754290362354e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.7408297026122455e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 1.9539925233402755e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.3500311979441904e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 2.3092638912203256e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 1.8118839761882555e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.829647544582258e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 2.113864638886298e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.900701818158268e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 2.3092638912203256e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.7053025658242404e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 2.3092638912203256e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 1.8118839761882555e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 1.829647544582258e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 2.113864638886298e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.900701818158268e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 2.3092638912203256e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.7053025658242404e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 1.5276668818842154e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 1.7053025658242404e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.0835776720341528e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.2612133559741778e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.8118839761882555e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.3855583347321954e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.4921397450962104e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 1.6342482922482304e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.5276668818842154e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.4033219031261979e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 819,
+      "max_error": 1.4921397450962104e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 839,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 859,
+      "max_error": 1.4210854715202004e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 879,
+      "max_error": 1.2967404927621828e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 899,
+      "max_error": 1.3855583347321954e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 919,
+      "max_error": 1.2434497875801753e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 939,
+      "max_error": 1.2523315717771766e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 959,
+      "max_error": 1.5631940186722204e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 979,
+      "max_error": 1.438849039914203e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 999,
+      "max_error": 1.4210854715202004e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 1.5276668818842154e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 1.7053025658242404e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.0835776720341528e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 1.2612133559741778e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 1.8118839761882555e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.3855583347321954e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.4921397450962104e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 1.6342482922482304e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 1.5276668818842154e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.4033219031261979e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 819,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 839,
+      "max_error": 1.580957587066223e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 859,
+      "max_error": 1.829647544582258e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 879,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 899,
+      "max_error": 1.687538997430238e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 919,
+      "max_error": 1.3145040611561853e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 939,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 959,
+      "max_error": 1.1368683772161603e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 979,
+      "max_error": 1.8474111129762605e-13
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 999,
+      "max_error": 1.936228954946273e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 2.149391775674303e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 2.042810365310288e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.4566126083082054e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 2.0605739337042905e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.5631940186722204e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.758593271006248e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 1.936228954946273e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.2612133559741778e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 2.149391775674303e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 2.042810365310288e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.4566126083082054e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 2.0605739337042905e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 1.5631940186722204e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.758593271006248e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 1.936228954946273e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.2612133559741778e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 2.149391775674303e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 2.149391775674303e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.936228954946273e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 2.184918912462308e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.6697754290362354e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.9184653865522705e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 2.3092638912203256e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.687538997430238e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 2.149391775674303e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 2.149391775674303e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 1.936228954946273e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 2.184918912462308e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.6697754290362354e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.9184653865522705e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 2.3092638912203256e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.687538997430238e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 1.474376176702208e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 1.9539925233402755e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.1368683772161603e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.5631940186722204e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.438849039914203e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 1.794120407794253e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.7763568394002505e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.3677947663381929e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 819,
+      "max_error": 1.474376176702208e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 839,
+      "max_error": 1.4921397450962104e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 859,
+      "max_error": 1.4566126083082054e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 879,
+      "max_error": 1.3145040611561853e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 899,
+      "max_error": 1.3677947663381929e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 919,
+      "max_error": 1.1723955140041653e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 939,
+      "max_error": 1.234568003383174e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 959,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 979,
+      "max_error": 1.474376176702208e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 999,
+      "max_error": 1.4033219031261979e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 1.474376176702208e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 1.9539925233402755e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.1368683772161603e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 1.5631940186722204e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.438849039914203e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 1.794120407794253e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 1.7763568394002505e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.3677947663381929e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 819,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 839,
+      "max_error": 1.580957587066223e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 859,
+      "max_error": 1.723066134218243e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 879,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 899,
+      "max_error": 1.6342482922482304e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 919,
+      "max_error": 1.3500311979441904e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 939,
+      "max_error": 1.6342482922482304e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 959,
+      "max_error": 1.1546319456101628e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 979,
+      "max_error": 1.8474111129762605e-13
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 999,
+      "max_error": 1.829647544582258e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 2.184918912462308e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 2.007283228522283e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.4566126083082054e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.7408297026122455e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.4210854715202004e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.438849039914203e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 1.794120407794253e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.1191048088221578e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.2612133559741778e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 2.184918912462308e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 2.007283228522283e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.4921397450962104e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 2.0250467969162855e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.7053025658242404e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.7408297026122455e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 1.9539925233402755e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 1.687538997430238e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.3322676295501878e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 2.291500322826323e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 2.1671553440683056e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.5631940186722204e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.5276668818842154e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.7053025658242404e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.4566126083082054e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.580957587066223e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 1.7053025658242404e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.5631940186722204e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.1013412404281553e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 2.291500322826323e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 2.1671553440683056e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.4921397450962104e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 1.8829382497642655e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 2.042810365310288e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.900701818158268e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 2.291500322826323e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.687538997430238e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 1.580957587066223e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 1.8829382497642655e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.3855583347321954e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.3145040611561853e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.438849039914203e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 1.412203687323199e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.4210854715202004e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.1901590823981678e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 819,
+      "max_error": 6.217248937900877e-14
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 839,
+      "max_error": 1.4210854715202004e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 859,
+      "max_error": 5.062616992290714e-14
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 879,
+      "max_error": 1.5631940186722204e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 899,
+      "max_error": 1.0658141036401503e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 919,
+      "max_error": 1.5631940186722204e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 939,
+      "max_error": 1.4921397450962104e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 959,
+      "max_error": 2.113864638886298e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 979,
+      "max_error": 2.4868995751603507e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 999,
+      "max_error": 1.438849039914203e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 1.580957587066223e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 1.8829382497642655e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.438849039914203e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 1.474376176702208e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.4210854715202004e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.3855583347321954e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 1.5276668818842154e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 819,
+      "max_error": 1.5276668818842154e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 839,
+      "max_error": 1.6697754290362354e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 859,
+      "max_error": 1.794120407794253e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 879,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 899,
+      "max_error": 1.5631940186722204e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 919,
+      "max_error": 1.3145040611561853e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 939,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 959,
+      "max_error": 1.1546319456101628e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 979,
+      "max_error": 1.8474111129762605e-13
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 999,
+      "max_error": 1.865174681370263e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 2.113864638886298e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 2.1316282072803006e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.3500311979441904e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.723066134218243e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.2967404927621828e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.4566126083082054e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.4921397450962104e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 1.758593271006248e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.1723955140041653e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.1723955140041653e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 2.113864638886298e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 2.1316282072803006e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 2.0605739337042905e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 1.4921397450962104e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.758593271006248e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 1.829647544582258e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 199,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.3145040611561853e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 2.184918912462308e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 1.8829382497642655e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.5631940186722204e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.6342482922482304e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 1.7053025658242404e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.1546319456101628e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 2.184918912462308e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 1.8829382497642655e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.5631940186722204e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 1.8474111129762605e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 2.113864638886298e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.8829382497642655e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 2.220446049250313e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 398,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.7763568394002505e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 19,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 39,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 59,
+      "max_error": 1.1546319456101628e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 79,
+      "max_error": 1.4566126083082054e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 99,
+      "max_error": 1.3855583347321954e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 119,
+      "max_error": 1.5276668818842154e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 139,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 159,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 179,
+      "max_error": 1.4210854715202004e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 199,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 819,
+      "max_error": 5.684341886080802e-14
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 839,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 859,
+      "max_error": 6.572520305780927e-14
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 879,
+      "max_error": 1.8385293287792592e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 899,
+      "max_error": 1.1901590823981678e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 919,
+      "max_error": 2.1582735598713043e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 939,
+      "max_error": 2.2648549702353193e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 959,
+      "max_error": 2.753353101070388e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 979,
+      "max_error": 2.433608869978343e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "COMMON_NOMINAL",
+      "frame": 999,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 19,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 39,
+      "max_error": 2.078337502098293e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 59,
+      "max_error": 1.1723955140041653e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 79,
+      "max_error": 1.723066134218243e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 99,
+      "max_error": 1.4921397450962104e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 119,
+      "max_error": 1.509903313490213e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 139,
+      "max_error": 1.7053025658242404e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 159,
+      "max_error": 1.900701818158268e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 179,
+      "max_error": 1.758593271006248e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 199,
+      "max_error": 1.4921397450962104e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 819,
+      "max_error": 1.652011860642233e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 839,
+      "max_error": 1.616484723854228e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 859,
+      "max_error": 1.794120407794253e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 879,
+      "max_error": 1.5631940186722204e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 899,
+      "max_error": 1.5987211554602254e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 919,
+      "max_error": 1.2789769243681803e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 939,
+      "max_error": 1.545430450278218e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 959,
+      "max_error": 1.1368683772161603e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 979,
+      "max_error": 1.829647544582258e-13
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "snapshot": 999,
+      "mode": "OWN_SELECTED",
+      "frame": 999,
+      "max_error": 1.8474111129762605e-13
+    }
+  ],
+  "seconds": 103.98182459175587,
+  "SSIM_LPIPS": "Original implementation,not independently rewritten",
+  "GPU_calls": 0
+}

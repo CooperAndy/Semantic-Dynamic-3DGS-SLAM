@@ -1,0 +1,31 @@
+{
+  "threshold": 0.8,
+  "params_path": "experiments/KITTI/seq00_e6a_confhard_holdout_200_0/params.npz",
+  "data_config": "configs/data/kitti_seq00_s1_common_raw_raft.yaml",
+  "heldout_frames": [
+    19,
+    39,
+    59,
+    79,
+    99,
+    119,
+    139,
+    159,
+    179,
+    199
+  ],
+  "rgb_support": "full 376x1241 image for every threshold",
+  "depth_support": "same raw RAFT depth pixels in [0.5,40] m for every threshold",
+  "silhouette_threshold": 0.5,
+  "metrics": {
+    "full_rgb_psnr": 12.56165189743042,
+    "full_rgb_ms_ssim": 0.5938800305128098,
+    "full_rgb_lpips": 0.5082599997520447,
+    "common_depth_l1_all_valid_m": 1.7937074780464173,
+    "common_depth_l1_supported_m": 1.283093947172165,
+    "silhouette_coverage_all": 0.8870849072933197,
+    "silhouette_coverage_common_depth": 0.9339917182922364,
+    "hole_ratio_common_depth": 0.06600828170776367,
+    "common_depth_valid_ratio": 0.8814539432525634
+  }
+}

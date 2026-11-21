@@ -1,0 +1,86 @@
+{
+  "sceneId": "kitti07_c60s42_v009_track20_trial",
+  "title": "KITTI 07 · ORB F1",
+  "dataset": "KITTI odometry sequence 07",
+  "sourceFrames": [
+    850,
+    1049
+  ],
+  "gaussianCount": 3168264,
+  "defaultVariant": "F1",
+  "fidelityMode": "full-resolution",
+  "poseProtocol": "ORB-SLAM3 estimated P2 camera poses; no GT input",
+  "depthProtocol": "RAFT-Stereo confidence >= 0.60; 0.5–40 m; seed 42",
+  "defaultCameraFrame": 949,
+  "assetManifest": "scene-data/KITTI07_C60S42/KITTI07_F1/KITTI07_F1_manifest.json",
+  "variants": {
+    "F200": {
+      "label": "F200 · Conf 0.60 · Seed 42",
+      "description": "200 seen views; fixed ORB estimated cameras.",
+      "rgb": "scene-data/KITTI07_C60S42/KITTI07_F200/KITTI07_F200_RGB.ply",
+      "rgbWithTrajectory": "scene-data/KITTI07_C60S42/KITTI07_F200/KITTI07_F200_RGB_with_Trajectory.ply",
+      "manifest": "scene-data/KITTI07_C60S42/KITTI07_F200/KITTI07_F200_manifest.json",
+      "sogLod": "scene-data/KITTI07_C60S42/KITTI07_F200/streamed_sog/lod-meta.json"
+    },
+    "F1": {
+      "label": "F1 · Conf 0.60 · Seed 42",
+      "description": "800-step RGB and opacity refinement; views seen.",
+      "rgb": "scene-data/KITTI07_C60S42/KITTI07_F1/KITTI07_F1_RGB.ply",
+      "rgbWithTrajectory": "scene-data/KITTI07_C60S42/KITTI07_F1/KITTI07_F1_RGB_with_Trajectory.ply",
+      "manifest": "scene-data/KITTI07_C60S42/KITTI07_F1/KITTI07_F1_manifest.json",
+      "sogLod": "scene-data/KITTI07_C60S42/KITTI07_F1/streamed_sog/lod-meta.json"
+    }
+  },
+  "assets": {
+    "rgb": "scene-data/KITTI07_C60S42/KITTI07_F1/KITTI07_F1_RGB.ply",
+    "rgbWithTrajectory": "scene-data/KITTI07_C60S42/KITTI07_F1/KITTI07_F1_RGB_with_Trajectory.ply",
+    "cameraPoses": "scene-data/KITTI07_C60S42/KITTI07_F1/KITTI07_F1_camera_poses.json",
+    "viewerSettings": "scene-data/KITTI07_C60S42/KITTI07_F1/viewer_settings_source_99.json",
+    "trajectoryViewerSettings": "scene-data/KITTI07_C60S42/KITTI07_F1/viewer_settings_trajectory.json",
+    "semantic": "scene-data/KITTI07_C60S42/KITTI07_F1_Semantic/KITTI07_F1_Semantic.ply",
+    "sogLod": "scene-data/KITTI07_C60S42/KITTI07_F1/streamed_sog/lod-meta.json"
+  },
+  "semanticGaussianCount": 3168264,
+  "semanticSource": "Mask2Former predictions fused into the selected F1 point set",
+  "semanticStatus": "Predicted semantics; motion and semantic accuracy not evaluated.",
+  "semanticMapId": "kitti07_c60s42_semantic",
+  "semanticManifest": "scene-data/KITTI07_C60S42/KITTI07_F1_Semantic/semantic_manifest.json",
+  "semanticRelation": "same F1 geometry, opacity and point order",
+  "motionIndex": null,
+  "dynamicVehicleRemoval": {
+    "version": 2,
+    "removedCount": 4726,
+    "gaussianCount": 3163538,
+    "maskSha256": "6b1f22bd6b5035837ad60df07cdd17d0c3b53938261efa141245bc86643e851c",
+    "manifest": "scene-data/KITTI07_C60S42/VehicleRemovalTrack20MultiFrameTrial/manifest.json",
+    "highlights": {
+      "F1": "scene-data/KITTI07_C60S42/VehicleRemovalTrack20MultiFrameTrial/F1_RGB_highlight.ply",
+      "F200": "scene-data/KITTI07_C60S42/VehicleRemovalTrack20MultiFrameTrial/F200_RGB_highlight.ply"
+    },
+    "variants": {
+      "F1": {
+        "rgb": "scene-data/KITTI07_C60S42/VehicleRemovalTrack20MultiFrameTrial/F1_RGB_removed.ply",
+        "rgbWithTrajectory": null
+      },
+      "F200": {
+        "rgb": "scene-data/KITTI07_C60S42/VehicleRemovalTrack20MultiFrameTrial/F200_RGB_removed.ply",
+        "rgbWithTrajectory": null
+      }
+    },
+    "warning": "Experimental Track 20 multi-frame selection; may include static points and miss vehicle remnants. Use preview to inspect before hiding."
+  },
+  "motionReferenceImageTemplate": null,
+  "motionSnapshot": "scene-data/KITTI07_C60S42/KITTI07_V009_Track20Trial/snapshot.json",
+  "motionLabelMode": "offline_semantic_vehicle_objects",
+  "motionStateManifest": "scene-data/KITTI07_C60S42/KITTI07_V009_Track20Trial/audit.json",
+  "motionStateConfig": "case-specific dynamic track 20 at V009 spatial anchor",
+  "hideUncertainMotion": true,
+  "cameraPathLayer": {
+    "enabled": true,
+    "variant": "F1",
+    "asset": "scene-data/KITTI07_C60S42/KITTI07_F1/KITTI07_F1_Trajectory.ply",
+    "manifest": "scene-data/KITTI07_C60S42/KITTI07_F1/camera_path_layer_manifest.json",
+    "gaussianCount": 1635,
+    "sha256": "bdcd6bf6446f9bb076d2dc61aa4fda32a445329b5e19351d0ac42d049000ace6"
+  }
+}

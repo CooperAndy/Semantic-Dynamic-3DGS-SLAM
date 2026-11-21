@@ -1,0 +1,26 @@
+--- pinned/setup.py
++++ 01_source_env/dependencies/DROID-SLAM_runtime/thirdparty/lietorch/setup.py
+@@ -24,11 +24,6 @@
+             extra_compile_args={
+                 'cxx': ['-O2'], 
+                 'nvcc': ['-O2',
+-                    '-gencode=arch=compute_60,code=sm_60', 
+-                    '-gencode=arch=compute_61,code=sm_61', 
+-                    '-gencode=arch=compute_70,code=sm_70', 
+-                    '-gencode=arch=compute_75,code=sm_75',
+-                    '-gencode=arch=compute_75,code=compute_75',
+                     
+                 ]
+             }),
+@@ -45,11 +40,6 @@
+             extra_compile_args={
+                 'cxx': ['-O2'], 
+                 'nvcc': ['-O2',
+-                    '-gencode=arch=compute_60,code=sm_60', 
+-                    '-gencode=arch=compute_61,code=sm_61', 
+-                    '-gencode=arch=compute_70,code=sm_70', 
+-                    '-gencode=arch=compute_75,code=sm_75',
+-                    '-gencode=arch=compute_75,code=compute_75',
+                     
+                 ]
+             }),

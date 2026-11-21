@@ -1,0 +1,356 @@
+--- a/dg_slam/depth_video.py
++++ b/dg_slam/depth_video.py
+@@ -249,7 +249,15 @@
+                 final_mask = seg_masks
+                 weight = weight * final_mask.unsqueeze(1)
+ 
++            diagnostic_hook = getattr(self, 'ba_diagnostic_hook', None)
++            if diagnostic_hook is not None:
++                diagnostic_hook('native_before_ba', target=target, effective_weight=weight, eta=eta,
++                                ii=ii, jj=jj, poses_w2c=self.poses[t0:t1],
++                                source_disps=self.disps[ii], source_disps_sens=self.disps_sens[ii],
++                                intrinsics=self.intrinsics[0], native_parameters=[t0,t1,itrs,lm,ep,int(motion_only)])
+             droid_backends.ba(self.poses, self.disps, self.intrinsics[0], self.disps_sens,
+                 target, weight, eta, ii, jj, t0, t1, itrs, lm, ep, motion_only)
+ 
+-            self.disps.clamp_(min=0.001)
+\ No newline at end of file
++            self.disps.clamp_(min=0.001)
++            if diagnostic_hook is not None:
++                diagnostic_hook('native_after_ba', poses_w2c=self.poses[t0:t1], source_disps=self.disps[ii])
+--- a/dg_slam/factor_graph.py
++++ b/dg_slam/factor_graph.py
+@@ -200,7 +200,7 @@
+ 
+ 
+     @torch.cuda.amp.autocast(enabled=True)
+-    def update(self, t0=None, t1=None, itrs=2, use_inactive=False, EP=1e-7, motion_only=False, use_mask = False):
++    def update(self, t0=None, t1=None, itrs=2, use_inactive=False, EP=1e-7, motion_only=False, use_mask = False, diagnostic_hook=None):
+         """ run update operator on factor graph """
+ 
+         # motion features
+@@ -241,9 +241,20 @@
+             target = target.view(-1, ht, wd, 2).permute(0,3,1,2).contiguous()
+             weight = weight.view(-1, ht, wd, 2).permute(0,3,1,2).contiguous()
+ 
++            if diagnostic_hook is not None:
++                diagnostic_hook('graph_before_ba', ii=ii, jj=jj, projected_before=coords1,
++                                projection_valid=mask, learned_delta=delta, learned_weight=self.weight,
++                                target=target, weight_before_mask=weight, damping=damping,
++                                poses_w2c=self.video.poses[t0:t1])
+             # dense bundle adjustment
+             self.video.ba(target, weight, damping, ii, jj, t0, t1, 
+                 itrs=itrs, lm=1e-4, ep=0.1, motion_only=motion_only, use_mask = use_mask)
++            if diagnostic_hook is not None:
++                projected_after, valid_after = self.video.reproject(ii, jj)
++                diagnostic_hook('graph_after_ba', ii=ii, jj=jj, projected_after=projected_after,
++                                projection_valid_after=valid_after, target=target,
++                                residual_after=target.permute(0,2,3,1)-projected_after[0],
++                                poses_w2c=self.video.poses[t0:t1])
+         
+             if self.upsample:
+                 self.video.upsample(torch.unique(self.ii), upmask)
+@@ -377,4 +388,4 @@
+                             d[(i1-t0)*(t-t1) + (j1-t1)] = np.inf
+ 
+         ii, jj = torch.as_tensor(es, device=self.device).unbind(dim=-1)
+-        self.add_factors(ii, jj, remove)
+\ No newline at end of file
++        self.add_factors(ii, jj, remove)
+--- /dev/null
++++ b/dg_slam/filler_adapter.py
+@@ -0,0 +1,54 @@
++"""Attach T19 candidate after tracking, before terminate_woBA; no GT access."""
++import json
++from pathlib import Path
++import numpy as np
++from dg_slam.filler_contract import anchor_policy
++from dg_slam.filler_trace import FillerTrace
++
++def configure_filler(model, mapped_c2w, arm, policy, output,
++                     mixed_geometry_diagnostic=False, preserve_keyframes=True,
++                     trace_frames=range(144, 176)):
++    # Validate before importing runtime libraries or mutating any video state.
++    receipt = anchor_policy(arm, policy, mixed_geometry_diagnostic)
++    output = Path(output)
++    if output.exists():
++        raise FileExistsError('Use a fresh diagnostic output directory')
++    import torch
++    from lietorch import SE3
++    from scipy.spatial.transform import Rotation
++    video = model.video
++    n = int(video.counter.value)
++    if n < 1 or len(mapped_c2w) != n:
++        raise ValueError('Mapped anchor count must match the final video keyframe count')
++    before = video.poses[:n].detach().clone()
++    snapshot = np.asarray(mapped_c2w)
++    if snapshot.shape != (n,4,4) or not np.isfinite(snapshot).all():
++        raise ValueError('Expected finite mapped c2w matrices')
++    if not np.allclose(snapshot[:,3], [0,0,0,1], atol=1e-6, rtol=0):
++        raise ValueError('Invalid homogeneous mapped pose')
++    R = snapshot[:,:3,:3]
++    if not np.allclose(R.transpose(0,2,1)@R, np.eye(3), atol=1e-5, rtol=0) or not np.allclose(np.linalg.det(R), 1, atol=1e-5, rtol=0):
++        raise ValueError('Mapped rotation must belong to SO(3)')
++    injected = before
++    if policy == 'mapping_snapshot':
++        seeds = np.concatenate([snapshot[:,:3,3], Rotation.from_matrix(R).as_quat()], axis=1)
++        injected = SE3(torch.as_tensor(seeds, dtype=before.dtype, device=before.device)).inv().data
++    output.mkdir(parents=True, exist_ok=False)
++    trace = FillerTrace(output/'trace', trace_frames)
++    np.savez_compressed(output/'anchor_source.npz', native_final_w2c=before.cpu().numpy(),
++                        selected_w2c=injected.detach().cpu().numpy(), mapped_c2w=snapshot,
++                        frame_indices=video.tstamp[:n].detach().cpu().numpy(),
++                        disps=video.disps[:n].detach().cpu().numpy(),
++                        disps_sens=video.disps_sens[:n].detach().cpu().numpy())
++    if policy == 'mapping_snapshot':
++        video.poses[:n] = injected
++    model.traj_filler.preserve_keyframes = bool(preserve_keyframes)
++    model.traj_filler.diagnostic_trace = trace
++    receipt.update(arm=arm, preserve_keyframes=bool(preserve_keyframes),
++                   anchor_preservation=bool(preserve_keyframes),
++                   mode='preserve_KF' if preserve_keyframes else 'instrumented_legacy_all_frames',
++                   trace_frames=sorted(trace.frames), trace_max_reserved_bytes=trace.max_bytes,
++                   n_keyframes=n, GPU_validated=False, formal=False,
++                   native_geometry_not_recomputed=True)
++    (output/'anchor_policy.json').write_text(json.dumps(receipt, indent=2), encoding='utf-8')
++    return receipt
+--- /dev/null
++++ b/dg_slam/filler_contract.py
+@@ -0,0 +1,44 @@
++"""CPU-safe index and anchor-source contract. No GT, Torch or CUDA dependency."""
++import math
++
++def frame_index(value):
++    if isinstance(value, bool):
++        raise ValueError('Boolean is not a frame index')
++    x = float(value)
++    if not math.isfinite(x) or x < 0 or not x.is_integer() or x > 2**24:
++        raise ValueError('Expected a nonnegative integer frame index exactly representable in float32')
++    return int(x)
++
++def ordered_indices(values):
++    ids = [frame_index(x) for x in values]
++    if any(a >= b for a, b in zip(ids, ids[1:])):
++        raise ValueError('Frame indices must be unique and strictly increasing')
++    return ids
++
++def batch_plan(timestamps, keyframe_timestamps):
++    keys = ordered_indices(keyframe_timestamps)
++    frames = ordered_indices(timestamps)
++    if not keys or (frames and frames[0] < keys[0]):
++        raise ValueError('At least one left anchor must cover every requested frame')
++    lookup = {frame: ordinal for ordinal, frame in enumerate(keys)}
++    slots, nonkey_positions = [], []
++    for position, frame in enumerate(frames):
++        if frame in lookup:
++            slots.append(('anchor', lookup[frame]))
++        else:
++            slots.append(('temporary', len(nonkey_positions)))
++            nonkey_positions.append(position)
++    return slots, nonkey_positions
++
++def anchor_policy(arm, policy, mixed_geometry_diagnostic=False):
++    if arm not in ('NO_GS_REFINE', 'LOCAL_ID'):
++        raise ValueError('Unsupported tracking arm')
++    if policy == 'native_final_DROID':
++        if arm != 'NO_GS_REFINE':
++            raise ValueError('Native DROID anchors would discard ID refinement; cannot label this LOCAL_ID')
++        return {'policy': policy, 'mixed_geometry': False, 'diagnostic_only': True,
++                'ID_refinement_retained': False}
++    if policy == 'mapping_snapshot' and mixed_geometry_diagnostic:
++        return {'policy': policy, 'mixed_geometry': True, 'diagnostic_only': True,
++                'ID_refinement_retained': arm == 'LOCAL_ID'}
++    raise ValueError('Mapping-pose injection needs explicit mixed_geometry_diagnostic=True; coherent ID integration is unresolved')
+--- /dev/null
++++ b/dg_slam/filler_trace.py
+@@ -0,0 +1,50 @@
++"""Opt-in diagnostic snapshots; never changes optimization targets or accepts poses."""
++from pathlib import Path
++import json
++import numpy as np
++
++class TraceBudgetExceeded(RuntimeError):
++    pass
++
++def array(value):
++    if hasattr(value, 'detach'):
++        value = value.detach().cpu().numpy()
++    return np.asarray(value).copy()
++
++class FillerTrace:
++    def __init__(self, root, frames=range(144, 176), max_bytes=256*1024**2):
++        self.root = Path(root)
++        self.root.mkdir(parents=True, exist_ok=False)
++        self.frames = set(int(x) for x in frames)
++        self.max_bytes = int(max_bytes)
++        self.bytes = 0
++        self.records = 0
++        self.batch = None
++        self.iteration = -1
++
++    def begin(self, frames):
++        ids = [int(x) for x in frames]
++        self.batch = ids if any(x in self.frames for x in ids) else None
++        self.iteration = -1
++        return self.batch is not None
++
++    def record(self, stage, **values):
++        if self.batch is None:
++            return
++        arrays = {key: array(value) for key, value in values.items()}
++        # Reserve the uncompressed payload before writing. Stop the diagnostic on budget failure.
++        reserved = sum(x.nbytes for x in arrays.values()) + 4096
++        if self.bytes + reserved > self.max_bytes:
++            raise TraceBudgetExceeded('Trace budget exceeded; no silent trace truncation or optimizer fallback')
++        stem = f'b{self.batch[0]:04d}_i{self.iteration:02d}_{self.records:04d}_{stage}'
++        path = self.root/(stem+'.npz')
++        with path.open('xb') as stream:
++            np.savez_compressed(stream, **arrays)
++        info = {'stage': stage, 'iteration': self.iteration, 'frames': self.batch,
++                'file': path.name, 'shapes': {k: list(v.shape) for k,v in arrays.items()},
++                'nonfinite': {k: int(np.count_nonzero(~np.isfinite(v))) for k,v in arrays.items() if v.dtype.kind in 'fc'},
++                'reserved_bytes': reserved}
++        with (self.root/'events.jsonl').open('a', encoding='utf-8') as stream:
++            stream.write(json.dumps(info, allow_nan=False)+'\n')
++        self.bytes += reserved
++        self.records += 1
+--- a/dg_slam/trajectory_filler.py
++++ b/dg_slam/trajectory_filler.py
+@@ -6,6 +6,7 @@
+ from factor_graph import FactorGraph
+ from droid_net import DroidNet
+ import geom.projective_ops as pops
++from dg_slam.filler_contract import batch_plan, ordered_indices
+ 
+ class PoseTrajectoryFiller:
+     """ This class is used to fill in non-keyframe poses """
+@@ -20,6 +21,8 @@
+         self.count = 0
+         self.video = video
+         self.device = device
++        self.preserve_keyframes = True
++        self.diagnostic_trace = None
+ 
+         # mean, std for image normalization
+         self.MEAN = torch.as_tensor([0.485, 0.456, 0.406], device=self.device)[:, None, None]
+@@ -62,48 +65,81 @@
+         inputs = inputs.sub_(self.MEAN).div_(self.STDV)
+         fmap = self.__feature_encoder(inputs)
+ 
+-        self.video.counter.value += M
+-        self.video[N:N+M] = (tt, images[:,0], Gs.data, depths, depths, intrinsics / 8.0, fmap, None, None, seg_masks)
+-
+-        graph = FactorGraph(self.video, self.update)
+-        graph.add_factors(t0.cuda(), torch.arange(N, N+M).cuda())
+-        graph.add_factors(t1.cuda(), torch.arange(N, N+M).cuda())
+-        
+-        for itr in range(6):
+-            graph.update(N, N+M, motion_only=True)
+-    
+-        Gs = SE3(self.video.poses[N:N+M].clone())
+-        self.video.counter.value -= M
+-
+-        return [ Gs ]
++        if N + M > len(self.video.poses):
++            raise ValueError('Video buffer has no capacity for temporary non-keyframes')
++        anchors_before = self.video.poses[:N].clone()
++        old_hook = getattr(self.video, 'ba_diagnostic_hook', None)
++        trace = self.diagnostic_trace
++        active_trace = trace is not None and trace.begin(tstamps)
++        self.video.counter.value = N + M
++        try:
++            self.video[N:N+M] = (tt, images[:,0], Gs.data, depths, depths, intrinsics / 8.0, fmap, None, None, seg_masks)
++            graph = FactorGraph(self.video, self.update)
++            graph.add_factors(t0.cuda(), torch.arange(N, N+M).cuda())
++            graph.add_factors(t1.cuda(), torch.arange(N, N+M).cuda())
++            if active_trace:
++                sources = torch.unique(torch.cat([t0, t1])).to(self.video.poses.device)
++                trace.record('initialization', temporary_frames=tt, temporary_w2c=self.video.poses[N:N+M],
++                             anchor_frames=ts, anchor_w2c=anchors_before, source_indices=sources,
++                             source_disps=self.video.disps[sources], source_disps_sens=self.video.disps_sens[sources],
++                             source_features=self.video.fmaps[sources], temporary_features=self.video.fmaps[N:N+M],
++                             source_intrinsics=self.video.intrinsics[sources], source_seg_masks=self.video.seg_masks[sources],
++                             temporary_depths=depths, temporary_seg_masks=seg_masks)
++                self.video.ba_diagnostic_hook = trace.record
++            for itr in range(6):
++                if active_trace:
++                    trace.iteration = itr
++                graph.update(N, N+M, motion_only=True,
++                             diagnostic_hook=trace.record if active_trace else None)
++            Gs = SE3(self.video.poses[N:N+M].clone())
++            if not torch.equal(self.video.poses[:N], anchors_before):
++                raise RuntimeError('Filler modified fixed anchor poses')
++            return Gs
++        finally:
++            self.video.counter.value = N
++            self.video.ba_diagnostic_hook = old_hook
+ 
+     @torch.no_grad()
+     def __call__(self, image_stream):
+         """ fill in poses of non-keyframe images """
+ 
+-        # store all camera poses
+-        pose_list = []
++        n = int(self.video.counter.value)
++        keys = ordered_indices(self.video.tstamp[:n].detach().cpu().tolist())
++        anchors = self.video.poses[:n].clone()
++        pose_list, batch = [], []
++        previous = -1
+ 
+-        tstamps = []
+-        images = []
+-        intrinsics = []
+-        seg_masks = []
+-        depths = []
+-        
+-        for (tstamp, image, depth, intrinsic, _, seg_mask) in image_stream:
+-            tstamps.append(tstamp)
+-            images.append(image)
+-            seg_masks.append(seg_mask)
+-            intrinsics.append(intrinsic)
+-            depths.append(depth)
++        def flush(rows):
++            if int(self.video.counter.value) != n:
++                raise RuntimeError('Keyframe count changed during filling')
++            slots, positions = batch_plan([row[0] for row in rows], keys)
++            if not self.preserve_keyframes:
++                positions = list(range(len(rows)))
++                slots = [('temporary', i) for i in positions]
++            filled = None
++            if positions:
++                selected = [rows[i] for i in positions]
++                filled = self.__fill([r[0] for r in selected], [r[1] for r in selected],
++                                     [r[2] for r in selected], [r[3] for r in selected],
++                                     [r[5] for r in selected])
++            for kind, index in slots:
++                pose_list.append(SE3(anchors[index:index+1].clone()) if kind == 'anchor'
++                                 else filled[index:index+1])
+ 
+-            if len(tstamps) == 16:
+-                pose_list += self.__fill(tstamps, images, depths, intrinsics, seg_masks)
+-                tstamps, images, intrinsics, depths = [], [], [], []
+-                seg_masks = []
+-
+-        if len(tstamps) > 0:
+-            pose_list += self.__fill(tstamps, images, depths, intrinsics, seg_masks)
+-
+-        # stitch pose segments together
+-        return lietorch.cat(pose_list, 0)
+\ No newline at end of file
++        for row in image_stream:
++            # Keep original 16-input-frame batch boundaries, even when anchors are skipped.
++            value = ordered_indices([row[0]])[0]
++            if value <= previous:
++                raise ValueError('Input stream must be strictly increasing')
++            previous = value
++            batch.append(row)
++            if len(batch) == 16:
++                flush(batch)
++                batch = []
++        if batch:
++            flush(batch)
++        if not pose_list:
++            raise ValueError('Empty image stream')
++        if not torch.equal(self.video.poses[:n], anchors):
++            raise RuntimeError('Anchor poses changed during filling')
++        return lietorch.cat(pose_list, 0)

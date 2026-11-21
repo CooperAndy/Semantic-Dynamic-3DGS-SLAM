@@ -1,0 +1,81 @@
+{
+  "status": "SEALED_BEFORE_SCORE",
+  "items": [
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/runs/C0_200/params.npz",
+      "sha256": "991c209b04cc7df846f986ed49acca4cc0c2395fc8be30e1100cc9da49d61984"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/runs/C2_200/params.npz",
+      "sha256": "010797c4b57cd671447afce7bfe28ea02b3395844cd681c60d78fadbcca07670"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/runs/C0_200/params.npz",
+      "sha256": "2522cbeeee8920c2f5acf0715e6409af497bf90c00e1bbb5bf80a008d0b2df2a"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/runs/C2_200/params.npz",
+      "sha256": "19d8fdd95402dee58dac19b6ac720e55feef7a9a68c49127813cfee2df91622d"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/runs/C0_200/params.npz",
+      "sha256": "7f98b2a1459ffb593d9d2b8f48e3e24f89a605edbd70a2b88731991512b9b02a"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/runs/C2_200/params.npz",
+      "sha256": "7357521f7e79d807d5283912065671a2e6dded0fceba588ed690e611a34a5bf9"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/protocol.md",
+      "sha256": "97398a20fc85ad09892221a498eda501d03b3dbcf1a3c4dcafbbd5b0ffc12995"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/input_manifest.json",
+      "sha256": "0ef6e4b32a489aad13ab78099149cb17ceb3029603d98869b98612d4438cd134"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/lidar_projected/manifest.json",
+      "sha256": "ca2fc1ab234a9463973c06b4237bf2ff38740fa1558a2519177f7d07b663ed29"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/lidar_projected/000019.npz",
+      "sha256": "01b422b7cbd9accf096359eb8300a239d1c4df8a0f5b885666fbd54129dbb7aa"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/lidar_projected/000039.npz",
+      "sha256": "8d63a282b4c28fe895eb4d2054391730784a4af8a0e7b7bf0c31143452d52014"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/lidar_projected/000059.npz",
+      "sha256": "fcab787d8019a5fd1225742fd6637d5a1537c955b3a5df3341d5a6390c5b4c9f"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/lidar_projected/000079.npz",
+      "sha256": "8dbe54be33971e781115ca466852b09292e1e4e5b921198c44592a80059c1b74"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/lidar_projected/000099.npz",
+      "sha256": "e5d1dcc57226449de4e8a43d34574a5fd07651564eca9993d75001015a908700"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/lidar_projected/000119.npz",
+      "sha256": "946035f254b3c14c9aaf7df7db1ed7306221433d7541f38f39f5abaf2746f8b4"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/lidar_projected/000139.npz",
+      "sha256": "8debe0add2792223de5e3bace564c002bb5b285664fb20ff0d972c8832227542"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/lidar_projected/000159.npz",
+      "sha256": "20057ea4f19e2538d3d34f0b88f957cc9a5b7cff372f628afa4cfb07730f09e0"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/lidar_projected/000179.npz",
+      "sha256": "409d33eb572ffba263c82aeb49f89e3e81870c8abdf5313fdfdd70df4b2c19a6"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/lidar_projected/000199.npz",
+      "sha256": "d01c281eb322864c6d30f20300b3d74125b1f6ab43ad177655fa0b64d6ea7d56"
+    }
+  ]
+}

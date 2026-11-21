@@ -1,0 +1,11 @@
+--- dg_slam/gaussian_model.py.orig
++++ dg_slam/gaussian_model.py
+@@ -17,7 +17,7 @@
+ from dg_slam.gaussian.system_utils import mkdir_p
+ from plyfile import PlyData, PlyElement
+ from dg_slam.gaussian.sh_utils import RGB2SH, SH2RGB, eval_sh
+-from simple_knn._C import distCUDA2
++# Unused simple_knn import removed; DG-SLAM uses FAISS for all neighbor searches.
+ from dg_slam.gaussian.graphics_utils import BasicPointCloud
+ from dg_slam.gaussian.general_utils import strip_symmetric, build_scaling_rotation
+ 

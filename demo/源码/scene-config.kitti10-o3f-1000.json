@@ -1,0 +1,73 @@
+{
+  "sceneId": "kitti10_o3f_000000_000999",
+  "title": "KITTI 10 · O3F · 1000 frames",
+  "dataset": "KITTI odometry sequence 10",
+  "sourceFrames": [
+    0,
+    999
+  ],
+  "gaussianCount": 2564544,
+  "defaultVariant": "F1",
+  "fidelityMode": "full-resolution",
+  "poseProtocol": "Fixed ORB estimated P2; no GT input",
+  "depthProtocol": "RAFT-Stereo; Demo 0.60 offline confidence",
+  "defaultCameraFrame": 99,
+  "assetManifest": "scene-data/KITTI10_O3F_1000/manifest.json",
+  "variants": {
+    "F1": {
+      "label": "O3F · Cap 3000 · H3 · Seed 0",
+      "description": "1000 seen frames; fixed ORB; H3 replay; 4000-step F1.",
+      "rgb": "scene-data/KITTI10_O3F_1000/RGB.ply",
+      "rgbWithTrajectory": "scene-data/KITTI10_O3F_1000/RGB_with_Trajectory.ply",
+      "manifest": "scene-data/KITTI10_O3F_1000/manifest.json",
+      "sogLod": "scene-data/KITTI10_O3F_1000/streamed_sog/lod-meta.json"
+    }
+  },
+  "assets": {
+    "rgb": "scene-data/KITTI10_O3F_1000/RGB.ply",
+    "rgbWithTrajectory": "scene-data/KITTI10_O3F_1000/RGB_with_Trajectory.ply",
+    "cameraPoses": "scene-data/KITTI10_O3F_1000/camera_poses.json",
+    "viewerSettings": "scene-data/KITTI10_O3F_1000/viewer_settings.json",
+    "trajectoryViewerSettings": "scene-data/KITTI10_O3F_1000/viewer_settings_trajectory.json",
+    "semantic": "scene-data/KITTI10_O3F_1000/Semantic.ply",
+    "sogLod": "scene-data/KITTI10_O3F_1000/streamed_sog/lod-meta.json"
+  },
+  "cameraPathLayer": {
+    "enabled": true,
+    "variant": "F1",
+    "asset": "scene-data/KITTI10_O3F_1000/camera_path.ply",
+    "manifest": "scene-data/KITTI10_O3F_1000/manifest.json",
+    "gaussianCount": 8195,
+    "sha256": "dc2ff214365be82b00fb4b70c7939946b03c00946e66c183f75c4b7034474cd2"
+  },
+  "semanticGaussianCount": 2564544,
+  "semanticManifest": "scene-data/KITTI10_O3F_1000/semantic_manifest.json",
+  "semanticSource": "Mask2Former Cityscapes-19, offline fixed-map fusion from 1000 seq10 images",
+  "semanticStatus": "Predicted classes, not motion; no semantic accuracy or object binding verified.",
+  "semanticMapId": "kitti10_o3f_1000_semantic",
+  "semanticRelation": "same RGB geometry, opacity, rotation and Gaussian order; category colors replace RGB",
+  "motionIndex": null,
+  "motionSnapshot": "scene-data/KITTI10_O3F_1000/FinalTruckRemovalExpanded/snapshot.json",
+  "motionReferenceImageTemplate": null,
+  "motionLabelMode": "offline_semantic_vehicle_objects",
+  "motionStateManifest": "scene-data/KITTI10_O3F_1000/ObjectStates/manifest.json",
+  "motionStateConfig": "semantic-region-v1 + short4_z0.5-40_far20",
+  "hideUncertainMotion": true,
+  "dynamicVehicleRemoval": {
+    "version": 2,
+    "removedCount": 45595,
+    "gaussianCount": 2518949,
+    "maskSha256": "5538f766e67bbbbe673fac29e2aaf7f250f239a0f3416ac9969bd4e0876ccda3",
+    "manifest": "scene-data/KITTI10_O3F_1000/FinalTruckRemovalExpanded/manifest.json",
+    "highlights": {
+      "F1": "scene-data/KITTI10_O3F_1000/FinalTruckRemovalExpanded/RGB_highlight.ply"
+    },
+    "variants": {
+      "F1": {
+        "rgb": "scene-data/KITTI10_O3F_1000/FinalTruckRemovalExpanded/RGB_removed.ply",
+        "rgbWithTrajectory": null
+      }
+    },
+    "warning": "Expanded V015 truck selection. Preview to inspect the selected points. Surfaces occluded in the source images can still have gaps."
+  }
+}

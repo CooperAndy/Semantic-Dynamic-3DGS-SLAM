@@ -1,0 +1,176 @@
+--- 01_source_env/dependencies/DROID-SLAM/src/altcorr_kernel.cu.orig
++++ 01_source_env/dependencies/DROID-SLAM/src/altcorr_kernel.cu
+@@ -1,5 +1,5 @@
+-#include <torch/extension.h>
+-#include <THC/THCAtomics.cuh>
++#include <torch/types.h>
++#include <ATen/cuda/Atomic.cuh>
+ #include <vector>
+ #include <iostream>
+ 
+
+--- 01_source_env/dependencies/DROID-SLAM/src/correlation_kernels.cu.orig
++++ 01_source_env/dependencies/DROID-SLAM/src/correlation_kernels.cu
+@@ -1,4 +1,4 @@
+-#include <torch/extension.h>
++#include <torch/types.h>
+ #include <cuda.h>
+ #include <cuda_runtime.h>
+ #include <vector>
+
+--- 01_source_env/dependencies/DROID-SLAM/src/droid.cpp.orig
++++ 01_source_env/dependencies/DROID-SLAM/src/droid.cpp
+@@ -1,4 +1,5 @@
+-#include <torch/extension.h>
++#include <torch/types.h>
++#include <torch/csrc/utils/pybind.h>
+ #include <vector>
+ 
+ // CUDA forward declarations
+
+--- 01_source_env/dependencies/DROID-SLAM/src/droid_kernels.cu.orig
++++ 01_source_env/dependencies/DROID-SLAM/src/droid_kernels.cu
+@@ -1,4 +1,4 @@
+-#include <torch/extension.h>
++#include <torch/types.h>
+ #include <cuda.h>
+ #include <cuda_runtime.h>
+ #include <cuda_runtime.h>
+
+--- 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/extras/altcorr_kernel.cu.orig
++++ 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/extras/altcorr_kernel.cu
+@@ -1,4 +1,4 @@
+-#include <torch/extension.h>
++#include <torch/types.h>
+ #include <cuda.h>
+ #include <cuda_runtime.h>
+ #include <vector>
+
+--- 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/extras/corr_index_kernel.cu.orig
++++ 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/extras/corr_index_kernel.cu
+@@ -1,4 +1,4 @@
+-#include <torch/extension.h>
++#include <torch/types.h>
+ #include <cuda.h>
+ #include <cuda_runtime.h>
+ #include <vector>
+
+--- 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/extras/extras.cpp.orig
++++ 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/extras/extras.cpp
+@@ -1,4 +1,5 @@
+-#include <torch/extension.h>
++#include <torch/types.h>
++#include <torch/csrc/utils/pybind.h>
+ #include <vector>
+ 
+ 
+
+--- 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/extras/se3_builder.cu.orig
++++ 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/extras/se3_builder.cu
+@@ -1,4 +1,4 @@
+-#include <torch/extension.h>
++#include <torch/types.h>
+ #include <cuda.h>
+ #include <cuda_runtime.h>
+ #include <vector>
+
+--- 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/extras/se3_inplace_builder.cu.orig
++++ 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/extras/se3_inplace_builder.cu
+@@ -1,4 +1,4 @@
+-#include <torch/extension.h>
++#include <torch/types.h>
+ #include <cuda.h>
+ #include <cuda_runtime.h>
+ #include <vector>
+
+--- 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/extras/se3_solver.cu.orig
++++ 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/extras/se3_solver.cu
+@@ -1,4 +1,4 @@
+-#include <torch/extension.h>
++#include <torch/types.h>
+ #include <vector>
+ 
+ 
+
+--- 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/include/dispatch.h.orig
++++ 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/include/dispatch.h
+@@ -1,7 +1,7 @@
+ #ifndef DISPATCH_H
+ #define DISPATCH_H
+ 
+-#include <torch/extension.h>
++#include <torch/types.h>
+ 
+ #include "so3.h"
+ #include "rxso3.h"
+
+--- 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/include/lietorch_cpu.h.orig
++++ 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/include/lietorch_cpu.h
+@@ -3,7 +3,7 @@
+ #define LIETORCH_CPU_H_
+ 
+ #include <vector>
+-#include <torch/extension.h>
++#include <torch/types.h>
+ 
+ 
+ // unary operations
+
+--- 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/include/lietorch_gpu.h.orig
++++ 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/include/lietorch_gpu.h
+@@ -3,7 +3,7 @@
+ #define LIETORCH_GPU_H_
+ 
+ #include <vector>
+-#include <torch/extension.h>
++#include <torch/types.h>
+ #include <cuda.h>
+ #include <cuda_runtime.h>
+ 
+
+--- 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/src/lietorch.cpp.orig
++++ 01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/lietorch/src/lietorch.cpp
+@@ -1,4 +1,5 @@
+-#include <torch/extension.h>
++#include <torch/types.h>
++#include <torch/csrc/utils/pybind.h>
+ #include <vector>
+ #include "lietorch_gpu.h"
+ #include "lietorch_cpu.h"
+
+--- 01_source_env/DG-SLAM/submodules/diff-gaussian-rasterization_pose/ext.cpp.orig
++++ 01_source_env/DG-SLAM/submodules/diff-gaussian-rasterization_pose/ext.cpp
+@@ -9,7 +9,8 @@
+  * For inquiries contact  george.drettakis@inria.fr
+  */
+ 
+-#include <torch/extension.h>
++#include <torch/types.h>
++#include <torch/csrc/utils/pybind.h>
+ #include "rasterize_points.h"
+ 
+ PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
+
+--- 01_source_env/DG-SLAM/submodules/diff-gaussian-rasterization_pose/rasterize_points.cu.orig
++++ 01_source_env/DG-SLAM/submodules/diff-gaussian-rasterization_pose/rasterize_points.cu
+@@ -10,7 +10,7 @@
+  */
+ 
+ #include <math.h>
+-#include <torch/extension.h>
++#include <torch/types.h>
+ #include <cstdio>
+ #include <sstream>
+ #include <iostream>
+
+--- 01_source_env/DG-SLAM/submodules/diff-gaussian-rasterization_pose/rasterize_points.h.orig
++++ 01_source_env/DG-SLAM/submodules/diff-gaussian-rasterization_pose/rasterize_points.h
+@@ -10,7 +10,7 @@
+  */
+ 
+ #pragma once
+-#include <torch/extension.h>
++#include <torch/types.h>
+ #include <cstdio>
+ #include <tuple>
+ #include <string>

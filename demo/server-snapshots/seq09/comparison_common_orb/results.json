@@ -1,0 +1,371 @@
+{
+  "camera": "common original ORB P2",
+  "background": [
+    0.055,
+    0.065,
+    0.08
+  ],
+  "scope": "S23 holdout frames were seen by existing F1; not an equal held-out comparison",
+  "rows": [
+    {
+      "variant": "Demo_F1",
+      "local_frame": 0,
+      "source_frame": 300,
+      "cohort": "seen",
+      "psnr": 14.461052834680068,
+      "ssim": 0.7113274931907654
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 49,
+      "source_frame": 349,
+      "cohort": "seen",
+      "psnr": 14.679027109549326,
+      "ssim": 0.6649509072303772
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 99,
+      "source_frame": 399,
+      "cohort": "S23_holdout",
+      "psnr": 14.980638359580134,
+      "ssim": 0.7437823414802551
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 149,
+      "source_frame": 449,
+      "cohort": "seen",
+      "psnr": 13.103168687570614,
+      "ssim": 0.7115967869758606
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 199,
+      "source_frame": 499,
+      "cohort": "S23_holdout",
+      "psnr": 9.170182586320307,
+      "ssim": 0.4863507151603699
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 19,
+      "source_frame": 319,
+      "cohort": "S23_holdout",
+      "psnr": 20.21121039900242,
+      "ssim": 0.7739804983139038
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 39,
+      "source_frame": 339,
+      "cohort": "S23_holdout",
+      "psnr": 15.422354621099426,
+      "ssim": 0.735572099685669
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 59,
+      "source_frame": 359,
+      "cohort": "S23_holdout",
+      "psnr": 16.89948026594823,
+      "ssim": 0.6835740208625793
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 79,
+      "source_frame": 379,
+      "cohort": "S23_holdout",
+      "psnr": 15.295841072151557,
+      "ssim": 0.7318198680877686
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 99,
+      "source_frame": 399,
+      "cohort": "S23_holdout",
+      "psnr": 14.980638359580134,
+      "ssim": 0.7437823414802551
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 119,
+      "source_frame": 419,
+      "cohort": "S23_holdout",
+      "psnr": 10.898797361659891,
+      "ssim": 0.6846951842308044
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 139,
+      "source_frame": 439,
+      "cohort": "S23_holdout",
+      "psnr": 9.842934967344913,
+      "ssim": 0.658902108669281
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 159,
+      "source_frame": 459,
+      "cohort": "S23_holdout",
+      "psnr": 13.641169008328424,
+      "ssim": 0.6895627379417419
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 179,
+      "source_frame": 479,
+      "cohort": "S23_holdout",
+      "psnr": 12.441448996308369,
+      "ssim": 0.6065565347671509
+    },
+    {
+      "variant": "Demo_F1",
+      "local_frame": 199,
+      "source_frame": 499,
+      "cohort": "S23_holdout",
+      "psnr": 9.170182586320307,
+      "ssim": 0.4863507151603699
+    },
+    {
+      "variant": "B",
+      "local_frame": 0,
+      "source_frame": 300,
+      "cohort": "seen",
+      "psnr": 14.270155962782766,
+      "ssim": 0.7126950025558472
+    },
+    {
+      "variant": "B",
+      "local_frame": 49,
+      "source_frame": 349,
+      "cohort": "seen",
+      "psnr": 14.320883600016007,
+      "ssim": 0.6307120323181152
+    },
+    {
+      "variant": "B",
+      "local_frame": 99,
+      "source_frame": 399,
+      "cohort": "S23_holdout",
+      "psnr": 11.739342176869163,
+      "ssim": 0.5246948003768921
+    },
+    {
+      "variant": "B",
+      "local_frame": 149,
+      "source_frame": 449,
+      "cohort": "seen",
+      "psnr": 11.147126653459754,
+      "ssim": 0.6379406452178955
+    },
+    {
+      "variant": "B",
+      "local_frame": 199,
+      "source_frame": 499,
+      "cohort": "S23_holdout",
+      "psnr": 8.251918432560748,
+      "ssim": 0.37388181686401367
+    },
+    {
+      "variant": "B",
+      "local_frame": 19,
+      "source_frame": 319,
+      "cohort": "S23_holdout",
+      "psnr": 16.012216361730466,
+      "ssim": 0.5586699843406677
+    },
+    {
+      "variant": "B",
+      "local_frame": 39,
+      "source_frame": 339,
+      "cohort": "S23_holdout",
+      "psnr": 13.789160807585015,
+      "ssim": 0.5349658727645874
+    },
+    {
+      "variant": "B",
+      "local_frame": 59,
+      "source_frame": 359,
+      "cohort": "S23_holdout",
+      "psnr": 13.916291471144467,
+      "ssim": 0.4906373918056488
+    },
+    {
+      "variant": "B",
+      "local_frame": 79,
+      "source_frame": 379,
+      "cohort": "S23_holdout",
+      "psnr": 12.572377357612181,
+      "ssim": 0.5306918621063232
+    },
+    {
+      "variant": "B",
+      "local_frame": 99,
+      "source_frame": 399,
+      "cohort": "S23_holdout",
+      "psnr": 11.739342176869163,
+      "ssim": 0.5246948003768921
+    },
+    {
+      "variant": "B",
+      "local_frame": 119,
+      "source_frame": 419,
+      "cohort": "S23_holdout",
+      "psnr": 9.350130221444058,
+      "ssim": 0.4371768534183502
+    },
+    {
+      "variant": "B",
+      "local_frame": 139,
+      "source_frame": 439,
+      "cohort": "S23_holdout",
+      "psnr": 8.576879060246927,
+      "ssim": 0.42700085043907166
+    },
+    {
+      "variant": "B",
+      "local_frame": 159,
+      "source_frame": 459,
+      "cohort": "S23_holdout",
+      "psnr": 10.765436095260261,
+      "ssim": 0.5239612460136414
+    },
+    {
+      "variant": "B",
+      "local_frame": 179,
+      "source_frame": 479,
+      "cohort": "S23_holdout",
+      "psnr": 10.530901822815505,
+      "ssim": 0.4273492097854614
+    },
+    {
+      "variant": "B",
+      "local_frame": 199,
+      "source_frame": 499,
+      "cohort": "S23_holdout",
+      "psnr": 8.251918432560748,
+      "ssim": 0.37388181686401367
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 0,
+      "source_frame": 300,
+      "cohort": "seen",
+      "psnr": 13.999456276929061,
+      "ssim": 0.7106869220733643
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 49,
+      "source_frame": 349,
+      "cohort": "seen",
+      "psnr": 14.342033047616013,
+      "ssim": 0.6299223303794861
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 99,
+      "source_frame": 399,
+      "cohort": "S23_holdout",
+      "psnr": 11.732752880550121,
+      "ssim": 0.5256919860839844
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 149,
+      "source_frame": 449,
+      "cohort": "seen",
+      "psnr": 11.149402349223221,
+      "ssim": 0.6380849480628967
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 199,
+      "source_frame": 499,
+      "cohort": "S23_holdout",
+      "psnr": 8.251882085128475,
+      "ssim": 0.37386056780815125
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 19,
+      "source_frame": 319,
+      "cohort": "S23_holdout",
+      "psnr": 15.849099229961997,
+      "ssim": 0.5570271611213684
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 39,
+      "source_frame": 339,
+      "cohort": "S23_holdout",
+      "psnr": 14.045934260671027,
+      "ssim": 0.5356376767158508
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 59,
+      "source_frame": 359,
+      "cohort": "S23_holdout",
+      "psnr": 13.891372774729426,
+      "ssim": 0.4883497953414917
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 79,
+      "source_frame": 379,
+      "cohort": "S23_holdout",
+      "psnr": 12.51610754362912,
+      "ssim": 0.5318151116371155
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 99,
+      "source_frame": 399,
+      "cohort": "S23_holdout",
+      "psnr": 11.732752880550121,
+      "ssim": 0.5256919860839844
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 119,
+      "source_frame": 419,
+      "cohort": "S23_holdout",
+      "psnr": 9.357709289402056,
+      "ssim": 0.43706125020980835
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 139,
+      "source_frame": 439,
+      "cohort": "S23_holdout",
+      "psnr": 8.57452566971731,
+      "ssim": 0.426895409822464
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 159,
+      "source_frame": 459,
+      "cohort": "S23_holdout",
+      "psnr": 10.764316632135756,
+      "ssim": 0.5240039229393005
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 179,
+      "source_frame": 479,
+      "cohort": "S23_holdout",
+      "psnr": 10.530510961425056,
+      "ssim": 0.42737525701522827
+    },
+    {
+      "variant": "TMD",
+      "local_frame": 199,
+      "source_frame": 499,
+      "cohort": "S23_holdout",
+      "psnr": 8.251882085128475,
+      "ssim": 0.37386056780815125
+    }
+  ]
+}

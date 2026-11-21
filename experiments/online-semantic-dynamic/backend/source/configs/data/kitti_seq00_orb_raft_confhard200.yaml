@@ -1,0 +1,18 @@
+dataset_name: "kitti"
+
+# SplaTAM's KITTI adapter reads pose_path from the dataset YAML.
+# This loader-compatible file keeps the delivered online 200-frame ORB poses
+# in rows 1-200 and is padded to 4541 rows because the current loader eagerly
+# validates a pose for every RGB/depth pair before num_frames is applied.
+pose_path: "/root/autodl-tmp/slam_project/stage1_driving_adaptation/results/orbslam3/seq00_orb_kitti_200_loader_compat.txt"
+depth_folder: "/root/autodl-tmp/slam_project/stage1r_confidence_mapping/results/confidence_mirrored_200/depth_confhard"
+
+camera_params:
+  image_height: 376
+  image_width: 1241
+  fx: 718.856
+  fy: 718.856
+  cx: 607.1928
+  cy: 185.2157
+  png_depth_scale: 1.0
+  crop_edge: 0

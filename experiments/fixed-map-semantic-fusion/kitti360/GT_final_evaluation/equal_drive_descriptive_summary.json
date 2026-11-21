@@ -1,0 +1,27 @@
+[
+  {
+    "group": "S0",
+    "equal_drive_primary_mIoU": 0.49801156325047824,
+    "equal_drive_coverage": 0.9453299809522617
+  },
+  {
+    "group": "S1",
+    "equal_drive_primary_mIoU": 0.4977708885986416,
+    "equal_drive_coverage": 0.9453299809522617
+  },
+  {
+    "group": "S-G",
+    "equal_drive_primary_mIoU": 0.5027651749772004,
+    "equal_drive_coverage": 0.9453299809522617
+  },
+  {
+    "group": "S2",
+    "equal_drive_primary_mIoU": 0.5022447411256818,
+    "equal_drive_coverage": 0.9453299809522617
+  },
+  {
+    "group": "S2-H",
+    "equal_drive_primary_mIoU": 0.4905104829000102,
+    "equal_drive_coverage": 0.9178089291224976
+  }
+]

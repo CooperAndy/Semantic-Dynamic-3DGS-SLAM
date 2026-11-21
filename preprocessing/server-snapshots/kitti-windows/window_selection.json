@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-29T04:07:18.784703+08:00",
+  "status": "WINDOWS_FIXED_BEFORE_FRONTEND_OR_GT_SCORING",
+  "windows": [
+    {
+      "id": "K05_F000000_000999",
+      "sequence": "05",
+      "source_start": 0,
+      "frame_count": 1000
+    },
+    {
+      "id": "K10_F000000_000999",
+      "sequence": "10",
+      "source_start": 0,
+      "frame_count": 1000
+    }
+  ],
+  "selection": "First1000 of existing05/10;no outcome based replacement",
+  "GT_reads": 0,
+  "quality_adoption": false
+}

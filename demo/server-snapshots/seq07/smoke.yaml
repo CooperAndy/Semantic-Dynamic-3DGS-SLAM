@@ -1,0 +1,1 @@
+{"dataset_name": "kitti", "pose_path": "/root/autodl-tmp/seq07_000850_001049_tuning_20261115/smoke_poses.txt", "depth_folder": "/root/autodl-tmp/seq07_000850_001049_tuning_20261115/smoke_confidence/depth_confhard", "camera_params": {"image_height": 370, "image_width": 1226, "fx": 707.0912, "fy": 707.0912, "cx": 601.8873, "cy": 183.1104, "png_depth_scale": 1.0, "crop_edge": 0}}

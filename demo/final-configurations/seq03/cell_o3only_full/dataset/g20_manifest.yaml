@@ -1,0 +1,11 @@
+dataset_name: kitti
+input_manifest: /root/autodl-tmp/seq03_000000_000800_O3F_M3F_20261116/cell_o3only_full/inputs/runtime/input_manifest.json
+camera_params:
+  image_height: 375
+  image_width: 1242
+  fx: 721.5377
+  fy: 721.5377
+  cx: 609.5593
+  cy: 172.854
+  png_depth_scale: 1.0
+  crop_edge: 0

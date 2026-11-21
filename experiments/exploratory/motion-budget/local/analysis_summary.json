@@ -1,0 +1,332 @@
+{
+  "status": "DERIVED_FROM_SEALED_RECEIPTS",
+  "holdout": {
+    "name": "frozen_original_holdout",
+    "registered": 10,
+    "eligible": 4,
+    "rows": [
+      {
+        "frame": 19,
+        "role": "process_control",
+        "support_pixels": 4034,
+        "eligible": true,
+        "risk_score_primary": 0.05598041329023973,
+        "pose_delta_mm": 10.680256822155343,
+        "harm_gt3mm": true,
+        "anchor_psnr_delta_db": 0.44345055875116657,
+        "anchor_depth_mae_delta_m": -0.008702903985977173
+      },
+      {
+        "frame": 39,
+        "role": "process_control",
+        "support_pixels": 4036,
+        "eligible": true,
+        "risk_score_primary": 0.014783448417657774,
+        "pose_delta_mm": -3.9238793845963738,
+        "harm_gt3mm": false,
+        "anchor_psnr_delta_db": 0.6364109082428762,
+        "anchor_depth_mae_delta_m": -0.023149818181991577
+      },
+      {
+        "frame": 59,
+        "role": "prospective_dev",
+        "support_pixels": 216,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 79,
+        "role": "prospective_dev",
+        "support_pixels": 2035,
+        "eligible": true,
+        "risk_score_primary": 0.03641529469354915,
+        "pose_delta_mm": 0.739888631523152,
+        "harm_gt3mm": false,
+        "anchor_psnr_delta_db": 0.5252283898472818,
+        "anchor_depth_mae_delta_m": -0.019861042499542236
+      },
+      {
+        "frame": 99,
+        "role": "prospective_dev",
+        "support_pixels": 467,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 119,
+        "role": "prospective_dev",
+        "support_pixels": 209,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 139,
+        "role": "prospective_dev",
+        "support_pixels": 447,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 159,
+        "role": "prospective_dev",
+        "support_pixels": 878,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 179,
+        "role": "prospective_dev",
+        "support_pixels": 1846,
+        "eligible": true,
+        "risk_score_primary": 0.007457058058618848,
+        "pose_delta_mm": -2.7155015229906785,
+        "harm_gt3mm": false,
+        "anchor_psnr_delta_db": 0.5294622703755998,
+        "anchor_depth_mae_delta_m": -0.060309529304504395
+      },
+      {
+        "frame": 199,
+        "role": "prospective_dev",
+        "support_pixels": 451,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      }
+    ],
+    "harm_gt3mm_count": 1,
+    "risk_auc_descriptive": null,
+    "risk_ranking_desc": [
+      19,
+      79,
+      39,
+      179
+    ],
+    "prospective": {
+      "registered": 8,
+      "eligible": 2,
+      "harm_gt3mm_count": 0,
+      "risk_auc_descriptive": null
+    },
+    "process_control": {
+      "registered": 2,
+      "eligible": 2,
+      "harm_gt3mm_count": 1
+    }
+  },
+  "grid": {
+    "name": "adaptive_exploratory_grid",
+    "registered": 16,
+    "eligible": 5,
+    "rows": [
+      {
+        "frame": 45,
+        "role": "exploratory_grid",
+        "support_pixels": 2637,
+        "eligible": true,
+        "risk_score_primary": 0.018024773730329458,
+        "pose_delta_mm": -0.3867678106008743,
+        "harm_gt3mm": false,
+        "anchor_psnr_delta_db": -0.417851917589644,
+        "anchor_depth_mae_delta_m": 0.027876555919647217
+      },
+      {
+        "frame": 55,
+        "role": "exploratory_grid",
+        "support_pixels": 597,
+        "eligible": false,
+        "risk_score_primary": 0.037796104531981234,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 65,
+        "role": "exploratory_grid",
+        "support_pixels": 599,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 75,
+        "role": "exploratory_grid",
+        "support_pixels": 1678,
+        "eligible": true,
+        "risk_score_primary": 0.056232409282071294,
+        "pose_delta_mm": 5.290402289436225,
+        "harm_gt3mm": true,
+        "anchor_psnr_delta_db": 0.8646043804798573,
+        "anchor_depth_mae_delta_m": -0.021259814500808716
+      },
+      {
+        "frame": 85,
+        "role": "exploratory_grid",
+        "support_pixels": 670,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 95,
+        "role": "exploratory_grid",
+        "support_pixels": 248,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 105,
+        "role": "exploratory_grid",
+        "support_pixels": 270,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 115,
+        "role": "exploratory_grid",
+        "support_pixels": 250,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 125,
+        "role": "exploratory_grid",
+        "support_pixels": 67,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 135,
+        "role": "exploratory_grid",
+        "support_pixels": 187,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 145,
+        "role": "exploratory_grid",
+        "support_pixels": 296,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 155,
+        "role": "exploratory_grid",
+        "support_pixels": 427,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      },
+      {
+        "frame": 165,
+        "role": "exploratory_grid",
+        "support_pixels": 1191,
+        "eligible": true,
+        "risk_score_primary": 0.10948223642783583,
+        "pose_delta_mm": -5.098114494612838,
+        "harm_gt3mm": false,
+        "anchor_psnr_delta_db": 0.715731464418564,
+        "anchor_depth_mae_delta_m": -0.016831770539283752
+      },
+      {
+        "frame": 175,
+        "role": "exploratory_grid",
+        "support_pixels": 2295,
+        "eligible": true,
+        "risk_score_primary": 0.05439133888826009,
+        "pose_delta_mm": -4.16514698981522,
+        "harm_gt3mm": false,
+        "anchor_psnr_delta_db": 0.710973960549353,
+        "anchor_depth_mae_delta_m": -0.01591646671295166
+      },
+      {
+        "frame": 185,
+        "role": "exploratory_grid",
+        "support_pixels": 1868,
+        "eligible": true,
+        "risk_score_primary": 0.01797523923740274,
+        "pose_delta_mm": -33.26848620405768,
+        "harm_gt3mm": false,
+        "anchor_psnr_delta_db": -0.1587203662783203,
+        "anchor_depth_mae_delta_m": 0.020925045013427734
+      },
+      {
+        "frame": 195,
+        "role": "exploratory_grid",
+        "support_pixels": 110,
+        "eligible": false,
+        "risk_score_primary": null,
+        "pose_delta_mm": null,
+        "harm_gt3mm": null,
+        "anchor_psnr_delta_db": null,
+        "anchor_depth_mae_delta_m": null
+      }
+    ],
+    "harm_gt3mm_count": 1,
+    "risk_auc_descriptive": 0.75,
+    "risk_ranking_desc": [
+      165,
+      75,
+      175,
+      45,
+      185
+    ]
+  },
+  "interpretation_boundary": "Never pool process controls, frozen holdouts, or adaptive grid as one confirmatory sample."
+}

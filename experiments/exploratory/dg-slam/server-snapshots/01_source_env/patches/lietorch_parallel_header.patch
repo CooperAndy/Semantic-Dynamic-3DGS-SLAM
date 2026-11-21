@@ -1,0 +1,7 @@
+--- lietorch_cpu.cpp.orig
++++ lietorch_cpu.cpp
+@@ -1,3 +1,4 @@
++#include <ATen/Parallel.h>
+ 
+ #include "lietorch_cpu.h"
+ #include <Eigen/Dense>

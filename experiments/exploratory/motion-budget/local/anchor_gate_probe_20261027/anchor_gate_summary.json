@@ -1,0 +1,135 @@
+{
+  "status": "DERIVED_AFTER_GPU_OUTPUT_SEAL",
+  "worker_GT_access": "audit_hook_blocks_GT_paths",
+  "support_protocol_sha256": "057cba50006175b8b2c4c6cf6a475e379bfec104e296ded4a64788993c25c0e0",
+  "pose_protocol_sha256": "e34f981898061cba80d40da3401f89d6e881d3f6e3421fe7cfee6e8e245a3e11",
+  "pose_receipt_sha256": "7e8394b56455bf236fdb95beaa333f050fa00dcb0028ec990fcf45dc29ef9c6d",
+  "trial_count": 40,
+  "eligible_view_count": 5,
+  "per_view": [
+    {
+      "event_role": "targeted_case_A",
+      "frame": 72,
+      "support_pixels": 2017,
+      "before_mean_anchor_translation_error_m": 0.008288310655076694,
+      "after_mean_anchor_translation_error_m": 0.01195405696191929,
+      "after_minus_before_m": 0.0036657463068425957,
+      "before_mean_anchor_rotation_error_deg": 0.028985473602055174,
+      "after_mean_anchor_rotation_error_deg": 0.03255966442261997,
+      "after_minus_before_rotation_deg": 0.0035741908205647946,
+      "per_perturbation_after_minus_before_m": {
+        "yaw_m1": 0.003337901271160475,
+        "yaw_p1": 0.0037300658652740775,
+        "tx_m5cm": 0.0038703803106735907,
+        "tx_p5cm": 0.003724637780262243
+      }
+    },
+    {
+      "event_role": "targeted_case_A",
+      "frame": 73,
+      "support_pixels": 1637,
+      "before_mean_anchor_translation_error_m": 0.013318627663899886,
+      "after_mean_anchor_translation_error_m": 0.011799184413830799,
+      "after_minus_before_m": -0.0015194432500690875,
+      "before_mean_anchor_rotation_error_deg": 0.02843842355275701,
+      "after_mean_anchor_rotation_error_deg": 0.026520508245244344,
+      "after_minus_before_rotation_deg": -0.0019179153075126673,
+      "per_perturbation_after_minus_before_m": {
+        "yaw_m1": -0.0027700691743826125,
+        "yaw_p1": 0.00063560753432634,
+        "tx_m5cm": -0.0016758633209187496,
+        "tx_p5cm": -0.0022674480393013226
+      }
+    },
+    {
+      "event_role": "targeted_case_A",
+      "frame": 74,
+      "support_pixels": 2047,
+      "before_mean_anchor_translation_error_m": 0.027571412156515946,
+      "after_mean_anchor_translation_error_m": 0.026446648152659506,
+      "after_minus_before_m": -0.0011247640038564398,
+      "before_mean_anchor_rotation_error_deg": 0.04165846380451481,
+      "after_mean_anchor_rotation_error_deg": 0.06374132579998226,
+      "after_minus_before_rotation_deg": 0.022082861995467454,
+      "per_perturbation_after_minus_before_m": {
+        "yaw_m1": -0.00016886359221054623,
+        "yaw_p1": -0.0017615534312215297,
+        "tx_m5cm": -0.000942686794475598,
+        "tx_p5cm": -0.0016259521975181025
+      }
+    },
+    {
+      "event_role": "targeted_case_B",
+      "frame": 162,
+      "support_pixels": 1096,
+      "before_mean_anchor_translation_error_m": 0.005338506552139793,
+      "after_mean_anchor_translation_error_m": 0.00938959432968563,
+      "after_minus_before_m": 0.004051087777545838,
+      "before_mean_anchor_rotation_error_deg": 0.004493453615985194,
+      "after_mean_anchor_rotation_error_deg": 0.009247329783814973,
+      "after_minus_before_rotation_deg": 0.004753876167829779,
+      "per_perturbation_after_minus_before_m": {
+        "yaw_m1": 0.0027757827172267538,
+        "yaw_p1": 0.004618081371420393,
+        "tx_m5cm": 0.0037829840994931243,
+        "tx_p5cm": 0.00502750292204308
+      }
+    },
+    {
+      "event_role": "targeted_case_B",
+      "frame": 163,
+      "support_pixels": 1111,
+      "before_mean_anchor_translation_error_m": 0.005218200916818979,
+      "after_mean_anchor_translation_error_m": 0.007001602308688681,
+      "after_minus_before_m": 0.001783401391869702,
+      "before_mean_anchor_rotation_error_deg": 0.0,
+      "after_mean_anchor_rotation_error_deg": 0.005779415096950069,
+      "after_minus_before_rotation_deg": 0.005779415096950069,
+      "per_perturbation_after_minus_before_m": {
+        "yaw_m1": 0.001754827942582549,
+        "yaw_p1": 0.0025752268130961598,
+        "tx_m5cm": 0.001529686128388638,
+        "tx_p5cm": 0.001273864683411459
+      }
+    }
+  ],
+  "events": [
+    {
+      "role": "targeted_case_A",
+      "future_frame": 75,
+      "eligible_observed_views": 3,
+      "registered_observed_views": [
+        72,
+        73,
+        74
+      ],
+      "unscorable_views": [],
+      "per_view_flagged_frames": [
+        72
+      ],
+      "probe_flag": false,
+      "previously_sealed_future_gt_translation_delta_mm": 5.290402289436225,
+      "future_harm_over_3mm": true
+    },
+    {
+      "role": "targeted_case_B",
+      "future_frame": 165,
+      "eligible_observed_views": 2,
+      "registered_observed_views": [
+        162,
+        163,
+        164
+      ],
+      "unscorable_views": [
+        164
+      ],
+      "per_view_flagged_frames": [
+        162
+      ],
+      "probe_flag": false,
+      "previously_sealed_future_gt_translation_delta_mm": -5.098114494612838,
+      "future_harm_over_3mm": false
+    }
+  ],
+  "interpretation": "Targeted two-case post hoc falsification only; view-level local recovery to the fixed ORB anchor is not GT accuracy, and the cases were selected after prior future-view outcomes were known."
+}

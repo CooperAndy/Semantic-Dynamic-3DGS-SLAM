@@ -1,0 +1,30 @@
+{
+  "defaultSceneId": "kitti09_conf050_seed42",
+  "scenes": [
+    {
+      "id": "kitti09_conf050_seed42",
+      "label": "Seq 09 · 000300–000499 · ORB F1 RGB",
+      "config": "scene-config.kitti09-c50-s42.json"
+    },
+    {
+      "id": "kitti10_o3f_000000_000999",
+      "label": "Seq 10 · 000000–000999 · O3F · Object States",
+      "config": "scene-config.kitti10-o3f-1000.json"
+    },
+    {
+      "id": "kitti07_c60s42_v009_track20_trial",
+      "label": "Seq 07 · 000850–001049 · ORB F1 RGB",
+      "config": "scene-config.kitti07-v009-track20-trial.json"
+    },
+    {
+      "id": "kitti13_o3f_780_1039",
+      "label": "Seq 13 · 000780–001039 · O3F · Object States",
+      "config": "scene-config.kitti13-o3f-260.json"
+    },
+    {
+      "id": "kitti03_m3f_000000_000800",
+      "label": "Seq 03 · 000000–000800 · M3F · Object States",
+      "config": "scene-config.kitti03-m3f-801.json"
+    }
+  ]
+}

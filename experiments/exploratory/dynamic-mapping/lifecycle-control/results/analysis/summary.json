@@ -1,0 +1,26 @@
+{
+  "D0": {
+    "gaussians_final": 216973,
+    "total_created": 216973,
+    "rejected_valid_depth_dynamic": 0,
+    "rejected_valid_depth_uncertain": 0,
+    "rejected_valid_depth_ignore": 0,
+    "psnr_mean_all_40": 15.931991457939148,
+    "ms_ssim_mean_all_40": 0.7582145363092423,
+    "lpips_mean_all_40": 0.359639847651124,
+    "wall_seconds": 54.5609735539183,
+    "max_frame_torch_allocated_mib": 217.36376953125
+  },
+  "D3": {
+    "gaussians_final": 212322,
+    "total_created": 212322,
+    "rejected_valid_depth_dynamic": 8085,
+    "rejected_valid_depth_uncertain": 5389,
+    "rejected_valid_depth_ignore": 0,
+    "psnr_mean_all_40": 15.88762834072113,
+    "ms_ssim_mean_all_40": 0.7576674714684486,
+    "lpips_mean_all_40": 0.3584482971578836,
+    "wall_seconds": 53.03333910997026,
+    "max_frame_torch_allocated_mib": 216.27099609375
+  }
+}

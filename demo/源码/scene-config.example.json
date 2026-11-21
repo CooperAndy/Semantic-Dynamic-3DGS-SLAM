@@ -1,0 +1,26 @@
+{
+  "sceneId": "kitti08_s3_full",
+  "title": "KITTI 08 · S3",
+  "dataset": "KITTI odometry sequence 08",
+  "sourceFrames": [3000, 3199],
+  "gaussianCount": 6431865,
+  "fidelityMode": "full-resolution",
+  "poseProtocol": "External camera poses; document the source here",
+  "depthProtocol": "Document the source depth and confidence policy here",
+  "defaultCameraFrame": 3099,
+  "semanticGaussianCount": 0,
+  "semanticSource": null,
+  "semanticStatus": "No point-aligned semantic asset is configured for this scene.",
+  "assets": {
+    "rgb": "scenes/example/rgb.ply",
+    "semantic": null,
+    "rgbWithTrajectory": "scenes/example/rgb_with_trajectory.ply",
+    "viewerSettings": "scenes/example/viewer_settings.json",
+    "trajectoryViewerSettings": "scenes/example/viewer_settings_trajectory.json",
+    "cameraPoses": "scenes/example/cameras.json"
+  },
+  "notes": [
+    "cameras.json must contain the actual source_frame, position, rotation, height and fy for this map.",
+    "Keep full-resolution source as master; do not overwrite with a decimated export."
+  ]
+}

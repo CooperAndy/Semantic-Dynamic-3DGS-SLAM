@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <script src="./viewer_presence.js" defer></script>
+  <title>Full Gaussian Map Viewer</title>
+  <style>
+    .restore-camera-dialog{width:min(680px,94vw);max-height:90vh;overflow:auto;padding:22px;border:1px solid #496180;border-radius:14px;background:#111d32;color:#eaf2ff}.restore-camera-dialog::backdrop{background:#000b}.restore-camera-dialog h2{margin:0 0 12px;font-size:20px}.restore-camera-dialog p{font-size:13px;color:#bdcce2;line-height:1.6;overflow-wrap:anywhere}.restore-camera-dialog label{display:block;margin:16px 0 8px}.restore-camera-dialog select{width:100%;padding:10px;border:1px solid #496180;border-radius:8px;background:#192a45}.restore-camera-dialog img{display:block;width:100%;max-height:32vh;object-fit:contain;margin:14px 0;border-radius:8px;background:#080f1d}.restore-camera-dialog img[hidden]{display:none}.restore-camera-dialog .restore-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.restore-camera-dialog button{padding:10px 14px;border:1px solid #496180;border-radius:8px;background:#1d2d45;color:#eaf2ff}.restore-camera-dialog button:disabled{opacity:.45;cursor:not-allowed}.restore-camera-dialog #t07-restore-apply{background:#2d64d7}
+    :root{color-scheme:dark;--bg:#080f1d;--panel:#111d32;--panel2:#192a45;--line:#344e74;--text:#eaf2ff;--muted:#9db1d0;--blue:#3478f6;font-family:"Segoe UI","Microsoft YaHei",sans-serif}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--text);background:radial-gradient(ellipse at 50% -40%,#1d355c 0,var(--bg) 65%)}button,select{font:inherit;color:inherit}button{cursor:pointer}
+    .app{height:100vh;min-height:720px;display:grid;grid-template-rows:92px 1fr 26px;padding:0 24px 8px;gap:8px}
+    header{display:flex;align-items:center;gap:18px;min-width:0}.brand{display:flex;align-items:center;gap:14px;min-width:345px}.cube{font-size:42px;color:#79afff;text-shadow:0 0 20px #3478f6aa}h1{margin:0;font-size:22px;letter-spacing:.03em}h1 small{margin-left:8px;color:var(--muted);font-size:14px;font-weight:400}.subtitle{display:block;margin-top:4px;color:var(--muted);font-size:13px}
+    .tabs{display:flex;margin:auto;padding:5px;border:1px solid var(--line);border-radius:15px;background:#111d32dd}.tabs button{min-width:112px;padding:11px 14px;border:0;border-right:1px solid #2a3d5e;background:transparent;color:#bdcce2}.tabs button:last-child{border-right:0}.tabs button.active{border-radius:10px;background:linear-gradient(135deg,#3478f6,#245fd1);color:#fff}.tabs button:disabled{opacity:.4;cursor:not-allowed}
+    .badge{display:flex;align-items:center;gap:10px;white-space:nowrap;padding:11px 14px;border:1px solid var(--line);border-radius:13px;background:#14223a;color:#d3e2f8;font-size:13px}.badge button{border:0;background:transparent;color:#b9d2f8}.badge .reload-map{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;padding:0}.badge #fullscreen{padding-left:12px;border-left:1px solid #40577b}.reload-map svg{width:19px;height:19px}.badge button:hover{color:#fff}.badge button:focus-visible{outline:2px solid #93b9ff;outline-offset:3px;border-radius:3px}
+    main{min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:16px}.viewport{position:relative;min-height:0;overflow:hidden;border:1px solid #385681;border-radius:20px;background:#080f1d;box-shadow:0 12px 36px #0005}.viewer{position:absolute;inset:0;width:100%;height:100%;border:0;background:#080f1d}.count-overlay,.axis,.hint,.tools,.loading{position:absolute;z-index:3}.count-overlay{top:16px;right:16px;padding:10px 13px;border:1px solid #46638d;border-radius:12px;background:#192944e8;color:#d6e5fc;font-size:13px;pointer-events:none}.axis{left:20px;bottom:25px;width:76px;height:76px;display:grid;place-items:center;border:1px solid #40577b;border-radius:50%;background:#111d32d9;color:#afc9ed;font-size:11px;pointer-events:none}.axis:before,.axis:after{content:"";position:absolute;background:#4e87ec}.axis:before{height:38px;width:1px}.axis:after{width:38px;height:1px}.axis em{position:absolute;top:12px;font-style:normal}.axis b{position:absolute;right:11px;font-weight:400}.axis i{position:absolute;bottom:7px;font-style:normal}.hint{left:15px;bottom:15px;padding:9px 13px 9px 92px;border:1px solid #354d70;border-radius:9px;background:#111d32e8;color:#c2d1e7;font-size:12px;pointer-events:none}.tools{right:15px;bottom:15px;display:flex;gap:4px;padding:5px;border:1px solid #354d70;border-radius:11px;background:#111d32e8}.tools button{width:34px;height:33px;border:0;border-radius:7px;background:transparent;color:#adc3e4}.tools button:hover,.tools button.active{background:var(--blue);color:white}.loading{left:50%;top:18px;transform:translateX(-50%);padding:8px 12px;border:1px solid #4d6890;border-radius:9px;background:#0e1b2ddd;color:#c9daf3;font-size:12px;pointer-events:none;transition:opacity .25s}.loading.hidden{opacity:0}
+    aside{overflow:auto;padding:21px;border:1px solid #344d72;border-radius:20px;background:linear-gradient(150deg,#192a45,#101b2e);box-shadow:0 12px 36px #0004}.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}h2{margin:0;font-size:18px}.help{width:27px;height:27px;border:1px solid #58739b;border-radius:50%;background:transparent;color:#bad0f2}.controls{display:grid;grid-template-columns:34px 1fr 1fr;gap:13px 6px;align-items:center;color:#c9d8ed;font-size:12px}.ico{text-align:center;color:#9dc5ff;font-size:16px}kbd{padding:3px 5px;border:1px solid #4a6386;border-radius:5px;background:#1d2d48;font:inherit}hr{border:0;border-top:1px solid #344a6a;margin:18px 0}h3{margin:0 0 10px;font-size:15px}select{width:100%;padding:11px;border:1px solid #405b81;border-radius:9px;background:#172741}.quick{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}.quick button{padding:6px 9px;border:1px solid #425b80;border-radius:7px;background:#172741;color:#bbcee9;font-size:11px}.quick button.active{border-color:#4d91ff;background:#1b4a91;color:white}.note{margin-top:16px;padding:11px;border:1px solid #344f76;border-radius:10px;background:#111e33;color:#aebfda;font-size:11px;line-height:1.6}.note strong{color:#d7e5fb}footer{display:flex;align-items:center;justify-content:space-between;color:#7188aa;font-size:10px;letter-spacing:.05em}
+    .axis{left:16px;bottom:58px;width:88px;height:88px;display:block;background:#111d32df;box-shadow:0 4px 14px #0006;opacity:.5;transition:opacity .2s}.axis.ready{opacity:1}.axis:before,.axis:after{content:none}.axis svg{display:block;width:100%;height:100%}.axis line{stroke-width:2.5;stroke-linecap:round}.axis circle.tip{stroke:#dce9fa;stroke-width:.7}.axis text{fill:#fff;font-size:10px;font-weight:700;text-anchor:middle;dominant-baseline:central}.hint{padding-left:13px}
+    .motion-labels{position:absolute;inset:0;z-index:2;pointer-events:none}.motion-label{position:absolute;transform:translate(-50%,calc(-100% - 8px));padding:5px 8px;border:1px solid #ffffffaa;border-radius:7px;background:#2258a0;color:white;font-size:12px;font-weight:bold;white-space:nowrap;box-shadow:0 2px 10px #0008}.motion-label.dynamic{background:#ad5a0a}.motion-label[hidden]{display:none}
+    .export-panel h3{margin-bottom:8px}.export-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}.export-actions button{min-width:0;min-height:44px;padding:9px 6px;border:1px solid #496180;border-radius:9px;background:linear-gradient(145deg,#1d2d45,#172337);color:#eaf2ff;font-size:14px;white-space:nowrap;transition:background .15s,border-color .15s}.export-actions button:hover{background:#263b5a;border-color:#7798c8}.export-panel label{display:block;margin:9px 0 4px;font-size:14px;color:#eaf2ff}.export-panel select{min-height:44px;font-size:14px}.export-trigger{display:flex;align-items:center;gap:12px;width:100%;padding:4px 0 0;border:0;background:transparent;color:#f2f6ff;text-align:left;font-size:17px}.export-camera{display:grid;place-items:center;flex:0 0 56px;width:56px;height:56px;border:1px solid #6d96ff;border-radius:50%;background:linear-gradient(145deg,#5484ff,#2b5cf4);box-shadow:0 4px 16px #2359ee40}.export-camera svg{width:27px;height:27px}.export-trigger:hover .export-camera{background:#5a88ff}.export-panel button:disabled{opacity:.45;cursor:wait}.export-panel button:focus-visible{outline:2px solid #93b9ff;outline-offset:3px}.export-panel .note{margin-top:8px;padding:10px 11px}aside{scrollbar-width:thin;scrollbar-color:#7a8494 #202a39}
+    .export-actions .export-trigger{justify-content:center;gap:6px;padding:6px 4px;font-size:13px;color:#f2f6ff}.export-actions .export-camera{flex:0 0 26px;width:26px;height:26px;box-shadow:none}.export-actions .export-camera svg{width:16px;height:16px}
+    .reference-search{display:flex;align-items:center;gap:8px;padding:0 12px;height:48px;border:1px solid #405b81;border-radius:9px;background:#142238;color:#b7c9e6}.reference-search input{width:100%;min-width:0;background:transparent;border:0;outline:none;color:#f2f6ff;font:inherit;font-size:12px}.reference-search input::placeholder{color:#c6d1e0;opacity:.8}.reference-search:focus-within{border-color:#83acff;box-shadow:0 0 0 2px #3478f633}.psnr-row{display:flex;justify-content:space-between;gap:8px;margin-top:8px;padding:12px;border:1px solid #405b81;border-radius:9px;background:#142238;font-size:13px}.psnr-row output{color:#acd0ff;text-align:right}.reference-caption{color:#98acc9;font-size:11px;line-height:1.5;margin:7px 0 0;overflow-wrap:anywhere}
+    .sidebar{display:flex;flex-direction:column;gap:18px}.sidebar>[hidden]{display:none}.sidebar-section{padding-bottom:18px;border-bottom:1px solid #344a6a}.sidebar-section:last-child{padding-bottom:0;border-bottom:0}.sidebar h3{font-size:15px;margin:0 0 11px}.sidebar .caption{margin:9px 0 0;color:#a8bbd6;font-size:11px;line-height:1.6;overflow-wrap:anywhere}.sidebar .fold{border:0}.sidebar summary{display:flex;align-items:center;justify-content:space-between;gap:8px;list-style:none;cursor:pointer;color:#cfdef3;font-size:13px;line-height:1.5}.sidebar summary::-webkit-details-marker{display:none}.sidebar summary:after{content:'⌄';color:#93acd0;transition:transform .15s}.sidebar details[open]>summary:after{transform:rotate(180deg)}.sidebar summary:focus-visible{outline:2px solid #93b9ff;outline-offset:4px;border-radius:3px}.sidebar .fold-body{margin-top:12px}.sidebar .scene-details{margin-top:12px}.sidebar .scene-details .note{margin-top:10px}.sidebar .cleanup-toggle{display:flex;align-items:center;gap:11px;cursor:pointer;font-size:13px;line-height:1.5}.sidebar .cleanup-toggle input{flex:0 0 auto;width:20px;height:20px;accent-color:#3478f6}.sidebar .secondary-action{width:100%;min-height:38px;margin-top:10px;padding:8px 10px;border:1px solid #405b81;border-radius:8px;background:#172741;font-size:12px}.sidebar button:disabled{opacity:.45;cursor:not-allowed}.sidebar .secondary-action[aria-pressed=true]{border-color:#86aaff;background:#244a7e}.sidebar .export-main{margin-bottom:8px;grid-template-columns:1fr}.sidebar .export-main .export-trigger{min-height:46px;border-color:#5d8fff;background:linear-gradient(135deg,#3478f6,#245fd1);font-size:14px}.sidebar .export-main .export-trigger:hover{background:#397ef5}.sidebar .export-main .export-camera{border:0;background:transparent}.sidebar .export-options{margin-top:12px}.sidebar .export-options label{font-size:12px}.sidebar .export-options select{font-size:13px}.sidebar #motion-status-detail{margin-top:9px}.sidebar .controls{font-size:11px;gap:10px 5px;grid-template-columns:24px 1fr 1fr}.sidebar .tool-fold>summary{font-size:14px;font-weight:600}.sidebar .tool-fold[open]>summary{color:#f0f5ff}
+    .sidebar>*{flex-shrink:0}
+    @media(max-height:800px) and (min-width:761px){aside{padding:18px}.sidebar{gap:14px}.sidebar-section{padding-bottom:14px}.head{margin-bottom:10px}.controls{gap:8px 6px}hr{margin:12px 0}.export-actions{margin-bottom:8px}.export-actions button{min-height:40px}.export-panel label{margin-top:7px}.export-panel select{min-height:40px;padding:9px 11px}.export-camera{flex-basis:50px;width:50px;height:50px}.export-panel .note{padding:8px 10px}}
+    @media(max-width:1050px){.app{padding:0 10px 6px}.brand{min-width:250px}.tabs button{min-width:85px;padding:9px}.badge{font-size:11px}main{grid-template-columns:minmax(0,1fr) 290px;gap:9px}aside{padding:16px}}
+    @media(max-width:760px){.app{height:auto;min-height:100vh;grid-template-rows:auto 65vh auto 24px}.brand{width:100%}header{flex-wrap:wrap;padding:10px 0}.tabs{margin:0;order:2}.badge{margin-left:auto;order:1}main{display:contents}.viewport{grid-row:2}aside{grid-row:3}.hint{padding-left:12px}.axis{width:72px;height:72px;bottom:56px}}
+    .semantic-legend-list{max-height:320px;overflow-y:auto;margin:0;padding:4px 10px;list-style:none;border:1px solid #405b81;border-radius:9px;background:#142238;scrollbar-width:thin;scrollbar-color:#7a8494 #202a39}.semantic-legend-list:focus-visible{outline:2px solid #93b9ff;outline-offset:3px}.semantic-legend-list li{display:flex;align-items:center;gap:12px;min-height:27px;border-bottom:1px solid #2c405f;color:#eaf2ff;font-size:13px}.semantic-legend-list li:last-child{border-bottom:0}.semantic-legend-list li[hidden]{display:none}.semantic-legend-dot{flex:0 0 13px;width:13px;height:13px;border-radius:50%;border:1px solid #ffffff55;background:var(--legend-color)}
+    .count-overlay{max-width:calc(100% - 32px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    @media(min-width:761px) and (max-width:1450px){.brand{min-width:240px}h1{font-size:18px}.tabs button{min-width:88px;padding:10px 9px;font-size:13px}.badge{font-size:11px;padding:10px}.export-actions button{font-size:13px}}
+  </style>
+  <style>
+    #reference-video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#05080e}
+    .video-mode #viewport>:not(#reference-video),.video-mode .sidebar>:not(#scene-range-panel,#video-panel),.video-mode .scene-details{display:none}
+    .video-controls{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+    .video-controls button{min-height:42px;padding:8px 12px;border:1px solid #5d8fff;border-radius:9px;background:#245fd1}
+    .video-controls button+button{border-color:#405b81;background:#172741}
+    .video-controls button:focus-visible,#video-position:focus-visible{outline:2px solid #93b9ff;outline-offset:3px}
+    #video-position{width:100%;margin:0;accent-color:var(--blue)}
+    .video-readout{display:flex;justify-content:space-between;gap:8px;margin:6px 0 0;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+    @media(min-width:761px) and (max-width:900px){.app{grid-template-rows:auto 1fr 26px}header{flex-wrap:wrap;padding:10px 0;gap:8px}.tabs{order:2;width:100%;margin:0}.tabs button{flex:1}.badge{margin-left:auto}}
+    @media(max-width:760px){.tabs{width:100%}.tabs button{flex:1;min-width:0;padding:8px 4px;font-size:12px}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="brand"><div class="cube">⬡</div><div><h1 id="scene-title">KITTI 08 · S3 <small>3000–3199</small></h1><span class="subtitle">T07 · Fixed-view export · Standalone demo</span></div></div>
+    <nav class="tabs" aria-label="Map display mode">
+      <button class="active" data-mode="rgb">RGB Map</button>
+      <button data-mode="sog" hidden disabled title="Checking SOG/LOD assets">RGB · SOG/LOD</button>
+      <button data-mode="semantic" disabled title="Checking semantic map assets">Semantic Map</button>
+      <button data-mode="status">Vehicle States</button>
+      <button data-mode="video">Video</button>
+    </nav>
+    <div class="badge"><button type="button" id="reload-map" class="reload-map" title="Reload this scene and restore its initial view" aria-label="Reload this scene and restore its initial view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7v5h-5"/><path d="M19 12a7 7 0 1 0-1.8 4.7"/></svg></button><button id="fullscreen">⛶ Fullscreen</button></div>
+  </header>
+  <main>
+    <section class="viewport" id="viewport">
+      <iframe class="viewer" id="viewer" title="Full Gaussian map" allow="fullscreen"></iframe>
+      <video id="reference-video" aria-label="Scene reference video" playsinline preload="auto" hidden></video>
+      <div class="loading" id="loading">Loading the full Gaussian map…</div>
+      <div id="motion-labels" class="motion-labels"></div>
+      <div id="motion-status-overlay" class="loading hidden" style="top:58px;opacity:1" role="status" hidden>Vehicle states unavailable · Showing this scene's RGB map</div>
+      <div class="count-overlay" id="map-source">◎　F1 appearance refinement · Full resolution</div>
+      <div class="axis" id="orientation-gizmo" role="img" aria-label="Orientation: X forward, Y right, Z up; updates with the camera" title="Red X: initial forward; green Y: initial right; blue Z: map up">
+        <svg viewBox="0 0 88 88" aria-hidden="true">
+          <circle cx="44" cy="44" r="33" fill="none" stroke="#476080" stroke-opacity=".5"/>
+          <circle cx="44" cy="44" r="3" fill="#dce9fa"/>
+          <g id="axis-x"><line x1="44" y1="44" x2="44" y2="44" stroke="#ee6666"/><circle class="tip" cx="44" cy="44" r="8" fill="#d94f55"/><text x="44" y="44">X</text></g>
+          <g id="axis-y"><line x1="44" y1="44" x2="44" y2="44" stroke="#45d888"/><circle class="tip" cx="44" cy="44" r="8" fill="#259c60"/><text x="44" y="44">Y</text></g>
+          <g id="axis-z"><line x1="44" y1="44" x2="44" y2="44" stroke="#68a7ff"/><circle class="tip" cx="44" cy="44" r="8" fill="#3578d7"/><text x="44" y="44">Z</text></g>
+        </svg>
+      </div>
+      <div class="hint">ⓘ　Left drag: orbit · Scroll: zoom · Right drag: pan</div>
+      <div class="tools"><button id="help" title="Navigation Help">ⓘ</button><button id="fullscreen2" title="Fullscreen">⛶</button></div>
+    </section>
+    <aside class="sidebar" aria-label="Scene and display controls">
+      <section class="sidebar-section" id="scene-range-panel" aria-labelledby="camera-heading">
+        <h3 id="camera-heading">Scene Range</h3>
+        <select id="camera" aria-label="Scene Range" disabled><option>Loading scenes…</option></select>
+        <p class="caption" id="camera-source">Loading the scene and initial view…</p>
+        <details class="fold scene-details"><summary>Map Information</summary><div class="note" id="scene-note"><strong>Scene Information</strong><br>Loading scene information…</div></details>
+      </section>
+      <section class="sidebar-section" id="video-panel" aria-labelledby="video-heading" hidden>
+        <h3 id="video-heading">Video</h3>
+        <div class="video-controls">
+          <button type="button" id="video-play" disabled>▶ Play</button>
+          <button type="button" id="video-restart" disabled>↺ Restart</button>
+        </div>
+        <input id="video-position" type="range" min="0" max="0" step="any" value="0" aria-label="Video position" disabled>
+        <p class="video-readout"><span id="video-time">0:00 / 0:00</span><span id="video-frame"></span></p>
+        <button type="button" class="secondary-action" id="video-open-rgb" disabled>Open Current Frame in RGB Map</button>
+        <p class="caption" id="video-status" role="status"></p>
+      </section>
+      <section class="sidebar-section" id="semantic-legend-panel" aria-labelledby="semantic-legend-heading" hidden>
+        <h3 id="semantic-legend-heading">Semantic Labels</h3>
+        <ul class="semantic-legend-list" tabindex="0" aria-label="Cityscapes semantic color legend">
+          <li><span class="semantic-legend-dot" style="--legend-color:#804080" aria-hidden="true"></span><span>Road</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#f423e8" aria-hidden="true"></span><span>Sidewalk</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#464646" aria-hidden="true"></span><span>Building</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#66669c" aria-hidden="true"></span><span>Wall</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#be9999" aria-hidden="true"></span><span>Fence</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#999999" aria-hidden="true"></span><span>Pole</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#faaa1e" aria-hidden="true"></span><span>Traffic Light</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#dcdc00" aria-hidden="true"></span><span>Traffic Sign</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#6b8e23" aria-hidden="true"></span><span>Vegetation</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#98fb98" aria-hidden="true"></span><span>Terrain</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#4682b4" aria-hidden="true"></span><span>Sky</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#dc143c" aria-hidden="true"></span><span>Person</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#ff0000" aria-hidden="true"></span><span>Rider</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#00008e" aria-hidden="true"></span><span>Car</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#000046" aria-hidden="true"></span><span>Truck</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#003c64" aria-hidden="true"></span><span>Bus</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#005064" aria-hidden="true"></span><span>Train</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#0000e6" aria-hidden="true"></span><span>Motorcycle</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#770b20" aria-hidden="true"></span><span>Bicycle</span></li>
+          <li><span class="semantic-legend-dot" style="--legend-color:#6e6e6e" aria-hidden="true"></span><span>Unknown</span></li>
+        </ul>
+        <p class="caption" id="semantic-legend-note" aria-live="polite">Detecting visible colors…</p>
+      </section>
+      <section class="sidebar-section" id="rgb-display-panel" aria-labelledby="rgb-display-heading">
+        <h3 id="rgb-display-heading">RGB Map</h3>
+        <label class="cleanup-toggle"><input id="camera-path" type="checkbox" role="switch" aria-label="Show camera path" aria-describedby="camera-path-note" disabled>Show camera path</label>
+        <p class="caption" id="camera-path-note">Camera path markers can be shown on the RGB map.</p>
+      </section>
+      <section class="sidebar-section" id="reference-panel" aria-labelledby="reference-heading" hidden>
+        <h3 id="reference-heading">Reference Evaluation · PSNR</h3>
+        <form id="t07-reference-form" class="reference-search"><span aria-hidden="true">⌕</span><input id="t07-reference-frame" type="text" inputmode="numeric" autocomplete="off" aria-label="Reference frame number" placeholder="Loading the frame range…" disabled><span aria-hidden="true">↵</span></form>
+        <div class="psnr-row"><span>PSNR</span><output id="t07-psnr" aria-live="polite">Not evaluated</output></div>
+        <p id="t07-reference-note" class="reference-caption">Enter a frame number and press Enter to align the camera and evaluate.</p>
+      </section>
+      <section class="sidebar-section" id="vehicle-display-panel" aria-labelledby="vehicle-cleanup-heading" hidden>
+        <h3 id="vehicle-cleanup-heading">Vehicle Display</h3>
+        <label class="cleanup-toggle"><input id="hide-vehicle-labels" type="checkbox" role="switch" aria-controls="motion-labels" disabled>Hide vehicle labels</label>
+        <label class="cleanup-toggle"><input id="vehicle-cleanup" type="checkbox" role="switch" aria-label="Remove predicted moving vehicles" aria-describedby="vehicle-cleanup-note" disabled>Remove predicted moving vehicles</label>
+        <button class="secondary-action" id="vehicle-cleanup-highlight" aria-pressed="false" disabled>Preview Removal</button>
+        <p class="caption" id="vehicle-cleanup-note" role="status">Checking vehicle removal assets…</p>
+      </section>
+      <section class="sidebar-section" id="motion-status-panel" hidden>
+        <h3>Vehicle States</h3>
+        <div id="motion-frame-control" hidden><label for="motion-frame">State Reference Frame</label><select id="motion-frame" aria-label="State Reference Frame"></select></div>
+        <p class="caption" id="motion-status-detail">Vehicle motion predictions are not available for this scene.</p>
+      </section>
+      <section class="sidebar-section export-panel" id="export-panel" aria-labelledby="export-heading" hidden>
+        <h3 id="export-heading">Fixed-View Export</h3>
+        <div class="export-actions"><button id="t07-lock">Lock View</button><button id="t07-unlock">Unlock View</button></div>
+        <div class="export-actions"><button class="export-trigger" id="t07-export" title="Save the map as PNG with camera JSON; automatically lock the current view if needed"><span class="export-camera" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5l1.5-2h5L16 5h3a3 3 0 013 3v11a3 3 0 01-3 3H5a3 3 0 01-3-3V8a3 3 0 013-3h3z" fill="white"/><circle cx="12" cy="13" r="4" stroke="#4374ff" stroke-width="2"/></svg></span><span>Save PNG</span></button><button id="t07-import" title="Choose the camera.json saved with a capture to restore and lock its camera pose">Restore Camera</button></div>
+        <p class="caption" id="t07-status" role="status" aria-live="polite">Save the current view. The camera is locked automatically and saved with the PNG.</p>
+        <details class="fold export-options"><summary>Export Settings</summary><div class="fold-body">
+          <p class="caption">Output width: 1920 px. Height follows the captured aspect ratio.</p>
+          <label for="t07-ss">Antialiasing</label>
+          <select id="t07-ss"><option value="1">Standard (1×)</option><option value="2">High (2× supersampling)</option></select>
+        </div></details>
+      </section>
+      <details class="sidebar-section tool-fold" id="navigation-help"><summary>Navigation Guide</summary><div class="controls fold-body">
+        <span class="ico">◉</span><span>Left drag</span><span>Orbit</span><span class="ico">↕</span><span>Scroll</span><span>Zoom</span>
+        <span class="ico">⇱</span><span>Right drag</span><span>Pan</span><span class="ico">⌨</span><span><kbd>W A S D</kbd></span><span>Move</span>
+        <span class="ico">⊕</span><span>Double-click</span><span>Set orbit center</span>
+      </div></details>
+    </aside>
+  </main>
+  <footer><span>3D Gaussian Splatting Viewer　|　F1 full-resolution</span><span>Loading map provenance and SHA256…</span></footer>
+</div>
+<dialog class="restore-camera-dialog" id="t07-restore-dialog" aria-labelledby="t07-restore-title">
+  <h2 id="t07-restore-title">Restore Camera</h2>
+  <p>Choose a saved capture for the current sequence and frame range. The camera pose will be restored and locked.</p>
+  <p id="t07-restore-root"></p>
+  <label for="t07-restore-select">Saved capture · Newest first</label>
+  <select id="t07-restore-select"></select>
+  <p id="t07-restore-empty" hidden>No saved captures for this sequence and frame range. Save a PNG first, or choose a camera JSON file.</p>
+  <img id="t07-restore-preview" alt="Selected saved capture" hidden>
+  <div class="restore-actions"><button id="t07-restore-apply" type="button">Restore Selected View</button><button id="t07-restore-browse" type="button">Choose JSON File…</button><button id="t07-restore-cancel" type="button">Cancel</button></div>
+</dialog>
+<script>
+  const frame = document.getElementById('viewer');
+  const loading = document.getElementById('loading');
+  const sceneSelect = document.getElementById('camera');
+  const note = document.getElementById('scene-note');
+  const motionLabels = document.getElementById('motion-labels');
+  const hideVehicleLabels = document.getElementById('hide-vehicle-labels');
+  const urlParams = new URLSearchParams(location.search);
+  const catalogUrl = new URL('./scene-catalog.json', location.href);
+  let configUrl;
+  let selectedScene;
+  let config;
+  const motionStateName = state => ({'动态':'Dynamic', '静态':'Static', '未知':'Unknown', '不确定':'Uncertain'})[state] || state;
+  function isMotionLabelVisible(object) {
+    return config?.hideUncertainMotion !== true || ['static', 'dynamic'].includes(object.final_state || object.raw_state);
+  }
+  let motionSnapshot = null;
+  let motionIndex = null;
+  let motionRequest = 0;
+  let vehicleCleanupEnabled = false;
+  let vehicleCleanupHighlight = false;
+  let showCameraPath = false;
+  const isCameraPathVisible = () => mode === 'rgb' && showCameraPath;
+  const usesCachedPathLayer = () => config?.cameraPathLayer?.enabled === true
+    && config.cameraPathLayer.variant === variant
+    && urlParams.get('path-layer') !== 'legacy';
+  let mapGeneration = 0;
+  function publishPathLayerStatus(stats) {
+    const node = document.getElementById('camera-path-note');
+    for (const [key, value] of Object.entries(stats)) node.dataset[`pathLayer${key[0].toUpperCase()}${key.slice(1)}`] = String(value);
+  }
+
+  async function readMotionSnapshot(path, expectedFrame = null) {
+    const response = await fetch(resolveAsset(path));
+    if (!response.ok) throw new Error(`Could not load the state snapshot: HTTP ${response.status}`);
+    const snapshot = await response.json();
+    if (snapshot.scene_id !== config.sceneId || !Number.isInteger(snapshot.reference_frame) ||
+        !poses.has(snapshot.reference_frame) || (expectedFrame !== null && snapshot.reference_frame !== expectedFrame) ||
+        !Array.isArray(snapshot.objects)) throw new Error('The state snapshot does not match this scene or reference frame.');
+    const tracks = new Set();
+    const objectIds = new Set();
+    for (const object of snapshot.objects) {
+      if (!Number.isInteger(object.track_id) || tracks.has(object.track_id) ||
+          !['动态', '静态', '未知', '不确定'].includes(object.state) ||
+          (snapshot.fixed_track_labels && (!['static', 'dynamic', 'uncertain'].includes(object.final_state) ||
+            object.state !== ({static:'静态', dynamic:'动态', uncertain:'不确定'})[object.final_state])) ||
+          (object.score !== null && (!Number.isFinite(object.score) || object.score < 0 || object.score > 1)) ||
+          (object.display_estimate === true && (!Array.isArray(object.viewer_xyz) || object.viewer_xyz.length !== 3 || !object.viewer_xyz.every(Number.isFinite)))) {
+        throw new Error('Invalid vehicle state fields.');
+      }
+      tracks.add(object.track_id);
+      if (snapshot.semantic_object_labels) {
+        if (!/^V\d{3}$/.test(object.object_id) || objectIds.has(object.object_id) ||
+            !Number.isInteger(object.anchor_source_gaussian_index) || object.anchor_source_gaussian_index < 0 ||
+            object.anchor_source_gaussian_index >= config.gaussianCount || !Array.isArray(object.source_track_ids)) {
+          throw new Error('Invalid semantic vehicle object fields.');
+        }
+        objectIds.add(object.object_id);
+      }
+    }
+    return snapshot;
+  }
+
+  async function initializeMotion() {
+    motionSnapshot = null;
+    motionIndex = null;
+    const control = document.getElementById('motion-frame-control');
+    control.hidden = true;
+    if (config.motionIndex) {
+      const response = await fetch(resolveAsset(config.motionIndex));
+      if (!response.ok) throw new Error(`Could not load the state frame index: HTTP ${response.status}`);
+      motionIndex = await response.json();
+      if (motionIndex.scene_id !== config.sceneId || !Array.isArray(motionIndex.frames) ||
+          !motionIndex.frames.length || !motionIndex.frames.every(item => Number.isInteger(item.frame) && poses.has(item.frame) && typeof item.snapshot === 'string')) {
+        throw new Error('The state frame index does not match this scene.');
+      }
+      const selector = document.getElementById('motion-frame');
+      selector.replaceChildren(...motionIndex.frames.map(item => {
+        const option = document.createElement('option');
+        option.value = String(item.frame);
+        option.textContent = `${String(item.frame).padStart(6, '0')} · ${item.vehicles} ${item.vehicles === 1 ? 'vehicle' : 'vehicles'}${item.history_available ? '' : ' · Insufficient history / Unknown'}`;
+        return option;
+      }));
+      const selected = motionIndex.frames.find(item => item.frame === motionIndex.default_frame);
+      if (!selected) throw new Error('The default vehicle state frame is missing.');
+      selector.value = String(selected.frame);
+      motionSnapshot = await readMotionSnapshot(selected.snapshot, selected.frame);
+      control.hidden = false;
+    } else {
+      const snapshotPath = config.motionSnapshot || (config.sceneId === 'kitti08_s3_f200_full' ? 'scene-data/KITTI08_MotionDemo/snapshot.json' : null);
+      if (snapshotPath) {
+        try { motionSnapshot = await readMotionSnapshot(snapshotPath); }
+        catch (error) { console.warn(error.message); }
+      }
+    }
+  }
+  const requestedMode = urlParams.get('mode');
+  let mode = ['rgb', 'sog', 'semantic', 'status', 'video'].includes(requestedMode) ? requestedMode : 'rgb';
+  const variant = 'F1';
+  let poses = new Map();
+  let viewerReady = false;
+  let loadingPoll;
+  const gizmo = document.getElementById('orientation-gizmo');
+  const gizmoSvg = gizmo.querySelector('svg');
+  const gizmoGroups = ['x', 'y', 'z'].map(axis => document.getElementById(`axis-${axis}`));
+  let referenceAxes;
+  let previousOrientation;
+  let lastGizmoCheck = 0;
+
+  // Inventory is generated from the semantic PLY's Gaussian colors, not the current view.
+  const semanticRows = [...document.querySelectorAll('.semantic-legend-list li')];
+  const semanticLegendNote = document.getElementById('semantic-legend-note');
+  const semanticInventory = fetch('./semantic-legend-classes.json').then(response => {
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return response.json();
+  }).catch(error => { console.warn('Semantic inventory:', error); return {}; });
+  let semanticLegendRequest = 0;
+  function updateSemanticLegend() {
+    const request = ++semanticLegendRequest;
+    semanticRows.forEach(row => { row.hidden = true; });
+    if (mode !== 'semantic' || !config?.assets?.semantic) return;
+    const sceneId = config.sceneId, asset = config.assets.semantic;
+    semanticLegendNote.textContent = 'Loading map semantic labels…';
+    semanticInventory.then(inventory => {
+      if (request !== semanticLegendRequest || mode !== 'semantic' || config.sceneId !== sceneId) return;
+      const record = inventory[sceneId];
+      if (!record || record.asset !== asset || record.unmatched !== 0) throw new Error('Map color inventory is unavailable or does not match this map.');
+      semanticRows.forEach(row => {
+        const color = row.querySelector('.semantic-legend-dot').style.getPropertyValue('--legend-color').trim().slice(1).toLowerCase();
+        row.hidden = !(record.counts[color] > 0);
+      });
+      semanticLegendNote.textContent = 'Labels present in the entire semantic map; independent of the current view.';
+    }).catch(error => {
+      if (request !== semanticLegendRequest || mode !== 'semantic') return;
+      semanticRows.forEach(row => { row.hidden = false; });
+      semanticLegendNote.textContent = 'Map label inventory unavailable; showing the full color legend.';
+      console.warn('Semantic legend:', error);
+    });
+  }
+
+  const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+  function setReferenceAxes(pose) {
+    // The map export converts KITTI camera coordinates to Viewer coordinates: [-x, -y, z].
+    // User-facing X is the default camera's horizontal forward, Y its right, Z world up.
+    const forward = [-pose.rotation[0][2], -pose.rotation[1][2], pose.rotation[2][2]];
+    const horizontalLength = Math.hypot(forward[0], forward[2]);
+    if (horizontalLength < 1e-6) throw new Error('The default camera direction cannot define a horizontal X axis.');
+    const x = [forward[0] / horizontalLength, 0, forward[2] / horizontalLength];
+    referenceAxes = [x, [-x[2], 0, x[0]], [0, 1, 0]];
+  }
+  function drawGizmo(orientation) {
+    const projections = referenceAxes.map((axis, index) => ({
+      group: gizmoGroups[index],
+      x: 44 + 27 * dot(axis, orientation.right),
+      y: 44 - 27 * dot(axis, orientation.up),
+      depth: dot(axis, orientation.forward)
+    }));
+    // Draw farther axis tips first, so the closer ones remain readable in overlaps.
+    for (const item of projections.sort((a, b) => b.depth - a.depth)) {
+      const [line, tip, label] = item.group.children;
+      line.setAttribute('x2', item.x.toFixed(2));
+      line.setAttribute('y2', item.y.toFixed(2));
+      tip.setAttribute('cx', item.x.toFixed(2));
+      tip.setAttribute('cy', item.y.toFixed(2));
+      tip.setAttribute('r', (8 - item.depth).toFixed(2));
+      label.setAttribute('x', item.x.toFixed(2));
+      label.setAttribute('y', item.y.toFixed(2));
+      gizmoSvg.append(item.group);
+    }
+    gizmo.classList.add('ready');
+  }
+  function updateGizmo(timestamp) {
+    requestAnimationFrame(updateGizmo);
+    if (!viewerReady || !referenceAxes || timestamp - lastGizmoCheck < 33) return;
+    lastGizmoCheck = timestamp;
+    try {
+      const orientation = frame.contentWindow?.getCameraOrientation?.();
+      if (!orientation) return;
+      const values = [...orientation.right, ...orientation.up, ...orientation.forward];
+      if (!values.every(Number.isFinite)) return;
+      if (previousOrientation && values.every((value, index) => Math.abs(value - previousOrientation[index]) < 0.001)) return;
+      previousOrientation = values;
+      drawGizmo(orientation);
+    } catch (_) {
+      // The iframe can be replaced while switching map modes.
+    }
+  }
+
+  function resolveAsset(path) {
+    return path ? new URL(path, configUrl).href : null;
+  }
+  function activeCount() {
+    if (vehicleCleanupHighlight) return config.gaussianCount;
+    if (vehicleCleanupEnabled) return config.dynamicVehicleRemoval.gaussianCount;
+    return mode === 'semantic' ? (config.semanticGaussianCount || 0) : config.gaussianCount;
+  }
+  function activeVariant() {
+    const original = config.variants[variant];
+    if (vehicleCleanupHighlight) return {...original, rgb: config.dynamicVehicleRemoval.highlights[variant],
+      manifest: config.dynamicVehicleRemoval.manifest, sogLod: null};
+    return vehicleCleanupEnabled ? {...original, ...config.dynamicVehicleRemoval.variants[variant],
+      manifest: config.dynamicVehicleRemoval.manifest, sogLod: null} : original;
+  }
+  function activeMapAsset() {
+    const choice = activeVariant();
+    return isCameraPathVisible() && !usesCachedPathLayer() ? choice.rgbWithTrajectory
+      : mode === 'semantic' ? (vehicleCleanupEnabled ? config.dynamicVehicleRemoval.semantic : config.assets.semantic)
+      : mode === 'sog' ? choice.sogLod : choice.rgb;
+  }
+  function activeMapManifest() {
+    return vehicleCleanupEnabled || vehicleCleanupHighlight ? config.dynamicVehicleRemoval.manifest
+      : mode === 'semantic' ? config.semanticManifest : activeVariant().manifest;
+  }
+  function refreshModeAvailability() {
+    const choice = activeVariant();
+    const sogButton = document.querySelector('[data-mode="sog"]');
+    sogButton.disabled = !choice.sogLod;
+    sogButton.title = choice.sogLod ? `${choice.label} streamed SOG/LOD` : 'SOG/LOD assets are unavailable for this version.';
+    if (!config.variants[variant].rgbWithTrajectory) showCameraPath = false;
+    document.querySelectorAll('.tabs button').forEach(item => item.classList.toggle('active', item.dataset.mode === mode));
+  }
+  function unavailableModeMessage() {
+    if (mode === 'semantic' && !config.assets.semantic) return 'Semantic Map is unavailable for this scene. Select another scene or display mode.';
+    if (mode === 'sog' && !activeVariant().sogLod) return 'RGB · SOG/LOD is unavailable for this scene. Select another scene or display mode.';
+    return null;
+  }
+  function updateModeInfo() {
+    const cleanup = config.dynamicVehicleRemoval;
+    const toggle = document.getElementById('vehicle-cleanup');
+    toggle.checked = vehicleCleanupEnabled && !vehicleCleanupHighlight;
+    toggle.disabled = mode !== 'status' || !cleanup || !viewerReady;
+    const highlight = document.getElementById('vehicle-cleanup-highlight');
+    highlight.disabled = !cleanup?.highlights?.[variant] || !viewerReady || mode !== 'status';
+    highlight.textContent = vehicleCleanupHighlight ? 'Return to Map' : 'Preview Removal';
+    highlight.setAttribute('aria-pressed', String(vehicleCleanupHighlight));
+    highlight.title = mode === 'status' ? 'Highlight selected Gaussians in red while preserving geometry and opacity' : 'Switch to Vehicle States to preview removal';
+    document.getElementById('vehicle-cleanup-note').textContent = (!cleanup
+      ? (motionSnapshot?.semantic_object_labels && !motionSnapshot.objects.some(obj => obj.final_state === 'dynamic')
+          ? 'No predicted dynamic regions in this scene; there are no points selected for removal.'
+          : 'Point-level removal is unavailable: a reliable selection has not been prepared for this scene.')
+      : vehicleCleanupHighlight
+        ? `Preview: ${cleanup.removedCount.toLocaleString()} selected points in red. No points are hidden; click again to return.`
+      : vehicleCleanupEnabled
+        ? `On · ${cleanup.removedCount.toLocaleString()} predicted moving vehicle points hidden. Turn off to restore the map.`
+        : 'Off · Full map shown. Enable removal to hide predicted moving vehicles, or preview the selected points.')
+      + (cleanup?.warning ? ` ${cleanup.warning}` : '');
+    const semantic = mode === 'semantic';
+    const trajectory = isCameraPathVisible();
+    const sog = mode === 'sog';
+    const status = mode === 'status';
+    document.getElementById('export-panel').hidden = status;
+    document.getElementById('semantic-legend-panel').hidden = !semantic || !config.assets.semantic;
+    updateSemanticLegend();
+    document.getElementById('rgb-display-panel').hidden = mode !== 'rgb';
+    document.getElementById('vehicle-display-panel').hidden = !status;
+    const pathToggle = document.getElementById('camera-path');
+    pathToggle.checked = showCameraPath;
+    pathToggle.disabled = mode !== 'rgb' || !config.variants[variant].rgbWithTrajectory || !viewerReady;
+    document.getElementById('camera-path-note').textContent = !config.variants[variant].rgbWithTrajectory
+      ? 'Camera path markers are unavailable for this scene.'
+      : trajectory ? 'Camera path shown. Turn it off for RGB reference evaluation.'
+      : 'Show camera path markers while keeping the current view.';
+    document.getElementById('reference-panel').hidden = mode !== 'rgb';
+    window.t07ReferenceAvailability?.();
+    const statusOverlay = document.getElementById('motion-status-overlay');
+    const hasMotion = status && motionSnapshot && motionSnapshot.scene_id === config.sceneId;
+    hideVehicleLabels.disabled = !hasMotion;
+    motionLabels.hidden = hideVehicleLabels.checked;
+    statusOverlay.hidden = !status;
+    statusOverlay.classList.toggle('hidden', !status);
+    const fixedMotion = hasMotion && motionSnapshot.fixed_track_labels === true;
+    const objectMotion = fixedMotion && motionSnapshot.semantic_object_labels === true;
+    const labeledTracks = fixedMotion ? motionSnapshot.objects.filter(obj => isMotionLabelVisible(obj) && obj.display_estimate === true) : [];
+    const uncertainHidden = fixedMotion && config.hideUncertainMotion === true;
+    statusOverlay.textContent = fixedMotion
+      ? `Fixed vehicle states · Frames ${motionSnapshot.source_frames.join('–')} · ${labeledTracks.length} ${objectMotion ? 'vehicle regions' : 'labeled tracks'}`
+      : hasMotion ? `Frame ${motionSnapshot.reference_frame} · Offline prediction · ${motionSnapshot.display_2d_only ? '2D observations only' : vehicleCleanupHighlight ? 'Removal points in red' : vehicleCleanupEnabled ? 'Moving vehicle removal on' : 'Estimated label positions'}` : 'Vehicle states unavailable · Showing the scene RGB map';
+    motionLabels.replaceChildren();
+    if (hasMotion) {
+      for (const obj of motionSnapshot.objects) {
+        if (!isMotionLabelVisible(obj)) continue;
+        const category = ({car:'Car', truck:'Truck', bus:'Bus', van:'Van'})[obj.category] || obj.category || 'Vehicle';
+        const label = document.createElement('div'); label.className = 'motion-label' + (obj.state === '动态' ? ' dynamic' : ''); if (obj.state === '未知' || obj.state === '不确定') label.style.background = '#596372'; label.dataset.track = obj.track_id; label.hidden = true;
+        label.textContent = objectMotion ? `${category} · ${motionStateName(obj.state)} · ${obj.object_id}` : fixedMotion ? `${category} · ${motionStateName(obj.state)} · Track #${obj.track_id}` : `${category} #${obj.track_id} · Pred. ${motionStateName(obj.state)} · Est. position`;
+        if (objectMotion) label.title = `${obj.object_id}: grouped tracks ${obj.source_track_ids.join(', ')}; fixed over frames ${obj.aggregate_evidence.first_frame}–${obj.aggregate_evidence.last_frame}.`;
+        else if (fixedMotion) label.title = `Fixed over frames ${obj.aggregate_evidence.first_frame}–${obj.aggregate_evidence.last_frame}; representative position from frame ${obj.representative_source_frame}.`;
+        motionLabels.append(label);
+      }
+    }
+    document.getElementById('motion-status-panel').hidden = !status;
+    document.getElementById('motion-status-detail').textContent = objectMotion
+      ? `Shown regions: Static ${labeledTracks.filter(obj => obj.final_state === 'static').length} · Dynamic ${labeledTracks.filter(obj => obj.final_state === 'dynamic').length}. ${motionSnapshot.object_counts.uncertain || 0} uncertain region hidden. These are predicted vehicle regions, not verified vehicle counts.`
+      : fixedMotion
+      ? uncertainHidden
+        ? `Labels: Static ${labeledTracks.filter(obj => obj.final_state === 'static').length} · Dynamic ${labeledTracks.filter(obj => obj.final_state === 'dynamic').length}. ${motionSnapshot.positioned_track_counts.uncertain || 0} positioned uncertain tracks are hidden. These are track labels, not verified unique vehicles.`
+        : `${motionSnapshot.positioned_track_count} positioned tracks: Static ${motionSnapshot.positioned_track_counts.static || 0} · Dynamic ${motionSnapshot.positioned_track_counts.dynamic || 0} · Uncertain ${motionSnapshot.positioned_track_counts.uncertain || 0}. ${motionSnapshot.unpositioned_track_count} further tracks have no 3D position. These are track counts, not verified unique vehicles.`
+      : hasMotion ? `${selectedScene.label}: frame ${motionSnapshot.reference_frame}, ${motionSnapshot.objects.length} vehicle ${motionSnapshot.objects.length === 1 ? 'observation' : 'observations'}. Offline predictions on the ${activeVariant().label} map.` : `${selectedScene.label}: vehicle states are unavailable. Showing this scene's ${activeVariant().label} RGB map.`;
+    const count = activeCount();
+    const sceneName = selectedScene.label;
+    const choice = activeVariant();
+    document.getElementById('map-source').textContent = semantic
+      ? `◎　${sceneName} · Semantic map · ${count.toLocaleString()} points`
+      : status ? `◎　${sceneName} · Vehicle states · ${choice.label} · ${fixedMotion ? 'Fixed labels' : hasMotion ? 'Frame ' + motionSnapshot.reference_frame : 'Results unavailable'}`
+      : trajectory ? `◎　${sceneName} · ${choice.label} + Camera path`
+      : sog ? `◎　${sceneName} · ${choice.label} · Streamed SOG/LOD · Up to ${count.toLocaleString()} points`
+      : `◎　${sceneName} · ${choice.label} · Full RGB`;
+    if (vehicleCleanupHighlight) document.getElementById('map-source').textContent += ' · Removal points in red';
+    else if (vehicleCleanupEnabled) document.getElementById('map-source').textContent += ' · Moving vehicle removal';
+    document.getElementById('camera-heading').textContent = 'Scene Range';
+    document.getElementById('camera-source').textContent = `${poses.size} frames · Initial view ${config.defaultCameraFrame} · Free navigation`;
+    document.querySelector('footer span').textContent = semantic
+      ? `${config.dataset}　|　semantic reference`
+      : `${config.dataset}　|　${sog ? 'streamed SOG/LOD trial' : config.fidelityMode}`;
+    document.querySelector('footer span:last-child').textContent = semantic
+      ? `Semantic source: ${config.semanticSource || 'Scene configuration'}`
+      : `Map provenance and SHA256: ${choice.manifest?.split('/').at(-1) || 'Scene configuration'}`;
+    note.innerHTML = semantic
+      ? `<strong>${sceneName} · Semantic Map</strong><br>${count.toLocaleString()} points; source: ${config.semanticSource}.<br><br>${config.semanticStatus}`
+      : status ? `<strong>${sceneName} · Vehicle States</strong><br>Using this scene's ${choice.label} RGB map. ${objectMotion ? 'Vehicle regions come from this map\'s predicted semantics. Observations from matching tracks are combined into one state per region. Label positions use the region geometry. Grouping and motion accuracy have not been evaluated against ground truth.' : fixedMotion ? 'One fixed prediction per track segment over the complete interval, with far-static evidence retained when approaching. This is an offline trial; no accuracy acceptance or physical vehicle identity merge is claimed.' : hasMotion ? 'Model predictions for the reference frame. Positions estimated from masks and depth are unverified.' : 'Vehicle predictions and state labels are unavailable.'}`
+      : sog ? `<strong>${sceneName} · ${choice.label} · SOG/LOD</strong><br>Full detail uses the ${count.toLocaleString()}-point RGB map. Detail streams with the view; SOG compression and lower LODs may change appearance.`
+      : `<strong>${sceneName} · ${choice.label}</strong><br>${count.toLocaleString()} points; ${config.poseProtocol}; ${config.depthProtocol}.<br><br>${choice.description || ''}`;
+    if (vehicleCleanupHighlight) note.append(document.createTextNode(' Removal preview only: selected points are red; geometry and opacity are preserved.'));
+    else if (vehicleCleanupEnabled) note.append(document.createTextNode(' Showing a moving vehicle removal copy; the original map is preserved.'));
+    const unavailable = unavailableModeMessage();
+    if (unavailable) {
+      document.getElementById('map-source').textContent = `◎　${sceneName} · ${mode === 'semantic' ? 'Semantic Map' : 'RGB · SOG/LOD'} · Unavailable`;
+      note.textContent = unavailable;
+      document.querySelector('footer span:last-child').textContent = unavailable;
+    }
+  }
+  function readCameraPoses(cameraPoses) {
+    poses = new Map();
+    for (const pose of cameraPoses) {
+      const valid = Number.isInteger(pose.source_frame)
+        && pose.position?.length === 3 && pose.rotation?.length === 3
+        && pose.rotation.every(row => row?.length === 3)
+        && Number.isFinite(pose.fy) && pose.fy > 0 && Number.isFinite(pose.height) && pose.height > 0
+        && [...pose.position, ...pose.rotation.flat()].every(Number.isFinite);
+      if (!valid || poses.has(pose.source_frame)) throw new Error('Incomplete camera poses or duplicate frame IDs.');
+      poses.set(pose.source_frame, pose);
+    }
+    if (!poses.has(config.defaultCameraFrame)) throw new Error(`Initial-view source frame ${config.defaultCameraFrame} is missing.`);
+    setReferenceAxes(poses.get(config.defaultCameraFrame));
+  }
+  function applyDefaultCamera() {
+    if (!viewerReady) return;
+    const frameId = mode === 'status' && motionSnapshot?.scene_id === config.sceneId ? motionSnapshot.reference_frame : config.defaultCameraFrame;
+    const pose = poses.get(frameId);
+    const setLookAt = frame.contentWindow?.setCameraLookAt;
+    if (!pose || typeof setLookAt !== 'function') return;
+    const position = pose.position;
+    const forward = pose.rotation.map(row => row[2]);
+    const target = position.map((value, index) => value + 30 * forward[index]);
+    const toViewer = ([x, y, z]) => [-x, -y, z];
+    const fov = mode === 'status' ? 55 : Math.atan(pose.height / (2 * pose.fy)) * 360 / Math.PI;
+    setLookAt(toViewer(position), toViewer(target), fov);
+  }
+  const referenceVideo = document.getElementById('reference-video');
+  const videoPlay = document.getElementById('video-play');
+  const videoRestart = document.getElementById('video-restart');
+  const videoPosition = document.getElementById('video-position');
+  const videoTime = document.getElementById('video-time');
+  const videoFrame = document.getElementById('video-frame');
+  const videoOpenRgb = document.getElementById('video-open-rgb');
+  const videoStatus = document.getElementById('video-status');
+  const videoFps = 30;
+  let videoMediaTime = null;
+  let videoFrameCallback = null;
+  let videoMapFrame = null;
+  function formatVideoTime(seconds) {
+    const whole = Math.floor(seconds);
+    return `${Math.floor(whole / 60)}:${String(whole % 60).padStart(2, '0')}`;
+  }
+  function currentVideoSourceFrame() {
+    const [start, end] = config.sourceFrames;
+    const offset = videoMediaTime === null
+      ? Math.floor(referenceVideo.currentTime * videoFps + 1e-6)
+      : Math.round(videoMediaTime * videoFps);
+    return Math.min(end, Math.max(start, start + offset));
+  }
+  function updateVideoFrame() {
+    const sourceFrame = currentVideoSourceFrame();
+    videoFrame.textContent = `Frame ${String(sourceFrame).padStart(6, '0')}`;
+    videoOpenRgb.disabled = referenceVideo.readyState < HTMLMediaElement.HAVE_CURRENT_DATA ||
+      referenceVideo.seeking || Boolean(referenceVideo.error) || !poses.has(sourceFrame);
+  }
+  function stopVideoFrameUpdates() {
+    if (videoFrameCallback !== null) referenceVideo.cancelVideoFrameCallback(videoFrameCallback);
+    videoFrameCallback = null;
+    videoMediaTime = null;
+  }
+  function onVideoFrame(_, metadata) {
+    videoMediaTime = metadata.mediaTime;
+    updateVideoFrame();
+    videoFrameCallback = referenceVideo.requestVideoFrameCallback(onVideoFrame);
+  }
+  function updateVideoControls() {
+    const duration = Number.isFinite(referenceVideo.duration) ? referenceVideo.duration : 0;
+    const ready = duration > 0 && !referenceVideo.error;
+    videoPlay.disabled = videoRestart.disabled = videoPosition.disabled = !ready;
+    videoPlay.textContent = referenceVideo.paused || referenceVideo.ended ? '▶ Play' : '⏸ Pause';
+    videoPosition.max = duration;
+    videoPosition.value = referenceVideo.currentTime;
+    videoTime.textContent = `${formatVideoTime(referenceVideo.currentTime)} / ${formatVideoTime(duration)}`;
+    updateVideoFrame();
+  }
+  function showReferenceVideo() {
+    const [start, end] = config.sourceFrames;
+    const source = new URL(`./scene-data/reference-video/${selectedScene.id}.mp4`, location.href);
+    stopVideoFrameUpdates();
+    referenceVideo.src = source.href;
+    if (typeof referenceVideo.requestVideoFrameCallback === 'function') {
+      videoFrameCallback = referenceVideo.requestVideoFrameCallback(onVideoFrame);
+    }
+    updateVideoControls();
+    videoStatus.textContent = 'Loading reference video…';
+    document.getElementById('camera-source').textContent = `${end - start + 1} reference frames · 30 fps · 3× speed`;
+    document.querySelector('footer span').textContent = config.dataset;
+    document.querySelector('footer span:last-child').textContent = 'KITTI camera reference images';
+  }
+  for (const event of ['loadedmetadata', 'loadeddata', 'durationchange', 'timeupdate', 'seeking', 'seeked', 'play', 'pause', 'ended', 'error']) {
+    referenceVideo.addEventListener(event, () => {
+      if (mode !== 'video' || !config) return;
+      updateVideoControls();
+      if (event === 'loadedmetadata') videoStatus.textContent = '';
+      if (event === 'error') videoStatus.textContent = 'The reference video could not be loaded for this scene.';
+    });
+  }
+  videoPlay.addEventListener('click', async () => {
+    if (!referenceVideo.paused && !referenceVideo.ended) {
+      referenceVideo.pause();
+      return;
+    }
+    try {
+      videoStatus.textContent = '';
+      await referenceVideo.play();
+    } catch (error) {
+      if (mode === 'video' && error.name !== 'AbortError') videoStatus.textContent = 'Playback could not start.';
+    }
+  });
+  videoRestart.addEventListener('click', () => { referenceVideo.currentTime = 0; });
+  videoPosition.addEventListener('input', () => { referenceVideo.currentTime = Number(videoPosition.value); });
+  videoOpenRgb.addEventListener('click', () => {
+    if (videoOpenRgb.disabled || mode !== 'video') return;
+    switchMode('rgb', currentVideoSourceFrame());
+  });
+  document.addEventListener('fullscreenchange', () => {
+    referenceVideo.controls = mode === 'video' && document.fullscreenElement === document.getElementById('viewport');
+  });
+  function loadMap() {
+    mapGeneration++;
+    frame.contentWindow?.t07PathLayer?.dispose();
+    window.t07ReferenceInvalidate?.();
+    clearInterval(loadingPoll);
+    viewerReady = false;
+    previousOrientation = null;
+    gizmo.classList.remove('ready');
+    loading.classList.remove('hidden');
+    const videoMode = mode === 'video';
+    document.querySelector('.app').classList.toggle('video-mode', videoMode);
+    referenceVideo.hidden = document.getElementById('video-panel').hidden = !videoMode;
+    if (videoMode) {
+      frame.src = 'about:blank';
+      showReferenceVideo();
+      return;
+    }
+    if (referenceVideo.hasAttribute('src')) {
+      stopVideoFrameUpdates();
+      referenceVideo.pause();
+      referenceVideo.removeAttribute('src');
+      referenceVideo.load();
+    }
+    const unavailable = unavailableModeMessage();
+    if (unavailable) {
+      updateModeInfo();
+      loading.textContent = unavailable;
+      frame.src = 'about:blank';
+      return;
+    }
+    const choice = activeVariant();
+    const assetPath = activeMapAsset();
+    const contentUrl = resolveAsset(assetPath);
+    const settingsUrl = resolveAsset(config.assets.viewerSettings);
+    if (!contentUrl || !settingsUrl) throw new Error('Map assets or camera settings are missing for this mode.');
+    const count = activeCount();
+    // SuperSplat interprets budget in millions, then multiplies by 1,000,000.
+    const budgetMillions = Math.max(2, Math.ceil(count / 1000000));
+    const query = new URLSearchParams({ content: contentUrl, settings: settingsUrl, budget: String(budgetMillions), lang: 'en' });
+    if (usesCachedPathLayer() && mode === 'rgb') query.set('t07-path-layer', resolveAsset(config.cameraPathLayer.asset));
+    if (urlParams.has('t07-perf')) query.set('t07-perf', '');
+    if (mode !== 'sog') query.set('fullload', '');
+    query.set('noui', '');
+    query.set('noanim', '');
+    const modeLabel = `${selectedScene.label} · ${mode === 'semantic' ? 'Semantic Map' : choice.label + (mode === 'sog' ? ' · Streamed SOG/LOD' : isCameraPathVisible() ? ' + Camera path' : ' · Full RGB')}`;
+    loading.textContent = `Loading ${modeLabel} · ${count.toLocaleString()} points…`;
+    updateModeInfo();
+    frame.src = `./viewer/index.html?${query.toString()}`;
+  }
+  function switchMode(nextMode, sourceFrame = null) {
+    mode = nextMode;
+    videoMapFrame = sourceFrame;
+    const nextUrl = new URL(location.href);
+    nextUrl.searchParams.set('mode', mode);
+    history.replaceState(null, '', nextUrl);
+    if (mode !== 'status') {
+      vehicleCleanupEnabled = false;
+      vehicleCleanupHighlight = false;
+    }
+    if (mode === 'status' || sourceFrame !== null) window.t07ResetForMotionFrame?.();
+    refreshModeAvailability();
+    try { loadMap(); } catch (error) { loading.textContent = error.message; }
+  }
+  async function initialize() {
+    try {
+      const catalogResponse = await fetch(catalogUrl);
+      if (!catalogResponse.ok) throw new Error(`Could not load the scene catalog: HTTP ${catalogResponse.status}`);
+      const catalog = await catalogResponse.json();
+      if (!Array.isArray(catalog.scenes) || !catalog.scenes.length) throw new Error('The scene catalog is empty.');
+      const ids = new Set();
+      for (const scene of catalog.scenes) {
+        if (!scene.id || !scene.label || !scene.config || ids.has(scene.id)) throw new Error('The scene catalog contains invalid or duplicate entries.');
+        ids.add(scene.id);
+      }
+      const requestedScene = urlParams.get('scene') || catalog.defaultSceneId;
+      selectedScene = catalog.scenes.find(scene => scene.id === requestedScene ||
+        new URL(scene.config, catalogUrl).href === new URL(requestedScene, location.href).href);
+      if (!selectedScene) {
+        selectedScene = catalog.scenes.find(scene => scene.id === catalog.defaultSceneId);
+        if (!selectedScene) throw new Error('The default scene is not in the catalog.');
+        const nextUrl = new URL(location.href);
+        nextUrl.searchParams.set('scene', selectedScene.id);
+        history.replaceState(null, '', nextUrl);
+      }
+      sceneSelect.replaceChildren(...catalog.scenes.map(scene => {
+        const option = document.createElement('option');
+        option.value = scene.id;
+        option.textContent = scene.label;
+        return option;
+      }));
+      sceneSelect.value = selectedScene.id;
+      configUrl = new URL(selectedScene.config, catalogUrl);
+      const response = await fetch(configUrl);
+      if (!response.ok) throw new Error(`Could not load scene configuration: HTTP ${response.status}`);
+      config = await response.json();
+      if (config.sceneId !== selectedScene.id) throw new Error('The selected scene does not match its map configuration.');
+      document.title = `${config.title} · Gaussian Map Viewer`;
+      const poseResponse = await fetch(resolveAsset(config.assets.cameraPoses));
+      if (!poseResponse.ok) throw new Error(`Could not load camera poses: HTTP ${poseResponse.status}`);
+      const title = document.getElementById('scene-title');
+      title.textContent = `${config.title} `;
+      const range = document.createElement('small');
+      range.textContent = `${config.sourceFrames[0]}–${config.sourceFrames[1]}`;
+      title.append(range);
+      const semanticButton = document.querySelector('[data-mode="semantic"]');
+      semanticButton.disabled = !config.assets.semantic;
+      semanticButton.title = config.assets.semantic ? config.semanticStatus : 'Semantic assets are unavailable for this scene.';
+      const rgbAsset = config.variants?.[variant]?.rgb;
+      if (!rgbAsset) throw new Error('The F1 appearance-refined map is not configured for this scene.');
+      const rgbCheck = await fetch(resolveAsset(rgbAsset), {method: 'HEAD'});
+      if (!rgbCheck.ok) throw new Error(`Could not load the F1 appearance-refined map: HTTP ${rgbCheck.status}`);
+      refreshModeAvailability();
+      readCameraPoses(await poseResponse.json());
+      await initializeMotion();
+      sceneSelect.disabled = false;
+      document.querySelectorAll('.tabs button').forEach(button => button.addEventListener('click', () => {
+        if (!button.disabled) switchMode(button.dataset.mode);
+      }));
+      window.t07ReferenceReady?.();
+      loadMap();
+    } catch (error) {
+      loading.textContent = error.message;
+      note.textContent = error.message;
+      document.getElementById('camera-source').textContent = error.message;
+    }
+  }
+  frame.addEventListener('load', () => {
+    clearInterval(loadingPoll);
+    if (mode === 'video' || !config || unavailableModeMessage()) return;
+    const generation = mapGeneration;
+    const startedAt = Date.now();
+    loading.textContent = 'Viewer ready. Loading and rendering the full point cloud…';
+    loadingPoll = setInterval(() => {
+      try {
+        const innerDoc = frame.contentDocument;
+        const innerLoading = innerDoc?.getElementById('loadingWrap');
+        const innerText = innerDoc?.getElementById('loadingText')?.textContent?.trim();
+        if (innerLoading?.classList.contains('hidden') && typeof frame.contentWindow?.setCameraLookAt === 'function') {
+          const ready = async () => {
+            if (generation !== mapGeneration) return;
+            viewerReady = true;
+            const targetFrame = videoMapFrame;
+            videoMapFrame = null;
+            if (targetFrame !== null && mode === 'rgb') {
+              loading.textContent = `Aligning to frame ${targetFrame}…`;
+              try {
+                await window.t07AlignReferenceFrame(targetFrame, generation);
+              } catch (error) {
+                if (generation !== mapGeneration) return;
+                applyDefaultCamera();
+                updateModeInfo();
+                loading.textContent = `Could not open frame ${targetFrame}: ${error.message}`;
+                return;
+              }
+              if (generation !== mapGeneration) return;
+            } else if (window.t07RestoreLocked) window.t07RestoreLocked();
+            else applyDefaultCamera();
+            updateModeInfo();
+            loading.textContent = targetFrame !== null ? `RGB map aligned to frame ${targetFrame}` :
+              isCameraPathVisible() ? 'RGB map with camera path rendered' : 'Map rendered';
+            setTimeout(() => { if (generation === mapGeneration) loading.classList.add('hidden'); }, 700);
+          };
+          if (usesCachedPathLayer() && mode === 'rgb') {
+            const layerReady = frame.contentWindow.t07PathLayerReady;
+            if (!layerReady) { loading.textContent = 'Initializing camera path controls…'; return; }
+            clearInterval(loadingPoll);
+            Promise.resolve(layerReady).then(layer => layer.setVisible(showCameraPath)).then(stats => {
+              if (generation !== mapGeneration) return;
+              publishPathLayerStatus(stats);
+              ready();
+            }).catch(error => {
+              if (generation !== mapGeneration) return;
+              showCameraPath = false;
+              ready();
+              document.getElementById('camera-path-note').textContent = `Camera path unavailable: ${error.message}`;
+            });
+            return;
+          }
+          clearInterval(loadingPoll);
+          ready();
+        } else if (innerText) {
+          loading.textContent = `Loading map · ${innerText}`;
+        } else if (Date.now() - startedAt > 600000) {
+          clearInterval(loadingPoll);
+          loading.textContent = 'The map has not rendered yet. Check GPU resources and Viewer errors.';
+        }
+      } catch (error) {
+        clearInterval(loadingPoll);
+        loading.textContent = 'Cannot read Viewer status. Check the local service.';
+      }
+    }, 500);
+  });
+  window.addEventListener('message', event => {
+    if (event.origin !== location.origin || event.source !== frame.contentWindow || event.data?.type !== 'gaussian-viewer-error') return;
+    clearInterval(loadingPoll);
+    loading.classList.remove('hidden');
+    loading.textContent = `Viewer error: ${event.data.message}`;
+  });
+  document.getElementById('reload-map').addEventListener('click', () => {
+    const nextUrl = new URL(location.href);
+    if (selectedScene?.id) nextUrl.searchParams.set('scene', selectedScene.id);
+    nextUrl.searchParams.set('mode', mode);
+    location.replace(nextUrl.href);
+  });
+  const full = () => document.getElementById('viewport').requestFullscreen?.();
+  document.getElementById('fullscreen').addEventListener('click', full);
+  document.getElementById('fullscreen2').addEventListener('click', full);
+  sceneSelect.addEventListener('change', () => {
+    const nextUrl = new URL(location.href);
+    nextUrl.searchParams.set('scene', sceneSelect.value);
+    nextUrl.searchParams.set('mode', mode);
+    location.assign(nextUrl.href);
+  });
+  document.getElementById('camera-path').addEventListener('change', event => {
+    if (mode !== 'rgb' || !viewerReady || !config.variants[variant].rgbWithTrajectory) {
+      event.target.checked = showCameraPath;
+      return;
+    }
+    if (usesCachedPathLayer()) {
+      const requested = event.target.checked;
+      window.t07RunExclusive(async () => {
+        const previous = showCameraPath;
+        showCameraPath = requested;
+        window.t07ReferenceInvalidate?.();
+        document.getElementById('camera-path-note').textContent = requested ? 'Showing camera path…' : 'Hiding camera path…';
+        try {
+          const layer = await frame.contentWindow.t07PathLayerReady;
+          if (!layer) throw new Error('The camera path layer is not ready.');
+          const stats = await layer.setVisible(requested);
+          publishPathLayerStatus(stats);
+          updateModeInfo();
+        } catch (error) {
+          showCameraPath = previous;
+          updateModeInfo();
+          document.getElementById('camera-path-note').textContent = `Camera path update failed: ${error.message}`;
+          throw error;
+        }
+      })();
+      return;
+    }
+    window.t07PrepareMapReload?.();
+    showCameraPath = event.target.checked;
+    try { loadMap(); } catch (error) { loading.textContent = error.message; }
+  });
+  hideVehicleLabels.addEventListener('change', () => {
+    motionLabels.hidden = hideVehicleLabels.checked;
+  });
+  document.getElementById('vehicle-cleanup').addEventListener('change', event => {
+    if (mode !== 'status' || !viewerReady || !config.dynamicVehicleRemoval) { event.target.checked = vehicleCleanupEnabled; return; }
+    window.t07PrepareMapReload?.();
+    vehicleCleanupEnabled = event.target.checked;
+    vehicleCleanupHighlight = false;
+    refreshModeAvailability();
+    try { loadMap(); } catch (error) { loading.textContent = error.message; }
+  });
+  document.getElementById('vehicle-cleanup-highlight').addEventListener('click', () => {
+    if (!viewerReady || !config.dynamicVehicleRemoval?.highlights?.[variant] || mode !== 'status') return;
+    window.t07PrepareMapReload?.();
+    vehicleCleanupHighlight = !vehicleCleanupHighlight;
+    try { loadMap(); } catch (error) { loading.textContent = error.message; }
+  });
+  document.getElementById('motion-frame').addEventListener('change', async event => {
+    if (!motionIndex) return;
+    const selected = motionIndex.frames.find(item => item.frame === Number(event.target.value));
+    if (!selected) return;
+    const request = ++motionRequest;
+    document.getElementById('motion-status-detail').textContent = `Loading vehicle predictions for frame ${selected.frame}…`;
+    try {
+      const snapshot = await readMotionSnapshot(selected.snapshot, selected.frame);
+      if (request !== motionRequest) return;
+      motionSnapshot = snapshot;
+      window.t07ResetForMotionFrame?.();
+      updateModeInfo();
+      if (mode === 'status') applyDefaultCamera();
+    } catch (error) {
+      if (request !== motionRequest) return;
+      const previousFrame = motionSnapshot?.reference_frame;
+      if (Number.isInteger(previousFrame)) event.target.value = String(previousFrame);
+      document.getElementById('motion-status-detail').textContent = `Could not load the state frame: ${error.message}. ${Number.isInteger(previousFrame) ? `Still showing frame ${previousFrame}.` : ''}`;
+    }
+  });
+  document.getElementById('help').addEventListener('click', () => {
+    const guide = document.getElementById('navigation-help');
+    guide.open = true;
+    guide.scrollIntoView({behavior:'smooth',block:'nearest'});
+    guide.querySelector('summary').focus({preventScroll:true});
+  });
+  function updateMotionLabels() {
+    requestAnimationFrame(updateMotionLabels);
+    if (motionLabels.hidden || mode !== 'status' || !viewerReady || !motionSnapshot || motionSnapshot.scene_id !== config?.sceneId) return;
+    try {
+      const project = frame.contentWindow?.t07Camera?.projectWorld;
+      if (!project) return;
+      const width = motionLabels.clientWidth, height = motionLabels.clientHeight;
+      let leaders = motionLabels.querySelector('svg');
+      if (!leaders) {
+        leaders = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        leaders.setAttribute('aria-hidden', 'true');
+        leaders.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;overflow:visible';
+        motionLabels.prepend(leaders);
+      }
+      leaders.replaceChildren();
+      const occupied = [];
+      for (const obj of motionSnapshot.objects) {
+        const label = document.querySelector(`.motion-label[data-track="${obj.track_id}"]`); if (!label) continue;
+        if (!isMotionLabelVisible(obj)) { label.hidden = true; continue; }
+        if ((vehicleCleanupEnabled && !vehicleCleanupHighlight && (obj.final_state || obj.raw_state) === 'dynamic') || obj.display_estimate !== true || !Array.isArray(obj.viewer_xyz) || obj.viewer_xyz.length !== 3 || !obj.viewer_xyz.every(Number.isFinite)) { label.hidden = true; continue; }
+        const pt = project(obj.viewer_xyz); const visible = pt && pt.front && pt.x >= 0 && pt.x <= 1 && pt.y >= 0 && pt.y <= 1; label.hidden = !visible;
+        if (visible) {
+          const anchorX = pt.x * width, anchorY = pt.y * height;
+          const labelWidth = label.offsetWidth, labelHeight = label.offsetHeight;
+          const x = Math.max(labelWidth / 2 + 4, Math.min(width - labelWidth / 2 - 4, anchorX));
+          const candidates = [];
+          for (let lane = 0; lane < 12; lane++) {
+            candidates.push(anchorY - 12 - lane * (labelHeight + 6));
+            candidates.push(anchorY + labelHeight + 12 + lane * (labelHeight + 6));
+          }
+          const left = x - labelWidth / 2, right = x + labelWidth / 2;
+          let bottom = Math.max(labelHeight + 4, Math.min(height - 4, anchorY - 12));
+          for (const candidate of candidates) {
+            const top = candidate - labelHeight;
+            if (top < 4 || candidate > height - 4) continue;
+            if (occupied.every(box => right + 4 < box.left || left - 4 > box.right || candidate + 4 < box.top || top - 4 > box.bottom)) { bottom = candidate; break; }
+          }
+          occupied.push({left, right, top: bottom - labelHeight, bottom});
+          label.style.transform = 'translate(-50%, -100%)';
+          label.style.left = `${x}px`; label.style.top = `${bottom}px`;
+          const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          line.setAttribute('x1', anchorX); line.setAttribute('y1', anchorY);
+          line.setAttribute('x2', x); line.setAttribute('y2', bottom < anchorY ? bottom : bottom - labelHeight);
+          line.setAttribute('stroke', obj.state === '动态' ? '#ffc16a' : obj.state === '静态' ? '#9ccaff' : '#d0d5de');
+          line.setAttribute('stroke-width', '1.5'); line.setAttribute('opacity', '.85');
+          leaders.append(line);
+        }
+      }
+    } catch (_) {}
+  }
+  requestAnimationFrame(updateGizmo);
+  requestAnimationFrame(updateMotionLabels);
+  initialize();
+</script>
+<script src="./t07.js"></script>
+</body>
+</html>

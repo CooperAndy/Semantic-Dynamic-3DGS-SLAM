@@ -1,0 +1,25 @@
+{
+  "sequence": "KITTI21",
+  "window": [
+    1200,
+    1399
+  ],
+  "count": {
+    "Train": 160,
+    "Dev": 20,
+    "Test": 20
+  },
+  "split_sha256": "124b05e5267e15bada003263fc0a268890505e3671e6f91631ca7d885713e31f",
+  "pose_sha256": "107ed81adb6a9ef69110820f6fb71e86f3f35de04fa989e80425f152ec6bff71",
+  "seed_threshold": 0.6,
+  "loss_threshold": 0.2,
+  "tracking_used_all_200_images": true,
+  "status": "FROZEN_BEFORE_EVAL",
+  "roi_mask_ledger_sha256": "fe242ad1138e6445e5d71df55b674115674208b3f0f9412efbf9f085761a4f7f",
+  "pre_registered_success": {
+    "paired_mean_psnr_delta_db_min": 0.0,
+    "positive_frames_min": 15,
+    "lpips_delta_max": 0.01,
+    "hole_rate_delta_max": 0.01
+  }
+}

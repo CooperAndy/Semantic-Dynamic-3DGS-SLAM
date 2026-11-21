@@ -1,0 +1,31 @@
+--- lietorch/setup.py.before_split
++++ lietorch/setup.py
+@@ -1,4 +1,5 @@
+ from setuptools import setup
++import glob
+ from torch.utils.cpp_extension import BuildExtension, CUDAExtension
+ 
+ import os.path as osp
+@@ -19,10 +20,10 @@
+                 osp.join(ROOT, 'eigen')],
+             sources=[
+                 'lietorch/src/lietorch.cpp', 
+-                'lietorch/src/lietorch_gpu.cu',
+-                'lietorch/src/lietorch_cpu.cpp'],
++                *sorted(glob.glob('lietorch/src/split_gpu/*.cu')),
++                *sorted(glob.glob('lietorch/src/split_cpu/*.cpp'))],
+             extra_compile_args={
+-                'cxx': ['-O0', '-g0'], 
++                'cxx': ['-O2', '-g0'], 
+                 'nvcc': ['-O2',
+                     
+                 ]
+@@ -38,7 +39,7 @@
+                 'lietorch/extras/extras.cpp',
+             ],
+             extra_compile_args={
+-                'cxx': ['-O0', '-g0'], 
++                'cxx': ['-O2', '-g0'], 
+                 'nvcc': ['-O2',
+                     
+                 ]

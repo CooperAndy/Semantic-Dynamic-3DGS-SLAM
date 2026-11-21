@@ -1,0 +1,11 @@
+dataset_name: kitti
+input_manifest: /root/autodl-tmp/s23_effects_20261105_p16247/E3_K05_S0_R3_serial/inputs/runtime/input_manifest.json
+camera_params:
+  image_height: 370
+  image_width: 1226
+  fx: 707.0912
+  fy: 707.0912
+  cx: 601.8873
+  cy: 183.1104
+  png_depth_scale: 1.0
+  crop_edge: 0

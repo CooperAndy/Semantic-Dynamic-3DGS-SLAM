@@ -1,0 +1,287 @@
+{
+  "status": "SEALED_SCORED_CANDIDATE_TEST",
+  "scope": "KITTI03 0-199, mapper-only holdout, exposure audit limited",
+  "quality_adoption": false,
+  "files": [
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/protocol.md",
+      "bytes": 3258,
+      "sha256": "97398a20fc85ad09892221a498eda501d03b3dbcf1a3c4dcafbbd5b0ffc12995"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/run03.py",
+      "bytes": 4655,
+      "sha256": "80ee7da72c81295f18e29a037aacb101c2fff9d8fe786b1ceb5bc4cddc2c847f"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/build_lidar03_config.py",
+      "bytes": 2000,
+      "sha256": "82a87623c5403246e9df43f9d75b9f4f967ab9052db027bf42716bbf6196d442"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/independent_score03.py",
+      "bytes": 4593,
+      "sha256": "67db50ce3eae6ad8b924d784eeb92c58bb9e0e4b121dcd177a0200c34a9269a4"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/input_manifest.json",
+      "bytes": 193755,
+      "sha256": "0ef6e4b32a489aad13ab78099149cb17ceb3029603d98869b98612d4438cd134"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/pose_audit_correction.json",
+      "bytes": 587,
+      "sha256": "a9390441ec641a079f68452ca8753485f2360eeeaafaecdc55a17eef126504e3"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/audit200_s0.log",
+      "bytes": 548,
+      "sha256": "7841f78be49c943e7f4ccac12b6f8924cdc105534448d35ef16d5510cb6a9cf0"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/independent_projection_audit.json",
+      "bytes": 1810,
+      "sha256": "a9d2f3286d55fe993c73eac391498d130db59058b686ef1e00ab5b887f50aafb"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/pre_score_seal.json",
+      "bytes": 3861,
+      "sha256": "afef2f03fdd6fdb78ef26b52cc7c655d0ff250c9004486379917a6c123700e05"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/scoring_complete.json",
+      "bytes": 116,
+      "sha256": "59841dc315e7c6771d833583c7fe374acae9376c5479020e6c8686137007b9fc"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/all_maps_ready.json",
+      "bytes": 90,
+      "sha256": "885bf5528fdc12bbcf139f3996cdf63e338d99962805bd6e51fb3793d61fc3e6"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/run_registration.json",
+      "bytes": 7376,
+      "sha256": "a5f5c55cd1f3f6a9857fa9aa663386c49ed2ae916b78101c84c822accd549eb3"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/independent_audit_v2_200.json",
+      "bytes": 1478,
+      "sha256": "82e5c71a2a1bb2ad28d0b96da6b0b446fa631e1327ece891d9f681ca682f5e6f"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/batch200.json",
+      "bytes": 639,
+      "sha256": "442b3bd7c152444da652e9a40766c500eccbca81bd68bd37048a6f141e443185"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/evaluation_200.json",
+      "bytes": 6692,
+      "sha256": "3c8689e7bb170b41d2fe5d50899b18287fff4d56b8090e4b5594f3305c548c94"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/lidar_score_config_200.json",
+      "bytes": 8062,
+      "sha256": "be8d47b5fee1e5c16f1c1d7970adb60102627318411f79f9ca18b80647430b44"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/lidar_score_200.json",
+      "bytes": 29372,
+      "sha256": "e4e5acb69630a49c8287261921e746fd12bf61a6f330333bfc8f81c4a3d857e0"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/lidar_summary_200.json",
+      "bytes": 2809,
+      "sha256": "e841e81578deea1f525078fbe89e62a264bc8c8c3d5f37a160c121a9cc2a4541"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/independent_lidar_audit.json",
+      "bytes": 1832,
+      "sha256": "6dc054a31bc59b77bc1cf000e6cdf6e54c12230322def92283a0535efc98f62f"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/lidar_scoring_render_export/manifest.json",
+      "bytes": 6158,
+      "sha256": "71502a98bf06215bf935b8eb72c46a477566f67dc613413c0c2a2573481c7407"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/runs/C0_200/a2_receipt.json",
+      "bytes": 5076,
+      "sha256": "ae879baafa6b9a59faad1c0b2bd61388e7a2f45507c2ddd207da50e926f7e640"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/runs/C0_200/params.npz",
+      "bytes": 29399858,
+      "sha256": "991c209b04cc7df846f986ed49acca4cc0c2395fc8be30e1100cc9da49d61984"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/runs/C0_200/estimated_trajectory.npz",
+      "bytes": 19067,
+      "sha256": "e2c6901d8a27106b7f3ca1e81209e96d6a12c6ee5229df76474e516b10b08378"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/runs/C2_200/a2_receipt.json",
+      "bytes": 5090,
+      "sha256": "e88a4778840967fa4b806e3399c10dbac7e5a9540d40d1123aa9fc6e513c9243"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/runs/C2_200/params.npz",
+      "bytes": 31393902,
+      "sha256": "010797c4b57cd671447afce7bfe28ea02b3395844cd681c60d78fadbcca07670"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_0/runs/C2_200/estimated_trajectory.npz",
+      "bytes": 19067,
+      "sha256": "e2c6901d8a27106b7f3ca1e81209e96d6a12c6ee5229df76474e516b10b08378"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/run_registration.json",
+      "bytes": 7384,
+      "sha256": "aba0584f319a427e627e82b409267d3107f7b221654cd9bd17a99bde545f09ee"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/independent_audit_v2_200.json",
+      "bytes": 1478,
+      "sha256": "8bf736851fb23612464265528598de581001a9d0616c4f6b462739a6049ab8e5"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/batch200.json",
+      "bytes": 639,
+      "sha256": "298b9ea1cfa2b343f7da3a1b21b0d0fa45b6300d64eb3f920ca82a4867df5b43"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/evaluation_200.json",
+      "bytes": 6688,
+      "sha256": "40ec4e793ca28c9138fbf3e3f11448e9a7b43bd567517d2e0760543b22e71b1e"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/lidar_score_config_200.json",
+      "bytes": 8083,
+      "sha256": "77493ab3b23e971e7176993b943856eeebcdb9f4f542c9ed7dfdf9001a3fce7a"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/lidar_score_200.json",
+      "bytes": 29389,
+      "sha256": "e8682d9bcb2379bb92c86623e3ece40cb95152159f6933c05ac815de39762d58"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/lidar_summary_200.json",
+      "bytes": 2800,
+      "sha256": "8a4a5972e0596cf4cf9f2c996bf6f46766bcc361741b9fe4e486e705a7a15e80"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/independent_lidar_audit.json",
+      "bytes": 1832,
+      "sha256": "286af17f70ae41ddc57cd5a28112f4b38990913f6545803fa8a30aa746e12094"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/lidar_scoring_render_export/manifest.json",
+      "bytes": 6178,
+      "sha256": "be12aa6ff72a0e0de30aa5e802185a71cb4ca7ab250ccfde6addaea616053a65"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/runs/C0_200/a2_receipt.json",
+      "bytes": 5076,
+      "sha256": "03557ce9bdf4b9cae56192e179d16fa340a76bfd4b2ffceca2b6d7d2a526b153"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/runs/C0_200/params.npz",
+      "bytes": 29513842,
+      "sha256": "2522cbeeee8920c2f5acf0715e6409af497bf90c00e1bbb5bf80a008d0b2df2a"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/runs/C0_200/estimated_trajectory.npz",
+      "bytes": 19067,
+      "sha256": "e2c6901d8a27106b7f3ca1e81209e96d6a12c6ee5229df76474e516b10b08378"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/runs/C2_200/a2_receipt.json",
+      "bytes": 5092,
+      "sha256": "4ff5f17cf7f063f1dd944e183ab84512aa5a4e2a2d9b35ebed4c5f8d1300d682"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/runs/C2_200/params.npz",
+      "bytes": 31476998,
+      "sha256": "19d8fdd95402dee58dac19b6ac720e55feef7a9a68c49127813cfee2df91622d"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_42/runs/C2_200/estimated_trajectory.npz",
+      "bytes": 19067,
+      "sha256": "e2c6901d8a27106b7f3ca1e81209e96d6a12c6ee5229df76474e516b10b08378"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/run_registration.json",
+      "bytes": 7400,
+      "sha256": "907ca2779f650aa556caa3e4d752208ba00e26a1d178e73532d95416a08ce134"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/independent_audit_v2_200.json",
+      "bytes": 1478,
+      "sha256": "0d867647e4579b1b8ade7f5a99fab0602cbca0d17264dd208da7e14ea7fd2076"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/batch200.json",
+      "bytes": 639,
+      "sha256": "cc896e638bd1650eebcdf98ffd785afcde34b249fda71883b56b3078785e11f1"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/evaluation_200.json",
+      "bytes": 6681,
+      "sha256": "1e0bbe40a027509a318f9031dc0cf41246d544d0653d784004e2f7ce625a6e89"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/lidar_score_config_200.json",
+      "bytes": 8125,
+      "sha256": "318240b767defb51a46ed32b411e9ea5bea0d72b4d5caf299d4752432b8a72a8"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/lidar_score_200.json",
+      "bytes": 29388,
+      "sha256": "06ae5514e0df9f70fad5e53e7d4c7f9738ed77d76749fabdb34fa63e89401e6f"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/lidar_summary_200.json",
+      "bytes": 2804,
+      "sha256": "aa404046b8b2fea85cac0b811f07371f5083875f8aa7840c30e56558460e91e6"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/independent_lidar_audit.json",
+      "bytes": 1832,
+      "sha256": "89b88e74a4a11e524bb6bdfa613c3820c0aeafe96decca2e1540e389eb753222"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/lidar_scoring_render_export/manifest.json",
+      "bytes": 6218,
+      "sha256": "8027e70ed3ae585de643661ad6eea2c90b564c7abb00c953a9eabca3194f8765"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/runs/C0_200/a2_receipt.json",
+      "bytes": 5079,
+      "sha256": "609512d023daa96e9250cb6ca7feb5cef7291b17d98b2f1cfeca11345ffe1c82"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/runs/C0_200/params.npz",
+      "bytes": 29403186,
+      "sha256": "7f98b2a1459ffb593d9d2b8f48e3e24f89a605edbd70a2b88731991512b9b02a"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/runs/C0_200/estimated_trajectory.npz",
+      "bytes": 19067,
+      "sha256": "e2c6901d8a27106b7f3ca1e81209e96d6a12c6ee5229df76474e516b10b08378"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/runs/C2_200/a2_receipt.json",
+      "bytes": 5093,
+      "sha256": "8e7264df6cfd48211aa98553eb98c1835ed17fbb94b9fed3c890050b40c24b99"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/runs/C2_200/params.npz",
+      "bytes": 31400298,
+      "sha256": "7357521f7e79d807d5283912065671a2e6dded0fceba588ed690e611a34a5bf9"
+    },
+    {
+      "path": "/root/autodl-tmp/A2_stereo_robust_geometry/seq03_recheck_v1/seed_2026/runs/C2_200/estimated_trajectory.npz",
+      "bytes": 19067,
+      "sha256": "e2c6901d8a27106b7f3ca1e81209e96d6a12c6ee5229df76474e516b10b08378"
+    }
+  ]
+}

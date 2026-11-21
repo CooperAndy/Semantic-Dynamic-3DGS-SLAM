@@ -1,0 +1,63 @@
+{
+  "scene": "Scene18",
+  "gt_file": "/root/autodl-tmp/slam_project/work_chy_20260924/stage2/06_\u72ec\u7acb\u590d\u6838\u4e0eTestOneShot/vehicle_only_v2/g1_v2_candidate_recheck/sealed_gt/Scene18_vehicle_gt.json",
+  "instance_source": "/root/autodl-tmp/slam_project/work_chy_20260924/stage2/06_\u72ec\u7acb\u590d\u6838\u4e0eTestOneShot/vehicle_only_v2/g2_online_dev_full_v2/prediction_root/Scene18/clone/instances",
+  "predicted_frame_count": 331,
+  "labelled_frame_count": 299,
+  "gt_objects": 1392,
+  "unique_gt_vehicles": 21,
+  "unmatched_predictions": 330,
+  "threshold": 0.5,
+  "40m_conditional": {
+    "gt_dynamic": 1277,
+    "scored": 762,
+    "tp": 759,
+    "missing": 517,
+    "fn": 2,
+    "gt_static": 2,
+    "fp": 1,
+    "precision": 0.9986842105263158,
+    "recall": 0.9973718791064389,
+    "f1": 0.9980276134122288
+  },
+  "40m_strict_proxy": {
+    "gt_dynamic": 1277,
+    "scored": 762,
+    "tp": 759,
+    "missing": 517,
+    "fn": 518,
+    "gt_static": 2,
+    "fp": 283,
+    "unmatched_dynamic_fp": 281,
+    "unmatched_no_gt_range_counted": 172,
+    "precision": 0.7284069097888676,
+    "recall": 0.5943617854346124,
+    "f1": 0.6545924967658473
+  },
+  "all_conditional": {
+    "gt_dynamic": 1390,
+    "missing": 627,
+    "scored": 765,
+    "tp": 762,
+    "fn": 2,
+    "gt_static": 2,
+    "fp": 1,
+    "precision": 0.9986893840104849,
+    "recall": 0.9973821989528796,
+    "f1": 0.9980353634577603
+  },
+  "all_strict": {
+    "gt_dynamic": 1390,
+    "missing": 627,
+    "fn": 628,
+    "scored": 765,
+    "tp": 762,
+    "gt_static": 2,
+    "fp": 287,
+    "unmatched_dynamic_fp": 285,
+    "precision": 0.7264061010486177,
+    "recall": 0.5482014388489208,
+    "f1": 0.6248462484624846
+  },
+  "note": "40m strict proxy assumes unmatched predictions with no GT match have unknown predicted depth and counts dynamic unknown conservatively; no predicted-depth test; static missing counted FP by historical convention; skip frames with no GT observations."
+}

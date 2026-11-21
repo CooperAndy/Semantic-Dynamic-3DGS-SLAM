@@ -1,0 +1,62 @@
+{
+  "sceneId": "kitti09_orb_f200_full",
+  "title": "KITTI 09 · Original map · Object Vehicle States",
+  "dataset": "KITTI odometry sequence 09",
+  "sourceFrames": [
+    300,
+    499
+  ],
+  "gaussianCount": 3720319,
+  "defaultVariant": "F1",
+  "fidelityMode": "full-resolution",
+  "poseProtocol": "ORB-SLAM3 estimated P2 camera poses (no GT input)",
+  "depthProtocol": "RAFT-Stereo confidence >= 0.60; 0.5-40 m; no vehicle-class exclusion in the original map",
+  "defaultCameraFrame": 399,
+  "assetManifest": "scene-data/KITTI09_F200/KITTI09_F200_manifest.json",
+  "variants": {
+    "F200": {
+      "label": "F200 · Original",
+      "description": "Deployment map from 200 seen frames with fixed ORB-SLAM3 estimated cameras.",
+      "rgb": "scene-data/KITTI09_F200/KITTI09_F200_RGB.ply",
+      "rgbWithTrajectory": "scene-data/KITTI09_F200/KITTI09_F200_RGB_with_Trajectory.ply",
+      "manifest": "scene-data/KITTI09_F200/KITTI09_F200_manifest.json"
+    },
+    "F1": {
+      "label": "F1 · Appearance Refined",
+      "description": "Geometry, scales, rotations and estimated cameras are fixed; RGB and opacity are refined for 800 steps. Not an independent test.",
+      "rgb": "scene-data/KITTI09_F1/KITTI09_F1_RGB.ply",
+      "rgbWithTrajectory": "scene-data/KITTI09_F1/KITTI09_F1_RGB_with_Trajectory.ply",
+      "manifest": "scene-data/KITTI09_F1/KITTI09_F1_manifest.json"
+    }
+  },
+  "assets": {
+    "rgb": "scene-data/KITTI09_F200/KITTI09_F200_RGB.ply",
+    "rgbWithTrajectory": "scene-data/KITTI09_F200/KITTI09_F200_RGB_with_Trajectory.ply",
+    "cameraPoses": "scene-data/KITTI09_F200/KITTI09_F200_camera_poses.json",
+    "viewerSettings": "scene-data/KITTI09_F200/viewer_settings_source_99.json",
+    "trajectoryViewerSettings": "scene-data/KITTI09_F200/viewer_settings_trajectory.json",
+    "semantic": "scene-data/KITTI09_F1_Semantic/KITTI09_F1_Semantic.ply"
+  },
+  "semanticGaussianCount": 3720319,
+  "semanticSource": "Mask2Former predictions fused from 200 seq09 images into the same F1 point set",
+  "semanticStatus": "Semantic predictions on the same F1 point set. Semantic class is not motion state; semantic accuracy has not been evaluated against ground truth.",
+  "semanticMapId": "kitti09_F1_semantic_same_points",
+  "semanticManifest": "scene-data/KITTI09_F1_Semantic/semantic_manifest.json",
+  "semanticRelation": "same F1 geometry, opacity and point order; display colors replaced",
+  "motionIndex": null,
+  "dynamicVehicleRemoval": null,
+  "motionReferenceImageTemplate": null,
+  "cameraPathLayer": {
+    "enabled": true,
+    "variant": "F1",
+    "asset": "scene-data/KITTI09_CameraPathLayer/KITTI09_F1_Path.ply",
+    "manifest": "scene-data/KITTI09_CameraPathLayer/manifest.json",
+    "gaussianCount": 1635,
+    "sha256": "34a9e56a40acc44d82ac14aae9ba0c8002adc3128f67f3a39605ad02de7d5d6b"
+  },
+  "motionSnapshot": "scene-data/KITTI09_ObjectStates/snapshot.json",
+  "motionLabelMode": "offline_semantic_vehicle_objects",
+  "motionStateManifest": "scene-data/KITTI09_ObjectStates/manifest.json",
+  "motionStateConfig": "semantic-region-v1 + short4_z0.5-40_far20",
+  "hideUncertainMotion": true
+}

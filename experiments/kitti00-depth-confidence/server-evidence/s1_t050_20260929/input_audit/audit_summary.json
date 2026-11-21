@@ -1,0 +1,19 @@
+{
+  "status": "CPU_GATE_AUDIT_COMPLETE_GPU_MAPPING_NOT_EVALUATED",
+  "scope": "KITTI seq00 frames 000000-000199",
+  "shape": [
+    376,
+    1241
+  ],
+  "min_depth_m": 0.5,
+  "max_depth_m": 40.0,
+  "thresholds": [
+    0.5
+  ],
+  "formula": "eligible = valid_depth[0.5m,40m] AND confidence >= threshold",
+  "summary_csv": "confidence_threshold_retention.csv",
+  "per_frame_csv": "per_frame_threshold_retention.csv",
+  "manifest_csv": "input_manifest_sha256.csv",
+  "hard_depth_written": true,
+  "mapping_metrics_assessed": false
+}

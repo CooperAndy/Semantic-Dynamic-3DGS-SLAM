@@ -1,0 +1,55 @@
+{
+  "sceneId": "kitti03_m3f_000000_000800",
+  "title": "KITTI 03 · M3F · 801 frames",
+  "dataset": "KITTI odometry sequence 03",
+  "sourceFrames": [
+    0,
+    800
+  ],
+  "gaussianCount": 2058667,
+  "defaultVariant": "F1",
+  "fidelityMode": "full-resolution",
+  "poseProtocol": "MASS selected estimates; no GT input",
+  "depthProtocol": "RAFT-Stereo; Demo 0.60 offline confidence",
+  "defaultCameraFrame": 400,
+  "assetManifest": "scene-data/KITTI03_M3F_801/manifest.json",
+  "variants": {
+    "F1": {
+      "label": "M3F · Cap 3000 · H3 · Seed 42",
+      "description": "801 seen frames, MASS selected poses, H3 replay and 3204-step F1 appearance refinement.",
+      "rgb": "scene-data/KITTI03_M3F_801/RGB.ply",
+      "rgbWithTrajectory": "scene-data/KITTI03_M3F_801/RGB_with_Trajectory.ply",
+      "manifest": "scene-data/KITTI03_M3F_801/manifest.json"
+    }
+  },
+  "assets": {
+    "rgb": "scene-data/KITTI03_M3F_801/RGB.ply",
+    "rgbWithTrajectory": "scene-data/KITTI03_M3F_801/RGB_with_Trajectory.ply",
+    "cameraPoses": "scene-data/KITTI03_M3F_801/camera_poses.json",
+    "viewerSettings": "scene-data/KITTI03_M3F_801/viewer_settings.json",
+    "trajectoryViewerSettings": "scene-data/KITTI03_M3F_801/viewer_settings_trajectory.json",
+    "semantic": "scene-data/KITTI03_M3F_801/Semantic.ply"
+  },
+  "cameraPathLayer": {
+    "enabled": true,
+    "variant": "F1",
+    "asset": "scene-data/KITTI03_M3F_801/camera_path.ply",
+    "manifest": "scene-data/KITTI03_M3F_801/manifest.json",
+    "gaussianCount": 6562,
+    "sha256": "533a521a0d6f8136e4370140957d4f8dcf02cb790315f4e0f512905f10ee102d"
+  },
+  "semanticGaussianCount": 2058667,
+  "semanticManifest": "scene-data/KITTI03_M3F_801/semantic_manifest.json",
+  "semanticSource": "Mask2Former Cityscapes-19; offline final-map fusion from 801 seq03 frames",
+  "semanticStatus": "Predicted categories; no semantic ground-truth accuracy or motion verified.",
+  "semanticMapId": "kitti03_m3f_801_semantic",
+  "semanticRelation": "same RGB geometry, opacity, rotation and Gaussian order; category colors replace RGB",
+  "motionIndex": null,
+  "motionSnapshot": "scene-data/KITTI03_M3F_801/ObjectStates/snapshot.json",
+  "motionReferenceImageTemplate": null,
+  "motionLabelMode": "offline_semantic_vehicle_objects",
+  "motionStateManifest": "scene-data/KITTI03_M3F_801/ObjectStates/manifest.json",
+  "motionStateConfig": "semantic-region-v1 + short4_z0.5-40_far20",
+  "hideUncertainMotion": true,
+  "dynamicVehicleRemoval": null
+}

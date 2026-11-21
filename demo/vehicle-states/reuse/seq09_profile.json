@@ -1,0 +1,74 @@
+{
+  "name": "seq09_success_baseline",
+  "workspace_root": "../../..",
+  "sequence": "09",
+  "scene_id": "kitti09_orb_f200_full",
+  "frame_range": [
+    300,
+    499
+  ],
+  "paths": {
+    "semantic_dir": "阶段2/动态语义Demo_设计/T07_动态语义独立副本/scene-data/KITTI09_F1_Semantic",
+    "semantic_ply": "KITTI09_F1_Semantic.ply",
+    "raw_frames": "阶段2/动态语义Demo_设计/T07_动态语义独立副本/scene-data/KITTI09_MotionDemo/frames",
+    "camera_poses": "阶段2/动态语义Demo_设计/T07_动态语义独立副本/scene-data/KITTI09_F200/KITTI09_F200_camera_poses.json",
+    "instance_inputs": "特调地图/vehicle_state_experiment/object_inputs",
+    "observation_run": "特调地图/vehicle_state_experiment/old_seq09_short4_far20"
+  },
+  "parameters": {
+    "region": {
+      "voxel_m": 0.15,
+      "connection_m": 0.45,
+      "semantic_confidence": 0.55,
+      "min_semantic_observations": 2,
+      "min_opacity": 0.1,
+      "max_scale_m": 0.25,
+      "min_voxels": 100,
+      "min_gaussians": 500,
+      "min_height_m": 0.45,
+      "max_height_m": 4.5,
+      "min_long_m": 1.4,
+      "min_short_m": 0.6,
+      "max_long_m": 15.0,
+      "max_short_m": 6.5,
+      "min_support_voxels": 8,
+      "min_support_pixels": 6,
+      "min_projected_coverage": 0.2,
+      "min_depth_consistency": 0.5,
+      "min_winner_share": 0.7,
+      "min_detection_confidence": 0.5,
+      "depth_abs_tolerance_m": 0.35,
+      "depth_relative_tolerance": 0.08
+    },
+    "motion": {
+      "depth_min": 0.5,
+      "depth_max": 40.0,
+      "min_valid_pixels": 100,
+      "min_valid_ratio": 0.5,
+      "sample_gap": 4,
+      "min_samples": 2,
+      "static_threshold": 0.4,
+      "dynamic_threshold": 0.6,
+      "far_min": 20.0,
+      "hold_min_observations": 3,
+      "hold_max_gap": 3,
+      "hold_min_span": 2,
+      "min_approach_m": 3.0,
+      "min_later_dynamic": 2,
+      "segment_gap": 10
+    }
+  },
+  "enable_static_hold": true,
+  "world_vertical_axis": "y",
+  "viewer_signs": [
+    -1,
+    -1,
+    1
+  ],
+  "semantic_classes": {
+    "car": 13,
+    "truck": 14,
+    "bus": 15
+  },
+  "scope": "Frozen seq09 defaults. Other sequences require their own aligned inputs; parameters are a starting point, not an accuracy guarantee."
+}

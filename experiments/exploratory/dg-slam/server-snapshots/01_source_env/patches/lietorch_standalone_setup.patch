@@ -1,0 +1,26 @@
+--- /root/autodl-tmp/dg_slam_chy_20261011/01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/setup.py.before_standalone
++++ /root/autodl-tmp/dg_slam_chy_20261011/01_source_env/dependencies/DROID-SLAM/thirdparty/lietorch/setup.py
+@@ -6,6 +6,23 @@
+ 
+ 
+ ROOT = osp.dirname(osp.abspath(__file__))
++
++import os
++
++# CPU_PREP_NINJA_ONLY: emit build rules, then release Python/torch RAM.
++if os.environ.get('DG_GENERATE_NINJA_ONLY') == '1':
++    import json as _json
++    import subprocess as _subprocess
++    from pathlib import Path as _Path
++    import torch.utils.cpp_extension as _ce
++    _original_ninja = _ce._run_ninja_build
++    def _generate_only(build_directory, verbose, error_prefix):
++        probe = _subprocess.run(['ninja', '-C', build_directory, '-n', '-j1'], capture_output=True, text=True)
++        if probe.returncode or 'no work to do' not in probe.stdout:
++            _Path(os.environ['DG_NINJA_MARKER']).write_text(_json.dumps({'directory':build_directory,'probe':probe.stdout[-4000:]}))
++            raise RuntimeError('DG_NINJA_EMITTED_RUN_STANDALONE')
++        return _original_ninja(build_directory, verbose, error_prefix)
++    _ce._run_ninja_build = _generate_only
+ 
+ setup(
+     name='lietorch',

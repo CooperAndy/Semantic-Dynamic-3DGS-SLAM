@@ -1,0 +1,14 @@
+dataset_name: "kitti"
+
+# P2/Twc external ORB-SLAM3 poses generated before any E3/E6a mapping result.
+pose_path: "/root/autodl-tmp/stage1_14r_cross_scene/inputs/seq07_orb_kitti_200.txt"
+
+camera_params:
+  image_height: 370
+  image_width: 1226
+  fx: 707.0912
+  fy: 707.0912
+  cx: 601.8873
+  cy: 183.1104
+  png_depth_scale: 1.0
+  crop_edge: 0

@@ -1,0 +1,62 @@
+{
+  "status": "CPU_SCORED",
+  "scope": "Exposed KITTI00 DEV, G08 capped-native adjacent maps, offline GT-blind future pose recovery",
+  "run_receipt_sha256": "1701692293885d719ed9e80451102dcc64866983981c088fb1b15ab749e53100",
+  "scorer_sha256": "e6b7fb11978efbf169705fa5c71e016403977c044455c43062f6b76bc369ebc6",
+  "gt_sha256": "90791a4113df979b149fa9e1104e960ea59f525a8318a202dbb6aec1a3d88793",
+  "calib_sha256": "7cfc9ab047da6bd829d669e31b2a0d72c278d084fa0c02f2f0320795d51a5d01",
+  "alignment": "Fixed SE3 on first 400 frames excluding 20 mapping holdouts, P2-to-P0, no scale",
+  "trials": 24,
+  "pairs": 12,
+  "distinct_update_events": 4,
+  "after_minus_before_gt_translation_mean_m": 0.0011951911365228607,
+  "after_better_gt_translation_pairs": 6,
+  "by_frame": [
+    {
+      "frame": 19,
+      "support_pixels": 4034,
+      "after_minus_before_gt_translation_mean_m": 0.010680256822155343,
+      "after_minus_before_gt_rotation_mean_deg": 0.0001845413142906501,
+      "after_minus_before_anchor_psnr_db": 0.44345055875116657,
+      "after_minus_before_anchor_depth_mae_m": -0.008702903985977173,
+      "before_coverage099": 0.27223455689474857,
+      "after_coverage099": 0.28615392528331646
+    },
+    {
+      "frame": 39,
+      "support_pixels": 4036,
+      "after_minus_before_gt_translation_mean_m": -0.003923879384596374,
+      "after_minus_before_gt_rotation_mean_deg": 0.018037404482190784,
+      "after_minus_before_anchor_psnr_db": 0.6364109082428762,
+      "after_minus_before_anchor_depth_mae_m": -0.023149818181991577,
+      "before_coverage099": 0.30152202239100245,
+      "after_coverage099": 0.30872923345963277
+    },
+    {
+      "frame": 79,
+      "support_pixels": 2035,
+      "after_minus_before_gt_translation_mean_m": 0.000739888631523152,
+      "after_minus_before_gt_rotation_mean_deg": -0.004732883046883689,
+      "after_minus_before_anchor_psnr_db": 0.5252283898472818,
+      "after_minus_before_anchor_depth_mae_m": -0.019861042499542236,
+      "before_coverage099": 0.21566770106468702,
+      "after_coverage099": 0.22753184631474274
+    },
+    {
+      "frame": 179,
+      "support_pixels": 1846,
+      "after_minus_before_gt_translation_mean_m": -0.0027155015229906785,
+      "after_minus_before_gt_rotation_mean_deg": 0.027682394946843897,
+      "after_minus_before_anchor_psnr_db": 0.5294622703755998,
+      "after_minus_before_anchor_depth_mae_m": -0.060309529304504395,
+      "before_coverage099": 0.15232868139969483,
+      "after_coverage099": 0.15903655253999005
+    }
+  ],
+  "limitations": [
+    "Two distinct but correlated adjacent updates from one exposed KITTI00 DEV replay",
+    "Three perturbations per frame are correlated",
+    "Fixed-map offline recovery, not online tracking or independent Test",
+    "E6a depth is a proxy; GT accessed only by this CPU scorer after GPU outputs were sealed"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "status": "PASS_SIX_NATIVE_MAPPING_POSE_BIRTH_TARGET_AND_FLOAT_AUDIT",
+  "at": "2026-11-01T21:31:22.219514+08:00",
+  "pose_rows": 6000,
+  "mapping_steps": 342000,
+  "birth_files": 5694,
+  "birth_points": 17055660,
+  "float_files": 12,
+  "propagated_frames": 2418,
+  "max_birth_world_error_m": 1.805884234965687e-05,
+  "max_birth_rgb_difference": 5.960464477539063e-08,
+  "max_propagation_quantization_m": 3.9751703092594636e-05,
+  "initial_gaussian_sha256": "662a6dbe42e5c48a600c198b51319e051b491e25b500a1899753e1fc03db7b94",
+  "variants": [
+    {
+      "variant": "B00_ORB_S0",
+      "frames": 1000,
+      "accepted": 0,
+      "mapping_steps": 57000,
+      "added": 2842610,
+      "final_gaussians": 2616484
+    },
+    {
+      "variant": "B03_ORB_S0",
+      "frames": 1000,
+      "accepted": 0,
+      "mapping_steps": 57000,
+      "added": 2842610,
+      "final_gaussians": 2589574
+    },
+    {
+      "variant": "B00_HARD_S0",
+      "frames": 1000,
+      "accepted": 4,
+      "mapping_steps": 57000,
+      "added": 2842610,
+      "final_gaussians": 2616844
+    },
+    {
+      "variant": "B03_HARD_S0",
+      "frames": 1000,
+      "accepted": 4,
+      "mapping_steps": 57000,
+      "added": 2842610,
+      "final_gaussians": 2588947
+    },
+    {
+      "variant": "B00_MASS_S0",
+      "frames": 1000,
+      "accepted": 25,
+      "mapping_steps": 57000,
+      "added": 2842610,
+      "final_gaussians": 2618282
+    },
+    {
+      "variant": "B03_MASS_S0",
+      "frames": 1000,
+      "accepted": 24,
+      "mapping_steps": 57000,
+      "added": 2842610,
+      "final_gaussians": 2591738
+    }
+  ],
+  "seconds": 262.71164053399116,
+  "quality_adoption": false
+}

@@ -1,0 +1,20 @@
+--- lietorch/setup.py.before_lowmem
++++ lietorch/setup.py
+@@ -22,7 +22,7 @@
+                 'lietorch/src/lietorch_gpu.cu',
+                 'lietorch/src/lietorch_cpu.cpp'],
+             extra_compile_args={
+-                'cxx': ['-O2'], 
++                'cxx': ['-O0', '-g0'], 
+                 'nvcc': ['-O2',
+                     
+                 ]
+@@ -38,7 +38,7 @@
+                 'lietorch/extras/extras.cpp',
+             ],
+             extra_compile_args={
+-                'cxx': ['-O2'], 
++                'cxx': ['-O0', '-g0'], 
+                 'nvcc': ['-O2',
+                     
+                 ]

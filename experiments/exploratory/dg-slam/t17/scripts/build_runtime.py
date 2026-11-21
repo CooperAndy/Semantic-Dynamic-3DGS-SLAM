@@ -1,0 +1,35 @@
+from pathlib import Path
+import ast,shutil
+F=Path(__file__).resolve().parents[1];OLD=F.parent/'CHY_正式Tracking采用验收_20261012/scripts'
+def change(text,old,new):
+ assert old in text,old
+ return text.replace(old,new)
+boot=(OLD/'runtime_boot.py').read_text(encoding='utf-8')
+boot=change(boot,"P=json.loads((F/'T14_formal_tracking_protocol.json').read_text())","BASE=R/'07_formal_tracking_T14_20261012'\nP=json.loads((BASE/'T14_formal_tracking_protocol.json').read_text());P.update(json.loads((F/'protocol.json').read_text()))")
+boot=boot.replace("F/'source'","BASE/'source'").replace("F/'native", "BASE/'native")
+boot=change(boot,"name=='groundtruth.txt' or name.endswith('_evaluation.csv')","name=='groundtruth.txt' or name.endswith('_evaluation.csv') or 'evaluation_reference' in name or 'evaluation_inputs' in str(args[0])")
+(F/'scripts/runtime_boot.py').write_text(boot,encoding='utf-8')
+run=(OLD/'run_tracking.py').read_text(encoding='utf-8')
+run=change(run,'F,R,DATA,P,bootstrap','F,R,DATA,P,BASE,bootstrap')
+run=change(run,"['DEV_SMOKE','W1','W2']","['SMOKE60','DEV200']")
+run=change(run,"args0.window=='DEV_SMOKE'","args0.window=='SMOKE60'")
+run=change(run,"native=bootstrap();audit=guard_gt()","N=60 if smoke else 200\n native=bootstrap();audit=guard_gt()")
+run=run.replace('T14_formal_tracking_protocol.json','protocol.json')
+run=change(run,"n_img=200","n_img=N")
+run=change(run,"exp_name='T14_'+args0.arm","exp_name='T17_'+args0.arm")
+run=change(run,'gs_pose_refine=True','gs_pose_refine=args0.arm!=\'NO_GS_REFINE\'')
+run=change(run,"'formal':not smoke","'formal':False,'registered_DEV':not smoke")
+run=change(run,'len(rows)==200','len(rows)==N')
+run=change(run,"(DATA/'seg_mask' if smoke else F/'inputs/masks')","(DATA/'seg_mask')")
+run=change(run,'len(pixel_ids)==200','len(pixel_ids)==N')
+run=change(run,"(F/'source').resolve()","(BASE/'source').resolve()")
+run=change(run,"args0.arm=='Q_AUTHOR'","args0.arm=='NO_GS_REFINE'")
+run=change(run,'ids.max()<200','ids.max()<N')
+run=change(run,'trajectory.shape==(200,7)','trajectory.shape==(N,7)')
+run=change(run,"assert audit['blocked_GT_opens']==0 and counts['camera_backward']>0 and counts['gs_mapping_calls']>0","assert audit['blocked_GT_opens']==0 and counts['gs_mapping_calls']>0\n  assert (counts['camera_backward']==0 if args0.arm=='NO_GS_REFINE' else counts['camera_backward']>0)\n  if args0.arm=='NO_GS_REFINE':assert np.allclose(np.asarray([v['coarse_c2w'] for v in frame_rows]),np.asarray([v['tracked_c2w'] for v in frame_rows]),atol=1e-6)")
+(F/'scripts/run_tracking.py').write_text(run,encoding='utf-8')
+for name in ['live_refinement.py','audit_camera.py']:shutil.copy2(OLD/name,F/'scripts'/name)
+ARC=F.parent/'CHY_正式Tracking采用验收_20261012/archive/scripts'
+for name in ['pose_math.py','bounded_step_cpu.py']:shutil.copy2(ARC/name,F/'scripts'/name)
+for p in (F/'scripts').glob('*.py'):ast.parse(p.read_text(encoding='utf-8'))
+print('T17_RUNTIME_PREPARED_ORIGINAL_ID_UNCHANGED')

@@ -1,0 +1,31 @@
+{
+  "scope": "KITTI seq00 frames 000000-000199",
+  "sensor_scope": "pure stereo RGB plus fixed external ORB poses; no external sensors or depth ground truth",
+  "calibration": {
+    "fx": 707.0912,
+    "fy": 707.0912,
+    "cx": 601.8873,
+    "cy": 183.1104,
+    "baseline_m": 0.5379044881339211
+  },
+  "confidence_formula": "valid_range * optional_static_mask * LR_cycle_photo * temporal_depth_consistency",
+  "thresholds": {
+    "seed": 0.6,
+    "loss": 0.2
+  },
+  "aggregate": {
+    "raw_valid_ratio": 0.8804013491468631,
+    "mapping_valid_ratio": 0.8804013491468631,
+    "lr_correspond_ratio": 0.8411909307349764,
+    "mean_confidence_all": 0.4806152938306332,
+    "mean_confidence_valid": 0.5462695977091789,
+    "seed_ratio": 0.4708502160398571,
+    "loss_ratio": 0.7232850403421367,
+    "cycle_error_median_px": 0.1479006290435791,
+    "cycle_error_p95_px": 9.946858672499657,
+    "photo_error_median": 0.017914828890934587,
+    "photo_error_p95": 0.13436370369046927,
+    "temporal_error_median_rel": 0.003701019334839657,
+    "temporal_error_p95_rel": 0.07087615092284977
+  }
+}

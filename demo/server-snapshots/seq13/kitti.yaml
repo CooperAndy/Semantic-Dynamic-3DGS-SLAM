@@ -1,0 +1,15 @@
+{
+  "dataset_name": "kitti",
+  "pose_path": "/root/autodl-tmp/seq13_000780_001039_O3F_260_20261115/poses_estimated_camera2.txt",
+  "depth_folder": "/root/autodl-tmp/seq13_000780_001039_O3F_260_20261115/confidence/depth_confhard",
+  "camera_params": {
+    "image_height": 376,
+    "image_width": 1241,
+    "fx": 718.856,
+    "fy": 718.856,
+    "cx": 607.1928,
+    "cy": 185.2157,
+    "png_depth_scale": 1.0,
+    "crop_edge": 0
+  }
+}

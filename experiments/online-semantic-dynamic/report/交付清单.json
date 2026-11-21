@@ -1,0 +1,405 @@
+{
+  "status": "COMPLETE_S23_TABLES_CONCLUSIONS_AND_FIXED_VIEWS",
+  "native_groups": 32,
+  "development_groups": 8,
+  "formal_groups": 24,
+  "fixed_common_GT_images": 64,
+  "new_manual_annotation": false,
+  "required": [
+    "定位.tsv",
+    "地图质量.tsv",
+    "语义质量.tsv",
+    "开销.tsv",
+    "8组消融.tsv",
+    "逐窗种子配对差值.tsv",
+    "全部结果.json",
+    "结果说明.md",
+    "典型视图索引.md",
+    "典型视图/图像清单.json",
+    "各类语义支持.tsv",
+    "各类语义支持与混淆.json"
+  ],
+  "files": [
+    {
+      "path": "8组消融.tsv",
+      "bytes": 1401,
+      "sha256": "41f25994bde33e1b14db2b6e4a0d460724f4d710a55d04251b898ed2bf375b86"
+    },
+    {
+      "path": "全部结果.json",
+      "bytes": 440640,
+      "sha256": "5e350e8f027267c1221806d0b7e65fb50a242f01019ff5ef06ed50ea552714a1"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_B_003019.png",
+      "bytes": 1493291,
+      "sha256": "eb624a9edb5540cadd04557cf2e4d8e2185f3d99f5a5f27007d06a3619219a9c"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_B_003999.png",
+      "bytes": 795935,
+      "sha256": "7c0f8da1143adcc28240b6b8bc73888fd6fb4dc32feba5dab2297585b3da1138"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_D_003019.png",
+      "bytes": 1495694,
+      "sha256": "54bb29a15c68367a250a5c417a29f8c92246d7b0d45a1f2730af44b746d5c332"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_D_003999.png",
+      "bytes": 796215,
+      "sha256": "424c18ee4a3c85436f325e87ca4edea627bb2d59976e73f424ea20e2a0604b54"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_MD_003019.png",
+      "bytes": 1489061,
+      "sha256": "dbd7789a9d31c279193efb582a0ffbaec41b32468ff8e49711b824d51f4bd7d7"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_MD_003999.png",
+      "bytes": 796189,
+      "sha256": "b241925e9ee0956dfd304c4da9e0ad55fcac6c35b5e10ed5cdc5ee9a3ef21b2b"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_M_003019.png",
+      "bytes": 1499206,
+      "sha256": "055c3674e5e0bafed4dd196fd5a0a54e47fbe5a45fd0aa4b9aedc1aeeb04f460"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_M_003999.png",
+      "bytes": 796062,
+      "sha256": "f2bf54697952441437e0fe07415ae6ea1f130f344f92d917c08d387278105325"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_TD_003019.png",
+      "bytes": 1492064,
+      "sha256": "f88cba84b84e7044a246bd98e168ed03152e508a4c98d20ba8dd7b5c72f00948"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_TD_003999.png",
+      "bytes": 796020,
+      "sha256": "fbf4a321aae616b60b3be52c11ca55a5dfee969445cf1841ee15020ca084b9cd"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_TMD_003019.png",
+      "bytes": 1489185,
+      "sha256": "615c6257692511be1bf3a2aaac09a7b410a9251a1443b15fc12737bf929014e0"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_TMD_003999.png",
+      "bytes": 796346,
+      "sha256": "471be5fb74903e346ba0ea23c1d8c638783985552cd84fcae9fbe9046c2fc3c9"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_TM_003019.png",
+      "bytes": 1485763,
+      "sha256": "81028474518436bb4f6316f7f5ec3d0eb2eacdcd0cecc0dfae39318dc94ffc61"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_TM_003999.png",
+      "bytes": 796069,
+      "sha256": "21194ecd1bdb30486576c3c52f665a85a4ed55f1ebf557fdafd89e52464948aa"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_T_003019.png",
+      "bytes": 1483711,
+      "sha256": "33d43cf22e65bcbade58b3f102e4eabda99084077a5efeb9a57bd1389edbbdc6"
+    },
+    {
+      "path": "典型视图/E2_K08_S0_R3_serial_T_003999.png",
+      "bytes": 795915,
+      "sha256": "346cba179beacf7213a25478f4ec7fec467050518ae3c20ed4586234638c337d"
+    },
+    {
+      "path": "典型视图/E3_K05_S0_R3_serial_B_000019.png",
+      "bytes": 1358303,
+      "sha256": "8b17233584a636b7757aeb67eabaa4b8e63f188305df41f4341f912eac71a0d7"
+    },
+    {
+      "path": "典型视图/E3_K05_S0_R3_serial_B_000999.png",
+      "bytes": 1226118,
+      "sha256": "4bfd7566374984426297fd560cc5367ab4b1ada27f91eeeef7c7ecce5293ac30"
+    },
+    {
+      "path": "典型视图/E3_K05_S0_R3_serial_D_000019.png",
+      "bytes": 1359474,
+      "sha256": "e640999b9bc64b40b3ca6e124e0f4fad0f3671b822407a9daaa322769d5ec032"
+    },
+    {
+      "path": "典型视图/E3_K05_S0_R3_serial_D_000999.png",
+      "bytes": 1224621,
+      "sha256": "79cde8b52104e5503b3e52390ddffb6025156376ea0debd1c1b8df23b8cfe71b"
+    },
+    {
+      "path": "典型视图/E3_K05_S0_R3_serial_TMD_000019.png",
+      "bytes": 1358846,
+      "sha256": "ba4001aadbf229a8f9ee5d0812d13144b7ddc3c32bda039b5a7c84c7286ec004"
+    },
+    {
+      "path": "典型视图/E3_K05_S0_R3_serial_TMD_000999.png",
+      "bytes": 1241500,
+      "sha256": "c6d5013c23347b77a527020e86c19a96c22f5ea290c8ac9d77abb12672b29f46"
+    },
+    {
+      "path": "典型视图/E3_K05_S0_R3_serial_TM_000019.png",
+      "bytes": 1361245,
+      "sha256": "f2fbde24b9f59d465d5881737f9dd48fe4f73ec5d0a6d9184f107274ba079327"
+    },
+    {
+      "path": "典型视图/E3_K05_S0_R3_serial_TM_000999.png",
+      "bytes": 1238934,
+      "sha256": "b342114d418463d72c9141694d0940940b8bd4074033677a292cf4c518b6e89b"
+    },
+    {
+      "path": "典型视图/E3_K05_S1_R3_serial_B_000019.png",
+      "bytes": 1360219,
+      "sha256": "ceb0845d4ed551c7c854b0686202e2d861cb062c00570506b645d4e168559c5a"
+    },
+    {
+      "path": "典型视图/E3_K05_S1_R3_serial_B_000999.png",
+      "bytes": 1188427,
+      "sha256": "821f9df62fb99539593414edf778f064618de11d8e5fa7e4275eaf2d4ec84aa4"
+    },
+    {
+      "path": "典型视图/E3_K05_S1_R3_serial_D_000019.png",
+      "bytes": 1359458,
+      "sha256": "07b467a88710b675621169e78c9b810afafdfc760a545c140d2f7555def3ff4d"
+    },
+    {
+      "path": "典型视图/E3_K05_S1_R3_serial_D_000999.png",
+      "bytes": 1181185,
+      "sha256": "1b424b3df2bdfe168175b22231722fee1b9e2de9ed70047c465fa2a7ad4a5b76"
+    },
+    {
+      "path": "典型视图/E3_K05_S1_R3_serial_TMD_000019.png",
+      "bytes": 1360437,
+      "sha256": "c9140a23cd5ab1bd2d7ddf7a28291f15d2aeed804737267a9cc2f84509221a03"
+    },
+    {
+      "path": "典型视图/E3_K05_S1_R3_serial_TMD_000999.png",
+      "bytes": 1205181,
+      "sha256": "0356f5c3fbd460cfd24547bd8c55c58d992e312769d909d3dc9b54d3f497b674"
+    },
+    {
+      "path": "典型视图/E3_K05_S1_R3_serial_TM_000019.png",
+      "bytes": 1360748,
+      "sha256": "e0d96b0dbe0ef2ddfd39ea013e87d06d4630ec41bd7f22a4acfeeafee4dfb73a"
+    },
+    {
+      "path": "典型视图/E3_K05_S1_R3_serial_TM_000999.png",
+      "bytes": 1211882,
+      "sha256": "d9a0c0011557fe161709f910d66efddd68632bb51146e8ed4ef8e871b6d80e46"
+    },
+    {
+      "path": "典型视图/E3_K05_S2_R3_serial_B_000019.png",
+      "bytes": 1365368,
+      "sha256": "d0ee7abb6ae51979b216ce4a129b2b7174a3571b20e1424c735600016ec0058d"
+    },
+    {
+      "path": "典型视图/E3_K05_S2_R3_serial_B_000999.png",
+      "bytes": 1212520,
+      "sha256": "0706705383c416283f616aa546040c40084d7fc279095ae6dae29dddad67616d"
+    },
+    {
+      "path": "典型视图/E3_K05_S2_R3_serial_D_000019.png",
+      "bytes": 1363307,
+      "sha256": "d25532c10e353fdad34f635af801e2980b7157a18ffe242601c7ee8c229d8c4c"
+    },
+    {
+      "path": "典型视图/E3_K05_S2_R3_serial_D_000999.png",
+      "bytes": 1210934,
+      "sha256": "03ee8e3874272b82dc5f69c1af37e3a9298257cdb7b49a36b138e8cbc3eb8ae5"
+    },
+    {
+      "path": "典型视图/E3_K05_S2_R3_serial_TMD_000019.png",
+      "bytes": 1365983,
+      "sha256": "2ba9e311689f153c8321c3924921353f1c30296e65cdc711254a1fe3453217c0"
+    },
+    {
+      "path": "典型视图/E3_K05_S2_R3_serial_TMD_000999.png",
+      "bytes": 1195945,
+      "sha256": "576910fd0a6ab1fae04b2c8333c7c27f9beecf56462beb81a18122407c27de0c"
+    },
+    {
+      "path": "典型视图/E3_K05_S2_R3_serial_TM_000019.png",
+      "bytes": 1362352,
+      "sha256": "90fd03132f3b5fbf7be0716a099470616e5191dddb0c2527dcea565550521e9d"
+    },
+    {
+      "path": "典型视图/E3_K05_S2_R3_serial_TM_000999.png",
+      "bytes": 1197140,
+      "sha256": "f721f5609a056e6a4428b61510d4b22cbfd225668d2c062c6e98cd063579141b"
+    },
+    {
+      "path": "典型视图/E3_K10_S0_R3_serial_B_000019.png",
+      "bytes": 1571029,
+      "sha256": "4baa79fa3655f1694e56b6f18f2787fe621e5dbc1fff018a2aadf3336453b044"
+    },
+    {
+      "path": "典型视图/E3_K10_S0_R3_serial_B_000999.png",
+      "bytes": 751509,
+      "sha256": "e97118131cdc94484fadf4bc3f2f6588f002f5288da19dbaf0352e204cb4877d"
+    },
+    {
+      "path": "典型视图/E3_K10_S0_R3_serial_D_000019.png",
+      "bytes": 1568997,
+      "sha256": "d210420fff388d0a87beaaecb684fea432b61fc9403ea1f0be7f9f22df79b3c6"
+    },
+    {
+      "path": "典型视图/E3_K10_S0_R3_serial_D_000999.png",
+      "bytes": 751228,
+      "sha256": "6848e019051e5865b2399a1c5ec3122ed08f34ac521eb65f722ce6a80109192f"
+    },
+    {
+      "path": "典型视图/E3_K10_S0_R3_serial_TMD_000019.png",
+      "bytes": 1575311,
+      "sha256": "9d98b229c9c95cbfb84697c67471521d2ab3da2c80f8b73f2316d6ec9f2ea90e"
+    },
+    {
+      "path": "典型视图/E3_K10_S0_R3_serial_TMD_000999.png",
+      "bytes": 751997,
+      "sha256": "69af47a3f7c3b94d7947fb560de01fd155fdff76735465ef515ff065e0f080f7"
+    },
+    {
+      "path": "典型视图/E3_K10_S0_R3_serial_TM_000019.png",
+      "bytes": 1574175,
+      "sha256": "b5b863b873ef7b8911bd43eb4e144b7c8e0d2c48091f2438369c4d4121bd737b"
+    },
+    {
+      "path": "典型视图/E3_K10_S0_R3_serial_TM_000999.png",
+      "bytes": 750783,
+      "sha256": "66932da9a61b2e43688bc358565b8c8cfd3a88b86b5d32da538fb35919353952"
+    },
+    {
+      "path": "典型视图/E3_K10_S1_R3_serial_B_000019.png",
+      "bytes": 1565448,
+      "sha256": "c5a4591d3c5067cd50b157d24aa7686e913a02f323bd66f789ca31bfbfaf139a"
+    },
+    {
+      "path": "典型视图/E3_K10_S1_R3_serial_B_000999.png",
+      "bytes": 750729,
+      "sha256": "87b033878ef4a9d37ce86e2502a8a0ca42f759eaceb9107af395e270dd9ab1ef"
+    },
+    {
+      "path": "典型视图/E3_K10_S1_R3_serial_D_000019.png",
+      "bytes": 1568546,
+      "sha256": "b2b51bb756ce6d604173b92a28199790d409da3e0e2576a67b6f13534f0dd60b"
+    },
+    {
+      "path": "典型视图/E3_K10_S1_R3_serial_D_000999.png",
+      "bytes": 750267,
+      "sha256": "88e08be309dd270da25180bdb69c6425a76e3f903277897a35e3496506ac043a"
+    },
+    {
+      "path": "典型视图/E3_K10_S1_R3_serial_TMD_000019.png",
+      "bytes": 1568598,
+      "sha256": "ec22f266cae6533de7861f10c9bc8a801ceee78b44b7e917c3b68a58c429febe"
+    },
+    {
+      "path": "典型视图/E3_K10_S1_R3_serial_TMD_000999.png",
+      "bytes": 751178,
+      "sha256": "4b7e384309b382591a5f7b0dc042582512cc98104274fd49b8cd6f49286c3484"
+    },
+    {
+      "path": "典型视图/E3_K10_S1_R3_serial_TM_000019.png",
+      "bytes": 1568281,
+      "sha256": "df788107ddfe8c543026e8d9cc4c7915a458371281f9508e3c946dfe54e34f40"
+    },
+    {
+      "path": "典型视图/E3_K10_S1_R3_serial_TM_000999.png",
+      "bytes": 751140,
+      "sha256": "ddaee476294520cd453f12efeecffaea8e3abbf7ccf5f23a1580c2372e9a0d86"
+    },
+    {
+      "path": "典型视图/E3_K10_S2_R3_serial_B_000019.png",
+      "bytes": 1574447,
+      "sha256": "9be103f503a581e17817200cebe9b1522f4a113108de627207db78e834f6f9d9"
+    },
+    {
+      "path": "典型视图/E3_K10_S2_R3_serial_B_000999.png",
+      "bytes": 750673,
+      "sha256": "11852c63f1959bb2bca9917a798e1718cacc3ea148f104f7e7112df9f783fbe4"
+    },
+    {
+      "path": "典型视图/E3_K10_S2_R3_serial_D_000019.png",
+      "bytes": 1573085,
+      "sha256": "76b48ca7a8333a3fef7cbcccf36295e72cbe90c0510169736b756ae3e0e3297b"
+    },
+    {
+      "path": "典型视图/E3_K10_S2_R3_serial_D_000999.png",
+      "bytes": 750527,
+      "sha256": "fd3800a4dd0e2e9f883580885f74d69bf06a0a5f583d14616876b2fcea06c0ca"
+    },
+    {
+      "path": "典型视图/E3_K10_S2_R3_serial_TMD_000019.png",
+      "bytes": 1569366,
+      "sha256": "6ac63d257febc2fb16c20f2774f33fff305a4b18a593ddcf48bd7303a1b2be55"
+    },
+    {
+      "path": "典型视图/E3_K10_S2_R3_serial_TMD_000999.png",
+      "bytes": 750344,
+      "sha256": "a26d8a5674a94e9c46ceda0b6f6a7242e64606cac1e744736cfad293e1e1460f"
+    },
+    {
+      "path": "典型视图/E3_K10_S2_R3_serial_TM_000019.png",
+      "bytes": 1569676,
+      "sha256": "1b0242b163ceb6c5d35a3a0a46f51a2ae8083d7212a738a5276811458a1844e4"
+    },
+    {
+      "path": "典型视图/E3_K10_S2_R3_serial_TM_000999.png",
+      "bytes": 750848,
+      "sha256": "41959ad58e2a723f2313ab64903c546587db5bc79f1a49829d72fe8d838b1b74"
+    },
+    {
+      "path": "典型视图/图像清单.json",
+      "bytes": 22307,
+      "sha256": "1edd7f3f1c9eff73efef6bd91f8d76e0b24fe6e3471f06c94d55c65e57d0bfa9"
+    },
+    {
+      "path": "典型视图索引.md",
+      "bytes": 7672,
+      "sha256": "1e67838c47d28c7db5e368141e22ef501f5744d812d6d8312a51cd9539be127a"
+    },
+    {
+      "path": "各类语义支持.tsv",
+      "bytes": 354614,
+      "sha256": "504b85abc543913bfbe3e95283bdc8b3955807d3a5fd92799c454c1989d411cc"
+    },
+    {
+      "path": "各类语义支持与混淆.json",
+      "bytes": 33558185,
+      "sha256": "bd18d697cc5b9560c84b4e1ae4e9cf735bd5f1a7992b7efab274919481be0972"
+    },
+    {
+      "path": "地图质量.tsv",
+      "bytes": 6110,
+      "sha256": "0736822cde9d81af5bc1504a327f26d791598daad413cfad896dc91e0dab94d6"
+    },
+    {
+      "path": "定位.tsv",
+      "bytes": 5282,
+      "sha256": "92e7a89ab9434bfc91c4416fcd7ae269cc1669512fe43e620bf0b56be0473832"
+    },
+    {
+      "path": "开销.tsv",
+      "bytes": 16115,
+      "sha256": "792ee41f0234b9494a9302f48aecfa0b5eb6f1a8b224792aa543121d7e3750d8"
+    },
+    {
+      "path": "结果说明.md",
+      "bytes": 6303,
+      "sha256": "8fee6dd37c67b7c962b56efd96a71e64e35e0050b138ede3646cf1df77eed2c4"
+    },
+    {
+      "path": "语义质量.tsv",
+      "bytes": 4511,
+      "sha256": "5572436a607f5a562455a9fb06958a94ffe71d0f432e8f8f02bdb2309ab0851f"
+    },
+    {
+      "path": "逐窗种子配对差值.tsv",
+      "bytes": 17568,
+      "sha256": "7e169c73d450e3fa376a97d4e05bd7b697f93e1f2ff9b8eda7ee562b34b1f520"
+    }
+  ],
+  "quality_adoption": false
+}

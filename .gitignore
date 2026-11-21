@@ -1,0 +1,31 @@
+# Local review and unapproved third-party snapshots
+/_review/
+/third_party_review/
+
+# Local data and generated artifacts
+/data/
+/datasets/
+/outputs/
+/runs/
+/demo/scene-data/
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+*.npz
+*.npy
+*.ply
+*.sog
+*.pth
+*.pt
+*.safetensors
+*.ckpt
+*.log
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+.env
+.env.*
+*password*
+*credential*

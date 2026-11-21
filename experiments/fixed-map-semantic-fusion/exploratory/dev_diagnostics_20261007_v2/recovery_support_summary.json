@@ -1,0 +1,112 @@
+[
+  {
+    "sequence": "Scene01_clone_330_355",
+    "group": "S0",
+    "initial_changed_labels": 4151,
+    "final_match_count": 1880,
+    "final_recovery_fraction": 0.45290291496025054,
+    "first_match_median_distinct_processed_frames": 6.0,
+    "first_match_median_effective_source_support": 6.0,
+    "unresolved_with_at_most_3_effective_source_observations": 1547,
+    "scope": "agreement with unperturbed same-method evolving label, not GT correctness; first match may later flip again"
+  },
+  {
+    "sequence": "Scene01_clone_330_355",
+    "group": "S1",
+    "initial_changed_labels": 4151,
+    "final_match_count": 1855,
+    "final_recovery_fraction": 0.4468802698145025,
+    "first_match_median_distinct_processed_frames": 6.0,
+    "first_match_median_effective_source_support": 6.0,
+    "unresolved_with_at_most_3_effective_source_observations": 1563,
+    "scope": "agreement with unperturbed same-method evolving label, not GT correctness; first match may later flip again"
+  },
+  {
+    "sequence": "Scene01_clone_330_355",
+    "group": "S-G",
+    "initial_changed_labels": 4151,
+    "final_match_count": 1757,
+    "final_recovery_fraction": 0.42327150084317033,
+    "first_match_median_distinct_processed_frames": 6.0,
+    "first_match_median_effective_source_support": 6.0,
+    "unresolved_with_at_most_3_effective_source_observations": 1557,
+    "scope": "agreement with unperturbed same-method evolving label, not GT correctness; first match may later flip again"
+  },
+  {
+    "sequence": "Scene01_clone_330_355",
+    "group": "S2",
+    "initial_changed_labels": 4151,
+    "final_match_count": 1753,
+    "final_recovery_fraction": 0.4223078776198506,
+    "first_match_median_distinct_processed_frames": 6.0,
+    "first_match_median_effective_source_support": 6.0,
+    "unresolved_with_at_most_3_effective_source_observations": 1563,
+    "scope": "agreement with unperturbed same-method evolving label, not GT correctness; first match may later flip again"
+  },
+  {
+    "sequence": "Scene01_clone_330_355",
+    "group": "S2-H",
+    "initial_changed_labels": 3639,
+    "final_match_count": 1359,
+    "final_recovery_fraction": 0.3734542456718879,
+    "first_match_median_distinct_processed_frames": 6.0,
+    "first_match_median_effective_source_support": 4.0,
+    "unresolved_with_at_most_3_effective_source_observations": 1703,
+    "scope": "agreement with unperturbed same-method evolving label, not GT correctness; first match may later flip again"
+  },
+  {
+    "sequence": "Scene02_clone_110_135",
+    "group": "S0",
+    "initial_changed_labels": 4410,
+    "final_match_count": 3505,
+    "final_recovery_fraction": 0.7947845804988662,
+    "first_match_median_distinct_processed_frames": 6.0,
+    "first_match_median_effective_source_support": 6.0,
+    "unresolved_with_at_most_3_effective_source_observations": 421,
+    "scope": "agreement with unperturbed same-method evolving label, not GT correctness; first match may later flip again"
+  },
+  {
+    "sequence": "Scene02_clone_110_135",
+    "group": "S1",
+    "initial_changed_labels": 4410,
+    "final_match_count": 3492,
+    "final_recovery_fraction": 0.7918367346938775,
+    "first_match_median_distinct_processed_frames": 6.0,
+    "first_match_median_effective_source_support": 6.0,
+    "unresolved_with_at_most_3_effective_source_observations": 430,
+    "scope": "agreement with unperturbed same-method evolving label, not GT correctness; first match may later flip again"
+  },
+  {
+    "sequence": "Scene02_clone_110_135",
+    "group": "S-G",
+    "initial_changed_labels": 4410,
+    "final_match_count": 3519,
+    "final_recovery_fraction": 0.7979591836734694,
+    "first_match_median_distinct_processed_frames": 6.0,
+    "first_match_median_effective_source_support": 6.0,
+    "unresolved_with_at_most_3_effective_source_observations": 430,
+    "scope": "agreement with unperturbed same-method evolving label, not GT correctness; first match may later flip again"
+  },
+  {
+    "sequence": "Scene02_clone_110_135",
+    "group": "S2",
+    "initial_changed_labels": 4410,
+    "final_match_count": 3533,
+    "final_recovery_fraction": 0.8011337868480726,
+    "first_match_median_distinct_processed_frames": 6.0,
+    "first_match_median_effective_source_support": 6.0,
+    "unresolved_with_at_most_3_effective_source_observations": 433,
+    "scope": "agreement with unperturbed same-method evolving label, not GT correctness; first match may later flip again"
+  },
+  {
+    "sequence": "Scene02_clone_110_135",
+    "group": "S2-H",
+    "initial_changed_labels": 3633,
+    "final_match_count": 2818,
+    "final_recovery_fraction": 0.7756674924304983,
+    "first_match_median_distinct_processed_frames": 6.0,
+    "first_match_median_effective_source_support": 6.0,
+    "unresolved_with_at_most_3_effective_source_observations": 499,
+    "scope": "agreement with unperturbed same-method evolving label, not GT correctness; first match may later flip again"
+  }
+]

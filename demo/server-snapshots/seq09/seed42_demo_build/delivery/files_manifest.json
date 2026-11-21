@@ -1,0 +1,1854 @@
+{
+  "scene-config.json": {
+    "bytes": 3295,
+    "sha256": "e3e583fc0f7fe2cda0bc99ec3aadde890c36b101212fdb3e89f5217f468a9b45"
+  },
+  "evidence/frame_index_mapping_and_input_hashes.csv": {
+    "bytes": 30356,
+    "sha256": "c422d9587ff1351e9c5917c17dbb870d95f07e288507fc595625722f0832444f"
+  },
+  "evidence/input_spec.json": {
+    "bytes": 864,
+    "sha256": "824e64813d77f5f7798b8b35761712f71439f69daff93576c588d33e7933edce"
+  },
+  "evidence/field_verification.json": {
+    "bytes": 228,
+    "sha256": "19c4b3b511f46e71eeb8d8b2fc5b0142e8d9f9136ee308d79be9bfe26644d43f"
+  },
+  "evidence/build_status.json": {
+    "bytes": 24,
+    "sha256": "f9f98b7678f7b5704c18644c291a2795bb6396e383498e70f8d5bc201beb0462"
+  },
+  "evidence/final_source_receipt.json": {
+    "bytes": 2674,
+    "sha256": "a8cfcd7cec03af5c7ee1ee16e4acaccf814958b3b2cc1ca1a099ab7fe5a5df16"
+  },
+  "scene-data/KITTI09_F200/KITTI09_F200_RGB.ply": {
+    "bytes": 215295901,
+    "sha256": "7c2414cb8748131c00e36d2aace6cf7dd918be9f524df13f5f0d5bf36aad9dc8"
+  },
+  "scene-data/KITTI09_F200/KITTI09_F200_Trajectory.ply": {
+    "bytes": 111666,
+    "sha256": "34a9e56a40acc44d82ac14aae9ba0c8002adc3128f67f3a39605ad02de7d5d6b"
+  },
+  "scene-data/KITTI09_F200/KITTI09_F200_RGB_with_Trajectory.ply": {
+    "bytes": 215407081,
+    "sha256": "41e824cf1f7165b991cec106d0b993da9c394e8604009c9f77cdfbaaca6057fa"
+  },
+  "scene-data/KITTI09_F200/KITTI09_F200_camera_poses.json": {
+    "bytes": 133237,
+    "sha256": "6af97b6863f121884c8668d6952547e0ea7399b91cc3c86239de3e6c9f9c8643"
+  },
+  "scene-data/KITTI09_F200/viewer_settings_source_99.json": {
+    "bytes": 1973,
+    "sha256": "57b6b7a28145245e9470e4d328cd5f09ff0d1dd3eae023ad65a133650482d97e"
+  },
+  "scene-data/KITTI09_F200/viewer_settings_trajectory.json": {
+    "bytes": 1919,
+    "sha256": "c3b7f846da2d953616080ab5eb0b7666184f6749f62ba53b15fdfba84f0440c5"
+  },
+  "scene-data/KITTI09_F200/params.npz": {
+    "bytes": 164660110,
+    "sha256": "e9268dd64b734555d89d1eb68e4cbf07c67e5f1678b826e26f11af52eccca207"
+  },
+  "scene-data/KITTI09_F200/KITTI09_F200_manifest.json": {
+    "bytes": 1699,
+    "sha256": "2fb58d2250df1f74c4bbbd0b1f229996e4dcb53bb62581f29473fd4f93ad53cd"
+  },
+  "scene-data/KITTI09_F1/KITTI09_F1_RGB.ply": {
+    "bytes": 215295901,
+    "sha256": "d5d7a4d3aceb681a383d4ff0d349966bf94c2cf112a6966c1f35d7f605184a26"
+  },
+  "scene-data/KITTI09_F1/KITTI09_F1_Trajectory.ply": {
+    "bytes": 111666,
+    "sha256": "34a9e56a40acc44d82ac14aae9ba0c8002adc3128f67f3a39605ad02de7d5d6b"
+  },
+  "scene-data/KITTI09_F1/KITTI09_F1_RGB_with_Trajectory.ply": {
+    "bytes": 215407081,
+    "sha256": "f1db9c10d70385f21e100882fe8b6e84b1dd6517e3c503c8601e2b5a0161217a"
+  },
+  "scene-data/KITTI09_F1/KITTI09_F1_camera_poses.json": {
+    "bytes": 133237,
+    "sha256": "6af97b6863f121884c8668d6952547e0ea7399b91cc3c86239de3e6c9f9c8643"
+  },
+  "scene-data/KITTI09_F1/viewer_settings_source_99.json": {
+    "bytes": 1973,
+    "sha256": "57b6b7a28145245e9470e4d328cd5f09ff0d1dd3eae023ad65a133650482d97e"
+  },
+  "scene-data/KITTI09_F1/viewer_settings_trajectory.json": {
+    "bytes": 1919,
+    "sha256": "c3b7f846da2d953616080ab5eb0b7666184f6749f62ba53b15fdfba84f0440c5"
+  },
+  "scene-data/KITTI09_F1/params.npz": {
+    "bytes": 164660110,
+    "sha256": "387ee7a14e84f48ce1cd1db82ddf8161d1cfc768b92b5b895a7634b78ca6e8b9"
+  },
+  "scene-data/KITTI09_F1/KITTI09_F1_manifest.json": {
+    "bytes": 1689,
+    "sha256": "275a09700df81614c20d69b4dddb61faa07b9c3a41ee1be15cf19faa9750fc77"
+  },
+  "scene-data/KITTI09_F1_Semantic/KITTI09_F1_Semantic.ply": {
+    "bytes": 215295901,
+    "sha256": "cd0f38162b5cd13edc0ca3509b25c92f35a564bc48b91d148b7879e96b5789d3"
+  },
+  "scene-data/KITTI09_F1_Semantic/semantic_gaussian_labels.npz": {
+    "bytes": 17449539,
+    "sha256": "3e4fd4ea2f5b257f5228669c9bf20548cfe95e85206119d313ba3cf4d8ab520a"
+  },
+  "scene-data/KITTI09_F1_Semantic/semantic_fusion_summary.json": {
+    "bytes": 3409,
+    "sha256": "12cee46079af8875b2451722a069abd22f70934cc5550dece5206e96d9bba4c8"
+  },
+  "scene-data/KITTI09_F1_Semantic/semantic_class_histogram.csv": {
+    "bytes": 1641,
+    "sha256": "c7c6ded9de05d3b63daac724f5a8a6587c13fd42e53d621c8ebdbeeb833b4671"
+  },
+  "scene-data/KITTI09_F1_Semantic/semantic_manifest.json": {
+    "bytes": 863,
+    "sha256": "1c6dc7892cdfa1e5cec1e4f868aeedf3bb248d03fc5bfb32a7cde53f28e029d3"
+  },
+  "scene-data/KITTI09_MotionDemo/index.json": {
+    "bytes": 57999,
+    "sha256": "7ba32318ec62a290a257db57b9bdae4e5ee36f755d2f3f1f4c7fd1c819b8172a"
+  },
+  "scene-data/KITTI09_MotionDemo/snapshot.json": {
+    "bytes": 7638,
+    "sha256": "cd924d0123fe79c6ffdbdab65afd4faa48230cf17b68f579ebe3af1f875be848"
+  },
+  "scene-data/KITTI09_MotionDemo/prediction_summary.json": {
+    "bytes": 632,
+    "sha256": "75d1461eb42c372bffd7814a685a472b108fd17784aeac7d0afc100de0caa26f"
+  },
+  "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F200_RGB.ply": {
+    "bytes": 207275845,
+    "sha256": "13aa841c2b9a3c27e895c8eef802b5c596ae07a050d77b16a67ef8ec4749bae7"
+  },
+  "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F200_RGB_Highlight.ply": {
+    "bytes": 215295901,
+    "sha256": "423d93392296f2615482d83b298a6a07c22723339521432d8cb92fc9fb98d550"
+  },
+  "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F200_RGB_with_Trajectory.ply": {
+    "bytes": 207387025,
+    "sha256": "c6f6964447f7f1ff1276bc8d03c78e1d8c2da0eac921f9e62456be611b85bf8d"
+  },
+  "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F1_RGB.ply": {
+    "bytes": 207275845,
+    "sha256": "7f017195bb39ced2947fce6b64695ab4d0bc263ffcea342ff88110810a5a4c8e"
+  },
+  "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F1_RGB_Highlight.ply": {
+    "bytes": 215295901,
+    "sha256": "a1726796293d36567499fd6a130d16083ab40f2898b0a201e6e5b0b4a98cf60d"
+  },
+  "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F1_RGB_with_Trajectory.ply": {
+    "bytes": 207387025,
+    "sha256": "70dced45357c60ec5c0e377b70b00c0a976f3703b66dbd95a08caaf5ef5addb3"
+  },
+  "scene-data/KITTI09_VehicleCleanupV2/KITTI09_F1_Semantic.ply": {
+    "bytes": 207275845,
+    "sha256": "bd4fc45da3b7e195ab14ecc65492f693e16ac1136674dede71f2217c5ac043f6"
+  },
+  "scene-data/KITTI09_VehicleCleanupV2/vehicle_removal_mask.npz": {
+    "bytes": 4845801,
+    "sha256": "85d53025426b56e680e0f703ddcc4607cf48622e86ae3bdb6076b88bcd71ccee"
+  },
+  "scene-data/KITTI09_VehicleCleanupV2/mask_receipt.json": {
+    "bytes": 25044,
+    "sha256": "20a9ad9d9dffecd4a063759d021c710311c91f0d0d645efba8e90d8e96c118ea"
+  },
+  "scene-data/KITTI09_VehicleCleanupV2/cleanup_manifest.json": {
+    "bytes": 26951,
+    "sha256": "a8497e7d3404c653bc12978e112f40ed449d28aaaaaf72a66ea5c241a308e9ae"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000300.json": {
+    "bytes": 856,
+    "sha256": "547a1f69b3cb31df4f3855d6e750db8b04d287757bde3033fcf2dee2659bd751"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000301.json": {
+    "bytes": 3397,
+    "sha256": "07fd1d6c6bdf1201b23dce53624c24f48d4db3b0cb05aad528365195a843e5ca"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000302.json": {
+    "bytes": 856,
+    "sha256": "82cb6fbf0496b1b731a1b03eb573856dcda2b3eec3425aa00b81301cd766b578"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000303.json": {
+    "bytes": 1652,
+    "sha256": "d6219ed73fb29982f96dd40bf33c9b095113c3d5ce99e7663dfb71837f168971"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000304.json": {
+    "bytes": 1749,
+    "sha256": "ecf899119d9aced18ee4ae5f88378ce26da6a342867ded8bfdfef7e0476b2ef7"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000305.json": {
+    "bytes": 2006,
+    "sha256": "9c1263017f2a4c7b3de63a7fd15b00d9c323b8d863e70976b696843c4b635f66"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000306.json": {
+    "bytes": 2008,
+    "sha256": "a553d8189b9912c9df417abb687e64fb4d58db81fb2c1f3703a8e27c0f13975c"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000307.json": {
+    "bytes": 3237,
+    "sha256": "10f764f84fc5bde6d20c07e7564aa8bf2187751592d97a6a3dcec1dabcbc0750"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000308.json": {
+    "bytes": 3353,
+    "sha256": "0565f274a7a102d1574249ce9c2a1985e8581f08657cba6eff54d5292a9e6868"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000309.json": {
+    "bytes": 5900,
+    "sha256": "aa891d1103720216b2574bc9fc769eaba9586e099c88008cc703c015496c79eb"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000310.json": {
+    "bytes": 3688,
+    "sha256": "d9d0b1a4480813c4a9ba96b30cf7d3610a12b7c2cc098f12939bbfbe67f61ae9"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000311.json": {
+    "bytes": 914,
+    "sha256": "d186eefcf5fcb3cf4d25f85237ee62b0582cc529bb426cc002d7708a5edf15a7"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000312.json": {
+    "bytes": 4167,
+    "sha256": "2ae86e842f306d26f815307a7857ace0cdd839f9fdb52dda690b2bfe7155412e"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000313.json": {
+    "bytes": 3237,
+    "sha256": "e3e1433deea6c86ef72b2268b1f46a2509d37ee86aa675f76f905def6d44f3c4"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000314.json": {
+    "bytes": 3237,
+    "sha256": "6d0a5b267663783a7aa8a69b935b87a73828d49bcffacbea7cb2f6095f90723a"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000315.json": {
+    "bytes": 3465,
+    "sha256": "45877d71fa31289c8da2e7fed8b67e30b5997cd338b3cd6cb5e216f68887429a"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000316.json": {
+    "bytes": 3924,
+    "sha256": "798dad05da6f8f8d96f7f0bba3a1c42ce84062455665ab8c114256936a0c36aa"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000317.json": {
+    "bytes": 3929,
+    "sha256": "688be7f1da0af1e63fa578a7eeef5614b45c65a8b97f1ff12ee0b16f4b1fa1e9"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000318.json": {
+    "bytes": 1619,
+    "sha256": "9743919cc481323e6fc4bee24622da350337cadf0e8c953765cedea33f7cca74"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000319.json": {
+    "bytes": 4041,
+    "sha256": "65e9965732370e02d6bc4154e9ab73ba894250b4f2b2417257b7ccb5bca08fbc"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000320.json": {
+    "bytes": 4865,
+    "sha256": "7117b9e30814b0a6ba8058754fab35a48dd95efcc5b207abe17655a2c3e37906"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000321.json": {
+    "bytes": 5088,
+    "sha256": "549c3c72de88877654a296b6e4f8bd581efe3359af26b204b00420547546ed9a"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000322.json": {
+    "bytes": 6475,
+    "sha256": "b5f64c7978971bc9bc5ff53876d9330c5f3af3e5c14e23a13fecd51a2bdc1b85"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000323.json": {
+    "bytes": 7291,
+    "sha256": "f69ea23e40245e08136375b34aecfb2885cb2a87a8d7ce86af39197a2e2cdb9d"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000324.json": {
+    "bytes": 5773,
+    "sha256": "d4c98813bf245adf41d94ae9521e35f6f62582224e7c5493dbbb5ae6c23741f0"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000325.json": {
+    "bytes": 4156,
+    "sha256": "9bdc10518fc0a8e8e6a2c9bc0d2a5b6264a8969d546c8cb4cee26450e6473997"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000326.json": {
+    "bytes": 7985,
+    "sha256": "8db8e706730daa83943e18a58a703f91bf9d6106fe57b40b5a4d3a1aed9d85a8"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000327.json": {
+    "bytes": 7063,
+    "sha256": "bb5b6c56ddd75e002c389146336981f84199a9a709481dfc41b1eaca88d399b5"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000328.json": {
+    "bytes": 4628,
+    "sha256": "a3fcd45d6b78c9d5a7ca22c90039e8c322e4de7453b161a251db74168bbdda9f"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000329.json": {
+    "bytes": 6485,
+    "sha256": "e627bcc94304532c169e5450fe63126fc8bf551e9845f8a90136f4ef94b87770"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000330.json": {
+    "bytes": 4742,
+    "sha256": "430d2e238b4d1386dc8d7957fee18da9bfacf1f25aa7609a2ae842129871ba89"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000331.json": {
+    "bytes": 4747,
+    "sha256": "69af87a3f1c166d84afb96f498a2849fc837855c2ed205db59de0a4db1708b80"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000332.json": {
+    "bytes": 4858,
+    "sha256": "90f235611a3f78a91c4cff26a93396846bde04a6ccd1a7da9c69359a691fbd67"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000333.json": {
+    "bytes": 4857,
+    "sha256": "be95b00a04dd00602fd796956a9acdd3ab23b90a043581467667c6fa33162d6e"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000334.json": {
+    "bytes": 4852,
+    "sha256": "a0139838d8ae2a50776be73e7c8a2c5e6882e36b8f5f0aed1806305f2a4ffbdd"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000335.json": {
+    "bytes": 6015,
+    "sha256": "4611e45451bd0e4627b239518ad6e38a2c5f8b41878346751b138629957841c5"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000336.json": {
+    "bytes": 7421,
+    "sha256": "6f253cf7965debb7d960e8d903a8eee5086f0e3298bf18f175e370eb05db15b1"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000337.json": {
+    "bytes": 6822,
+    "sha256": "5052bda62ee270c7b8fbd92a5548d7262baf9fb034de78be994c24dbf029334f"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000338.json": {
+    "bytes": 5410,
+    "sha256": "ef49842f5b2968ae796282cfaf45ff578fa6d63d28c581e45aa10939d6770312"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000339.json": {
+    "bytes": 5190,
+    "sha256": "8de8b3793f75a66aeddeb0083fce7c5d2b508fcadf82a94eb4f3a6caa08e9c76"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000340.json": {
+    "bytes": 4726,
+    "sha256": "6dfc5906ecc46a4f70180439f468ce17cc7a209f06a0d9605eb3c536a0c32412"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000341.json": {
+    "bytes": 4144,
+    "sha256": "a09215d6a9bb7e68c56e97d18e2c3c83399abec15862f2824b27efaacab9e5b0"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000342.json": {
+    "bytes": 6231,
+    "sha256": "81fcdac58503f0d4840efdd5a0e5bad7d7019835932b279ada32059d433be2c1"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000343.json": {
+    "bytes": 6788,
+    "sha256": "900f59bc722fea72b5fb4c743b4d7aecdfebba80adc340c4a444e6eb911d377c"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000344.json": {
+    "bytes": 4365,
+    "sha256": "5756811b0bbdfa907039ffeb6a44a3d207f7b24b359b1e5e1cb55188478533d3"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000345.json": {
+    "bytes": 5761,
+    "sha256": "8b98e7e284be5db1a60d72366eb00cc288462e15562c372241747e3792ca0ff3"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000346.json": {
+    "bytes": 9217,
+    "sha256": "f372355d92becaaf83186099fbb76547ebe056819d096a604f17b683ea0140d3"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000347.json": {
+    "bytes": 3689,
+    "sha256": "6a88a0ba39ff28832619a236912c396353559c9c640cd44464a6e9cdae196a8c"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000348.json": {
+    "bytes": 5290,
+    "sha256": "9b27a0f92109d13f28918dfecdbcf2e1e149aca0864635a3e6b4900ce78511d6"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000349.json": {
+    "bytes": 4953,
+    "sha256": "390b1397885d6f67b8964a476be4531cca86f50a52848046dcb3e2eae56704ee"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000350.json": {
+    "bytes": 7492,
+    "sha256": "ed7e9be7de51d1167779a74550aeab60711f2e42861b2d65b28286fb1841bbea"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000351.json": {
+    "bytes": 6569,
+    "sha256": "3cef93847e0334e68fafdfa10e6ff18fd2ac90c35201de72580774a6e45e0efe"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000352.json": {
+    "bytes": 4252,
+    "sha256": "db2f9d3db0b4e919b39a4536ae68cc9a9c86c405af0ad46390e4f504f6e4b51d"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000353.json": {
+    "bytes": 5871,
+    "sha256": "bf3153c692cd88c4721aead57e8ac05bceb7708455899f754cfcfae5ab611df0"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000354.json": {
+    "bytes": 7494,
+    "sha256": "7458aa1a80d5fe8ed138c93e3ab776f8f03f6c2427d532cba7e74adefd7230b4"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000355.json": {
+    "bytes": 6677,
+    "sha256": "310e34022224e360a5e59d55f0cf05571bf15e1201687a249d90f04c9c669d7e"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000356.json": {
+    "bytes": 8976,
+    "sha256": "f151258dae2c220c4fcf55b70cc4b904927cb658a6fc79a8d92ae59b25839279"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000357.json": {
+    "bytes": 9580,
+    "sha256": "7a9485c5bbda56b54043d3588eeeca0b2c54fe44bfdcd2116c19cf94b14c4b9a"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000358.json": {
+    "bytes": 7723,
+    "sha256": "152746973c68b75d8e981aaba3c84718fae102d5a2baedfec4d87c01b4875bf7"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000359.json": {
+    "bytes": 6105,
+    "sha256": "2b19783db73709d89f4bf905b2163565c2c751e9fd94d6571f13bfcc8bbec0b4"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000360.json": {
+    "bytes": 7156,
+    "sha256": "ea7af4dd6fc84830273be68dc9eec89f19e9a53a7d0e4dd2550ab9966a436944"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000361.json": {
+    "bytes": 5761,
+    "sha256": "f89016ac50780905bc9364113909966a46081c1e309c7fed9c225193a3d3621f"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000362.json": {
+    "bytes": 5779,
+    "sha256": "b68aebc74508589f245b5eb204022d11c964d1bc7ca8822c00ce174bde881421"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000363.json": {
+    "bytes": 2770,
+    "sha256": "609e11c624932e4bfd4bbfbfb73bb9e40433b4b524ffda06c2a299128eb49d60"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000364.json": {
+    "bytes": 4048,
+    "sha256": "2c934e094039a869e45a653b35727c0d470714029c50588aec73c1c3e2c09e3e"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000365.json": {
+    "bytes": 3934,
+    "sha256": "88e4d252bc2dae1eb28e459cf29baff29e90c9fc7481e920e31ef51a36ef94c9"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000366.json": {
+    "bytes": 4163,
+    "sha256": "51e7ddaa1f0bdb40de1f91736b7a4aa38ccf834da0e6232f2778c86102e39457"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000367.json": {
+    "bytes": 4391,
+    "sha256": "80ec3ccbce501bee73e2998a3cd07b9efa368a5d0b842716184dc5f3b56801e1"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000368.json": {
+    "bytes": 2886,
+    "sha256": "28061fff91b4219101da0883f67c948ad23f94918e777b0fd91ee04ca2f6f15c"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000369.json": {
+    "bytes": 5203,
+    "sha256": "cca5af69f19c6b0455cd5c4f23a29255d366e7598da96e8d2ffe81de95f5c67f"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000370.json": {
+    "bytes": 5206,
+    "sha256": "18afe53c2f3809a028a46ee2a5fc505be2c1e85c9779284d36b2900c0e58ff90"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000371.json": {
+    "bytes": 6594,
+    "sha256": "472a85778e1bd101fc793d4fa4a5a2fbe98b1cc49184699b465a8201d26b38a0"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000372.json": {
+    "bytes": 5659,
+    "sha256": "2f62c0c44a96e75f3580ce1232f0c1716d0e89d7e996a0845f7e9771fc1500f4"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000373.json": {
+    "bytes": 5537,
+    "sha256": "4a9f28237b0691bbb40770fb1d1297c2d82b40e40e7c9d702b6560ccdf935b6e"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000374.json": {
+    "bytes": 3811,
+    "sha256": "1bcee73e591b0b60c634210684bb32249abf52ea21c83454a4e099bd53509a53"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000375.json": {
+    "bytes": 3811,
+    "sha256": "2e16cb0ae9185d4317427f16f321ed72188cd53d34eff7655b96260ff1f9f257"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000376.json": {
+    "bytes": 2079,
+    "sha256": "96189ed0cdd5da725ddbe5d0b13f1a11d7eb2e52e0af0e8db8b17dc15fdfe40a"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000377.json": {
+    "bytes": 5194,
+    "sha256": "52f23b1a1663843ecc6603ba43c0081592526b3324df686cac0b01235fc86b1d"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000378.json": {
+    "bytes": 2757,
+    "sha256": "7a2f0e0ed231a7cefb759c40d29b3fe45ad04e013288784dc165e3438e1b285e"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000379.json": {
+    "bytes": 4138,
+    "sha256": "2f188cf938f7a6f1283451646961730911d7a63b4aee095a2d1d23de7ea5f041"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000380.json": {
+    "bytes": 4255,
+    "sha256": "5735ce3f109f9633919e47e4b6108822426d5a2e0de3803a4a76035437d8fbab"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000381.json": {
+    "bytes": 4362,
+    "sha256": "ef03710ca8ed446ae0efadf9946838b61dd733cab5889b4582f5073220efc6fd"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000382.json": {
+    "bytes": 4487,
+    "sha256": "fa987f65011f44a267f0ef65e81fd4363ba2a10856c68a785c9ff93feeef9593"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000383.json": {
+    "bytes": 4484,
+    "sha256": "782c9a3c79100bc754842f45fe799c6d5d41c2a051112e4fbbf134e839755853"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000384.json": {
+    "bytes": 4706,
+    "sha256": "1d8ce16215212d5c297f5977c632fd1a95fb24c53d0c9e5c1239e56c4dcaf5c4"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000385.json": {
+    "bytes": 5859,
+    "sha256": "17c1855295b7b442604ae7e5e86a211943ebdb071de3ac695d6544bf72492a13"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000386.json": {
+    "bytes": 4810,
+    "sha256": "5ee8ea23f31b0c38ecf111910270339f01ed035159dfae34bb5c920d95a01d5d"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000387.json": {
+    "bytes": 4819,
+    "sha256": "a9029d279319d50dc3d2eb390b2440f37b1aba5094f115db81cd4eceebf4cd89"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000388.json": {
+    "bytes": 4821,
+    "sha256": "764c4c2fe53aab2c358dd99ae4db4aac2ba2bee71531bcffffae1eeaed3dff00"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000389.json": {
+    "bytes": 4817,
+    "sha256": "c26f40cd07ef9b6758bacd0225d08955b6d09882cbb750222710b5e6b6edaed5"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000390.json": {
+    "bytes": 4814,
+    "sha256": "2aee2e1b7f0b84223ce4b7ea6b617b436a53483bc50794875a9c2a56464d5c48"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000391.json": {
+    "bytes": 4827,
+    "sha256": "65307a4ed868d26028b9feb59333398c1d5fb634b7f18828f52a71d47238cb87"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000392.json": {
+    "bytes": 5987,
+    "sha256": "de847a5337c5c994384053480ad8bcb6bd1327901b370f281833d8b289490670"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000393.json": {
+    "bytes": 4823,
+    "sha256": "be19b5294ae19a7e9736a01895efbfe9f30054fbc91d852c68801080de4e15ed"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000394.json": {
+    "bytes": 5995,
+    "sha256": "7d4dbf3d9c7d2bbec73dee893e6566aa521d7ec6a2295d80197ac967bc6f4d57"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000395.json": {
+    "bytes": 5983,
+    "sha256": "b646eabb74621f8dccf63abb8a672983300dd63b668aa1f1f1870a1c49255cb6"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000396.json": {
+    "bytes": 4823,
+    "sha256": "86e3bf7de0e31b2a850eda2619e9aa21580882cf024ec6693461f087a8077ca2"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000397.json": {
+    "bytes": 5684,
+    "sha256": "e9dac6a542ce28700335520db9c107db13181ef1b985157df1d45ed4f67b6596"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000398.json": {
+    "bytes": 7296,
+    "sha256": "19581fd447e6d918a2430635d75bc37a4b00827c3f7ca72de9334428a19cc589"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000399.json": {
+    "bytes": 6138,
+    "sha256": "e27a6f65d1d81f3538d73513a961cb1e66a7d9ab0a268c274090d4eb70cc0aac"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000400.json": {
+    "bytes": 7303,
+    "sha256": "74ce1344df3aed4b43dbc4654d785492349037bda3713d1aed9039e0984eee29"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000401.json": {
+    "bytes": 4972,
+    "sha256": "879d5d14820c48abdf67f6ba9cd232604899c347388fe012f57b211e5558bb44"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000402.json": {
+    "bytes": 5095,
+    "sha256": "382ad05e2d55e45da432848bff6195f847905cf328df35556e486c985cbf44fa"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000403.json": {
+    "bytes": 5197,
+    "sha256": "1027537ae3b75cb7a4339726c3f99fbf8f4e143fea4a78649e0f6780e4019b67"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000404.json": {
+    "bytes": 8094,
+    "sha256": "12ca44540cf64f518cb284dcde022e40a6ab08d50e808f68219e8687b21857e0"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000405.json": {
+    "bytes": 7638,
+    "sha256": "cd924d0123fe79c6ffdbdab65afd4faa48230cf17b68f579ebe3af1f875be848"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000406.json": {
+    "bytes": 5417,
+    "sha256": "84c76158d79774457859ea329e0d0a07353c60c65f4777879a7b0cdc04d4d5a2"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000407.json": {
+    "bytes": 5645,
+    "sha256": "492599cd8e5e3cc261d5776750345d980e10bd3a5250d44eacedd006e5f74dd7"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000408.json": {
+    "bytes": 7035,
+    "sha256": "60900a7301847597b3c1afe2a6bb853f04882861f03141975f0a6af34165baf8"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000409.json": {
+    "bytes": 7255,
+    "sha256": "39fc4c077324d1d451b949051e096ea972d2ae5518590f2c1f03dbe12bbd53fd"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000410.json": {
+    "bytes": 6225,
+    "sha256": "bbf73748fd5ff631737a1c83179e5bf3bb5eb065bd4f9eb571b4025c82cf5d32"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000411.json": {
+    "bytes": 7713,
+    "sha256": "5dfdc3e1f588763a53af0e65ab979e9ff260851bb94f156ada3842fa78952b70"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000412.json": {
+    "bytes": 7260,
+    "sha256": "2bdad7e0a4682b3762fe2c6a2ced3fa3ababe97d8362dcdf1bc414532c95bb10"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000413.json": {
+    "bytes": 5646,
+    "sha256": "820c03733c3f5d623ccc5791ff73dc2c8c112e03df10705b68ed6113d88aa015"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000414.json": {
+    "bytes": 2078,
+    "sha256": "f5b1cd44235d1af21787f14126fe902617549856233befb56c35a564b4954e8d"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000415.json": {
+    "bytes": 5762,
+    "sha256": "7f40b91b319261077cf2fa3902eca018731f11fdc98df3e737d4466d36a8a051"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000416.json": {
+    "bytes": 4476,
+    "sha256": "bde837e725cddf7d3d4f50345f23872896194d87d7bea8d5921d85cbf48ce24e"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000417.json": {
+    "bytes": 4482,
+    "sha256": "58a43e978a4b846876e2e6afb931c6fb7e019c35461fec28df62a3b70db021e3"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000418.json": {
+    "bytes": 4595,
+    "sha256": "1d0a4249ae0641d7cba59958a5c8abc60e72a7736b7e5546a4ebcbc8e1c63171"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000419.json": {
+    "bytes": 4594,
+    "sha256": "1f5f97f5fb9006c389e3aef92f69e701e6d4dafbe13d1fb38399839ead7cdbd8"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000420.json": {
+    "bytes": 4598,
+    "sha256": "5bdfda9844bd974726fffa8f51104b621dcae6650b298501a66b61e78d7e7df1"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000421.json": {
+    "bytes": 5753,
+    "sha256": "ea058b3b8f00669832400548292686b9aad3db581ff394bb926701e5e569144d"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000422.json": {
+    "bytes": 6088,
+    "sha256": "3e3575133fb428aebf0f9dc610d086d00b97166817920b596fe7be6edb121b33"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000423.json": {
+    "bytes": 7363,
+    "sha256": "86c2a4fc83f490eadba2c8dd7cd62ab7f2f1bf512b764c34c2945fa079b29dde"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000424.json": {
+    "bytes": 6323,
+    "sha256": "53c091f49fccc678fada7e64a8a471eedf868216773eff2375205787ad1546d2"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000425.json": {
+    "bytes": 6444,
+    "sha256": "e78bef362d692c686d76cf8a407eab32cdc522b190d1da40c90a76339ca05444"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000426.json": {
+    "bytes": 7717,
+    "sha256": "a1e90516304e928d8320d256f3d52f54b86e22dd406b18cb9c41c207a32fa295"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000427.json": {
+    "bytes": 8644,
+    "sha256": "e4f073cb6f3e59d5372851b7d07a1583d7f6e8cf749df2b4bd7a251bed98d1ee"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000428.json": {
+    "bytes": 8175,
+    "sha256": "d910f8af6258cb7da82264a11ce7a5e460293ea5c8a928759925b6200126b5b5"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000429.json": {
+    "bytes": 8053,
+    "sha256": "031e72f7f12fc59c1f77aa16f15ce5ef9e7134dd41dd8953159d3a2adcd3158f"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000430.json": {
+    "bytes": 6783,
+    "sha256": "2f13479625bf4c0698b90cd914d656e7f593f8f8b0c1e7ce5dedf64dea32d5b8"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000431.json": {
+    "bytes": 6783,
+    "sha256": "7a62e314ceb9e74bf15aaecc8a515a9446eaf58b3d13f081ba49a3f45781f870"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000432.json": {
+    "bytes": 6784,
+    "sha256": "c8393d246f6d59cf3439bac06664d2c22295abcb299fa3d24f36985cf8789411"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000433.json": {
+    "bytes": 6785,
+    "sha256": "15f780458b391160b3b4d081a76ec4c78c9cd911b858f2dc7ce10e3ed1d4f630"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000434.json": {
+    "bytes": 2862,
+    "sha256": "5448563fd206b984a67cc53e64e58a0b6f5fab867723d6c571304dc42c03c1f9"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000435.json": {
+    "bytes": 5194,
+    "sha256": "d438ad120545f3cdefd10e1119905a5ecf49442c879110af785db537d135b614"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000436.json": {
+    "bytes": 5299,
+    "sha256": "761bab703ad3b1af99d267a40a22e5b932fab09d1abaf94fb8b15e6d91b7004f"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000437.json": {
+    "bytes": 5295,
+    "sha256": "af8bbc306d5ebc33eba7014b2c4f337aeb66071fcc2c56812a4f390d8e40e711"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000438.json": {
+    "bytes": 4145,
+    "sha256": "03b62c4376f971f239c64fe570e6e092e58c32df1145c0cf43f092422a8ec4d4"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000439.json": {
+    "bytes": 4256,
+    "sha256": "d56a3d00e8447e18a039d3fe3ba9492d81ee8dd469efde6c3ef2abdd8ceadcf9"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000440.json": {
+    "bytes": 5533,
+    "sha256": "78278210101b2a8fb1dde7590e17468a1ec14fe30e7fee6cb633cc737a0bae29"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000441.json": {
+    "bytes": 2870,
+    "sha256": "01fec2aa9092873a14d8618c7e3705d3a1a4517b67e874c4b08c8c38e7325d32"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000442.json": {
+    "bytes": 2868,
+    "sha256": "acbd9cc23a1bd0fb218ba5f8fddd2e371172c32b4d86d16c50764aaa3772e901"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000443.json": {
+    "bytes": 2870,
+    "sha256": "5cb0b5e4572b4c57cc4652e6ebf74dd59d5e720e08ed28851e420947e83529d2"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000444.json": {
+    "bytes": 5188,
+    "sha256": "dec820fa35639a6428c3854eeb66c8b616a441e9cf11987416a25a9e05d0ec81"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000445.json": {
+    "bytes": 7734,
+    "sha256": "f164f15ae9014434448085ace8555e37e52737f61169203898ff3cdd64e9b410"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000446.json": {
+    "bytes": 5527,
+    "sha256": "be1b7c3ef1a887227f8919e935f5209f116372fb947b67fe67f3b5d4a192d895"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000447.json": {
+    "bytes": 5758,
+    "sha256": "d914e32b9a226f3a201abb795891b4e7a37f6644e087fe5d1ec522e9b1960ad1"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000448.json": {
+    "bytes": 5636,
+    "sha256": "125600345e2517a9a0d10f889936de802110797d4bc039aac22d027cae66cfc7"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000449.json": {
+    "bytes": 7029,
+    "sha256": "d7a5f57d8063b284079477127d1fd2e1e951872e67e1d43c958cf72f187bedff"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000450.json": {
+    "bytes": 3465,
+    "sha256": "71b6e915b6870e573b3fc7fe4bd72084a8926d46f5879e45235c33c5c89cc105"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000451.json": {
+    "bytes": 5547,
+    "sha256": "339ab784a47d6a53d4ae6e95b72f796930deb80c3814f03ee5a690aa284ef20c"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000452.json": {
+    "bytes": 5895,
+    "sha256": "5eb7791da8d3ba4a3bda5c121ef65cf1b04f695a59d08951b0d15ea8e70bd2cd"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000453.json": {
+    "bytes": 5303,
+    "sha256": "2de67b61cea6d2a727e677f75540607a6768b0e6ba2f734eacdb9af0e480c5a6"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000454.json": {
+    "bytes": 3576,
+    "sha256": "8e83e6febb63d2565cd7fc6e92d48e8bd8355582cb69c421cd9eea62eaa365e2"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000455.json": {
+    "bytes": 5527,
+    "sha256": "255f3616c0ee125a3e7fa2ad00623941c8e13e5ece285d1504d4226a5d09c3c9"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000456.json": {
+    "bytes": 5318,
+    "sha256": "3a079f442c6acd6532eb559472b8d5402d8e0a52c95d5b05076130e814574267"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000457.json": {
+    "bytes": 4384,
+    "sha256": "564edc710f5526f46f97f19eaae4e61553ffee5fbb592098e0b6cb34a87809bd"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000458.json": {
+    "bytes": 2862,
+    "sha256": "f4f095b728621395a0ec42557fb85fe3110eb74936f5f2f37fbd5e0068edaf79"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000459.json": {
+    "bytes": 2869,
+    "sha256": "0983f4ca3f19efaed02e1fd6143d78034a62a067d3e27f3bbdf7f3d76dbd5b4f"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000460.json": {
+    "bytes": 3566,
+    "sha256": "2782a09816b22356a94024d111cb2ccdfa51c60f3969a31a7506ed51924badda"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000461.json": {
+    "bytes": 3683,
+    "sha256": "02b4c11bc74c16e049565a42e49978f9236800b8903f5eca65f6990136fe3bb0"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000462.json": {
+    "bytes": 4251,
+    "sha256": "0b18e6d878772c2b3a493419364c4819d066ba4f24c11baf4fa643c7cb80d0aa"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000463.json": {
+    "bytes": 2869,
+    "sha256": "2ada3c6cfd41a5c3d2f8119e173ee97d50d1828d59ba224f211c4bdf6e5bdc6b"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000464.json": {
+    "bytes": 2866,
+    "sha256": "a298f8f39552d8189194b8846f472f9fe5ff5a8224d4d6bbdb76810b94af8c43"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000465.json": {
+    "bytes": 2866,
+    "sha256": "506f8e3126f8c81f74a77ddae8a55b7f4dc150b66661c62092f69e55dc0f179c"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000466.json": {
+    "bytes": 2867,
+    "sha256": "f3010e777df510eb1ae131960704a113aa7f8fd76c8426a9c2351ad10a61dccb"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000467.json": {
+    "bytes": 2865,
+    "sha256": "216bfd8b192a644875aacd6e43acef8623105ace61a31ce6550005456c51c3b1"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000468.json": {
+    "bytes": 3569,
+    "sha256": "55d350c284f4636f0af6d328fd8283a382c7fec277fb2988f2386dd5a98b714f"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000469.json": {
+    "bytes": 1617,
+    "sha256": "31e2827d5df7ab81b67cac4ead7e56533b9965ca00ac07b9aa04c7b34ae46528"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000470.json": {
+    "bytes": 914,
+    "sha256": "99ec5a821abb1c650d9cb837db2b1a8ac982f8ed7cd42ac3dc4e7e355d4b3450"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000471.json": {
+    "bytes": 914,
+    "sha256": "4a460fd4537662c79f487beac9ea53da13761ad486a677d4a7331188237ad82f"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000472.json": {
+    "bytes": 2768,
+    "sha256": "d660cf0142e02916f283398b5ce06020a7f5745fe85f1e4af2a86e5f85d9a26b"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000473.json": {
+    "bytes": 2184,
+    "sha256": "9ad561fda4f988d5495a6aa0ae988cefc1991c64164a4bbe0125d76a01fcd752"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000474.json": {
+    "bytes": 914,
+    "sha256": "6673300b3eb119794fbbde9557d8227cf979647b608dbbd24faa0827aa8760cb"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000475.json": {
+    "bytes": 2301,
+    "sha256": "906398d6347003566986b7d86be2db8bf2b17b9af6396fd1850758c213878975"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000476.json": {
+    "bytes": 2412,
+    "sha256": "2d125e6cb14917fca053d9af6169dcaf5b1e986df927ce9ae127420abc2c39b9"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000477.json": {
+    "bytes": 2073,
+    "sha256": "ee35138ff38445a16e90db6b362a2d7398e0c1d10d4de94f103dfc77688c76f0"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000478.json": {
+    "bytes": 4385,
+    "sha256": "cd4931af9236b67924563e0ddf2c4d4bd02d4f1ca659465bda573f51e1416669"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000479.json": {
+    "bytes": 2635,
+    "sha256": "a3086f5587a53b79ac09a1a827ea5f993b4b1545bdbe710c49c4f4c1595652d9"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000480.json": {
+    "bytes": 2641,
+    "sha256": "6aa9bf8edb7565a300268297f643a9deb6e9ae2b61f9a1740e8ba1c13e78b63e"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000481.json": {
+    "bytes": 3341,
+    "sha256": "c29a4be8c4aa34e55be943b7be22313cc1695977431e3281fe99968069346bd2"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000482.json": {
+    "bytes": 4165,
+    "sha256": "525da945667151814b73e492d6bdb728dd7e55f5f5db81fc6bf010b12b3035d6"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000483.json": {
+    "bytes": 6007,
+    "sha256": "45ddce721b70e3382c0eb1e0089b30cce6bcc5cc71d73b9c9e1cf01660d5c913"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000484.json": {
+    "bytes": 5892,
+    "sha256": "94c166e005935a783b84cb5ca208e0ed63f31dd342db92c197874ed65163df1f"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000485.json": {
+    "bytes": 6799,
+    "sha256": "8c57c9c026a373a89de3bd883522a29b0d61f89338b0ef5cf995a2d228290f06"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000486.json": {
+    "bytes": 5527,
+    "sha256": "f1ff9bb643003fa0e0d31e81f66d79d113cbd4b9c80aecfe09187e1d6eca0e28"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000487.json": {
+    "bytes": 6804,
+    "sha256": "36e954d2b0f663d688c503adc2aa42072b2aa8e6386e23b0aa908cef93c8a4cf"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000488.json": {
+    "bytes": 9462,
+    "sha256": "faed09161001d31c619e6de36a327b2b08baaaed09fcc01b0463e5d837424aef"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000489.json": {
+    "bytes": 10621,
+    "sha256": "3b2beb4cccc6efcf14ccbdfe01ebf060dd7a7e6fcd4cf762d8c36fee4c8dedc5"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000490.json": {
+    "bytes": 9686,
+    "sha256": "5038679144edd6c56c38e67aef162c08c1964a2d691d3dbe8f8a6db1079bd108"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000491.json": {
+    "bytes": 6566,
+    "sha256": "ac67e2e976c6d8b7a74853d2760e33226b3ca35dceb1df49e4954c4b247d6a74"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000492.json": {
+    "bytes": 11072,
+    "sha256": "766d25b0f0033423bc95ad8cb37668fb87d919486fddfafd326fc4de68a1610c"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000493.json": {
+    "bytes": 7821,
+    "sha256": "d0d13d6095ff1ebd919bc2962f885df6389f9c19bb1e92cd5a3d7e7a64eadd25"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000494.json": {
+    "bytes": 10746,
+    "sha256": "3f8e9e90c56ed4068fb9139da2e0673002f15f104c54101a067954274f059327"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000495.json": {
+    "bytes": 9102,
+    "sha256": "c6d23867403b8e2da3b72c8cebc98077b3a67f6009f63320a03e7b7ebdfb88aa"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000496.json": {
+    "bytes": 7605,
+    "sha256": "dd58bf978d9c78c6dd6e1bc233fc58d9c9eb63f0a20b94f6ba2c3ff5efe9f868"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000497.json": {
+    "bytes": 5854,
+    "sha256": "196b27ff29383a8f29e976cf2452018f28a59d1e69642d90d7bee02e33415a95"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000498.json": {
+    "bytes": 7244,
+    "sha256": "9c03b8afc95fc184896b0a394e2002aefd22617431610be67fcfda4150b23688"
+  },
+  "scene-data/KITTI09_MotionDemo/frames/000499.json": {
+    "bytes": 6202,
+    "sha256": "6f10034e3d8c1d86dc76fe1da6a28c8283b20f2256b26ef20b92b0dcf853fb33"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000301.jpg": {
+    "bytes": 118165,
+    "sha256": "9423e0b4dd2c6aa387f90de5bfd56d260172146ee51a927e60b38bcba7da2585"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000302.jpg": {
+    "bytes": 114584,
+    "sha256": "615231c76128a7fb254a093b9ffda1a23fea469d377e77e5050d383ab44767b9"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000303.jpg": {
+    "bytes": 115711,
+    "sha256": "9a44eeb7e9dcbdb13ae676fee26ff72f2551ff838430e90c110c9524e88c7c15"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000304.jpg": {
+    "bytes": 115439,
+    "sha256": "ef6ae9203facaaf035b727d610037655fdb829e08f81edd3f1dba99e91081bc6"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000305.jpg": {
+    "bytes": 112467,
+    "sha256": "7857ec6903199a5ae6b5be6338e9c728203007704de992ff753ce5dba5302fb9"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000306.jpg": {
+    "bytes": 111975,
+    "sha256": "057d9c61fd7f413fd782a27690a5beebe749970e3dd40077087b1bfae7fde29c"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000307.jpg": {
+    "bytes": 112848,
+    "sha256": "cc5acf889cbba1e8163e5127e615312c7ba08217975d1077d8902a686f9ba766"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000308.jpg": {
+    "bytes": 112528,
+    "sha256": "a5b73903e1e95066a3e85df2624ce6fa22fc1d416fc4b715ec7457b8700be9e4"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000309.jpg": {
+    "bytes": 114453,
+    "sha256": "980f2589180d55fa04910ae24dcff717519674628b051cc2f02b19123c78812c"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000310.jpg": {
+    "bytes": 115002,
+    "sha256": "b5ea1bd37535d12479abdcb4e8bb9fe70b293eaa8a2edb4f1c2ae85ead4ba346"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000311.jpg": {
+    "bytes": 113995,
+    "sha256": "18017c2144cae66dad582322ebf43afe39b415ce50676117b2915e4f2dd93484"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000312.jpg": {
+    "bytes": 113765,
+    "sha256": "3e2d8409cd05c6dfaa9ebd74cff98ff504bb840bfdd40c8867671ff13f0f6131"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000313.jpg": {
+    "bytes": 112984,
+    "sha256": "be6e830aa8d61f55c740b13cd52c1bdeaa435c1f71967a0366258d602adad62f"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000314.jpg": {
+    "bytes": 113108,
+    "sha256": "fe81b6f84bcdfece66fe8ceaa7e7942622f19530d0c8566961dcb3220dd522f6"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000315.jpg": {
+    "bytes": 114281,
+    "sha256": "a89859e732b7f1e3ea9120a096a42f855f54f75f5503ea34497cb6f42ec0f622"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000316.jpg": {
+    "bytes": 114051,
+    "sha256": "e38e56c55c60427dffc26804d599c9b26e770643d26f4686a6d1c2656b24f8d2"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000317.jpg": {
+    "bytes": 115360,
+    "sha256": "0e74effb4ff5405a7bcdd1f61b10923ecaab72066b63756ba4a7f83baa4bd6c9"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000318.jpg": {
+    "bytes": 118128,
+    "sha256": "aa7c7236e325333454f3d3be18ba9aca205b124bd74a0bc1c326da2eaa75c009"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000319.jpg": {
+    "bytes": 120178,
+    "sha256": "dbfe44258e814058f7820595445ab78f060a906a2d496056d4a55cce82cc045b"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000320.jpg": {
+    "bytes": 121493,
+    "sha256": "94848d7d23dca8d0a76e68da0d2651d595a1154249e2cb2e31962b12a3636e0a"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000321.jpg": {
+    "bytes": 120440,
+    "sha256": "d4e2fac3863343eec7e08fb592427d15f20c76014aae14714cf86a936deded5f"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000322.jpg": {
+    "bytes": 121156,
+    "sha256": "9c8a44ca2094903d0306c113f470a2365c39b9c95046b53a8adf060346ef714e"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000323.jpg": {
+    "bytes": 121991,
+    "sha256": "aa26e9c4ca7a260285f622610986cc5852519023244cbca54dcf14bd213eb30f"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000324.jpg": {
+    "bytes": 125684,
+    "sha256": "2f6f5a112d92e8e67168445d1cb5a86511f265dd5f2bc085e12639c1dfad9067"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000325.jpg": {
+    "bytes": 130382,
+    "sha256": "b4b5329d404a1c8711a34f035d56c3aa0365cef198fb25927c67122e6b224f53"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000326.jpg": {
+    "bytes": 136817,
+    "sha256": "6c4397bf277b4b59336bad6c5448603c0926efa16b1ab3637fcb86a91254609b"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000327.jpg": {
+    "bytes": 139318,
+    "sha256": "86327dfd5f4d5a162876619a4a5ea1280a4d7dff87b3f1432848bd5f7c2e0869"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000328.jpg": {
+    "bytes": 132785,
+    "sha256": "b408f4f92ac795c108e0c5b1a1b6c7300cb623333c2de71cb8dc6a80bd2e5dfe"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000329.jpg": {
+    "bytes": 126423,
+    "sha256": "7101be236fec33c1e45a9a4e8e715e9c4b835380e88ffcd9360a773a674a8bf5"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000330.jpg": {
+    "bytes": 119681,
+    "sha256": "aa8de7ea80df456cdf586117ed83758d16af71dc5004c7fae3c417de429c8ec1"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000331.jpg": {
+    "bytes": 114862,
+    "sha256": "d25053eae90541ea05f1940a753e222f6f53c8ec95997c289c57ac13d39ad71d"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000332.jpg": {
+    "bytes": 112484,
+    "sha256": "c870c5817f97923c18f86722462f4d0186bb2137ac5904787168a9ae1e2e96ff"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000333.jpg": {
+    "bytes": 114316,
+    "sha256": "992be777fc11ba7b7ea6c6db2fe7c02acb58c435d0c0b27bce19a8a6af6df0e2"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000334.jpg": {
+    "bytes": 116637,
+    "sha256": "dcf5a9adcc8ff8f5765008c8f0d55add19baa537912343242c99c7d39bd4d778"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000335.jpg": {
+    "bytes": 119176,
+    "sha256": "cc24df2beb1c1ed45226b377b4a261e4fd6723617f1546413736de4b2c664416"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000336.jpg": {
+    "bytes": 121458,
+    "sha256": "1f20e88d6c78580184823f90214cc58ef3a9eef24744622fcc82f683540b56cd"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000337.jpg": {
+    "bytes": 123142,
+    "sha256": "22222f1c03a5f2129962fff0c9fd61a9ebedd0176a2f21f9d6f838488549f139"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000338.jpg": {
+    "bytes": 120167,
+    "sha256": "3f87e6ffc4df337366ec6199df1cd4f05fd7aafdfd7ea404f3d3ba1e0fbca421"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000339.jpg": {
+    "bytes": 123683,
+    "sha256": "6a262f2db21be4da93b29e91b96f943c9be4a661f949034de1ee3667effde039"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000340.jpg": {
+    "bytes": 126142,
+    "sha256": "7ee55b560dd31315119bad91c8d613e86d096f771456ff244fbfd1b852caa9a0"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000341.jpg": {
+    "bytes": 128013,
+    "sha256": "192c7d2ad1b9c6787f346e65c4e84ad696b613fe226563358c4485dcb6157f6c"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000342.jpg": {
+    "bytes": 131032,
+    "sha256": "b035d836961edeb66dca3b69efee25469c0b5685399d0e3ad5696250da32dd0a"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000343.jpg": {
+    "bytes": 134309,
+    "sha256": "fc6f7dfd18a536cd6c192708220530f5b58e15e9fbb7118ce6f1bcf212ee3b4f"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000344.jpg": {
+    "bytes": 133628,
+    "sha256": "02e0931f8dc029e0fc0045504ac828d9b12895fa52b5f48273c59a077005eb72"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000345.jpg": {
+    "bytes": 132619,
+    "sha256": "8404746dd1759b72a2f49132b005326ab11e9052c6064461b17c9fa2d11aec38"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000346.jpg": {
+    "bytes": 132087,
+    "sha256": "86876b9211448659a02cb0c1314cc745d2244ece7fc1c91ffe522337e1122052"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000347.jpg": {
+    "bytes": 128334,
+    "sha256": "c137e592d480410e1b2ee9b2ad4beed685f9e5fc6e104dd74062d80d33dab6a4"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000348.jpg": {
+    "bytes": 122021,
+    "sha256": "0a73d04cabb576143164f15bb4b3b42f8c4072564fa2d84d9913b823c19971b5"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000349.jpg": {
+    "bytes": 121095,
+    "sha256": "0949b7893cdb26d1c150c0eef97a79cc23f338079177f7d20a53090f5b154616"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000350.jpg": {
+    "bytes": 123501,
+    "sha256": "3069169a2da4e1f8e963e5dff569c7bcf52c1d30baecdc16ffa4adc566a7681c"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000351.jpg": {
+    "bytes": 125892,
+    "sha256": "72aee264551247dad8294c7fe9bf1cd3d470bb4662186e604dd0b2e693f2715c"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000352.jpg": {
+    "bytes": 128456,
+    "sha256": "39f96f14efdc192b11c621369ecbb03507bc0c08d938d65842391edd083b0f22"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000353.jpg": {
+    "bytes": 131318,
+    "sha256": "c914e68ed31e1cf5212b100e0f30f90dab09fb680f99f6cfeb00ab536a437c65"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000354.jpg": {
+    "bytes": 133372,
+    "sha256": "619cf244552404696cb24067ac869d2cef7c74f110f6776c071d452e0b0d3135"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000355.jpg": {
+    "bytes": 131359,
+    "sha256": "1b2c57d7cdf9f254e34313c292e6a220553570ea2538ae15238e7b14f4353b7b"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000356.jpg": {
+    "bytes": 129847,
+    "sha256": "594aebab069c642c45a8d650de7cb58748c87980f7295b3e9403047decd27f60"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000357.jpg": {
+    "bytes": 130179,
+    "sha256": "092eda63a2813ad12dddfacf18caeba4a4de35e187415fd59a6ced675c7657fd"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000358.jpg": {
+    "bytes": 129276,
+    "sha256": "031f1034fbcc9e8eb1c8631954fb24368c786331470c893d1356ced58ce56d16"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000359.jpg": {
+    "bytes": 133162,
+    "sha256": "92834872ca251434d7d28f8710e218cdd4c36624c797dc7ffc4a006fdecb986d"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000360.jpg": {
+    "bytes": 132329,
+    "sha256": "2f18924a35fab2b2fa61a046bea90c92c59e691ab2d3b8d3f2e493ff3a141e93"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000361.jpg": {
+    "bytes": 131773,
+    "sha256": "885f77ccac5b8dd8b63d874fd25bc010730257b45523c5abade4339c2c872a5d"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000362.jpg": {
+    "bytes": 125859,
+    "sha256": "251d18b35a71b682798964d9fe6a4bc4528025fabc42d5faf0fe1e5faa10a987"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000363.jpg": {
+    "bytes": 120495,
+    "sha256": "fedb4922da22ced38faa782527ea32aa7e3db53c836a2761ceed8018ea9d3c96"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000364.jpg": {
+    "bytes": 115421,
+    "sha256": "2404f0b80f671adc1f463a4b520db36c1c732a23970eb2ffa39b2f50189654b4"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000365.jpg": {
+    "bytes": 109220,
+    "sha256": "e776a0cf3e54506bea65e7a73ba67d2860809182ae41f715486d5d05b5ef9c6e"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000366.jpg": {
+    "bytes": 104560,
+    "sha256": "9cd24fdc5f7b3c75798692873db1a641e94a99209b190778a74d613fef1e54a4"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000367.jpg": {
+    "bytes": 102820,
+    "sha256": "6a519609674cbbf54e408f02c7e7ca488f3c4e63f3bdbd48fd137dc6fc371b04"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000368.jpg": {
+    "bytes": 101319,
+    "sha256": "9a4995ec3963ab226cc32118e9cb62aa32dacfa474bb1c24d20de9f1d7af9775"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000369.jpg": {
+    "bytes": 103948,
+    "sha256": "5b12964befd977b826b2d30b2523fd622dde112c5d59f0897bf301b062f18e7b"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000370.jpg": {
+    "bytes": 103301,
+    "sha256": "46d4be4edff1a64a2cf50c4c60a662c6119aaee2278fcaa4868bed5a41de1787"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000371.jpg": {
+    "bytes": 104558,
+    "sha256": "3006eb061db8aa6de56ce99868b2fea51d63b1ee6c4d48add6bbdeb3a497e02e"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000372.jpg": {
+    "bytes": 104743,
+    "sha256": "db914e6b35f36cc716ac12572cf55dfafc40fe2c1fef6b6e636b833436dde978"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000373.jpg": {
+    "bytes": 103353,
+    "sha256": "6bea4d0bdb29146da7908c8b310190d928df54df43f1a77008efcac9c863087d"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000374.jpg": {
+    "bytes": 100372,
+    "sha256": "6777a0876d4959dc1676dc446de1e8703af33098881aa8066ddbc659333ae533"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000375.jpg": {
+    "bytes": 102435,
+    "sha256": "f74c07967a1842255fb322dcee5d87cae6019baf9b9bb11d1f35960ad92263b2"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000376.jpg": {
+    "bytes": 103258,
+    "sha256": "1dde7bbba459605fd31863467b35e30d841cf5ef37755da6ccf692ec3f1d2fbd"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000377.jpg": {
+    "bytes": 107310,
+    "sha256": "6875ed5407a51326ff9b389517d40573d2fb24952646cda0a3801a0856ba3ab6"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000378.jpg": {
+    "bytes": 106697,
+    "sha256": "55e5aec175ebe5e83be18ee038b68a8bac664f64d5dc648c9b70f05fbc2499be"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000379.jpg": {
+    "bytes": 109104,
+    "sha256": "95eb1a8b2caefc65fb6541bed81f15e4bbb92aa4c2b8e06838f7955401235ace"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000380.jpg": {
+    "bytes": 110966,
+    "sha256": "82195b2491a5c4767afce4b29bc02738dd0e17a0e4eef353bff01996c9377b16"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000381.jpg": {
+    "bytes": 114519,
+    "sha256": "9f97e80fdb77a6285cebe480ca71b54380c816a7b3bc55a821dafad8b0cf8d84"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000382.jpg": {
+    "bytes": 118465,
+    "sha256": "21acbd28bba9094ffd0e701378ad551cad3d3ca0e28444791effa54fd413e75d"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000383.jpg": {
+    "bytes": 121135,
+    "sha256": "f4e0a7abfcac1732de9b6b63888c7ff437629b4a2abc07e483c0ce05684c07ce"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000384.jpg": {
+    "bytes": 123714,
+    "sha256": "25bfbdbe278dfb972db5793bfef883532d56b3b2936a9a6e860f609b59455850"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000385.jpg": {
+    "bytes": 126332,
+    "sha256": "55bca3bc98e857d04ef595e489f0bcbcb35d05f2948dd0bdc119793a518a5f04"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000386.jpg": {
+    "bytes": 124639,
+    "sha256": "5825dec89c4eaef7d90666ee575972ac648e512b675fb26519df49a93142281a"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000387.jpg": {
+    "bytes": 123701,
+    "sha256": "3f672540dfe213b92daf1ddeb322fc2351889fcd667f848d7f12dcf4605eef70"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000388.jpg": {
+    "bytes": 121290,
+    "sha256": "08e3f4c61e2c37794c867cfdfaae04aeef51a5a02f67ff574e55a4c892092287"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000389.jpg": {
+    "bytes": 118898,
+    "sha256": "983eb0ee9d1a2fb3f3cdbf92d25404617d94d1ef3c65f11a4216b8beee6648a5"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000390.jpg": {
+    "bytes": 115678,
+    "sha256": "375f69e36c76f8a8da3b9795432f210d10383321fa6a6957ba2da65d66ba3169"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000391.jpg": {
+    "bytes": 114262,
+    "sha256": "7354b0ce2bce2e4de4ece7ca4ee0955786216408c02aea4df33932bc150e6672"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000392.jpg": {
+    "bytes": 111933,
+    "sha256": "1eeaf264888b1750c73cdad6aa37cde332996a68895b9f2d5e75c217c0811e10"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000393.jpg": {
+    "bytes": 106523,
+    "sha256": "4482236c64247a8a3b6045561edaed0827ed429e5ed63f45d0697f54268650f6"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000394.jpg": {
+    "bytes": 108307,
+    "sha256": "18824414845b55acb77f259f3a0e4e6f8dbc765d6116c5fd4a34cceb96fe86d8"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000395.jpg": {
+    "bytes": 108889,
+    "sha256": "09fcad05b8cad092d611eec423c4c6809c24b33f8a91e08621af8e416a9d440c"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000396.jpg": {
+    "bytes": 107187,
+    "sha256": "7c8036e5468968cbc50b8119e34341341b3a2a4d1b52e61dedb6b0537807b3a8"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000397.jpg": {
+    "bytes": 110560,
+    "sha256": "17c17d64ad977f5545cb21846693cffe15daf02249b0bf4afe85b8ad32443df3"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000398.jpg": {
+    "bytes": 111628,
+    "sha256": "fa7b7c8581d963994d08d98886de7744d05c0e575c2226a85aff616757037462"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000399.jpg": {
+    "bytes": 110592,
+    "sha256": "daf18861e664b55c555c49c127c83679840d2f5c57a3f92600f98b3e4402e03c"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000400.jpg": {
+    "bytes": 109452,
+    "sha256": "99270b886c1910e63374a352abd3c784d77ac1a14e7728a6313067557b7d1c3b"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000401.jpg": {
+    "bytes": 108208,
+    "sha256": "57cbbb2e9f7af84064255e81fa4a085058a54fda984ab13014c3f05eb680e209"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000402.jpg": {
+    "bytes": 106614,
+    "sha256": "f79838014e2197fdb786f9823162bd959d20119ab535268f2edbe5d78ba40189"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000403.jpg": {
+    "bytes": 108410,
+    "sha256": "5dd86d4c8586570916a12a523b5952d3ece1a4acd2ba8b3b76988dafc828acaa"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000404.jpg": {
+    "bytes": 108531,
+    "sha256": "43f127ad6f5e5fdd23f7d29228a9bc30be860d816f5728c095126b451c8b9938"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000405.jpg": {
+    "bytes": 110192,
+    "sha256": "cc0db1ea2ed088e6ed2a4109ea0f75722d837348c4bb310e76241a084e7e416b"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000406.jpg": {
+    "bytes": 107762,
+    "sha256": "32e355642c03abff4f9959d043710e554d343a4ae0881dfb5e734a765fd2d8ed"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000407.jpg": {
+    "bytes": 107404,
+    "sha256": "59a7ba04145dfffaec168f35995e1361c8036c8192109dd1b8b35cce4290e5d0"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000408.jpg": {
+    "bytes": 106718,
+    "sha256": "c8df4a3fb62ed7794d68b3b8fb17d6f6e27d4d96085bcdabf95e6601de80db33"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000409.jpg": {
+    "bytes": 106517,
+    "sha256": "66910181e2ad133b8fd3cd9bbb3c26de1a73ab1c8a59a5722a782213dc454246"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000410.jpg": {
+    "bytes": 108365,
+    "sha256": "71f13503f244b758c452b71b19ecbe21166cc5c8b3610a97c207e85186fa4f1d"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000411.jpg": {
+    "bytes": 107119,
+    "sha256": "ff9955b2f78014ee02942e689cce7cb9d70848f3cfa938908e8e65b71f4babe5"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000412.jpg": {
+    "bytes": 106290,
+    "sha256": "81869ff8cae4905e52909a1df929c601c43045e528d899474dccb0b0d36986bf"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000413.jpg": {
+    "bytes": 104136,
+    "sha256": "13e192fe344d2eb59aba2dab0c852e1dbf9d7058cfa4597a8aff27d3bf25573e"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000414.jpg": {
+    "bytes": 96049,
+    "sha256": "3c496c0dcd3c692373e79ceb34f719bb501780eb5e98d61638263b71818c90f2"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000415.jpg": {
+    "bytes": 100224,
+    "sha256": "1376d5a90b2c83e4c5c33f518d3495bfaba1675d806b614d59b17ddbbd256890"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000416.jpg": {
+    "bytes": 97011,
+    "sha256": "da514bc63993d47f2309efe074ae573bd783766fbe51354ff5c9f5ecba5d6d00"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000417.jpg": {
+    "bytes": 96253,
+    "sha256": "d2c9d3a1b86ddc680f76664ed9c16ccdfdc5a8bc87c8c912c433efa345e09885"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000418.jpg": {
+    "bytes": 94446,
+    "sha256": "a375df50b020795a181e1da1432f00383a1c212b38227d9140ea25254aa3042f"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000419.jpg": {
+    "bytes": 94434,
+    "sha256": "0e297a101c02c4a6f67de95bf96695b818a569d92a3ec03c8782bdef31a24ab9"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000420.jpg": {
+    "bytes": 93879,
+    "sha256": "0d59c35747448d55ba6c737f92e8b8ab5e748a2d479020b910d0123cc6681778"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000421.jpg": {
+    "bytes": 93337,
+    "sha256": "b8d8bdb70fa2a0067836750c262ee4686c7365a11ce5cb1e13ecd77b5322426d"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000422.jpg": {
+    "bytes": 94443,
+    "sha256": "7d183273b50dcea243084464ee861f028411712dc2d3ce749335906e723a6e1b"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000423.jpg": {
+    "bytes": 96689,
+    "sha256": "09bd8480a13964cefbd97b7015dd1d22c1a8d7137ae2d9d8ede5ab9bf75d632b"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000424.jpg": {
+    "bytes": 99841,
+    "sha256": "4e6ce2622adab4a3e96e4ab9c4091a63e8f2619c90d98a1cb943f763b4788fb4"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000425.jpg": {
+    "bytes": 99353,
+    "sha256": "aceb3dd9102065b229ec3b2949ce53572f36e9c7f232d1d97c2694cf114d546e"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000426.jpg": {
+    "bytes": 100923,
+    "sha256": "41920db2b517a62bdab77f01fc390fb67147f37d98f19df461d73ad41287390d"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000427.jpg": {
+    "bytes": 102158,
+    "sha256": "8b8c1709cd4faa66ed8f2a791f723b7425589e3e40c8f7b254a76d9923e6e6d5"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000428.jpg": {
+    "bytes": 105409,
+    "sha256": "1d50bae2905936e3e7d82e99dc180442095c85a7dfee6e74a03b4fb32996abbe"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000429.jpg": {
+    "bytes": 107846,
+    "sha256": "76317dacd63dc606f8af15686288912ef684a95ee5893b927634d47f559db569"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000430.jpg": {
+    "bytes": 108383,
+    "sha256": "a90b5c59a785567759254884bc71db7b1e5316f4feabeaa59fa92484060bdced"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000431.jpg": {
+    "bytes": 110290,
+    "sha256": "cd45f299d19baaeef838d6c7674b0012c02d491daf6ea553e19b1a0da63bf949"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000432.jpg": {
+    "bytes": 113292,
+    "sha256": "72f8ada2ff6ae5515c8b5ac4369c029a6a2845e1ab9b2d20f30d49d7b2a35aa1"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000433.jpg": {
+    "bytes": 115225,
+    "sha256": "27494ebb2618be01f82799d989bd048705678671046608943550850c0e305902"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000434.jpg": {
+    "bytes": 110902,
+    "sha256": "f3815fae0dfc54e73e9984be8cd3601acbee28c793250eb4028164cf364a6e36"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000435.jpg": {
+    "bytes": 109343,
+    "sha256": "b60bcdb29a243591904325322458b08cc52770e88e54d90e00df2051f326b86e"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000436.jpg": {
+    "bytes": 108961,
+    "sha256": "417c67561880db829aeed9efea1a29201a7d01f0abbfa1acbb00bd02e9e15b85"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000437.jpg": {
+    "bytes": 107272,
+    "sha256": "d38fcff4db6195c135f48830edbbabc6039cd870b18ba6ad7dd8e1c4b8edb498"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000438.jpg": {
+    "bytes": 105240,
+    "sha256": "4744926af8f1a3c81789732c79d8474f45e03101a5216d43b9cd2a702b27153f"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000439.jpg": {
+    "bytes": 107457,
+    "sha256": "99eb65c42cc8d9543c8893906adfb2e3278caa573ff9cd534772f5eeb8c99e46"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000440.jpg": {
+    "bytes": 106401,
+    "sha256": "96c86e61700af4c8512acf38c762033a49b6024753d521868432a4d49b8aff39"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000441.jpg": {
+    "bytes": 106120,
+    "sha256": "9f116a702d4edef26a6e5487ec243bc8923366d81384de3b9e30f435b88fcae8"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000442.jpg": {
+    "bytes": 101650,
+    "sha256": "539c7f160640f5fa128993b95cbbe68508cd8a59a78ac48bdcf8e3f58cda065e"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000443.jpg": {
+    "bytes": 101297,
+    "sha256": "c4136047ada38ede7a14a03e5cb060feaeeaa07f2a08c710fcfb753f3d4c9d7f"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000444.jpg": {
+    "bytes": 105139,
+    "sha256": "67e458712e1190a3767eb49b24bc1cd7e69a5bb492ac9bdf1ceadc74ff2c49bf"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000445.jpg": {
+    "bytes": 107353,
+    "sha256": "fe44865d57958d57941f8c0ca2327f79c6bf2a9a04b12e681d70c700eb93b739"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000446.jpg": {
+    "bytes": 105709,
+    "sha256": "928cec76412790c2202f8ee37e38ab60da96e58359fb04bf7c9dc199a31ed786"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000447.jpg": {
+    "bytes": 105714,
+    "sha256": "f58ab57a1b3bee95132bc3ee0bfd689a7ef3b7638ec8b02793dae65068335023"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000448.jpg": {
+    "bytes": 106970,
+    "sha256": "cf021a6eb000eb048f7e5d99f3a88b55c08d91e4a5cff564fa400dae8c7acb79"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000449.jpg": {
+    "bytes": 109185,
+    "sha256": "c0edfda8e20258aee2a01e0e5b59895e4734528b3648e1dbf22c7555c72e9f0e"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000450.jpg": {
+    "bytes": 108004,
+    "sha256": "3260321e69f1946ecd0a7fcb7831ca726ec95dd8ec93df00f6916be44c817fe0"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000451.jpg": {
+    "bytes": 110774,
+    "sha256": "422ba6349816aae335bd7d34c0f65f7aeebbe8243bb1e7f03ede9ed2823ea043"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000452.jpg": {
+    "bytes": 113857,
+    "sha256": "b6a438d6617bc4d2cc5db634e5f9d55f40281dc0afed9039b520e749bb0238ee"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000453.jpg": {
+    "bytes": 117396,
+    "sha256": "babd90cb3061e6b6eecd283b90b4863d68945e0418f2ec7411b7f254e39e3a52"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000454.jpg": {
+    "bytes": 116318,
+    "sha256": "2cc70f79e3018fbbb38b50e6d39b2f336e1b465b390d7442be1250c9f0315145"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000455.jpg": {
+    "bytes": 116115,
+    "sha256": "35d61bd97d548be5a5f4af4cf59ad9ead0692ad8a136bec0c449f54561e5e018"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000456.jpg": {
+    "bytes": 114068,
+    "sha256": "ed19383e161f7221b26ef2b6d900f3c952a1bcea0dbc76e24804136e0c7704b2"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000457.jpg": {
+    "bytes": 113526,
+    "sha256": "851087e4f1a29dc0ef270c831ba667628493546044585ad3656e60832779e3ce"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000458.jpg": {
+    "bytes": 112400,
+    "sha256": "5d8603a5d0e08b217329c5af0ef38ced53a97380b6b5244164f41b825aaec166"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000459.jpg": {
+    "bytes": 111255,
+    "sha256": "f82dbf9b8b76e4112646355e939fd3ac4e4cea39ea6897e5027194ff263c5b19"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000460.jpg": {
+    "bytes": 112592,
+    "sha256": "42576b123cc88ba2fe08c685cf19498c89cbfe446a82249cb8c1217912733a0c"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000461.jpg": {
+    "bytes": 112188,
+    "sha256": "2e0d3c778292d6d62480305d4537e61d69adba6e2edaad6eb8b098e52b8d21fc"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000462.jpg": {
+    "bytes": 111635,
+    "sha256": "2bb306942515eee7f76855c6f989531fdcd0960eba2223146ee1ac05fd2eb3e8"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000463.jpg": {
+    "bytes": 114606,
+    "sha256": "ade5e4b9479fdd3dbe7df2f0e4116d90fdd7b9d7373abb12005ff150af6baff7"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000464.jpg": {
+    "bytes": 115609,
+    "sha256": "5ff9e941af76945605c02072e0303a4e30ec84eb4e9c83700fef1d4238742a7a"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000465.jpg": {
+    "bytes": 115138,
+    "sha256": "9305292f0b1cd680eb3e29b41570fac565792eb8c0c2f1fe23582c481012cf7f"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000466.jpg": {
+    "bytes": 121101,
+    "sha256": "76268de4cd9fe322954b62ec4db3ba95f958d907d5e929dea8dc5c19907c8c60"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000300.jpg": {
+    "bytes": 113467,
+    "sha256": "9d62fd02187a3ee8fea5139bc0ae881b3d80fc406a78d92efae14f9ed17543ca"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000467.jpg": {
+    "bytes": 128704,
+    "sha256": "70a915fb65d214c5d2ef9488a189f45c5ec434098f9dea17f31d57deb720d8fa"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000468.jpg": {
+    "bytes": 127679,
+    "sha256": "e3b6bede7bd6f617738fa112ed08d80650fc7c8ac554c2a508d35b6e8ca32d11"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000469.jpg": {
+    "bytes": 122128,
+    "sha256": "f11be865cbcce2f75fe41141e63312f4a404fd7484210dcbcac1bf7772c1f4a5"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000470.jpg": {
+    "bytes": 120132,
+    "sha256": "d25771d308860430071a5a0fcdcc21c67fdd9a369c2e1b3a943dd13f2bfa5779"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000471.jpg": {
+    "bytes": 121091,
+    "sha256": "aade0bcf28102ddcc71937d9d53232010697aae791570f087ee586118584b895"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000472.jpg": {
+    "bytes": 124212,
+    "sha256": "cc01a199fabfc5430301ac2f88e673e0f47a87547089695820044e593bd67178"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000473.jpg": {
+    "bytes": 125620,
+    "sha256": "f8adc89bbbf41b3fc4e3aff65bf7090b9b44ad8b14eb8f8bc0eff312b497a978"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000474.jpg": {
+    "bytes": 124856,
+    "sha256": "4895ea75c22a02ab02054199eaaccbed5f3c7e93310ee8e9ced7647542e1fda3"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000475.jpg": {
+    "bytes": 123363,
+    "sha256": "5c12de91c5d94aca2b4404a2acb9bd270434d0aea4c7e4c1485179c23c340b7c"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000476.jpg": {
+    "bytes": 123213,
+    "sha256": "484ad073f934fc45e3cc1e9d298a4a3a63ac854c3020fefdd46479a42b3d4ccd"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000477.jpg": {
+    "bytes": 122387,
+    "sha256": "0dda9791394972f747a6b7d6776fc82bd0c5eacb2b808aae335106c3c2351282"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000478.jpg": {
+    "bytes": 121925,
+    "sha256": "fa443291a3a254b10778b3bd5d869ed67395ceb7d196c72e49935d34a5f62dc6"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000479.jpg": {
+    "bytes": 119219,
+    "sha256": "5f1b10c1de69a802cbbac922885ada8f1ecf60411ace6a4855c62f20732c156f"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000480.jpg": {
+    "bytes": 120438,
+    "sha256": "73e543e88a9c9a9daa64311fc2c6fc6a2521981727e73d567959dd7d66825dbc"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000481.jpg": {
+    "bytes": 121967,
+    "sha256": "4c6cb61d5fb6eda1ebe505b93c73d48e0d84498177891e0d25848d93caded25f"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000482.jpg": {
+    "bytes": 122026,
+    "sha256": "625d34e32c6335f2d12b2642cef2e8a1ba8fdfa6344cc76495f68f747ef7d84a"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000483.jpg": {
+    "bytes": 122030,
+    "sha256": "e9b1324d2e338cb1a5cc5afdefb245c2fcc8c3dba1cc5c42c2705911ecda121f"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000484.jpg": {
+    "bytes": 121736,
+    "sha256": "4e7ea37ec10d6d84a71ceabb16361304e73bd77c96d22843fa3a9476d6a01a6c"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000485.jpg": {
+    "bytes": 122094,
+    "sha256": "ab1193b73bff963dd947142e0cf6dfd116769521be4d2aaae92cf15b6cf742e2"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000486.jpg": {
+    "bytes": 122161,
+    "sha256": "9f8c2ed71888d493f5e344b533d7515441d1f3df3e5c9142cbe656e75fd7c83b"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000487.jpg": {
+    "bytes": 121576,
+    "sha256": "313bffeff851da23d474d9884d69c40456b14d2a1089380ca0a599abf16842a0"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000488.jpg": {
+    "bytes": 120858,
+    "sha256": "e0a061bb7be9bbc1eebe1169ff10f44e5948c72f64b68d448a4515faad2c8ee1"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000489.jpg": {
+    "bytes": 122490,
+    "sha256": "24a3cd152dccfc906ffb1464dd45c35cfa2fb10d3c991e5fa06da6d22e31ede8"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000490.jpg": {
+    "bytes": 124773,
+    "sha256": "21bd19681af3b296567bdb3cb8acaaf83fce1b7f7d333a3323adf38e190b7607"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000491.jpg": {
+    "bytes": 125189,
+    "sha256": "1be18ccb0024bccb8a008af55f089c2d6e50727be8389861b7279e4f7b903970"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000492.jpg": {
+    "bytes": 127036,
+    "sha256": "1570144491d3c248194a38c3babf25dba2bd2e9acc19072ad16b9a4aef9e1dff"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000493.jpg": {
+    "bytes": 125244,
+    "sha256": "3ef34ffae33b629ff38bbf75db10fee1b57446994020b22f1f17260cb0b5aafd"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000494.jpg": {
+    "bytes": 125385,
+    "sha256": "99f6f4b4f928d5170200e34fc9e4747df8043f484972abe674474a3f69af5369"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000495.jpg": {
+    "bytes": 123041,
+    "sha256": "8d09d9a9d299bd2670cfeefe2ef0c88a1e825206d97206e460918bbf146897a4"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000496.jpg": {
+    "bytes": 118055,
+    "sha256": "331eab6240d9fa0c6c02e927c3623787b7742367baa44f14fa2ec867995d418b"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000497.jpg": {
+    "bytes": 118952,
+    "sha256": "2a43d31603dd7a4cdc987dd87b3e737ca02708392cd5d078d6d5634c43dac58d"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000498.jpg": {
+    "bytes": 121562,
+    "sha256": "34d1c522ea85eea0996fe1da0b07d71fa0b02981c78532755d04b75ad27eb69b"
+  },
+  "scene-data/KITTI09_MotionDemo/reference/000499.jpg": {
+    "bytes": 122336,
+    "sha256": "bedfd915357e89eb0a4faa7ffee3c6edc380c27c10f43974462c759fdbf8f372"
+  },
+  "evidence/mapping_scripts/build_depth_confidence_kitti.py": {
+    "bytes": 17251,
+    "sha256": "64022d185d8e6ec14171245846168c5e47e805fa74c1321734d23b0d69a12b4a"
+  },
+  "evidence/mapping_scripts/cleanup_legacy.py": {
+    "bytes": 4729,
+    "sha256": "308b96d666cb9bfddd4496082d8d909b58c4ce611a8eff3f362edd6de5a5ad6f"
+  },
+  "evidence/mapping_scripts/cleanup_v2.py": {
+    "bytes": 5926,
+    "sha256": "590c3c6c3e121d9c436af170e1c9b1044a675441a3e8068d0f7193306cdf4819"
+  },
+  "evidence/mapping_scripts/export_assets.py": {
+    "bytes": 4864,
+    "sha256": "00f515f8e01cb585fa88c28729bf1c5131116e65f1332bdc716f3aa8349279f1"
+  },
+  "evidence/mapping_scripts/export_s3_assets_reference.py": {
+    "bytes": 16265,
+    "sha256": "1d5dc6a247c904d630f74642ac01c5f70aa994ed96262a9b0763a957a45708dd"
+  },
+  "evidence/mapping_scripts/generate_raft_depth_kitti.py": {
+    "bytes": 11732,
+    "sha256": "caa51140259624ff86b393e6bc719f4ca6a2ef0a229d34f54cf626bd5ffcd228"
+  },
+  "evidence/mapping_scripts/generate_raft_reverse_depth_kitti.py": {
+    "bytes": 9709,
+    "sha256": "f6153bea1b2537f5cc0b1172fc5875398f493c9b7d74fa3db450dfaf5f4d4363"
+  },
+  "evidence/mapping_scripts/mapping_config.py": {
+    "bytes": 2693,
+    "sha256": "13ed7656b6755d904048666dda0c2f618c258da80f60458ed4aaa003a90410eb"
+  },
+  "evidence/mapping_scripts/render_diagnostic.py": {
+    "bytes": 2687,
+    "sha256": "d6e828e4dd88de6fe1fb40111ca8d4f9c4e9bde94b2a2a4d2898fc15a5c1c144"
+  },
+  "evidence/mapping_scripts/resource_guard.py": {
+    "bytes": 2228,
+    "sha256": "1abd578c5a4c1be1fb6241a9021d845d4d609ea5934190181ec0722857643b3b"
+  },
+  "evidence/mapping_scripts/smoke_config.py": {
+    "bytes": 2593,
+    "sha256": "cd5454abb48e6e91a418f201476c8fa3df4f632107b1c9cd876020853e479732"
+  },
+  "evidence/mapping_scripts/splatam_isolated.py": {
+    "bytes": 53297,
+    "sha256": "c2057162d9e19c274c3ddd617c77d307d587f1c95fdb08fb3f228e177e0b2edb"
+  },
+  "evidence/mapping_scripts/train_f1_seq04.py": {
+    "bytes": 8476,
+    "sha256": "b6690bf38467043b991d30b517c56eeae1f0e1cc5553b4226bad0f037c7eccdc"
+  },
+  "evidence/annotation_scripts/adapt_mask2former_to_instances.py": {
+    "bytes": 22266,
+    "sha256": "9874a73207843e5139ac3c9cc392ed603da3571504fffe93cdcb832c61e40711"
+  },
+  "evidence/annotation_scripts/export_annotations.py": {
+    "bytes": 9519,
+    "sha256": "e0237ef54f6bc387d7acf2a75d6f9eb351bd3460327d1cf2785c86bce5b08550"
+  },
+  "evidence/annotation_scripts/export_s3_assets_reference.py": {
+    "bytes": 16265,
+    "sha256": "1d5dc6a247c904d630f74642ac01c5f70aa994ed96262a9b0763a957a45708dd"
+  },
+  "evidence/annotation_scripts/fuse_semantic.py": {
+    "bytes": 28740,
+    "sha256": "1e93b8ff798b34167f56e6d8d3da3246d97a38a6d6436c0f9683a6dcca3f50a1"
+  },
+  "evidence/annotation_scripts/generate_flow.py": {
+    "bytes": 1795,
+    "sha256": "a0ead5d3557b0c58a77d206a8b46bdaf80a18dc6ecabf332ef13fa2fc807c73f"
+  },
+  "evidence/annotation_scripts/generate_semantic.py": {
+    "bytes": 19846,
+    "sha256": "d69fe4a3c1c2585536a51ac87be4fd268d661f52c0a5874d131105bb0e218c1f"
+  },
+  "evidence/annotation_scripts/resource_guard.py": {
+    "bytes": 2228,
+    "sha256": "1abd578c5a4c1be1fb6241a9021d845d4d609ea5934190181ec0722857643b3b"
+  },
+  "evidence/annotation_scripts/run_instances.py": {
+    "bytes": 22907,
+    "sha256": "eec95487817fa29d098997d808f472db1633eda36f4d35dd53f2e303e957ee73"
+  },
+  "evidence/annotation_scripts/run_motion.py": {
+    "bytes": 4935,
+    "sha256": "a44292a5b8c894145b3b9bdb36512416c5b31792271ffd383c274da1474a78c0"
+  },
+  "evidence/annotation_scripts/verify_instances.py": {
+    "bytes": 13764,
+    "sha256": "6bf2f1482824d59cb2cc304767496894dc04cd5a9f6902c7e5746a337e31c359"
+  }
+}

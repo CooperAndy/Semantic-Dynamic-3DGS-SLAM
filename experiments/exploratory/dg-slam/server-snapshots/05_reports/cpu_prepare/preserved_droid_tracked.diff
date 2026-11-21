@@ -1,0 +1,49 @@
+diff --git a/src/altcorr_kernel.cu b/src/altcorr_kernel.cu
+index 736b05e..1a7e5f7 100644
+--- a/src/altcorr_kernel.cu
++++ b/src/altcorr_kernel.cu
+@@ -1,5 +1,5 @@
+-#include <torch/extension.h>
+-#include <THC/THCAtomics.cuh>
++#include <torch/types.h>
++#include <ATen/cuda/Atomic.cuh>
+ #include <vector>
+ #include <iostream>
+ 
+diff --git a/src/correlation_kernels.cu b/src/correlation_kernels.cu
+index 88c791e..b8ae649 100644
+--- a/src/correlation_kernels.cu
++++ b/src/correlation_kernels.cu
+@@ -1,4 +1,4 @@
+-#include <torch/extension.h>
++#include <torch/types.h>
+ #include <cuda.h>
+ #include <cuda_runtime.h>
+ #include <vector>
+diff --git a/src/droid.cpp b/src/droid.cpp
+index e0ae668..9491c95 100644
+--- a/src/droid.cpp
++++ b/src/droid.cpp
+@@ -1,4 +1,5 @@
+-#include <torch/extension.h>
++#include <torch/types.h>
++#include <torch/csrc/utils/pybind.h>
+ #include <vector>
+ 
+ // CUDA forward declarations
+diff --git a/src/droid_kernels.cu b/src/droid_kernels.cu
+index 30678f2..c1f689b 100644
+--- a/src/droid_kernels.cu
++++ b/src/droid_kernels.cu
+@@ -1,4 +1,4 @@
+-#include <torch/extension.h>
++#include <torch/types.h>
+ #include <cuda.h>
+ #include <cuda_runtime.h>
+ #include <cuda_runtime.h>
+diff --git a/thirdparty/lietorch b/thirdparty/lietorch
+--- a/thirdparty/lietorch
++++ b/thirdparty/lietorch
+@@ -1 +1 @@
+-Subproject commit 7f687644fcea81ab337831749445224503c1290d
++Subproject commit 7f687644fcea81ab337831749445224503c1290d-dirty

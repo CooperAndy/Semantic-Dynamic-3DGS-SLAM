@@ -1,0 +1,32 @@
+{
+  "status": "FORMAL_S2_COMMON_SUPPORT_COMPLETE",
+  "protocol": {
+    "sequence": "KITTI odometry sequence 00, frames 0-199",
+    "confidence_threshold": 0.60,
+    "heldout_evaluation_frames": [19, 39, 59, 79, 99, 119, 139, 159, 179, 199],
+    "heldout_mapping_budgets": [25, 50, 100, 190],
+    "matched_view_noheldout_budget": 200,
+    "rgb_support": "full 376x1241 image",
+    "depth_support": "same raw RAFT valid pixels in [0.5, 40] m"
+  },
+  "matched_view_noheldout_comparison": {
+    "heldout_mode": "m190",
+    "in_sample_mode": "noheldout200",
+    "psnr_difference_in_sample_minus_heldout": 0.9811993598937985,
+    "ms_ssim_difference": 0.10419808626174931,
+    "lpips_difference": -0.08179863244295116,
+    "depth_l1_difference_m": -0.46854648888111117,
+    "warning": "The no-held-out score is in-sample reconstruction and is not a generalization metric."
+  },
+  "heldout_leakage_check": {
+    "m025": {"mapping_overlap": [], "keyframe_overlap": []},
+    "m050": {"mapping_overlap": [], "keyframe_overlap": []},
+    "m100": {"mapping_overlap": [], "keyframe_overlap": []},
+    "m190": {"mapping_overlap": [], "keyframe_overlap": []}
+  },
+  "download_verification": {
+    "bundle_sha256": "07f3b138f202de7024dee8298a78b34cb75cc5799f2cb7c7f68f607f1405c6c2",
+    "internal_files_checked": 17,
+    "hash_mismatches": 0
+  }
+}

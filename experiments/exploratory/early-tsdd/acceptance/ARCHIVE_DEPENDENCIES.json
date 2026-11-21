@@ -1,0 +1,16 @@
+[
+  {
+    "name": "chy07_remaining_engineering_20261001.tar.gz",
+    "sha256": "b4d3c9171c87d42a11ad0d9434f6f67198ddc451b56220730c64b3fc405ff94c",
+    "bytes": 1522487684,
+    "server_path": "/tmp/chy07_remaining_engineering_20261001.tar.gz",
+    "local_backup_relative_to_08_backup": "../阶段二_20261001_07剩余项工程结案/chy07_remaining_engineering_20261001.tar.gz"
+  },
+  {
+    "name": "chy07_dev_matrix_20261001.tar.gz",
+    "sha256": "118c77bbf093ce124932bdaca2cccc4b21a0876037fddcf20c9ae96185d8987c",
+    "bytes": 722826298,
+    "server_path": "/tmp/chy07_dev_matrix_20261001.tar.gz",
+    "local_backup_relative_to_08_backup": "../阶段二_20261001_07剩余项工程结案/chy07_dev_matrix_20261001.tar.gz"
+  }
+]

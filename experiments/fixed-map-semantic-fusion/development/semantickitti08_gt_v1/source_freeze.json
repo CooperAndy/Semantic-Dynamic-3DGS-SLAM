@@ -1,0 +1,17 @@
+{
+  "status": "CODE_LOCKED_BEFORE_ALL200_GT_SCORING",
+  "files": {
+    "scripts/run_semantickitti08_pipeline.py": "e74c41132836833272cc72477bd3824fdf42c1264cb5030a7bb431b2ba6897c8",
+    "scripts/fetch_semantickitti08.py": "cf7c1bfaf31c2aa8cc31ee3ba3fd9ed28772b495febc413428d39a79e19b1894",
+    "scripts/prepare_semantickitti08_full.py": "7ea2698151c4711c9095eaf6f6c2774366f922c54a499007594492abb96864dc",
+    "scripts/render_semantickitti08_fixed.py": "050c3dcbd240743f593c2f12655a6cb122c82a5a16f214a0c244602efabcbaf0",
+    "scripts/evaluate_semantickitti08.py": "4d83709bcf7f6b72ab296a891d7475436fda0b0e79d551f44632b69dc27c5d22",
+    "scripts/semantickitti_projection.py": "da3290bce02210c9493758e05ae01c9d968da0c25ddad0d16255a26d9af4fbeb",
+    "scripts/http_range_zip.py": "94183e4a8bf8cf602b83a7ea8691f3e4d2874108c617a941bb4776468612c5c9",
+    "scripts/semantic_cpu.py": "472f78f297084c734f3e9b1376b1a3b2e8059572297e3d9b108a084f3cc7a6f8",
+    "scripts/native_semantic_render.py": "0a2c4fd080e3ac00119c06294972bf313aa7b297363bf38e5555b08021e7ec31",
+    "scripts/evaluate_vkitti_gt_dev.py": "8eae35c3e0afc289d807e453e1284a14cb7645b268ef732034ffb13c4d937e49"
+  },
+  "small_audit_sha256": "08511f23b34fae97ccf4e423e4f58a56c4198e3447a2fed9caf435b810ba2702",
+  "GT_feedback_or_weight_changes": false
+}

@@ -1,0 +1,11 @@
+import json,glob,os,subprocess,csv
+from pathlib import Path
+import numpy as np
+R=Path('/root/autodl-tmp/stage2_new_model_pi3mos');O=R/'run_all_clone_20261105';v=Path(glob.glob('/root/autodl-tmp/slam_project/work_chy_20260924/stage2/06_*/vehicle_only_v2')[0]);sc='Scene01';pred=v/'g2_online_dev_full_v2/prediction_root'/sc/'clone'/'instances';vroot=Path('/root/autodl-tmp/datasets/vkitti2_2.0.3/extracted');out=O/'matcher_validation';out.mkdir(exist_ok=True);seq=out/'pred'/sc/'clone';seq.mkdir(parents=True,exist_ok=True)
+if not (seq/'instances').exists():(seq/'instances').symlink_to(pred,target_is_directory=True)
+e=seq/'evidence';e.mkdir(exist_ok=True)
+gt=json.loads((v/'g1_v2_candidate_recheck/sealed_gt/Scene01_vehicle_gt.json').read_text());gt['split']='dev';gt['observations']=[r for r in gt['observations'] if r['sequence']=='Scene01/clone' and 7<=int(r['frame_t'])<=49];(out/'gt.json').write_text(json.dumps(gt))
+for t in range(7,50):
+ z=np.load(O/sc/f'{t:06d}.npz');d=[{'track_id':int(i),'category':'car','dynamic_probability':float(x)} for i,x in zip(z['track_ids'],z['scores']) if np.isfinite(x)];(e/f'{t:06d}_{t+1:06d}.json').write_text(json.dumps({'instances':d}))
+args=['/root/miniconda3/bin/python','/tmp/vkitti_frozen_matcher_20261103.py','--gt',str(out/'gt.json'),'--prediction-root',str(out/'pred'),'--vkitti-root',str(vroot),'--model-id','pi3mos_audit','--output',str(out/'matched.json')];subprocess.run(args,check=True)
+old=json.loads((out/'matched.json').read_text())['predictions'];old={(int(r['frame_t']),str(r['track_id'])):str(r['predicted_track_id']) for r in old if not str(r['track_id']).startswith('pred:')};new=list(csv.DictReader(open(O/sc/'evaluation_devcheck/vehicle_rows.csv')));new={(int(r['frame']),str(r['gt_track'])):str(r['pred_track']) for r in new if 7<=int(r['frame'])<=49 and r['score'] not in ('','None')};onlyold={k:v for k,v in old.items() if new.get(k)!=v};onlynew={k:v for k,v in new.items() if old.get(k)!=v};result={'original_matcher_count':len(old),'new_matcher_count':len(new),'only_old_or_diff':len(onlyold),'only_new_or_diff':len(onlynew),'examples_old':list(onlyold.items())[:5],'examples_new':list(onlynew.items())[:5]};(out/'comparison.json').write_text(json.dumps(result,indent=2));print(json.dumps(result),flush=True)

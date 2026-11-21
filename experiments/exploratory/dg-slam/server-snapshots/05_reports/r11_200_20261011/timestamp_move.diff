@@ -1,0 +1,10 @@
+--- R1/dg_slam/factor_graph.py
++++ R1.1/dg_slam/factor_graph.py
+@@ -166,6 +166,7 @@
+ 
+ 
+         with self.video.get_lock():
++            self.video.tstamp[ix] = self.video.tstamp[ix+1]
+             self.video.images[ix] = self.video.images[ix+1]
+             self.video.poses[ix] = self.video.poses[ix+1]
+             self.video.disps[ix] = self.video.disps[ix+1]

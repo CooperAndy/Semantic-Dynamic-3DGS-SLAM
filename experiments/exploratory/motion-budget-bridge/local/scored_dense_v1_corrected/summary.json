@@ -1,0 +1,42 @@
+{
+  "status": "CPU_SCORED",
+  "scope": "KITTI00 exposed DEV, offline fixed-map pose recovery on two future mapping holdouts; no online tracking or independent Test",
+  "run_receipt_sha256": "f8be9ce78ace83d7a9bc951b51163e0eda1854461ab60c83689e3192403bc9d7",
+  "scorer_sha256": "ee55794c709f877d2aaecf92aaa284bbd07c444647ab9a1b2b2744eb7edda5bf",
+  "gt_sha256": "90791a4113df979b149fa9e1104e960ea59f525a8318a202dbb6aec1a3d88793",
+  "calib_sha256": "7cfc9ab047da6bd829d669e31b2a0d72c278d084fa0c02f2f0320795d51a5d01",
+  "alignment": "Fixed SE3 on first 400 frames excluding 20 mapping holdouts, P2-to-P0, no scale",
+  "trials": 12,
+  "pairs": 6,
+  "distinct_update_events": 2,
+  "after_minus_before_gt_translation_mean_m": 0.011761818580666605,
+  "after_better_gt_translation_pairs": 0,
+  "by_frame": [
+    {
+      "frame": 19,
+      "support_pixels": 6463,
+      "after_minus_before_gt_translation_mean_m": 0.008166191495634726,
+      "after_minus_before_gt_rotation_mean_deg": 0.015224377654119733,
+      "after_minus_before_anchor_psnr_db": 0.12806916692097303,
+      "after_minus_before_anchor_depth_mae_m": -0.00510077178478241,
+      "before_coverage099": 0.541226618890051,
+      "after_coverage099": 0.5578934284293723
+    },
+    {
+      "frame": 39,
+      "support_pixels": 5808,
+      "after_minus_before_gt_translation_mean_m": 0.015357445665698485,
+      "after_minus_before_gt_rotation_mean_deg": 0.009606766960293667,
+      "after_minus_before_anchor_psnr_db": 0.8373359351904277,
+      "after_minus_before_anchor_depth_mae_m": -0.02670516073703766,
+      "before_coverage099": 0.4955273715431961,
+      "after_coverage099": 0.5269343528725976
+    }
+  ],
+  "limitations": [
+    "Two distinct but correlated adjacent updates from one exposed KITTI00 DEV replay",
+    "Three perturbations per frame are correlated",
+    "Fixed-map offline recovery, not online tracking or independent Test",
+    "E6a depth is a proxy; GT accessed only by this CPU scorer after GPU outputs were sealed"
+  ]
+}

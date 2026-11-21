@@ -1,0 +1,243 @@
+{
+  "created_utc": "2026-10-12T13:54:23.791964+00:00",
+  "owner": "CHY",
+  "path_base": "Parent 2026.10.11 directory; preserve sibling evidence folders",
+  "scope": "Direct historical source files linked by this handoff; SHA256 and byte size",
+  "sources": [
+    {
+      "path": "CHY_T14_结果诊断与下一步_20261012/T14_FULL退化诊断与下一步.md",
+      "bytes": 9065,
+      "sha256": "ba24547ac1f9aeb5c43ce0c41843694915c9bb4bfcb53875a7b7be6ec6061f4e"
+    },
+    {
+      "path": "CHY_T15_DEV同图回放_20261012/delivery_manifest.json",
+      "bytes": 8614,
+      "sha256": "96b5771697696ed8a0ca4f9008c742bc66c66f8d6b7fd4fa16aa78c3ec4c91f9"
+    },
+    {
+      "path": "CHY_T15_DEV同图回放_20261012/T15_执行结果与停止决定.md",
+      "bytes": 5542,
+      "sha256": "d76e2882eb60dc8e6e48c0bcea9462c8bc434e3b128ef17471280546bd4eccc7"
+    },
+    {
+      "path": "CHY_T16_渲染分支诊断与修复_20261012/delivery_manifest.json",
+      "bytes": 23610,
+      "sha256": "ebf71f32ae464a22fdfdfe4123b03645cbf89d802e64e82f54bd3dc4d784e24d"
+    },
+    {
+      "path": "CHY_T16_渲染分支诊断与修复_20261012/T16_分支验证修复与8次回放结果.md",
+      "bytes": 7322,
+      "sha256": "0614408c42f80613a75624b2eb7ef9b338f1e0d81f214d620d20f587aec0fd68"
+    },
+    {
+      "path": "CHY_T17_NO_GS_vs_ID完整轨迹_20261012/delivery_manifest.json",
+      "bytes": 51069,
+      "sha256": "36f3b582ad32adf3c3a9536d66cb7ffe63c38589f7e9f8a0d3267294eba8e30a"
+    },
+    {
+      "path": "CHY_T17_NO_GS_vs_ID完整轨迹_20261012/protocol.json",
+      "bytes": 4671,
+      "sha256": "cfbc1a84e844c7dee31ea1f35191df486e8ab9e152096b9af3f31e69c9a5d6a2"
+    },
+    {
+      "path": "CHY_T17_NO_GS_vs_ID完整轨迹_20261012/T17_六次完整轨迹结果.csv",
+      "bytes": 1545,
+      "sha256": "469c52a050d05274867ba5705be2693770184964b75a5fe4eba6aab5a3f5496f"
+    },
+    {
+      "path": "CHY_T17_NO_GS_vs_ID完整轨迹_20261012/T17_完整轨迹对照结果与决定.md",
+      "bytes": 6216,
+      "sha256": "a1876f68619595ab1102964273b69fd4052b225afb8439d053a25e08977218ff"
+    },
+    {
+      "path": "CHY_T18_CPU离线补全误差诊断_20261012/delivery_manifest.json",
+      "bytes": 12589,
+      "sha256": "3c3e27180180455b4b065157f15291a403b59cbfb218fe9ddfe5f04de1e032c1"
+    },
+    {
+      "path": "CHY_T18_CPU离线补全误差诊断_20261012/T18_CPU离线补全诊断与下一步.md",
+      "bytes": 11260,
+      "sha256": "8186aaca5b859087a6e75c40488bbe1a223a1fed7c419e344060cc7c53ee389e"
+    },
+    {
+      "path": "CHY_T19_补全接口修复与CPU验证_20261012/delivery_manifest.json",
+      "bytes": 15799,
+      "sha256": "568af5cc393c28f0788a50c62270081a970ca4ac777aefab1152d672cc50283c"
+    },
+    {
+      "path": "CHY_T19_补全接口修复与CPU验证_20261012/diagnostic_registration.json",
+      "bytes": 5782,
+      "sha256": "470337713553deab853c194005e1b77ab6108d2dd781089a837de7cb7d64a627"
+    },
+    {
+      "path": "CHY_T19_补全接口修复与CPU验证_20261012/patches/T19_vs_T17.patch",
+      "bytes": 17740,
+      "sha256": "7cac33b7f8925239c04329ce2f7de4537966cddf6e569275490bfa1536961347"
+    },
+    {
+      "path": "CHY_T19_补全接口修复与CPU验证_20261012/README_CPU与接入.md",
+      "bytes": 2581,
+      "sha256": "ab917fdefac7da7df2c96b6d171abc155e15d70a70791bb3c0bda51c9e201e1c"
+    },
+    {
+      "path": "CHY_T19_补全接口修复与CPU验证_20261012/T19_补全接口修复与CPU验证报告.md",
+      "bytes": 5655,
+      "sha256": "18c9587dd4e75b95d46f21942956044fe52467ba36e72bd7614ad48f742c1f99"
+    },
+    {
+      "path": "CHY_T20_GPU补全诊断_20261012/delivery_manifest.json",
+      "bytes": 103087,
+      "sha256": "8bfdbb06e62bb50ef4befd9d90a47758465be3d0259b40f3017ffa5bdd6919f7"
+    },
+    {
+      "path": "CHY_T20_GPU补全诊断_20261012/protocol.json",
+      "bytes": 6753,
+      "sha256": "d5cbfe04fa81c120c73807d5c24c979d1ae6f80af52514078bfb41e8f78c924f"
+    },
+    {
+      "path": "CHY_T20_GPU补全诊断_20261012/README_交付与复现.md",
+      "bytes": 2907,
+      "sha256": "2e33537062bf2b227ffa127087519d741366da2022e760ec55377298f7ec14b0"
+    },
+    {
+      "path": "CHY_T20_GPU补全诊断_20261012/receipts/candidate_gpu_smoke_v2.json",
+      "bytes": 291,
+      "sha256": "2e78df396802f7c2711596652db40658c1ae3c93e1a3628775bbd4007d748732"
+    },
+    {
+      "path": "CHY_T20_GPU补全诊断_20261012/receipts/independent_audit.json",
+      "bytes": 2025,
+      "sha256": "8d24081b394d4709f3653c9be01a7588bbcb0e88f39816d3ebfb3f1b356845b3"
+    },
+    {
+      "path": "CHY_T20_GPU补全诊断_20261012/receipts/launch_v2.json",
+      "bytes": 696,
+      "sha256": "a6f696f2f5e3bbc13b4973a1592797e0a3dcadea9f1568038e7ff4f1fc025cbf"
+    },
+    {
+      "path": "CHY_T20_GPU补全诊断_20261012/receipts/source_depth_inspection.json",
+      "bytes": 1741,
+      "sha256": "1601c62fd498d3ebf6a36ebfbfc4ded872979bd61336aaeaaa2d0347e3cddd36"
+    },
+    {
+      "path": "CHY_T20_GPU补全诊断_20261012/T20_GPU补全诊断结果与下一步.md",
+      "bytes": 10656,
+      "sha256": "c205e73e4c3587dadf402705f92a0715fdf14f077c7d701f3409f236de1e1cc1"
+    },
+    {
+      "path": "CHY_T20_GPU补全诊断_20261012/T20_五组诊断结果.csv",
+      "bytes": 1576,
+      "sha256": "27da3581536d62e20f908101f78d2eb2e654b74a857362ce599588b4620a648c"
+    },
+    {
+      "path": "CHY_T20_GPU补全诊断_20261012/T20_有效权重诊断.csv",
+      "bytes": 10420,
+      "sha256": "37ccc0b11a6f5c055ea252a858afa03f22b9584c7a9b434d236a43d5be9adcce"
+    },
+    {
+      "path": "CHY_T20_GPU补全诊断_20261012/T20_逐帧误差与移动.csv",
+      "bytes": 24124,
+      "sha256": "b0ee4b51e7c9d86dc9fb68a49b2267811fd2879642d2aff1f45ba44bff9db83c"
+    },
+    {
+      "path": "CHY_T20_GPU补全诊断_20261012/T20_逐轮目标与GT误差.csv",
+      "bytes": 11445,
+      "sha256": "be50ad5246e45d0a49c388a5571a381331187342dce8e0f31d3b75609a1f758c"
+    },
+    {
+      "path": "CHY_回交队友_T11至T19_20261012/交接文档_CHY接手后T11至T19_20261012.md",
+      "bytes": 26380,
+      "sha256": "897cf0292db13779407033db008b216fdc0a8acdb68ce9145cf471f8ae752fda"
+    },
+    {
+      "path": "CHY_接手DGSLAM_T11起_20261012/delivery_manifest.json",
+      "bytes": 1321121,
+      "sha256": "0c9b6851998864991197b56c43df02179798b53dd79ff2b8facf529e3ffc1208"
+    },
+    {
+      "path": "CHY_接手DGSLAM_T11起_20261012/README_接手状态.md",
+      "bytes": 3005,
+      "sha256": "cc9a8f75ba4ec60052fb2b190ee63c26fd74277df9eb782b2e7434fab4fe793c"
+    },
+    {
+      "path": "CHY_接手DGSLAM_T11起_20261012/T11_结果与T12接续方案.md",
+      "bytes": 11747,
+      "sha256": "29c688c59c07f916569029dc10f7361c8c916f3c989970ddf9b07c76bad20bbc"
+    },
+    {
+      "path": "CHY_接手DGSLAM_T11起_20261012/T12_T13_执行与验收_20261012.md",
+      "bytes": 8075,
+      "sha256": "afa498ee7bb1196b24baa86d5de33e2c7e96fc1a2f4f30b78372e4ca3375d246"
+    },
+    {
+      "path": "CHY_正式Tracking采用验收_20261012/delivery_manifest.json",
+      "bytes": 1455843,
+      "sha256": "c30e88c7a4f3b38a96b810148ff6cbda279b0a8463ff0f5e2fc1b7260ba050e8"
+    },
+    {
+      "path": "CHY_正式Tracking采用验收_20261012/T14_formal_tracking_protocol.json",
+      "bytes": 8474,
+      "sha256": "b9bcf103e780269b7cd2c4e99a9714db2316ee6de273be1a0994874b2f717b34"
+    },
+    {
+      "path": "CHY_正式Tracking采用验收_20261012/T14_全部18次运行.csv",
+      "bytes": 3399,
+      "sha256": "4a0bdb5dcc5bccb0ba1e0b6e630616920e1cae236e256285d3b8235195b319c1"
+    },
+    {
+      "path": "CHY_正式Tracking采用验收_20261012/T14_完整Tracking正式验收结果.md",
+      "bytes": 8044,
+      "sha256": "be3a82410ab5998f0b84a2cbc69fef1c8879db4544588e54e75caa2298784044"
+    },
+    {
+      "path": "DGSLAM_阶段收口与采用决定_20261012.md",
+      "bytes": 3495,
+      "sha256": "1cffd6bf1755b1ec4a6edfa3f70357c515e087d8019bd8cb24ea87fe7b21ac29"
+    },
+    {
+      "path": "T04_KITTI00前200帧_ORB与Gaussian对比/04_后续运行/pause_receipt.json",
+      "bytes": 151,
+      "sha256": "90e2d54c2f680feffb74b5041d8a02ad9b61d009d800cd81ba4fe9c660109062"
+    },
+    {
+      "path": "T04_KITTI00前200帧_ORB与Gaussian对比/05_报告与归档/适配与公平性排查_20261012/修正版对比结果.md",
+      "bytes": 1079,
+      "sha256": "55456b819d610c5d707283123f0f217dc5fd2ca5b53c7f30a7220cc1c9c918ce"
+    },
+    {
+      "path": "T15_CHY_DEV数值检查_20261012.zip",
+      "bytes": 38917874,
+      "sha256": "bb8be1d0a550df2fe0cf0d6ff5c538458b93e2bcffbcb28328988d5f0227e8c1"
+    },
+    {
+      "path": "T16_CHY_分支修复与8次回放_20261012.zip",
+      "bytes": 275201624,
+      "sha256": "569abdf3a44f7ef8c000c5e2041d84e6a4f26a0d31435ca9be482aee74d9cabb"
+    },
+    {
+      "path": "T17_CHY_NO_GS与ID完整轨迹对照_20261012.zip",
+      "bytes": 61956890,
+      "sha256": "35127598d5ed442968294bc59b601086200767888041cb0c1a59f511627f0c3f"
+    },
+    {
+      "path": "T18_CHY_CPU离线补全诊断_20261012.zip",
+      "bytes": 1515162,
+      "sha256": "dc1a9123e547c0936868e9a19cf88776d716e7c2e72be8c66b6a243e8528a59d"
+    },
+    {
+      "path": "T19_CHY_补全接口修复与CPU验证_20261012.zip",
+      "bytes": 126223,
+      "sha256": "710cf2ef4d26745cebbd51bf6e705294824cb044dfbc501a4a534b1d535cb256"
+    },
+    {
+      "path": "T20_CHY_GPU补全诊断完整交付_20261012.zip",
+      "bytes": 676275272,
+      "sha256": "c9e5e3e7592a75f6d1e3a297053ebc91c0d219095253402f812dcf8335d51de4"
+    },
+    {
+      "path": "队友交接文档_DGSLAM截至T10_20261012.md",
+      "bytes": 16893,
+      "sha256": "41c5db493904dfa396b665313fc3998c0b7e128d78f60e9919ed26b66c566498"
+    }
+  ]
+}

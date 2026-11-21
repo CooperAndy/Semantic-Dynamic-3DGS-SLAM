@@ -1,0 +1,26 @@
+{
+  "counts": {
+    "moving": {
+      "Static": 247,
+      "Uncertain": 2,
+      "Dynamic": 24636,
+      "Ignore": 0
+    },
+    "static": {
+      "Static": 296,
+      "Uncertain": 0,
+      "Dynamic": 1,
+      "Ignore": 0
+    },
+    "other_unknown": {
+      "Static": 102022,
+      "Uncertain": 0,
+      "Dynamic": 506,
+      "Ignore": 0
+    }
+  },
+  "vehicle_instances": 46,
+  "unmatched_iou_0_5": 1,
+  "definition": "candidate before D3 state AND depth>0; predicted mask IoU is per-GT best, nonexclusive; state map generated from predicted T2.3",
+  "caveat": "posthoc candidate reconstruction matched historical scalar counts only"
+}

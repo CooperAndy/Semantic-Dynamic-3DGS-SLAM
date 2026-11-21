@@ -1,0 +1,46 @@
+{
+  "schema_version": "stage2_acceptance_v2",
+  "owner": "CHY",
+  "date": "2026-10-01",
+  "archive_task_complete": true,
+  "M3_COMPLETE": false,
+  "status": "M3_NOT_COMPLETE_ENGINEERING_ARCHIVE_COMPLETE",
+  "formal_model_pass_issued": false,
+  "formal_dual_class_gate_b_pass_issued": false,
+  "stage06": "PAUSED_FORMAL_FAIL_RETAINED",
+  "stage07": "ENGINEERING_COMPLETE_WITH_LIMITATIONS",
+  "p6_receipts_validated": 19,
+  "criteria": [
+    {
+      "id": "C1",
+      "requirement": "Contracts, GT, splits and source independence",
+      "status": "PARTIAL",
+      "reason": "G2 18-frame engineering passed; later Vehicle-only protocol restricted. IMS conflict/full label support and independent KITTI object GT not completed."
+    },
+    {
+      "id": "C2",
+      "requirement": "Pre-registered binary/coverage Gate B for eligible classes",
+      "status": "FAIL",
+      "reason": "Scene20 primary clone F1=0.096195<.75; Pedestrian not formally evaluable."
+    },
+    {
+      "id": "C3",
+      "requirement": "Temporal/rejection and transition GT evaluation",
+      "status": "NOT_COMPLETE",
+      "reason": "T2.3 engineering output exists, no formal calibrated transition/coverage acceptance."
+    },
+    {
+      "id": "C4",
+      "requirement": "ORB/map system benefit and ghosting",
+      "status": "ENGINEERING_COMPLETE_WITH_LIMITATIONS",
+      "reason": "No ORB 25% ATE improvement; shared-view D3 does not reliably improve quality; ghost ROI support insufficient and no vacated GT."
+    },
+    {
+      "id": "C5",
+      "requirement": "Reproducible evidence and failure preservation",
+      "status": "ARCHIVE_AUDIT_PASS",
+      "reason": "19 P6 receipts schema/semantic validated and immutably registered; original raw prediction manifests retained; full07 dependencies hash checked."
+    }
+  ],
+  "scientific_boundary": "No new inference/test; no artificial teammate signature; user owner approvals preserved as original receipts."
+}

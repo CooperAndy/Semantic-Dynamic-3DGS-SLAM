@@ -1,0 +1,66 @@
+{
+  "scope": "PREREGISTERED_DEV_EPISODE_FEATURE_SUPPORT_NO_TRAINING_NO_FORMAL_SCORE",
+  "feature_columns": [
+    "original_P1_score",
+    "displacement_magnitude",
+    "normalized_3D_signal",
+    "w5_direction_consistency",
+    "w5_displacement_CV",
+    "w5_valid_support_consistency",
+    "valid_ratio",
+    "vector_aggregation_ratio",
+    "depth",
+    "noise_valid_fraction"
+  ],
+  "prediction_GT_accessed": false,
+  "source_GT_observation_counts": {
+    "Scene01": {
+      "Static": 87,
+      "Dynamic": 91,
+      "Ignore": 5
+    },
+    "Scene02": {
+      "Static": 110,
+      "Dynamic": 134,
+      "Ignore": 2
+    }
+  },
+  "support": {
+    "Scene01": {
+      "Dynamic": {
+        "GT_episodes": 5,
+        "matched_episodes": 5,
+        "complete_10_feature_episodes": 5
+      },
+      "Static": {
+        "GT_episodes": 5,
+        "matched_episodes": 5,
+        "complete_10_feature_episodes": 5
+      }
+    },
+    "Scene02": {
+      "Dynamic": {
+        "GT_episodes": 6,
+        "matched_episodes": 6,
+        "complete_10_feature_episodes": 5
+      },
+      "Static": {
+        "GT_episodes": 5,
+        "matched_episodes": 5,
+        "complete_10_feature_episodes": 4
+      }
+    }
+  },
+  "episodes": 21,
+  "prediction_rows": 422,
+  "matched_prediction_rows": 355,
+  "input_sha256": {
+    "/root/autodl-tmp/slam_project/work_chy_20260924/stage2/06_独立复核与TestOneShot/vehicle_only_v2/dev_selected_features_20261005_v1/result/predicted_features.json": "8477e3f225f2c643f61c22e3c86753532cfde21eca049f9b981629f294a618a1",
+    "/root/autodl-tmp/slam_project/work_chy_20260924/stage2/06_独立复核与TestOneShot/vehicle_only_v2/analyze_selected_dev_20261005_v1.py": "4458469dbafffa8c9480425ac771c6501205df7f06d1043ef19a896b44530d9c",
+    "/root/autodl-tmp/slam_project/work_chy_20260924/stage2/06_独立复核与TestOneShot/vehicle_only_v2/g1_v2_candidate/sealed_gt/Scene01_vehicle_gt.json": "6534c3c09d2b2094359f1cf7843e9a3bf8beadea1cf938dd852ab4777b84e41d",
+    "/root/autodl-tmp/slam_project/work_chy_20260924/stage2/06_独立复核与TestOneShot/vehicle_only_v2/g1_v2_candidate/sealed_gt/Scene02_vehicle_gt.json": "91e52990f03c2ac5cfad8ee4ed1de9c3968c62120345c5d95dffdf8e66678d48",
+    "/root/autodl-tmp/slam_project/work_chy_20260924/stage2/06_独立复核与TestOneShot/vehicle_only_v2/orb_run_dev_scene01_clone_full_v1/CameraTrajectory.txt": "e3cdcc5f91fd27ff577ff72d2e6f456eb2e843f5ea332988ff1e35ac86a35bf9",
+    "/root/autodl-tmp/slam_project/work_chy_20260924/stage2/06_独立复核与TestOneShot/vehicle_only_v2/orb_run_dev_scene02_clone_full_v1/CameraTrajectory.txt": "f83eb99a284b7f0645538d4bd41db6a8e6c5bbb1059e57f97b8f1a86fb82beac"
+  },
+  "formal_model_pass_issued": false
+}

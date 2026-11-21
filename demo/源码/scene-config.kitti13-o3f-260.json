@@ -1,0 +1,55 @@
+{
+  "sceneId": "kitti13_o3f_780_1039",
+  "title": "KITTI 13 · O3F · 260 frames",
+  "dataset": "KITTI odometry sequence 13",
+  "sourceFrames": [
+    780,
+    1039
+  ],
+  "gaussianCount": 834436,
+  "defaultVariant": "F1",
+  "fidelityMode": "full-resolution",
+  "poseProtocol": "Fixed causal ORB estimated P2; no GT input",
+  "depthProtocol": "RAFT-Stereo; G19C confidence",
+  "defaultCameraFrame": 879,
+  "assetManifest": "scene-data/KITTI13_O3F_260/manifest.json",
+  "variants": {
+    "F1": {
+      "label": "O3F · Cap 3000 · H3 · Seed 0",
+      "description": "260 seen frames, fixed ORB, H3 replay and 1040-step F1 appearance refinement.",
+      "rgb": "scene-data/KITTI13_O3F_260/RGB.ply",
+      "rgbWithTrajectory": "scene-data/KITTI13_O3F_260/RGB_with_Trajectory.ply",
+      "manifest": "scene-data/KITTI13_O3F_260/manifest.json"
+    }
+  },
+  "assets": {
+    "rgb": "scene-data/KITTI13_O3F_260/RGB.ply",
+    "rgbWithTrajectory": "scene-data/KITTI13_O3F_260/RGB_with_Trajectory.ply",
+    "cameraPoses": "scene-data/KITTI13_O3F_260/camera_poses.json",
+    "viewerSettings": "scene-data/KITTI13_O3F_260/viewer_settings.json",
+    "trajectoryViewerSettings": "scene-data/KITTI13_O3F_260/viewer_settings_trajectory.json",
+    "semantic": "scene-data/KITTI13_O3F_260/Semantic.ply"
+  },
+  "cameraPathLayer": {
+    "enabled": true,
+    "variant": "F1",
+    "asset": "scene-data/KITTI13_O3F_260/camera_path.ply",
+    "manifest": "scene-data/KITTI13_O3F_260/manifest.json",
+    "gaussianCount": 2127,
+    "sha256": "bbd363a311b94992018cdabe8ed6df5e3ae3881992347b75fdfc181f9440a356"
+  },
+  "semanticGaussianCount": 834436,
+  "semanticManifest": "scene-data/KITTI13_O3F_260/semantic_manifest.json",
+  "semanticSource": "Mask2Former Cityscapes-19; offline final-map fusion from 260 seq13 frames",
+  "semanticStatus": "Predicted categories; no semantic ground-truth accuracy or motion verified.",
+  "semanticMapId": "kitti13_o3f_260_semantic",
+  "semanticRelation": "same RGB geometry, opacity, rotation and Gaussian order; category colors replace RGB",
+  "motionIndex": null,
+  "motionSnapshot": "scene-data/KITTI13_O3F_260/ObjectStates/snapshot.json",
+  "motionReferenceImageTemplate": null,
+  "motionLabelMode": "offline_semantic_vehicle_objects",
+  "motionStateManifest": "scene-data/KITTI13_O3F_260/ObjectStates/manifest.json",
+  "motionStateConfig": "semantic-region-v1 + short4_z0.5-40_far20",
+  "hideUncertainMotion": true,
+  "dynamicVehicleRemoval": null
+}

@@ -1,0 +1,9 @@
+{
+  "status": "PASS_THREE_REFERENCE_FRAMES",
+  "max_absolute_error": {
+    "3007": 0.0,
+    "3015": 0.0,
+    "3024": 0.0
+  },
+  "checkpoint_sha256": "1a536b1bb6e9c6c16a77b7ed544649351d387e281a16f3d946e0786cdcf23ded"
+}

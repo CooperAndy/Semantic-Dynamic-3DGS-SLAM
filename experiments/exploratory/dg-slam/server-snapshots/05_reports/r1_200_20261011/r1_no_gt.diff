@@ -1,0 +1,381 @@
+--- R0/dg_slam/dg_model.py
++++ R1/dg_slam/dg_model.py
+@@ -42,7 +42,6 @@
+         self.traj_filler = PoseTrajectoryFiller(self.net, self.video)
+ 
+         self.mapping_counter = 0
+-        self.inv_pose = None
+ 
+     def load_weights(self, weights):
+         """ load trained model weights """
+@@ -59,12 +58,12 @@
+         self.net.load_state_dict(state_dict)
+         self.net.to("cuda:0").eval()
+ 
+-    def track(self, tstamp, image, depth, pose, intrinsics, seg_mask):
++    def track(self, tstamp, image, depth, intrinsics, seg_mask):
+         """ main thread - update map """
+ 
+         with torch.no_grad():
+             # check there is enough motion
+-            self.filterx.track(tstamp, image, depth, pose, intrinsics, seg_mask)
++            self.filterx.track(tstamp, image, depth, intrinsics, seg_mask)
+             # local bundle adjustment
+             update_status = self.frontend()
+ 
+@@ -80,22 +79,14 @@
+                     disps_up = self.video.disps_up[self.mapping_counter]
+                     depth_idx = torch.where(disps_up > 0, 1.0/disps_up, disps_up)
+ 
+-                    gt_pose_idx = self.video.poses_gt[self.mapping_counter]
+-                    gt_pose_idx = torch.from_numpy(pose_matrix_from_quaternion(gt_pose_idx.cpu())).cuda() 
+-
+-                    pose_idx = self.video.poses[self.mapping_counter] 
+-                    pose_idx = quaternion_to_transform_noBatch(SE3(pose_idx).inv().data) 
+-
+-                    if self.inv_pose is None:
+-                        init_pose = gt_pose_idx
+-                        self.inv_pose = torch.inverse(init_pose)
+-                        gt_pose_idx = self.inv_pose @ gt_pose_idx
+-                    else:
+-                        gt_pose_idx = self.inv_pose @ gt_pose_idx
++                    pose_idx = self.video.poses[self.mapping_counter]
++                    pose_idx = quaternion_to_transform_noBatch(SE3(pose_idx).inv().data)
++                    if self.mapping_counter == 0:
++                        pose_idx = torch.eye(4, device=pose_idx.device)
+ 
+                     seg_mask_idx = ~ self.video.seg_masks_ori[self.mapping_counter]
+ 
+-                    self.tracking_mapping.run(idx, img_idx, depth_idx, gt_pose_idx, pose_idx, seg_mask_idx)
++                    self.tracking_mapping.run(idx, img_idx, depth_idx, pose_idx, seg_mask_idx)
+                     self.mapping_counter += 1
+                 else:
+                     break
+--- R0/dg_slam/motion_filter.py
++++ R1/dg_slam/motion_filter.py
+@@ -37,7 +37,7 @@
+ 
+     @torch.cuda.amp.autocast(enabled=True)
+     @torch.no_grad()
+-    def track(self, tstamp, image, depth=None, pose =None, intrinsics=None, seg_mask = None):
++    def track(self, tstamp, image, depth=None, intrinsics=None, seg_mask = None):
+         """ main update operation - run on every frame in video """
+ 
+         Id = lietorch.SE3.Identity(1,).data.squeeze() 
+@@ -55,7 +55,7 @@
+         if self.video.counter.value == 0:
+             net, inp = self.__context_encoder(inputs[:,[0]])
+             self.net, self.inp, self.fmap = net, inp, gmap
+-            self.video.append(tstamp, image[0], Id, depth, depth, intrinsics / 8.0, gmap, net[0,0], inp[0,0], seg_mask, pose)
++            self.video.append(tstamp, image[0], Id, depth, depth, intrinsics / 8.0, gmap, net[0,0], inp[0,0], seg_mask)
+ 
+         ### only add new frame if there is enough motion ###
+         else:                
+@@ -71,7 +71,7 @@
+                 self.count = 0
+                 net, inp = self.__context_encoder(inputs[:,[0]])
+                 self.net, self.inp, self.fmap = net, inp, gmap
+-                self.video.append(tstamp, image[0], None, depth, depth, intrinsics / 8.0, gmap, net[0], inp[0], seg_mask, pose)
++                self.video.append(tstamp, image[0], None, depth, depth, intrinsics / 8.0, gmap, net[0], inp[0], seg_mask)
+ 
+             else:
+                 self.count += 1--- R0/dg_slam/depth_video.py
++++ R1/dg_slam/depth_video.py
+@@ -37,7 +37,6 @@
+         self.disps_up = torch.zeros(buffer, ht, wd, device="cuda", dtype=torch.float).share_memory_()
+         self.depths_gt = torch.zeros(buffer, ht, wd, device="cuda", dtype=torch.float).share_memory_()
+         self.intrinsics = torch.zeros(buffer, 4, device="cuda", dtype=torch.float).share_memory_()
+-        self.poses_gt = torch.zeros(buffer, 7, device="cuda", dtype=torch.float32).share_memory_()
+ 
+         self.seg_masks = torch.zeros(buffer, ht//8, wd//8, device="cuda", dtype=torch.bool).share_memory_()
+         self.seg_masks_ori = torch.zeros(buffer, ht, wd, device="cuda", dtype=torch.bool).share_memory_()
+@@ -117,8 +116,6 @@
+                 self.seg_masks[index] = seg_mask
+                 self.seg_masks_ori[index] = item[9]
+ 
+-        if len(item) > 10:
+-            self.poses_gt[index] = item[10]
+ 
+     def __setitem__(self, index, item):
+         with self.get_lock():
+--- R0/dg_slam/factor_graph.py
++++ R1/dg_slam/factor_graph.py
+@@ -177,7 +177,6 @@
+             self.video.fmaps[ix] = self.video.fmaps[ix+1]
+ 
+             self.video.seg_masks[ix] = self.video.seg_masks[ix + 1]
+-            self.video.poses_gt[ix] = self.video.poses_gt[ix + 1]
+             self.video.depths_gt[ix] = self.video.depths_gt[ix + 1]
+             self.video.seg_masks_ori[ix] = self.video.seg_masks_ori[ix + 1]
+             
+--- R0/dg_slam/gs_tracking_mapping.py
++++ R1/dg_slam/gs_tracking_mapping.py
+@@ -56,7 +56,6 @@
+ 
+         self.n_img = cfg["data"]["n_img"]
+         self.estimate_c2w_list = torch.zeros((self.n_img, 4, 4))
+-        self.gt_c2w_list = torch.zeros((self.n_img, 4, 4))
+         self.idx = torch.zeros((1)).int()
+         self.mapping_idx = torch.zeros((1)).int()
+ 
+@@ -379,7 +378,7 @@
+         optimizable_tensors = self.replace_tensor_to_optimizer(opacities_new, "opacity")
+         self.gaussians_opacity_grad = optimizable_tensors["opacity"]        
+     
+-    def optimize_cur_map(self, num_joint_iters, idx, cur_gt_color, cur_gt_depth, gt_cur_c2w, cur_c2w, color_refine=False, seg_mask = None):
++    def optimize_cur_map(self, num_joint_iters, idx, cur_gt_color, cur_gt_depth, cur_c2w, color_refine=False, seg_mask = None):
+         H, W, fx, fy, cx, cy = self.H, self.W, self.fx, self.fy, self.cx, self.cy
+         init = True if idx == 0 else False
+         
+@@ -402,33 +401,25 @@
+         warp_window = 3
+         warp_depth_img_batch = []
+         warp_pose_batch = []
+-        warp_gt_pose_batch = []
+         if keyframe_len >= warp_window:
+             for frame_id in range(1, warp_window + 1):
+                 query_id = frame_id * (-1)
+                 tmp_gt_depth = self.video.depths_gt[idx + query_id]
+-                tmp_gt_c2w = self.video.poses_gt[idx + query_id] 
+                 tmp_est_c2w = self.estimate_c2w_list[idx + query_id].cuda() 
+ 
+                 warp_pose_batch += [tmp_est_c2w]
+                 warp_depth_img_batch += [tmp_gt_depth]
+-                tmp_gt_c2w = torch.from_numpy(pose_matrix_from_quaternion(tmp_gt_c2w.cpu())).cuda()
+-                warp_gt_pose_batch += [tmp_gt_c2w]
+         else:
+             for frame_id in range(1, keyframe_len + 1):
+                 query_id = frame_id * (-1)
+                 tmp_gt_depth = self.video.depths_gt[idx + query_id] 
+-                tmp_gt_c2w = self.video.poses_gt[idx + query_id]
+                 tmp_est_c2w = self.estimate_c2w_list[idx + query_id].cuda()
+                 warp_pose_batch += [tmp_est_c2w]
+                 warp_depth_img_batch += [tmp_gt_depth]
+-                tmp_gt_c2w = torch.from_numpy(pose_matrix_from_quaternion(tmp_gt_c2w.cpu())).cuda()
+-                warp_gt_pose_batch += [tmp_gt_c2w]
+         
+         if idx > 0:
+             warp_depth_batch = torch.stack(warp_depth_img_batch, dim=0)
+             warp_est_pose_batch = torch.stack(warp_pose_batch, dim=0)
+-            warp_gt_pose_batch = torch.stack(warp_gt_pose_batch, dim=0)
+             intrinsic = np.array([self.fx, self.fy, self.cx, self.cy])
+             batch_mask = depth_warp_pixel(cur_c2w, warp_est_pose_batch, cur_gt_depth.unsqueeze(-1), warp_depth_batch.unsqueeze(-1), cur_gt_depth,
+                                intrinsic, H, W, batch_rays_o, batch_rays_d, batch_gt_depth, batch_gt_depth)
+@@ -484,31 +475,23 @@
+                     warp_window = 3
+                     warp_depth_img_batch = []
+                     warp_pose_batch = []
+-                    warp_gt_pose_batch = []
+                     if keyframe_len >= warp_window:
+                         for frame_id in range(1, warp_window + 1):
+                             query_id = frame_id * (-1)
+                             tmp_gt_depth = self.video.depths_gt[idx + query_id]
+-                            tmp_gt_c2w = self.video.poses_gt[idx + query_id]
+                             tmp_est_c2w = self.estimate_c2w_list[idx + query_id].cuda()
+                             warp_pose_batch += [tmp_est_c2w]
+                             warp_depth_img_batch += [tmp_gt_depth]
+-                            tmp_gt_c2w = torch.from_numpy(pose_matrix_from_quaternion(tmp_gt_c2w.cpu())).cuda()
+-                            warp_gt_pose_batch += [tmp_gt_c2w]
+                     else:
+                         for frame_id in range(1, keyframe_len + 1):
+                             query_id = frame_id * (-1)
+                             tmp_gt_depth = self.video.depths_gt[idx + query_id]                            
+-                            tmp_gt_c2w = self.video.poses_gt[idx + query_id]
+                             tmp_est_c2w = self.estimate_c2w_list[idx + query_id].cuda()
+                             warp_pose_batch += [tmp_est_c2w]
+                             warp_depth_img_batch += [tmp_gt_depth]
+-                            tmp_gt_c2w = torch.from_numpy(pose_matrix_from_quaternion(tmp_gt_c2w.cpu())).cuda()
+-                            warp_gt_pose_batch += [tmp_gt_c2w]
+                     if idx > 0:
+                         warp_depth_batch = torch.stack(warp_depth_img_batch, dim=0)
+                         warp_est_pose_batch = torch.stack(warp_pose_batch, dim=0)
+-                        warp_gt_pose_batch = torch.stack(warp_gt_pose_batch, dim=0)
+                         intrinsic = np.array([self.fx, self.fy, self.cx, self.cy])
+                         batch_mask = depth_warp_pixel(cur_c2w, warp_est_pose_batch, cur_gt_depth.unsqueeze(-1),
+                                                       warp_depth_batch.unsqueeze(-1), cur_gt_depth,
+@@ -693,7 +676,7 @@
+             self.exposure_feat_all.append(self.exposure_feat.detach().cpu())
+         return None
+ 
+-    def optimize_map(self, num_joint_iters, idx, cur_gt_color, cur_gt_depth, gt_cur_c2w,
++    def optimize_map(self, num_joint_iters, idx, cur_gt_color, cur_gt_depth,
+                      keyframe_dict, keyframe_list, cur_c2w, color_refine=False, cur_seg_mask = None):
+         """
+         Mapping iterations. Sample pixels from selected keyframes,
+@@ -704,7 +687,6 @@
+             idx (int): the index of current frame
+             cur_gt_color (tensor): gt_color image of the current camera.
+             cur_gt_depth (tensor): gt_depth image of the current camera.
+-            gt_cur_c2w (tensor): groundtruth camera to world matrix corresponding to current frame.
+             keyframe_dict (list): list of keyframes info dictionary.
+             keyframe_list (list): list of keyframe index.
+             cur_c2w (tensor): the estimated camera to world matrix of current frame. 
+@@ -744,16 +726,14 @@
+             for id, frame in enumerate(optimize_frame):
+                 if frame != -1:
+                     frame_idx = keyframe_list[frame]
+-                    tmp_gt_c2w = keyframe_dict[frame]['gt_c2w']
+                     tmp_est_c2w = keyframe_dict[frame]['est_c2w']
+                     tmp_gt_depth = keyframe_dict[frame]['depth']
+                 else:
+                     frame_idx = idx
+-                    tmp_gt_c2w = gt_cur_c2w
+                     tmp_est_c2w = cur_c2w
+                     tmp_gt_depth = cur_gt_depth
+                 keyframes_info.append(
+-                    {'idx': frame_idx, 'gt_c2w': tmp_gt_c2w, 'est_c2w': tmp_est_c2w})
++                    {'idx': frame_idx, 'est_c2w': tmp_est_c2w})
+                 opt_frames_camera_tensor_list.append(tmp_est_c2w)
+                 opt_frames_gt_depth_list.append(tmp_gt_depth.cpu().numpy())
+             self.selected_keyframes[idx] = keyframes_info
+@@ -805,21 +785,16 @@
+ 
+         if self.BA:
+             camera_tensor_list = []
+-            gt_camera_tensor_list = []
+             for frame in optimize_frame:
+                 if frame != oldest_frame:
+                     if frame != -1:
+                         c2w = keyframe_dict[frame]['est_c2w']
+-                        gt_c2w = keyframe_dict[frame]['gt_c2w']
+                     else:
+                         c2w = cur_c2w
+-                        gt_c2w = gt_cur_c2w
+                     camera_tensor = get_tensor_from_camera(c2w)
+                     camera_tensor = Variable(
+                         camera_tensor.to(device), requires_grad=True)
+                     camera_tensor_list.append(camera_tensor)
+-                    gt_camera_tensor = get_tensor_from_camera(gt_c2w)
+-                    gt_camera_tensor_list.append(gt_camera_tensor)
+         
+         optim_para_list = [
+             {'params': [self.gaussians_xyz_grad], 'lr': self.position_lr_init, "name": "xyz"},
+@@ -1174,7 +1149,7 @@
+                 poses[i] = delta @ c2w_key
+         return poses
+ 
+-    def tracking(self, idx, gt_color, gt_depth, gt_c2w, estimated_c2w, seg_mask):
++    def tracking(self, idx, gt_color, gt_depth, estimated_c2w, seg_mask):
+         device = self.device
+         self.update_para_from_mapping()
+ 
+@@ -1184,17 +1159,15 @@
+             print(Style.RESET_ALL)
+ 
+         if idx <= 1:
+-            c2w = gt_c2w
++            # Preserve the 50-iteration budget from idx>=2; idx=1 uses DROID.
++            c2w = torch.eye(4, device=estimated_c2w.device) if idx == 0 else estimated_c2w
+         else:
+             self.count_bound = (idx % 5) if (idx % 5) > 0 else 5
+-            gt_camera_tensor = get_tensor_from_camera(gt_c2w)
+             self.num_cam_iters = self.cfg['tracking']['iters']
+             estimated_new_cam_c2w = estimated_c2w
+             camera_tensor = get_tensor_from_camera(
+                 estimated_new_cam_c2w.detach())
+             
+-            if torch.dot(camera_tensor[:4], gt_camera_tensor[:4]).item() < 0:
+-                camera_tensor[:4] *= -1
+ 
+             if self.separate_LR:
+                 camera_tensor = camera_tensor.to(device).detach()
+@@ -1232,8 +1205,6 @@
+                 if cam_iter == 0:
+                     initial_loss = loss
+ 
+-                loss_camera_tensor = torch.abs(
+-                    gt_camera_tensor.to(device)-camera_tensor).mean().item()
+                 if loss <= current_min_loss:
+                     current_min_loss = loss
+                     candidate_cam_tensor = camera_tensor.detach().clone()
+@@ -1243,7 +1214,7 @@
+                
+                 if (cam_iter + 1) % 20 == 0 or cam_iter == 0:
+                     if not self.wandb:
+-                        print(f'iter: {cam_iter}, camera tensor error: {loss_camera_tensor:.4f},  tracking loss: {loss:.4f}')
++                        print(f'iter: {cam_iter}, tracking loss: {loss:.4f}')
+ 
+             bottom = torch.tensor(
+                 [0, 0, 0, 1.0], device=self.device).reshape(1, 4)
+@@ -1253,7 +1224,6 @@
+             print(f'Finish tracking opt, plan iter: {self.num_cam_iters}, actual opt iter: {actual_cam_iters}')
+ 
+         self.estimate_c2w_list[idx] = c2w.clone().cpu()
+-        self.gt_c2w_list[idx] = gt_c2w.clone().cpu()
+         self.pre_c2w = c2w.clone()
+         self.idx[0] = idx
+ 
+@@ -1262,7 +1232,7 @@
+         if self.wandb:
+             wandb.finish()
+ 
+-    def mapping(self, idx, gt_color, gt_depth, gt_c2w, estimated_c2w, seg_mask, init = False):        
++    def mapping(self, idx, gt_color, gt_depth, estimated_c2w, seg_mask, init = False):        
+         if self.verbose:
+             print(Fore.GREEN)
+             print("Mapping KeyFrame ", idx.item())
+@@ -1292,16 +1262,16 @@
+         for outer_joint_iter in range(outer_joint_iters):
+             self.BA = (len(self.keyframe_list) >
+                         4) and self.cfg['mapping']['BA']
+-            self.optimize_cur_map(num_joint_iters, idx, gt_color, gt_depth, gt_c2w, cur_c2w, color_refine=color_refine, seg_mask = seg_mask)
+-            _ = self.optimize_map(num_joint_iters, idx, gt_color, gt_depth, gt_c2w,
++            self.optimize_cur_map(num_joint_iters, idx, gt_color, gt_depth, cur_c2w, color_refine=color_refine, seg_mask = seg_mask)
++            _ = self.optimize_map(num_joint_iters, idx, gt_color, gt_depth,
+                                     self.keyframe_dict, self.keyframe_list, cur_c2w, color_refine=color_refine, cur_seg_mask = seg_mask)
+             if self.BA:
+                 cur_c2w = _
+                 self.estimate_c2w_list[idx] = cur_c2w
+ 
+-        if (idx % self.keyframe_every == 0 or (idx == self.n_img-2)) and (idx not in self.keyframe_list) and (not torch.isinf(gt_c2w).any()) and (not torch.isnan(gt_c2w).any()):
++        if (idx % self.keyframe_every == 0 or (idx == self.n_img-2)) and (idx not in self.keyframe_list) and (not torch.isinf(cur_c2w).any()) and (not torch.isnan(cur_c2w).any()):
+             self.keyframe_list.append(idx)
+-            dic_of_cur_frame = {'gt_c2w': gt_c2w.detach(), 'idx': idx, 'color': gt_color.detach(),
++            dic_of_cur_frame = {'idx': idx, 'color': gt_color.detach(),
+                                 'depth': gt_depth.detach(), 'est_c2w': cur_c2w.detach().clone(), "seg_mask": seg_mask.detach()}
+             if self.use_dynamic_radius:
+                 dic_of_cur_frame.update(
+@@ -1325,7 +1295,7 @@
+         if self.low_gpu_mem:
+             torch.cuda.empty_cache() 
+ 
+-    def run(self, idx, gt_color, gt_depth, gt_c2w, estimated_c2w, seg_mask): 
++    def run(self, idx, gt_color, gt_depth, estimated_c2w, seg_mask): 
+         """
+         Dispatch Threads. # this func, when called, act as main process
+         """
+@@ -1365,11 +1335,10 @@
+                 self.device), torch.from_numpy(dynamic_r_query).to(self.device)
+         
+         if idx == 0:
+-            self.estimate_c2w_list[0] = gt_c2w.cpu()
+-            self.gt_c2w_list[0] = gt_c2w.cpu()
+-            self.mapping(idx, gt_color, gt_depth, gt_c2w, estimated_c2w, seg_mask,  init)
+-            self.tracking(idx, gt_color, gt_depth, gt_c2w, estimated_c2w, seg_mask)
++            self.estimate_c2w_list[0] = torch.eye(4)
++            self.mapping(idx, gt_color, gt_depth, estimated_c2w, seg_mask,  init)
++            self.tracking(idx, gt_color, gt_depth, estimated_c2w, seg_mask)
+ 
+         else:
+-            self.tracking(idx, gt_color, gt_depth, gt_c2w, estimated_c2w, seg_mask)
+-            self.mapping(idx, gt_color, gt_depth, gt_c2w, estimated_c2w, seg_mask, init)
++            self.tracking(idx, gt_color, gt_depth, estimated_c2w, seg_mask)
++            self.mapping(idx, gt_color, gt_depth, estimated_c2w, seg_mask, init)
+--- R0/dg_slam/gaussian/logger.py
++++ R1/dg_slam/gaussian/logger.py
+@@ -11,7 +11,6 @@
+                  ):
+         self.verbose = mapper.verbose
+         self.ckptsdir = mapper.ckptsdir
+-        self.gt_c2w_list = mapper.gt_c2w_list
+         self.estimate_c2w_list = mapper.estimate_c2w_list
+ 
+     def log(self, idx, keyframe_dict, keyframe_list, selected_keyframes, gaussians, exposure_feat=None):
+@@ -26,7 +25,6 @@
+             'pts_num': gaussians.pts_num(),
+             'input_pos': gaussians.input_pos(),
+             'input_rgb': gaussians.input_rgb(),
+-            'gt_c2w_list': self.gt_c2w_list,
+             'estimate_c2w_list': self.estimate_c2w_list,
+             'keyframe_list': keyframe_list,
+             'keyframe_dict': keyframe_dict,

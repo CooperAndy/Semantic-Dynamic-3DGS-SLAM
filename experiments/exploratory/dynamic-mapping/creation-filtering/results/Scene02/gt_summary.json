@@ -1,0 +1,26 @@
+{
+  "counts": {
+    "moving": {
+      "Static": 9666,
+      "Uncertain": 0,
+      "Dynamic": 25432,
+      "Ignore": 0
+    },
+    "static": {
+      "Static": 724,
+      "Uncertain": 0,
+      "Dynamic": 1783,
+      "Ignore": 0
+    },
+    "other_unknown": {
+      "Static": 76659,
+      "Uncertain": 0,
+      "Dynamic": 1040,
+      "Ignore": 0
+    }
+  },
+  "vehicle_instances": 141,
+  "unmatched_iou_0_5": 78,
+  "definition": "candidate before D3 state AND depth>0; predicted mask IoU is per-GT best, nonexclusive; state map generated from predicted T2.3",
+  "caveat": "direct logged candidate masks from new frozen DEV run"
+}

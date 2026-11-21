@@ -1,0 +1,145 @@
+{
+  "created_utc": "2026-10-12T13:54:23.793041+00:00",
+  "owner": "CHY",
+  "status": "PASS",
+  "scope": "Fresh local read-only verification of eight frozen manifests, all listed files, direct sources, links and T20 table transcription; no experiment/scoring/network/GPU",
+  "original_teammate_H01": "6657-file PASS is historical; original teammate tree not rehashed here",
+  "user_reference_matches_local_prior_handoff": true,
+  "document": {
+    "path": "CHY_回交队友_T11至T20_收口版_20261012/交接报告_CHY接手后T11至T20及阶段收口_20261012.md",
+    "bytes": 43288,
+    "sha256": "a56e23b8f5f75897a998a04274fbc55c9d0ed696df06c259205f72cb748e1dc7"
+  },
+  "source_index": {
+    "path": "CHY_回交队友_T11至T20_收口版_20261012/source_index.json",
+    "bytes": 9947,
+    "sha256": "c9769697dca5861227b12f870773bee5ef1f63b10d2d9abbd1a05672f51f4105"
+  },
+  "verifier": {
+    "path": "CHY_回交队友_T11至T20_收口版_20261012/verify_handoff.py",
+    "bytes": 8291,
+    "sha256": "6ea65c6a68a0a3189c008d606180e65510cf5198f5baa4521fc9b5d6b24d4db8"
+  },
+  "generator": {
+    "path": "CHY_回交队友_T11至T20_收口版_20261012/build_handoff.py",
+    "bytes": 29790,
+    "sha256": "9c3c624d6bba745bf928b513aa43a7897060533bf009e98313c6c426bb802c8a"
+  },
+  "stages": [
+    {
+      "stage": "H01_T11_T12_T13",
+      "manifest": {
+        "path": "CHY_接手DGSLAM_T11起_20261012/delivery_manifest.json",
+        "bytes": 1321121,
+        "sha256": "0c9b6851998864991197b56c43df02179798b53dd79ff2b8facf529e3ffc1208"
+      },
+      "listed_files": 5348,
+      "verified_files": 5348,
+      "verified_bytes": 172236649,
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "stage": "T14",
+      "manifest": {
+        "path": "CHY_正式Tracking采用验收_20261012/delivery_manifest.json",
+        "bytes": 1455843,
+        "sha256": "c30e88c7a4f3b38a96b810148ff6cbda279b0a8463ff0f5e2fc1b7260ba050e8"
+      },
+      "listed_files": 7135,
+      "verified_files": 7135,
+      "verified_bytes": 595114156,
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "stage": "T15",
+      "manifest": {
+        "path": "CHY_T15_DEV同图回放_20261012/delivery_manifest.json",
+        "bytes": 8614,
+        "sha256": "96b5771697696ed8a0ca4f9008c742bc66c66f8d6b7fd4fa16aa78c3ec4c91f9"
+      },
+      "listed_files": 50,
+      "verified_files": 50,
+      "verified_bytes": 49703098,
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "stage": "T16",
+      "manifest": {
+        "path": "CHY_T16_渲染分支诊断与修复_20261012/delivery_manifest.json",
+        "bytes": 23610,
+        "sha256": "ebf71f32ae464a22fdfdfe4123b03645cbf89d802e64e82f54bd3dc4d784e24d"
+      },
+      "listed_files": 136,
+      "verified_files": 136,
+      "verified_bytes": 292011445,
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "stage": "T17",
+      "manifest": {
+        "path": "CHY_T17_NO_GS_vs_ID完整轨迹_20261012/delivery_manifest.json",
+        "bytes": 51069,
+        "sha256": "36f3b582ad32adf3c3a9536d66cb7ffe63c38589f7e9f8a0d3267294eba8e30a"
+      },
+      "listed_files": 281,
+      "verified_files": 281,
+      "verified_bytes": 63134635,
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "stage": "T18",
+      "manifest": {
+        "path": "CHY_T18_CPU离线补全误差诊断_20261012/delivery_manifest.json",
+        "bytes": 12589,
+        "sha256": "3c3e27180180455b4b065157f15291a403b59cbfb218fe9ddfe5f04de1e032c1"
+      },
+      "listed_files": 67,
+      "verified_files": 67,
+      "verified_bytes": 2472857,
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "stage": "T19",
+      "manifest": {
+        "path": "CHY_T19_补全接口修复与CPU验证_20261012/delivery_manifest.json",
+        "bytes": 15799,
+        "sha256": "568af5cc393c28f0788a50c62270081a970ca4ac777aefab1152d672cc50283c"
+      },
+      "listed_files": 80,
+      "verified_files": 80,
+      "verified_bytes": 260905,
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "stage": "T20",
+      "manifest": {
+        "path": "CHY_T20_GPU补全诊断_20261012/delivery_manifest.json",
+        "bytes": 103087,
+        "sha256": "8bfdbb06e62bb50ef4befd9d90a47758465be3d0259b40f3017ffa5bdd6919f7"
+      },
+      "listed_files": 504,
+      "verified_files": 504,
+      "verified_bytes": 922153814,
+      "status": "PASS",
+      "errors": []
+    }
+  ],
+  "total_verified_listed_files": 13601,
+  "unique_direct_source_files": 47,
+  "markdown_link_occurrences": 61,
+  "unique_companion_links": 4,
+  "numbered_sections": 16,
+  "T20_table_rows_checked_against_frozen_CSV": 5,
+  "new_science_experiments": 0,
+  "network_connections": 0,
+  "GPU_jobs_started": 0,
+  "adoption_state": "CLOSED_NO_FURTHER_EXPERIMENTS_ORIGINAL_MAPPING_RETAINED_FULL_NOT_ADOPTED",
+  "errors": []
+}
