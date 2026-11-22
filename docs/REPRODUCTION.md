@@ -5,12 +5,13 @@ A single study may contain multiple run-specific configurations.
 
 | Study | Data and protocol | Saved files |
 | --- | --- | --- |
+| T0.3 SplaTAM baseline | Replica room0 | [Pinned setup, data, and run scripts](../experiments/replica-room0/) |
 | Depth-confidence selection and mapping-frame budget | KITTI00, 0–199 | [Threshold study](../experiments/kitti00-depth-confidence/) and [frame-budget study](../experiments/kitti00-frame-budget/) |
 | Map-assisted pose correction | KITTI08, 3000–3999, ORB/HARD/MASS × H0/H3, seed 0 | [G30 configs](../experiments/kitti08-pose-correction/source/configs/kitti/), [worker](../experiments/kitti08-pose-correction/scripts/worker.py), [trajectory results](../experiments/kitti08-pose-correction/evaluation_only/trajectory_results.json) |
 | Historical replay | KITTI08, 3000–3999, H0/H3, seeds 0–2 | [G14 configs](../experiments/kitti08-historical-replay/source/configs/kitti/), [worker](../experiments/kitti08-historical-replay/scripts/worker.py), [evaluation summary](../experiments/kitti08-historical-replay/evaluation/summary.json) |
 | F0/F1 appearance refinement | KITTI21, 1200–1399, Train160/Dev20/Test20. ORB-SLAM3 processed all 200 frames. | [Split](../experiments/kitti21-appearance-refinement/protocol/split.csv), [F0 configuration](../experiments/kitti21-appearance-refinement/splatam_train160_config.py), [F1 runner](../experiments/kitti21-appearance-refinement/run_f1_dev.sh), [test runner](../experiments/kitti21-appearance-refinement/run_test.sh), [test summary](../experiments/kitti21-appearance-refinement/eval/test_pair_summary.json) |
 | Fixed-map semantic fusion | KITTI08 with SemanticKITTI, Virtual KITTI 2, and KITTI-360 | [Protocol and evaluation scripts](../experiments/fixed-map-semantic-fusion/) |
-| Online semantic and dynamic feedback | KITTI05/10, 0–999 each, B/TM/D/TMD, seeds 0–2 | [All 24 formal configs](../experiments/online-semantic-dynamic/configurations/), [bundle preparation](../experiments/online-semantic-dynamic/prepare_bundle.py), [matrix runner](../experiments/online-semantic-dynamic/run_registered_matrix.py), [result report](../experiments/online-semantic-dynamic/report/) |
+| Online semantic and dynamic feedback | KITTI08, 3000–3999, eight E2 groups. KITTI05/10, 0–999 each, B/TM/D/TMD, seeds 0–2. | [Runnable S23 guide](../experiments/online-semantic-dynamic/REPRODUCE.md), [registered configs](../experiments/online-semantic-dynamic/configurations/), [result report](../experiments/online-semantic-dynamic/report/) |
 
 ## Prepare a run
 
@@ -44,13 +45,12 @@ evaluation. The saved `protocol/split.csv` defines the frame membership.
 The F1 comparison uses fixed cameras and geometry and updates
 appearance on the Train160 views.
 
-**KITTI05/10 online feedback.** Prepare aligned inputs with
-`prepare_bundle.py` and use `run_registered_matrix.py` for the E3
-matrix. The runner offers `--check-only` to report prerequisites
-before starting a run. D and TMD require the matching, pre-generated
-TSDD state caches. Use the cache version registered for the formal
-matrix when reproducing those variants. The earlier TSDD experiment
-records use their own protocols.
+**KITTI05/08/10 online feedback.** Use `reproduce.py inputs` to build the
+registered prediction bundles, `reproduce.py check --verify-hashes` to
+check them, and `reproduce.py run --evaluate` for mapping and scoring.
+The [S23 guide](../experiments/online-semantic-dynamic/REPRODUCE.md)
+includes commands for reusing archived prediction bytes and building the
+registered CUDA implementation.
 
 ## Demo and supplementary studies
 

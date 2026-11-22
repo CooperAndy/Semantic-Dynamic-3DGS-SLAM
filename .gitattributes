@@ -1,0 +1,6 @@
+# Preserve the bytes hashed by the registered experiment manifests.
+/experiments/online-semantic-dynamic/configurations/**/*.py -text
+/experiments/online-semantic-dynamic/native/** -text
+/preprocessing/tsdd-s23/** -text
+/preprocessing/server-snapshots/causal-stereo/source/RAFT-Stereo/** -text
+/experiments/replica-room0/*.sh text eol=lf

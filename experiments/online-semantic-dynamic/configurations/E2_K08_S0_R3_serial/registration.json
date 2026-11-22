@@ -1,0 +1,59 @@
+{
+  "variants": [
+    "B",
+    "T",
+    "M",
+    "TM",
+    "D",
+    "TD",
+    "MD",
+    "TMD"
+  ],
+  "cell": {
+    "stage": "E2",
+    "sequence": "08",
+    "source_start": 3000,
+    "frames": 1000,
+    "seed": 0,
+    "group": "B",
+    "T": false,
+    "M": false,
+    "D": false
+  },
+  "config_sha256": {
+    "B": "70ecdb063463c22adaef97ecbe8543ccd7e7f7e3728e12e1f4299774729a4b9c",
+    "T": "8c88cfd0265411b1a294cc60245c39d1c7502075b17b6e693cc589d54854bd50",
+    "M": "b39b80dda07ac0aec1334bc8555b91aef2ebcf82aad8cae5884978cfb497dc47",
+    "TM": "f194c67ffe23796196b4fdcba54dcb1c65379c11dbb4ad96e31acd1500eb42ff",
+    "D": "80e10b61f1ff16680db5c851e5f0c590a526a7e1474b9cf6327a23625c30b782",
+    "TD": "68ea8deb18988bf37a10e4b35b44ebd1160b7414c47ca4ff0fc2e1285ae89064",
+    "MD": "e36709796f9806d8ae2df9f3d826fcd1ad02422768cb4b48bff01badac0fdc36",
+    "TMD": "e5bd00aadd0f5c424e8f7572448ad2982d3aa9e2fdb6ad2c8287be5953137e41"
+  },
+  "limits": {
+    "E0_PSNR_span_dB": 0.1,
+    "E0_LPIPS_span": 0.002,
+    "E0_coverage_span": 0.002,
+    "E0_points_relative_span": 0.01,
+    "translation_m": 0.0003,
+    "rotation_deg": 0.002,
+    "startup_free_GiB": 23,
+    "minimum_free_GiB": 8,
+    "run_seconds": 9000,
+    "semantic_confidence": 0.8,
+    "semantic_loss_weight": 0.1,
+    "ATE_improvement": 0.1,
+    "RPE_improvement": 0.05,
+    "window_max_regression": 0.05,
+    "static_PSNR_gain_dB": 0.5,
+    "static_LPIPS_max_delta": 0.0,
+    "SSIM_min_delta": -0.01,
+    "coverage_min_delta": -0.02,
+    "static_depth_MAE_max_ratio": 1.01,
+    "recent_PSNR_min_delta": -0.2,
+    "recent_LPIPS_max_delta": 0.01,
+    "recent_LPIPS_tail_max_delta": 0.03
+  },
+  "quality_adoption": false,
+  "candidate": "candidate_v4_fp64accum"
+}

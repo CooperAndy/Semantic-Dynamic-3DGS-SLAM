@@ -49,6 +49,8 @@ required by the experiment you want to run.
 
 ## Reproduce results
 
+For the S23 E2/E3 matrix, start with the [runnable S23 guide](experiments/online-semantic-dynamic/REPRODUCE.md). It covers the FP64 CUDA build, supplying causal ORB poses, regenerating or restoring predictions, and fixed-view evaluation.
+
 The [reproduction guide](docs/REPRODUCTION.md) links each study to its
 source frame range, configuration, run order, and reference outputs.
 The directory [preprocessing/](preprocessing/) contains the input

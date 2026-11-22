@@ -1,0 +1,66 @@
+{
+  "status": "PINNED_BEFORE_E2_AND_FORMAL_INPUTS",
+  "files": [
+    {
+      "path": "preprocessing/tsdd-s23/configs/tsdd.yaml",
+      "sha256": "fb808f8b774e03af9af4ed87b88d82b0da81d1dbc023d7b8c54abf7d3fe901f1",
+      "bytes": 341
+    },
+    {
+      "path": "preprocessing/tsdd-s23/scripts/generate_mask2former_semantics_kitti.py",
+      "sha256": "e1d6d5ba80ad4fd1868617f8d183e9e60c350aee0a7aee8f099832871814f5c2",
+      "bytes": 19747
+    },
+    {
+      "path": "preprocessing/tsdd-s23/scripts/run_mask2former_instance_tracking.py",
+      "sha256": "3005a215816b3d2bdfc1dc97d21c27599adef1a50998a15a5702b2619246d0bf",
+      "bytes": 22802
+    },
+    {
+      "path": "preprocessing/tsdd-s23/scripts/adapt_mask2former_to_instances.py",
+      "sha256": "9874a73207843e5139ac3c9cc392ed603da3571504fffe93cdcb832c61e40711",
+      "bytes": 22266
+    },
+    {
+      "path": "preprocessing/tsdd-s23/scripts/compute_motion_evidence.py",
+      "sha256": "048965b5f0cfda6889bf2397fb7daac1cb6c292352c31a9106c5815520aa18ba",
+      "bytes": 19102
+    },
+    {
+      "path": "preprocessing/tsdd-s23/scripts/run_tsdd.py",
+      "sha256": "d161e899dcaf2b01daff43163debe6682acd22bdbcf6735465aece289d4524b6",
+      "bytes": 21663
+    },
+    {
+      "path": "models/mask2former-swin-small-cityscapes-semantic-91281d04/config.json",
+      "sha256": "0d539faff55bcbd57451dd0128e054c528eb20b896ea543b52ef28722272262c",
+      "bytes": 77332
+    },
+    {
+      "path": "models/mask2former-swin-small-cityscapes-semantic-91281d04/model.safetensors",
+      "sha256": "4a3c78ef62be0b5d777d2387965e079db9f7cd0448d59e038b5991f135bf7dd5",
+      "bytes": 275471056
+    },
+    {
+      "path": "models/mask2former-swin-small-cityscapes-semantic-91281d04/preprocessor_config.json",
+      "sha256": "98ca5faae0c936507c0e6888d85a08ae8ed2e96a853787275e125c63a212e9b0",
+      "bytes": 537
+    },
+    {
+      "path": "models/mask2former-swin-small-cityscapes-instance-4c0fb9b2-hf457/config.json",
+      "sha256": "6747fdd27472911b89777a5a99307820cca60d5de3c78f62929c06a605383b6b",
+      "bytes": 76894
+    },
+    {
+      "path": "models/mask2former-swin-small-cityscapes-instance-4c0fb9b2-hf457/preprocessor_config.json",
+      "sha256": "2708f8405d4643ff4ca3c2b8da5c8d45acb08c8c7b9e834c6d4572b80e21b079",
+      "bytes": 535
+    },
+    {
+      "path": "models/mask2former-swin-small-cityscapes-instance-4c0fb9b2-hf457/pytorch_model.bin",
+      "sha256": "8c42557b1be26562597edcf4f7c0fc404f70eb1079280967054987cb6e71407c",
+      "bytes": 275624859
+    }
+  ],
+  "threshold_search": false
+}

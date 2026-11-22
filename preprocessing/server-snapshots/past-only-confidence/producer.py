@@ -1,7 +1,7 @@
 from common import *
 import numpy as np,cv2,importlib.util,time,shutil,csv
 cv2.setNumThreads(2)
-spec=importlib.util.spec_from_file_location('legacy',R/'provenance/legacy_confidence.py');legacy=importlib.util.module_from_spec(spec);spec.loader.exec_module(legacy)
+spec=importlib.util.spec_from_file_location('legacy',Path(__file__).resolve().parent/'provenance/legacy_confidence.py');legacy=importlib.util.module_from_spec(spec);spec.loader.exec_module(legacy)
 def compute(left,right,dl,dr,pose,previous_depth,previous_pose,calib):
  valid=(dl>=.5)&(dl<=40.);lr,_,_,_=legacy.confidence_from_stereo(left,right,dl,dr,calib['fx']*calib['baseline_m'],valid,1.,.1)
  if previous_depth is None:tc=np.ones_like(dl,dtype=np.float32)

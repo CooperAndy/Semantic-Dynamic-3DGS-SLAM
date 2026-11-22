@@ -15,7 +15,7 @@ def sha(path):
     return h.hexdigest()
 
 
-def capture(root,group,out,remote,references=None):
+def capture(root,group,out,remote,references=None,*,portable=False):
     root=Path(root);out=Path(out);remote=Path(remote)
     assert root.parent==remote
     folder=out/'input_provenance';folder.mkdir(exist_ok=False)
@@ -56,14 +56,19 @@ def capture(root,group,out,remote,references=None):
     if group=='B':
         for row in observation['rows']:
             source=observation_path.parent/row['path']
-            keep(source,'observation_cache/'+Path(row['path']).name,row['sha256'],hardlink=True)
+            keep(source,'observation_cache/'+Path(row['path']).name,row['sha256'],hardlink=not portable or not source.is_symlink())
     pose=Path(m['pose_file']);assert '/dataset/poses/' not in str(pose) and pose.name!='groundtruth.txt'
     keep(pose,'frontend_ORB_poses.txt',m.get('pose_sha256'))
-    frozen_path=remote/'stage2_frozen_sources.json';frozen=json.loads(frozen_path.read_text())
+    study=Path(__file__).resolve().parent
+    frozen_path=(study if portable else remote)/'stage2_frozen_sources.json'
+    frozen=json.loads(frozen_path.read_text())
     keep(frozen_path,'stage2_frozen_sources.json')
     for i,row in enumerate(frozen['files']):
         source=Path(row['path'])
-        if source.suffix in ['.py','.yaml','.json']:
+        if portable and source.suffix in ['.py','.yaml']:
+            source=study.parents[1]/'preprocessing/tsdd-s23'/source.parent.name/source.name
+            keep(source,f'stage2_sources/{i:03}_{source.name}',row['sha256'])
+        elif not portable and source.suffix in ['.py','.yaml','.json']:
             keep(source,f'stage2_sources/{i:03}_{source.name}',row['sha256'])
 
     if references is not None:
@@ -78,7 +83,8 @@ def capture(root,group,out,remote,references=None):
                     keep(references/name,'evaluation_only/'+name,hardlink=True)
         import automatic_gt
         projection=Path(sys.modules[automatic_gt.project.__module__].__file__)
-        keep(projection,'evaluation_only/actual_projection_source.py',sha(remote/'semantickitti_projection.py'))
+        expected_projection=(study if portable else remote)/'semantickitti_projection.py'
+        keep(projection,'evaluation_only/actual_projection_source.py',sha(expected_projection))
 
     versions={}
     for name in ['torch','torchvision','numpy','scipy','lpips','transformers','opencv-python']:

@@ -15,7 +15,7 @@ def references(R):
     from automatic_gt import official_gt
     m=json.loads((R/'inputs/runtime/input_manifest.json').read_text());reg=json.loads((R/'registration.json').read_text());seq=reg['cell']['sequence']
     E=REMOTE/'evaluation_only'/('K'+seq);E.mkdir(parents=True,exist_ok=True)
-    old=Path('/root/autodl-tmp/stage3_chy_20261006/inputs/semantickitti08_v1')
+    old=REMOTE/'legacy-gt/semantickitti08_v1'
     with zipfile.ZipFile(old/'official_calibration.zip') as z:
         names=[n for n in z.namelist() if n.endswith('/'+seq+'/calib.txt')];assert len(names)==1
         calib=E/'calib.txt'
@@ -24,7 +24,7 @@ def references(R):
     for line in calib.read_text().splitlines():
         key,val=line.split(':',1);c[key]=np.fromstring(val,sep=' ')
     K=c['P2'].reshape(3,4)[:,:3];assert np.allclose(K,m['K'],rtol=0,atol=5e-4)
-    poses=Path('/root/autodl-tmp/slam_project/data/kitti/dataset/poses')/(seq+'.txt')
+    poses=REMOTE/'legacy-gt/poses'/(seq+'.txt')
     if not poses.exists():raise FileNotFoundError('Official trajectory GT is missing; retain predictions: '+str(poses))
     raw=np.loadtxt(poses,dtype=np.float64);ids=np.array([r['source_frame_id'] for r in m['rows']],int)
     G0=np.tile(np.eye(4),(len(ids),1,1));G0[:,:3]=raw[ids].reshape(-1,3,4)
@@ -41,7 +41,7 @@ def references(R):
                 legacy=old/kind/p.name
                 if seq=='08' and legacy.exists():p.hardlink_to(legacy)
                 else:
-                    sys.path.insert(0,'/root/autodl-tmp/stage3_chy_20261006/scripts')
+                    sys.path.insert(0,str(REMOTE/'legacy-gt/scripts'))
                     from http_range_zip import RangeZip
                     if archive is None:archive=RangeZip(url,256*2**20)
                     names=[n for n in archive.info if n.endswith(f'/{seq}/{kind}/{source:06}.{extension}')];assert len(names)==1
@@ -58,7 +58,7 @@ def references(R):
     return E,G
 
 
-def evaluate(R,group):
+def evaluate(R,group,kitti_root=None,labels_root=None):
     import torch,lpips
     from PIL import Image,ImageDraw
     from online_state import OnlineState
@@ -70,9 +70,14 @@ def evaluate(R,group):
     from source_snapshot import capture_evaluation
     capture_evaluation(out)
     assert json.loads((d/'independent_numeric_audit.json').read_text())['status'].startswith('PASS_')
-    E,G=references(R);m=json.loads((R/'inputs/runtime/input_manifest.json').read_text())
+    if kitti_root is not None:
+        from reproduction_references import prepare_references
+        E,G=prepare_references(R,kitti_root,labels_root)
+    else:
+        E,G=references(R)
+    m=json.loads((R/'inputs/runtime/input_manifest.json').read_text())
     from input_provenance import capture as capture_inputs
-    input_identity=capture_inputs(R,group,out,REMOTE,E)
+    input_identity=capture_inputs(R,group,out,REMOTE,E,portable=kitti_root is not None)
     sys.path[:0]=[str(R/'scripts'),str(R/'source')]
     spec=importlib.util.spec_from_file_location('matrix_frozen_eval_core',R/'source/scripts/splatam_external_tm.py');core=importlib.util.module_from_spec(spec);sys.modules[spec.name]=core;spec.loader.exec_module(core)
     import external_tracking as ext
@@ -141,4 +146,12 @@ def evaluate(R,group):
     (out/'results.json').write_text(json.dumps(result,indent=2));return result
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--group',required=True);a=p.parse_args();print(json.dumps(evaluate(a.root,a.group)['trajectory']))
+    p=argparse.ArgumentParser()
+    p.add_argument('--root',type=Path,required=True)
+    p.add_argument('--group',required=True)
+    p.add_argument('--kitti-root',type=Path)
+    p.add_argument('--labels-root',type=Path)
+    a=p.parse_args()
+    if bool(a.kitti_root)!=bool(a.labels_root):
+        p.error('--kitti-root and --labels-root must be supplied together')
+    print(json.dumps(evaluate(a.root,a.group,a.kitti_root,a.labels_root)['trajectory']))

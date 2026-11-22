@@ -1,0 +1,16 @@
+log_odds:
+  forgetting_factor: 0.90
+  theta_low: -1.50
+  theta_high: 1.50
+  clip: 5.00
+  probability_clip: [0.05, 0.95]
+gating:
+  min_valid_ratio: 0.35
+  min_confirm_frames: 3
+  dynamic_to_static_confirm_frames: 5
+  max_missing_frames: 5
+state_encoding:
+  static: 0
+  uncertain: 1
+  dynamic: 2
+calibration_status: unvalidated_starting_point

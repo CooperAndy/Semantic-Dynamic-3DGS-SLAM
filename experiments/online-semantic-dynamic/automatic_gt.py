@@ -1,11 +1,10 @@
 """Evaluation-only official LiDAR labels. Sparse support is never densified."""
-import hashlib,json,sys
+import hashlib,json
 from pathlib import Path
 import numpy as np
 
 MOVING=np.array([252,253,254,255,256,257,258,259],np.uint16)
 STATIC_MAPPED=np.array([10,11,13,15,16,18,30,31,32,40,48,50,51,60,70,71,72,80,81],np.uint16)
-sys.path.insert(0,'/root/autodl-tmp/stage3_chy_20261006/scripts')
 from semantickitti_projection import calibration,project
 
 
@@ -54,7 +53,7 @@ def sparse_metrics(rgb,target,depth,silhouette,predicted_semantics,gt):
 def main():
     from experiment import REMOTE
     R=REMOTE/'evaluation_only/official_gt_v2';R.mkdir(parents=True,exist_ok=False)
-    old=Path('/root/autodl-tmp/stage3_chy_20261006/inputs/semantickitti08_v1')
+    old=REMOTE/'legacy-gt/semantickitti08_v1'
     calib=old/'calib.txt'
     assert hashlib.sha256(calib.read_bytes()).hexdigest()=='5e7b3136edf2799be47e472ca9c5362fcacbee5d21c6ab8038506b8691b8b9ec'
     rows=[]
